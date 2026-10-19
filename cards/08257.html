@@ -35,12 +35,19 @@ button{flex:1;border:none;border-radius:12px;padding:14px;font-size:16px;font-we
 .witem .wq{font-size:15px;font-weight:600;cursor:pointer;color:#7a3b12}
 .witem .wa{display:none;font-size:14px;color:#444;margin-top:6px;background:#faf8f3;border-radius:8px;padding:10px}
 .witem.open .wa{display:block}
+.tabs{display:flex;gap:8px;margin:12px 0 4px}
+.tab{flex:1;border:1px solid #e2ddd2;background:#fff;color:#888;border-radius:10px;padding:10px;font-size:15px;font-weight:700;cursor:pointer}
+.tab.on{background:#1a1a1a;color:#fff;border-color:#1a1a1a}
+.witem .wa.show{display:block}
+.wmark{display:inline-block;margin-top:8px;border:none;background:#2a7a4b;color:#fff;border-radius:8px;padding:8px 14px;font-size:14px;font-weight:700;cursor:pointer}
 footer{max-width:720px;margin:0 auto;padding:20px 16px 40px;color:#aaa;font-size:12px;text-align:center}
 </style></head><body>
 <header class="top"><div class="in"><a class="t" href="../index.html">📚 自考学习站</a><span class="r">舆论学</span></div></header>
 <div class="wrap"><a class="back" href="../s/08257.html">← 返回舆论学</a>
 <h2 class="pt">🎴 背诵卡片自测</h2>
 <div class="sub">按真题出现次数排序 · 高频优先 · 进度自动保存</div>
+<div class="tabs"><button class="tab on" id="tab-all">全部卡片</button><button class="tab" id="tab-wrong">不会的 (<span id="wcount">0</span>)</button></div>
+
 <div class="prog"><div class="bar"><div id="pfill"></div></div><div id="ptext" class="ptext"></div></div>
 <div id="stage"></div>
 <div class="btnrow" id="menubtns" style="margin-top:18px">
@@ -68,7 +75,7 @@ function paintProg(done,total){
   document.getElementById('ptext').textContent='已掌握 '+knownCount()+' / '+RAW.length+'（本轮 '+done+'/'+total+'）';
 }
 function startScreen(){
-  phase='menu';paintProg(0,0);
+  phase='menu';paintProg(0,0);setTab(true);paintWCount();
   var nWrong=store.wrong.length;
   var h='<div class="center">共 '+RAW.length+' 张卡片<br>已掌握 '+knownCount()+' 张 · 待加强 '+nWrong+' 张<br><br>'+
     '<div class="btnrow"><button class="btn-show" onclick="startRound(\'full\')">开始自测</button></div>';
@@ -139,6 +146,41 @@ function summary(){
   document.getElementById('stage').innerHTML=h;
   window.scrollTo(0,0);
 }
+function paintWCount(){document.getElementById('wcount').textContent=store.wrong.length;}
+function setTab(all){document.getElementById('tab-all').classList.toggle('on',all);document.getElementById('tab-wrong').classList.toggle('on',!all);}
+function showWrongList(){
+  phase='wrong';setTab(false);
+  document.getElementById('pfill').style.width='0%';
+  document.getElementById('ptext').textContent='不会的卡片共 '+store.wrong.length+' 张 · 点击问题可收起/展开答案';
+  paintWCount();
+  var st=document.getElementById('stage');
+  var ws=store.wrong.slice().sort(function(a,b){return RAW[b].freq-RAW[a].freq;});
+  var h='';
+  if(!ws.length){
+    h='<div class="center">\u0001F389 没有不会的卡片，全部掌握！</div>';
+  }else{
+    h+='<div class="btnrow"><button class="btn-know" onclick="startRound(\'wrong\')">再练一遍（'+ws.length+'）</button></div>';
+    ws.forEach(function(i){
+      var c=RAW[i];
+      h+='<div class="witem"><div class="wq" onclick="this.parentNode.querySelector(\'.wa\').classList.toggle(\'show\')">'+esc(c.q)+'</div>'+
+         '<div class="wa show">'+freqLabel(c.freq)+' '+tagPill(c.tag)+'<br>'+esc(c.a)+
+         '<br><button class="wmark" onclick="markKnownFromList('+i+',this)">\u2713 会了，移出</button></div></div>';
+    });
+  }
+  st.innerHTML=h;
+  window.scrollTo(0,0);
+}
+function markKnownFromList(i,btn){
+  var ki=store.known.indexOf(i),wi=store.wrong.indexOf(i);
+  if(ki<0)store.known.push(i);
+  if(wi>=0)store.wrong.splice(wi,1);
+  save();paintWCount();
+  document.getElementById('b-retry').disabled=!store.wrong.length;
+  var item=btn.closest('.witem');if(item)item.remove();
+  if(!store.wrong.length)showWrongList();
+}
+document.getElementById('tab-all').onclick=function(){startScreen();};
+document.getElementById('tab-wrong').onclick=function(){showWrongList();};
 document.getElementById('b-retry').onclick=function(){if(store.wrong.length)startRound('wrong');};
 document.getElementById('b-reset').onclick=function(){
   if(confirm('清空本门课的全部自测进度？')){localStorage.removeItem(KEY);store={known:[],wrong:[]};startScreen();}
