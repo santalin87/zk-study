@@ -1,0 +1,148 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>背诵卡片 - 手机媒体概论 - 自考学习站</title><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#f7f5f0;color:#222;font-size:16px;line-height:1.9}
+.wrap{max-width:720px;margin:0 auto;padding:16px 16px 64px}
+header.top{background:#1a1a1a;color:#fff;padding:14px 16px;position:sticky;top:0;z-index:10}
+header.top .in{max-width:720px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+header.top a{color:#fff;text-decoration:none}
+header.top .t{font-size:17px;font-weight:700}
+header.top .r{font-size:13px;color:#bbb}
+.back{display:inline-block;margin:12px 0;font-size:14px;color:#b3541e;text-decoration:none}
+h2.pt{font-size:20px;margin:6px 0 2px}
+.sub{font-size:13px;color:#888;margin-bottom:10px}
+.prog{margin:12px 0}
+.bar{background:#e8e2d6;border-radius:8px;height:10px;overflow:hidden}
+.bar>div{background:#b3541e;height:100%;width:0%;transition:width .3s;border-radius:8px}
+.ptext{font-size:13px;color:#888;margin-top:6px}
+.fcard{background:#fff;border-radius:14px;padding:22px 18px;margin:14px 0;box-shadow:0 2px 10px rgba(0,0,0,.07);min-height:220px;position:relative}
+.fcard .freq{position:absolute;top:12px;right:12px;font-size:12px;color:#999;background:#f0ece2;border-radius:20px;padding:2px 10px}
+.fcard .freq.hot{color:#fff;background:#c0392b;font-weight:700}
+.fcard .tag{display:inline-block;font-size:12px;color:#fff;border-radius:6px;padding:1px 8px;margin-bottom:10px}
+.fcard .q{font-size:18px;font-weight:600;line-height:1.7;padding-right:92px}
+.fcard .a{margin-top:14px;padding-top:14px;border-top:1px dashed #ddd;font-size:15px;line-height:1.9}
+.fcard .a .alabel{font-size:13px;color:#2a7a4b;font-weight:700;margin-bottom:6px}
+.btnrow{display:flex;gap:10px;margin:14px 0}
+button{flex:1;border:none;border-radius:12px;padding:14px;font-size:16px;font-weight:700;cursor:pointer}
+.btn-show{background:#1a1a1a;color:#fff}
+.btn-know{background:#2a7a4b;color:#fff}
+.btn-unknow{background:#c0392b;color:#fff}
+.btn-ghost{background:#fff;color:#b3541e;border:1px solid #e2ddd2;flex:1}
+.btn-ghost:disabled{opacity:.4}
+.center{text-align:center;color:#888;padding:40px 0}
+.sum{background:#fff;border-radius:14px;padding:22px 18px;margin:14px 0;box-shadow:0 2px 10px rgba(0,0,0,.07)}
+.sum .rate{font-size:34px;font-weight:800;color:#b3541e;text-align:center;margin:8px 0}
+.witem{border-top:1px solid #eee;padding:10px 0}
+.witem .wq{font-size:15px;font-weight:600;cursor:pointer;color:#7a3b12}
+.witem .wa{display:none;font-size:14px;color:#444;margin-top:6px;background:#faf8f3;border-radius:8px;padding:10px}
+.witem.open .wa{display:block}
+footer{max-width:720px;margin:0 auto;padding:20px 16px 40px;color:#aaa;font-size:12px;text-align:center}
+</style></head><body>
+<header class="top"><div class="in"><a class="t" href="../index.html">📚 自考学习站</a><span class="r">手机媒体概论</span></div></header>
+<div class="wrap"><a class="back" href="../s/14237.html">← 返回手机媒体概论</a>
+<h2 class="pt">🎴 背诵卡片自测</h2>
+<div class="sub">按真题出现次数排序 · 高频优先 · 进度自动保存</div>
+<div class="prog"><div class="bar"><div id="pfill"></div></div><div id="ptext" class="ptext"></div></div>
+<div id="stage"></div>
+<div class="btnrow" id="menubtns" style="margin-top:18px">
+<button class="btn-ghost" id="b-retry">再练错题</button>
+<button class="btn-ghost" id="b-reset">重置进度</button>
+</div></div>
+<footer>网络与新媒体 · 专升本冲刺 · 10月24-25日考试加油</footer>
+<script id="cards-data" type="application/json">[{"a": "框架：传播机制→关系结构→信息特点→功能定位→舆论作用。要点：微博=广场式裂变传播、弱联系（粉丝关系）、媒体属性、制造热点；微信=社群圈层传播、强联系（熟人关系）、社交属性、沉淀共识。强联系信任高但视野窄（回声室），弱联系公共性强但信任低。", "freq": 3, "q": "微博与微信的区别（论述题）", "tag": "论述"}, {"a": "定义：通过传感设备按约定协议把物品与互联网连接，实现智能化识别、定位、跟踪、监控和管理的网络技术，本质是“万物互联”。架构：感知层（信息采集）、网络层（传输）、应用层。意义：生产、生活、媒体生态（万物皆媒）、社会治理变革；挑战是数据安全、隐私、标准统一。", "freq": 2, "q": "物联网技术及其意义（论述题）", "tag": "论述"}, {"a": "一、机器写作常态化（程式化、数据密集型报道自动化）；二、人机协同（记者负责深度判断，机器负责抓取、初稿）；三、算法分发主导（千人千面，但带来信息茧房、回声室）；四、UGC/PGC/AGC融合，主体多元化；五、机器替代重复劳动，记者竞争力转向调查能力与思想深度。", "freq": 1, "q": "智能化媒体时代新闻生产的新模式（论述题）", "tag": "论述"}, {"a": "由伊丽莎白·诺尔-诺依曼提出。四环节：对孤立的恐惧→对意见气候的判断→发声或沉默的选择→螺旋式强化（多数越发声越壮大，少数越沉默越萎缩）。网络变异：匿名降低孤立恐惧使少数更易发声；算法“信息茧房/回声室”让人误以为小圈子意见即多数；群体极化是螺旋在网络圈群中的表现。", "freq": 1, "q": "网络中“沉默的螺旋”的形成机制（论述题）", "tag": "论述"}, {"a": "格兰诺维特提出：强联系=亲密、频繁、多维（如亲友），弱联系=疏远、低频、单一（如网友）。朋友圈强联系→信任度高、说服力强，但同质化、易回声室；视频号弱联系→传播广、公共性强，但信任度低、需权威背书。结论：用强联系做信任背书，用弱联系做范围扩散，兼得“传得开”与“信得过”。", "freq": 1, "q": "运用强联系/弱联系理论分析新闻信息信任度（论述题）", "tag": "论述"}, {"a": "陪伴需求、互动快感、归属感、打赏的权力感、从众与围观心理。", "freq": 1, "q": "社交互动性直播的心理动因（论述题）", "tag": "论述"}, {"a": "要点：VR/AR技术、社交媒体的拟剧化生存、线上线下消费打通、元宇宙概念；答题时展开融合的表现与界限。", "freq": 1, "q": "互联网如何推动虚拟世界与现实世界的融合（论述题）", "tag": "论述"}, {"a": "结合媒介素养作答：主动管理使用时间、辨别信息真伪、保持线下社交、不做“低头族”。（24全国综合应用题材料为“放下手机、面对真实世界”。）", "freq": 1, "q": "如何善用手机媒体（论述题）", "tag": "论述"}, {"a": "特征：用户既是接收者也是生产者（UGC）；去中心化、人人可参与；互动性强；内容海量化。意义：打破传统媒体信息垄断，实现“自下而上”传播；催生博客、Wiki、SNS；为自媒体、社交媒体时代奠定基础。Web1.0是“只读”门户模式。", "freq": 2, "q": "简述Web2.0的特征和意义", "tag": "简答"}, {"a": "广场式公开传播（信息公开可见、可触达陌生人）；裂变式扩散（转发链无限延伸）；碎片化（短平快，适合即时发布）；弱联系（单向关注的粉丝关系）；媒体属性强（突发新闻首发地、议程设置能力强）。", "freq": 1, "q": "简述微博的传播特点", "tag": "简答"}, {"a": "编辑主导（专业编辑筛选加工）；单向传播（用户只能被动接收，“只读互联网”）；中心化（新浪、搜狐、网易垄断流量入口）；内容同质化（各门户内容高度相似，竞争靠速度和包装）。", "freq": 1, "q": "简述Web1.0时代“大众门户”模式的特点", "tag": "简答"}, {"a": "传播机制：微博广场裂变 vs 微信圈层社群；关系结构：微博弱联系 vs 微信强联系；信息信任：微博广度大信任低 vs 微信信任高视野窄；功能定位：微博媒体属性 vs 微信社交属性；舆论作用：微博制造热点 vs 微信沉淀共识。", "freq": 1, "q": "简述微博与微信的区别", "tag": "简答"}, {"a": "即时性（信息实时到达）；交互性（双向多轮对话、可即时反馈）；私密性（一对一或小圈层）；情感性（熟人关系情感连接强）；多媒体化（文字、语音、视频、表情包综合运用）。", "freq": 1, "q": "简述网络人际传播的渠道特点", "tag": "简答"}, {"a": "加速舆论形成（话题迅速发酵）；下沉传播（深入家族群等私域，扩大覆盖）；情绪化助推（熟人背书使情绪易传染）；谣言温床（“内部消息”难核验、辟谣难）；动员功能（群聊便于组织行动，线上舆论易转线下）。", "freq": 1, "q": "简述即时通信传播对舆论形成的影响", "tag": "简答"}, {"a": "社交类：微信、微博；新闻资讯类：今日头条、澎湃新闻；短视频类：抖音、快手；问答/社区类：知乎、小红书；直播类：斗鱼、抖音直播。（列举5个不同类型即可）", "freq": 1, "q": "请列举五个不同类型的移动端新媒体应用", "tag": "简答"}, {"a": "内容为王（做强原创、做精垂直）；技术赋能（优化算法，兼顾个性化与主流价值）；用户运营（增强互动、发展会员制）；融合发展（结合短视频、直播）；盈利模式（广告+付费+政务服务多元变现）。", "freq": 1, "q": "简述新闻客户端的发展对策", "tag": "简答"}, {"a": "信息茧房（视野越收越窄）；回声室效应（加剧群体极化）；标题党泛滥（劣币驱逐良币）；价值观偏差（流量至上）；隐私问题（过度采集用户数据）。", "freq": 1, "q": "简述目前新闻推荐算法存在的问题", "tag": "简答"}, {"a": "可直接穿戴在身上或整合进服装、配件中的便携式智能设备，如智能手表、智能手环、VR眼镜。特点：贴近人体、持续在线、感知环境；是物联网在个人层面的典型应用、“万物皆媒”的硬件入口。", "freq": 1, "q": "可穿戴设备是什么", "tag": "名解"}, {"a": "虚拟现实，利用计算机生成完全沉浸式的三维虚拟环境的技术，用户佩戴设备后与现实世界隔绝。与AR共同推动虚拟世界与现实世界的融合，是下一代媒体形态的重要技术基础。", "freq": 1, "q": "VR是什么", "tag": "名解"}, {"a": "增强现实，将虚拟信息叠加到现实世界的技术，虚实结合。与VR共同推动虚拟世界与现实世界的融合。", "freq": 1, "q": "AR是什么", "tag": "名解"}, {"a": "由哈贝马斯提出，指介于国家与私人领域之间、公民自由讨论公共事务的话语空间，如咖啡馆、沙龙、网络论坛。理想状态是理性、平等、公开的讨论；网络论坛、微博广场是数字时代的新型公共领域。", "freq": 1, "q": "公共领域是什么", "tag": "名解"}, {"a": "即Social Networking Services（社交网络服务），是基于现实或虚拟社会关系、提供信息发布和互动交流的网络平台，如微信、微博、QQ。核心是人际关系链。", "freq": 1, "q": "SNS是什么", "tag": "名解"}, {"a": "群体成员经过讨论协商后，意见向更极端的方向偏移的现象。网络空间中回声室效应和算法推荐加剧群体极化，使温和意见边缘化、极端意见被强化，是网络舆论非理性化的重要机制。", "freq": 1, "q": "群体极化是什么", "tag": "名解"}, {"a": "通过传感器、射频识别等设备，按约定协议将物品与互联网连接，实现智能化识别、定位、跟踪、监控和管理的网络技术。其实质是“万物互联”，架构包括感知层、网络层、应用层三层。", "freq": 2, "q": "物联网技术是什么", "tag": "名解"}, {"a": "围绕某一新闻事件或主题，集中、多角度、持续进行报道的新闻产品形态。类型包括全面集纳型、动态型、静态型、采访型、事件型（口诀“全动静采事”），是网络媒体深度报道的主要形式。", "freq": 4, "q": "新闻专题是什么", "tag": "名解"}, {"a": "即HTML5，移动端广泛应用的交互式页面技术标准。H5页面以图文、音频、视频、互动测试相结合的形式呈现内容，具有传播便捷、体验沉浸、易于分享的特点，是移动新闻创新的代表形态。", "freq": 1, "q": "H5是什么", "tag": "名解"}, {"a": "以数据为核心素材，运用数据挖掘、可视化技术进行新闻报道的新形态。生产流程包括数据获取、清洗、分析、可视化呈现，体现“用数据说话”的新闻理念，是智能化媒体时代的重要新闻生产模式。", "freq": 1, "q": "数据新闻是什么", "tag": "名解"}, {"a": "用户既是接收者也是生产者的互联网应用模式，以博客、Wiki、SNS为代表。与Web1.0“只读”门户模式不同，Web2.0实现了去中心化、人人可参与，奠定了社交媒体时代的基础。", "freq": 2, "q": "Web2.0是什么", "tag": "名解"}, {"a": "个人或小团队依托网络平台自主生产、发布内容的传播主体，如公众号、UP主、博主。特点是门槛低、个性化、交互强。", "freq": 1, "q": "自媒体是什么", "tag": "名解"}, {"a": "整合文字、图片、音频、视频、数据等多种媒介形态、进行跨平台呈现的新闻产品。打破单一文体界限，以多媒体、交互式方式讲好一个新闻故事，是媒介融合在内容生产层面的体现。", "freq": 1, "q": "融合性新闻是什么", "tag": "名解"}, {"a": "一种多人协作编写的超文本系统，最典型的是维基百科。特点是开放编辑、版本留痕、集体智慧，体现了Web2.0时代用户生产内容的精神，也带来信息权威性方面的争议。", "freq": 1, "q": "Wiki是什么", "tag": "名解"}, {"a": "理论由麦库姆斯和唐纳德·肖提出，认为大众媒介通过选择和强调某些议题，告诉公众“想什么”（而不是“怎么想”），从而影响公众对议题重要性的判断。", "freq": 1, "q": "议程设置是什么", "tag": "名解"}, {"a": "具有独立操作系统、可安装应用软件、持续联网的移动电话。它是手机媒体的核心终端，集通信、娱乐、支付、办公于一体，使用户“永远在线”，成为人体器官的延伸。", "freq": 1, "q": "智能手机是什么", "tag": "名解"}, {"a": "第五代移动通信技术，具有高速率、低时延、大连接三大特性。为4K/8K视频、VR/AR、物联网、自动驾驶等应用提供网络基础，是智能化媒体时代的关键基础设施。", "freq": 1, "q": "5G是什么", "tag": "名解"}, {"a": "用于解释用户接受新技术的心理机制的模型，核心变量是感知有用性和感知易用性：用户觉得一项技术有用且好用，才会采纳。是新媒体用户研究的基础模型之一。", "freq": 1, "q": "技术采纳模型（TAM）是什么", "tag": "名解"}, {"a": "认为个体行为意向取决于行为态度、主观规范和知觉行为控制三个因素的理论。常用于解释网民的信息分享、媒介使用等行为，是新媒体效果研究的重要理论工具。", "freq": 1, "q": "计划行为理论（TPB）是什么", "tag": "名解"}, {"a": "个体只关注自己感兴趣的信息、视野日益狭窄，如同生活在蚕茧中的现象。其个人表征是“个人日报”。它是算法推荐的负效应之一，与回声室效应、群体极化构成网络心理效应链。", "freq": 2, "q": "信息茧房是什么", "tag": "名解"}, {"a": "哈贝马斯", "freq": 1, "q": "提出“公共领域”理论的学者是", "tag": "选择"}, {"a": "浦尔", "freq": 1, "q": "《自由的技术》中提出“媒介融合”概念的学者是", "tag": "选择"}, {"a": "卡斯特", "freq": 1, "q": "提出“流动的空间”概念的学者是", "tag": "选择"}, {"a": "库尔特·卢因", "freq": 1, "q": "提出“把关人”理论的学者是", "tag": "选择"}, {"a": "拉扎斯菲尔德", "freq": 1, "q": "提出“两级传播”理论的学者是", "tag": "选择"}, {"a": "威廉·吉布森", "freq": 1, "q": "《神经漫游者》中提出“赛博空间”概念的作者是", "tag": "选择"}, {"a": "标点符号的重度使用", "freq": 3, "q": "社交媒体文章标题的特性是____（三卷选择第10题连考）", "tag": "选择"}, {"a": "来源陷阱、时间陷阱、专业陷阱、情绪/情感/认知框架陷阱", "freq": 3, "q": "网络假新闻陷阱包括哪四类", "tag": "选择"}, {"a": "情绪框架陷阱", "freq": 3, "q": "“喝酒能抗癌”式急于贴标签属于哪种假新闻陷阱", "tag": "选择"}, {"a": "专业陷阱", "freq": 3, "q": "“抢独家未经求证刊发”属于哪种假新闻陷阱", "tag": "选择"}, {"a": "全面集纳型、动态型、静态型、采访型、事件型（口诀：全动静采事）", "freq": 4, "q": "新闻专题的五种类型是", "tag": "选择"}, {"a": "事件型、静态型、采访型", "freq": 3, "q": "三卷选择连考新闻专题类型：2022.4考____、2022.10考____、2023.4考____", "tag": "选择"}, {"a": "原生网络媒体、合作型新闻网站、聚合型新闻网站、新型网络媒体（聚合型实例：《赫芬顿邮报》、BuzzFeed）", "freq": 2, "q": "新闻网站的四种类型是", "tag": "选择"}, {"a": "蒂姆·伯纳斯-李，1989年", "freq": 2, "q": "WWW技术的构想者及其提出年份", "tag": "选择"}, {"a": "情感连接、话语权利相对平等", "freq": 1, "q": "微信朋友圈传播的特点是", "tag": "选择"}, {"a": "麦库姆斯和唐纳德·肖", "freq": 1, "q": "议程设置理论的提出者是", "tag": "选择"}, {"a": "社会整合作用", "freq": 1, "q": "麦库姆斯和唐纳德·肖还提出议程设置具有哪项社会功能（2022.4选择13考）", "tag": "选择"}, {"a": "基于位置的服务", "freq": 1, "q": "LBS的全称是", "tag": "选择"}, {"a": "基站定位+GPS", "freq": 1, "q": "手机定位主要依靠的技术是", "tag": "选择"}, {"a": "信息茧房→回声室→群体极化", "freq": 1, "q": "网络心理效应链的三环依次是", "tag": "选择"}, {"a": "小圈子信息加强（同类观点相互强化）", "freq": 1, "q": "回声室效应的题眼是", "tag": "选择"}, {"a": "个人日报", "freq": 1, "q": "2024全国卷选择15：信息茧房的个人表征是", "tag": "选择"}]</script>
+<script>
+var SLUG="14237", NAME="手机媒体概论";
+var RAW=JSON.parse(document.getElementById('cards-data').textContent);
+var ORDER=RAW.map(function(c,i){return i;}).sort(function(a,b){return RAW[b].freq-RAW[a].freq;});
+var KEY='zk_cards_'+SLUG;
+function load(){try{var s=JSON.parse(localStorage.getItem(KEY));if(s&&s.known&&s.wrong)return s;}catch(e){}return {known:[],wrong:[]};}
+function save(){localStorage.setItem(KEY,JSON.stringify(store));}
+var store=load();
+var queue=[],retry=[],qi=0,roundTotal=0,roundKnown=0,roundAttempted={},phase='';
+var TAGC={"名解": "#2a7a4b", "简答": "#b3541e", "论述": "#7a3b12", "选择": "#1a6fa8", "综合": "#6a3fa0", "填空": "#1a6fa8"};
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').split('\n').join('<br>');}
+function freqLabel(f){var hot=f>=2?' hot':'';return '<span class="freq'+hot+'">真题考过 '+f+' 次</span>';}
+function tagPill(t){var c=TAGC[t]||'#888';return '<span class="tag" style="background:'+c+'">'+esc(t)+'</span>';}
+function knownCount(){return store.known.length;}
+function paintProg(done,total){
+  document.getElementById('pfill').style.width=(total?Math.round(done/total*100):0)+'%';
+  document.getElementById('ptext').textContent='已掌握 '+knownCount()+' / '+RAW.length+'（本轮 '+done+'/'+total+'）';
+}
+function startScreen(){
+  phase='menu';paintProg(0,0);
+  var nWrong=store.wrong.length;
+  var h='<div class="center">共 '+RAW.length+' 张卡片<br>已掌握 '+knownCount()+' 张 · 待加强 '+nWrong+' 张<br><br>'+
+    '<div class="btnrow"><button class="btn-show" onclick="startRound(\'full\')">开始自测</button></div>';
+  if(nWrong){h+='<div class="btnrow"><button class="btn-know" onclick="startRound(\'wrong\')">只练错题（'+nWrong+'）</button></div>';}
+  h+='</div>';
+  document.getElementById('stage').innerHTML=h;
+  document.getElementById('b-retry').disabled=!nWrong;
+}
+function startRound(mode){
+  roundAttempted={};roundKnown=0;
+  if(mode==='wrong'){queue=store.wrong.slice().sort(function(a,b){return RAW[b].freq-RAW[a].freq;});}
+  else{queue=ORDER.slice();}
+  retry=[];qi=0;roundTotal=queue.length;phase='quiz';
+  if(!queue.length){startScreen();return;}
+  showCard(false);
+}
+function showCard(revealed){
+  var i=queue[qi],c=RAW[i],st=document.getElementById('stage');
+  paintProg(qi,roundTotal);
+  var h='<div class="fcard">'+freqLabel(c.freq)+tagPill(c.tag)+'<div class="q">'+esc(c.q)+'</div>';
+  if(revealed){
+    h+='<div class="a"><div class="alabel">✓ 答案要点</div>'+esc(c.a)+'</div></div>';
+    h+='<div class="btnrow"><button class="btn-know" onclick="mark(true)">会 ✓</button><button class="btn-unknow" onclick="mark(false)">不会 ✗</button></div>';
+  }else{
+    h+='</div><div class="btnrow"><button class="btn-show" onclick="showCard(true)">显示答案</button></div>';
+  }
+  st.innerHTML=h;
+  window.scrollTo(0,0);
+}
+function mark(know){
+  var i=queue[qi];
+  roundAttempted[i]=1;
+  var ki=store.known.indexOf(i),wi=store.wrong.indexOf(i);
+  if(know){
+    if(ki<0)store.known.push(i);
+    if(wi>=0)store.wrong.splice(wi,1);
+    roundKnown++;
+  }else{
+    if(wi<0)store.wrong.push(i);
+    if(retry.indexOf(i)<0)retry.push(i);
+  }
+  save();qi++;next();
+}
+function next(){
+  if(qi<queue.length){showCard(false);return;}
+  if(retry.length){queue=retry;retry=[];qi=0;roundTotal=queue.length;showCard(false);return;}
+  summary();
+}
+function summary(){
+  phase='done';
+  var total=Object.keys(roundAttempted).length;
+  var rate=total?Math.round(roundKnown/total*100):0;
+  paintProg(roundTotal,roundTotal);
+  var h='<div class="sum"><div style="text-align:center;color:#888;font-size:14px">本轮结算</div>'+
+    '<div class="rate">'+roundKnown+' / '+total+'（'+rate+'%）</div>';
+  if(store.wrong.length){
+    h+='<div style="font-size:14px;color:#888;margin:10px 0 4px">错题本（'+store.wrong.length+'）· 点击展开看答案</div>';
+    var ws=store.wrong.slice().sort(function(a,b){return RAW[b].freq-RAW[a].freq;});
+    ws.forEach(function(i){
+      var c=RAW[i];
+      h+='<div class="witem"><div class="wq" onclick="this.parentNode.classList.toggle(\'open\')">'+esc(c.q)+'</div><div class="wa">'+freqLabel(c.freq)+' '+tagPill(c.tag)+'<br>'+esc(c.a)+'</div></div>';
+    });
+  }else{
+    h+='<div class="center">🎉 全部掌握！</div>';
+  }
+  h+='</div><div class="btnrow"><button class="btn-know" onclick="startRound(\'wrong\')"'+(store.wrong.length?'':' disabled')+'>再练错题</button>'+
+     '<button class="btn-ghost" onclick="startRound(\'full\')">重新开始</button></div>';
+  document.getElementById('stage').innerHTML=h;
+  window.scrollTo(0,0);
+}
+document.getElementById('b-retry').onclick=function(){if(store.wrong.length)startRound('wrong');};
+document.getElementById('b-reset').onclick=function(){
+  if(confirm('清空本门课的全部自测进度？')){localStorage.removeItem(KEY);store={known:[],wrong:[]};startScreen();}
+};
+startScreen();
+</script>
+</body></html>

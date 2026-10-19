@@ -1,0 +1,148 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>背诵卡片 - 网络传播法规 - 自考学习站</title><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#f7f5f0;color:#222;font-size:16px;line-height:1.9}
+.wrap{max-width:720px;margin:0 auto;padding:16px 16px 64px}
+header.top{background:#1a1a1a;color:#fff;padding:14px 16px;position:sticky;top:0;z-index:10}
+header.top .in{max-width:720px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+header.top a{color:#fff;text-decoration:none}
+header.top .t{font-size:17px;font-weight:700}
+header.top .r{font-size:13px;color:#bbb}
+.back{display:inline-block;margin:12px 0;font-size:14px;color:#b3541e;text-decoration:none}
+h2.pt{font-size:20px;margin:6px 0 2px}
+.sub{font-size:13px;color:#888;margin-bottom:10px}
+.prog{margin:12px 0}
+.bar{background:#e8e2d6;border-radius:8px;height:10px;overflow:hidden}
+.bar>div{background:#b3541e;height:100%;width:0%;transition:width .3s;border-radius:8px}
+.ptext{font-size:13px;color:#888;margin-top:6px}
+.fcard{background:#fff;border-radius:14px;padding:22px 18px;margin:14px 0;box-shadow:0 2px 10px rgba(0,0,0,.07);min-height:220px;position:relative}
+.fcard .freq{position:absolute;top:12px;right:12px;font-size:12px;color:#999;background:#f0ece2;border-radius:20px;padding:2px 10px}
+.fcard .freq.hot{color:#fff;background:#c0392b;font-weight:700}
+.fcard .tag{display:inline-block;font-size:12px;color:#fff;border-radius:6px;padding:1px 8px;margin-bottom:10px}
+.fcard .q{font-size:18px;font-weight:600;line-height:1.7;padding-right:92px}
+.fcard .a{margin-top:14px;padding-top:14px;border-top:1px dashed #ddd;font-size:15px;line-height:1.9}
+.fcard .a .alabel{font-size:13px;color:#2a7a4b;font-weight:700;margin-bottom:6px}
+.btnrow{display:flex;gap:10px;margin:14px 0}
+button{flex:1;border:none;border-radius:12px;padding:14px;font-size:16px;font-weight:700;cursor:pointer}
+.btn-show{background:#1a1a1a;color:#fff}
+.btn-know{background:#2a7a4b;color:#fff}
+.btn-unknow{background:#c0392b;color:#fff}
+.btn-ghost{background:#fff;color:#b3541e;border:1px solid #e2ddd2;flex:1}
+.btn-ghost:disabled{opacity:.4}
+.center{text-align:center;color:#888;padding:40px 0}
+.sum{background:#fff;border-radius:14px;padding:22px 18px;margin:14px 0;box-shadow:0 2px 10px rgba(0,0,0,.07)}
+.sum .rate{font-size:34px;font-weight:800;color:#b3541e;text-align:center;margin:8px 0}
+.witem{border-top:1px solid #eee;padding:10px 0}
+.witem .wq{font-size:15px;font-weight:600;cursor:pointer;color:#7a3b12}
+.witem .wa{display:none;font-size:14px;color:#444;margin-top:6px;background:#faf8f3;border-radius:8px;padding:10px}
+.witem.open .wa{display:block}
+footer{max-width:720px;margin:0 auto;padding:20px 16px 40px;color:#aaa;font-size:12px;text-align:center}
+</style></head><body>
+<header class="top"><div class="in"><a class="t" href="../index.html">📚 自考学习站</a><span class="r">网络传播法规</span></div></header>
+<div class="wrap"><a class="back" href="../s/14339.html">← 返回网络传播法规</a>
+<h2 class="pt">🎴 背诵卡片自测</h2>
+<div class="sub">按真题出现次数排序 · 高频优先 · 进度自动保存</div>
+<div class="prog"><div class="bar"><div id="pfill"></div></div><div id="ptext" class="ptext"></div></div>
+<div id="stage"></div>
+<div class="btnrow" id="menubtns" style="margin-top:18px">
+<button class="btn-ghost" id="b-retry">再练错题</button>
+<button class="btn-ghost" id="b-reset">重置进度</button>
+</div></div>
+<footer>网络与新媒体 · 专升本冲刺 · 10月24-25日考试加油</footer>
+<script id="cards-data" type="application/json">[{"a": "定义：国家在网络空间享有的独立、自主、自卫和管辖的最高权力，是国家主权在网络空间的延伸。四表现：管辖权、自卫权、空间独立权、资源平等共享权（口诀\"管自空资\"）。维护：①加强网络立法（三法构建法治体系）；②坚持自主创新（核心技术自主可控）；③参与国际规则制定，反对\"全球公域\"说（美国主张）；④加强内容管理与舆论引导；⑤增强全民意识（宣传教育、完善法律、培养人才；依法上网、不信谣不传谣、及时举报）。", "freq": 8, "q": "结合互联网环境背景，论述网络空间主权及维护", "tag": "论述"}, {"a": "四十条：网络运营者对其收集的用户信息严格保密，建立健全用户信息保护制度。四十一条：收集、使用个人信息遵循合法、正当、必要原则；公开规则、明示目的方式范围、经被收集者同意；不得收集无关信息。四十二条：不得泄露、篡改、毁损；未经同意不得向他人提供；采取技术措施防泄密；发生泄露立即补救、告知用户并报告。四十三条赋予删除权、更正权；四十四条禁止窃取、非法出售或非法提供。", "freq": 3, "q": "试述《网络安全法》规范个人信息保护的具体措施", "tag": "论述"}, {"a": "泄密途径：①计算机网络传输、存储涉密信息；②移动存储介质（U盘等）拷贝带出；③手机/移动终端拍摄、录音外传；④对外交往与合作失密。治理措施：技术—涉密网与互联网物理隔离，\"涉密不上网、上网不涉密\"；管理—定密制度、规范介质和手机使用；法律—依《保守国家秘密法》追责，2010年修订版第28条处置三步：立即停止传输、保存记录、向公安/国安报告；人员—保密宣传教育与问责。", "freq": 2, "q": "结合互联网环境背景，论述网络泄密的治理", "tag": "论述"}, {"a": "表现：①隐性网络广告（公认广告方式以外的手段发布）；②竞价排名伪装成自然搜索结果；③种草软文、直播带货虚假宣传；④夸大功效、虚构案例。虚假信息界定四标准：无根据性、具体性、可行性、危害性。防治：法律（广告法、互联网广告管理办法、反不正当竞争法，明确各方责任）；平台（先审后发、广告档案、违法即下架并报告）；技术（大数据AI识别、监测预警）；社会共治（投诉举报、行业自律、舆论监督）。", "freq": 3, "q": "结合虚假广告在网络上的表现形式，论述防治手段", "tag": "论述"}, {"a": "侵权样态：去中心化、跨地域、隐蔽化；未经许可复制传播、\"洗稿\"、盗播盗链、聚合转码。刑法第217、218、222条刑罚：罚金、拘役、有期徒刑。自律措施：①制定行业规范（转载/引用/付费边界）；②版权合作机制（授权合作、正版采购）；③完善\"通知—删除\"机制（阶梯处罚直至封禁）；④技术保护（数字水印、区块链存证）；⑤版权集体管理（一揽子授权）；⑥侵权黑名单联合惩戒。", "freq": 3, "q": "论述如何加强网络媒体行业自律以治理网络侵犯著作权", "tag": "论述"}, {"a": "加强网络立法，把主权原则法律化；坚持核心技术自主创新，技术自主可控；积极参与网络空间国际规则制定，掌握话语权；反对\"全球公域\"说，坚持主权原则；加强网络内容管理与舆论引导；处理好国家管理、社会调节与社会自治的关系；增强全民网络空间主权意识。", "freq": 2, "q": "简述为维护网络空间主权需要开展的主要工作", "tag": "简答"}, {"a": "信源多元化：人人都有麦克风，UGC成重要信源；传播即时化：现场直播、短视频让新闻\"正在发生\"；核实机制变化：从\"先核实后发布\"到\"发布—核实—修正\"并行；真实标准拓展：从事实真实向\"过程真实\"\"参与真实\"延伸；把关人转移：算法推荐和平台审核成新把关力量；用户参与核验：受众既是传播者也是\"事实核查员\"。", "freq": 1, "q": "简述互联网如何重塑新闻真实新生态", "tag": "简答"}, {"a": "侮辱：以暴力或语言贬损他人人格；诽谤：捏造、散布虚假事实损害他人名誉；泄露隐私：披露他人不愿公开的私人信息；冒用身份：盗用他人名义发布不当言论；不当评价：超出合理评论界限的恶意贬损。（考前对照讲义核对五类表述）", "freq": 1, "q": "网络侵犯他人名誉权的类型可归纳为哪五类", "tag": "简答"}, {"a": "计算机网络传输、存储涉密信息泄密；移动存储介质（U盘、移动硬盘）拷贝带出泄密；手机及移动终端拍摄、录音、外传泄密；即时通信软件、邮箱、网盘外发泄密；对外交往、学术交流、商务合作中失密。", "freq": 2, "q": "简述网络泄密的主要途径", "tag": "简答"}, {"a": "网络爬虫：批量抓取公开页面中的个人信息；植入恶意程序：木马、间谍软件窃取终端数据；钓鱼攻击：伪造网站、邮件诱骗用户提交信息；数据交易与撞库：购买黑市数据、利用泄露数据库批量验证。（考前对照讲义核对四种表述）", "freq": 1, "q": "简述利用科技手段收集个人信息的四种方式", "tag": "简答"}, {"a": "主体不同：著作权主体是作者等创作者，邻接权主体是表演者、录音录像制作者、广播组织等传播者；保护对象不同：著作权保护作品本身，邻接权保护作品的传播成果；权利内容不完全相同：邻接权内容较著作权窄；保护期限不同：邻接权保护期较短（如表演者权、录制者权一般为50年）。", "freq": 2, "q": "邻接权和著作权在哪四个方面体现出不同", "tag": "简答"}, {"a": "国家层面：开展网络空间主权宣传教育，纳入国民教育体系；完善网络安全法律法规体系；加强网络安全人才培养；提升网络空间国际话语权。个人层面：学习网络安全知识，树立主权意识；依法文明上网，不信谣、不传谣；保护个人信息，不随意泄露；发现危害主权和安全的行为及时举报。", "freq": 2, "q": "从国家层面和个人层面，简述增强网络空间主权意识的举措", "tag": "简答"}, {"a": "编造、散布虚假信息；组织、雇佣网络水军造势；人肉搜索、曝光他人隐私；侮辱谩骂、恶意诋毁；煽动对立、挑动群体情绪。（考前对照讲义核对五种表述）", "freq": 1, "q": "简述网络谣言暴力包括的主要五种行为", "tag": "简答"}, {"a": "未经许可的商业广告邮件；诈骗类邮件（钓鱼、中奖、冒充公检法）；传播淫秽色情内容的邮件；传播病毒、木马等恶意程序的邮件；连锁信、恶作剧类骚扰邮件。（考前对照讲义核对五类表述）", "freq": 1, "q": "简述常见五类垃圾电子邮件形式", "tag": "简答"}, {"a": "行为人证明其传播的信息内容真实，从而免除侵犯名誉权责任的抗辩事由；所传播事实基本真实即不构成侵权。体现言论自由与名誉权保护的平衡，是新闻舆论监督的重要法律屏障。", "freq": 2, "q": "真实性抗辩是什么", "tag": "名解"}, {"a": "一切国家机关、武装力量、政党、社会团体、企事业单位和公民都有保守国家秘密的义务。国家秘密是关系国家安全和利益、依法定程序确定、在一定时间内只限一定范围人员知悉的事项；密级分为绝密、机密、秘密三级。", "freq": 2, "q": "保守国家秘密是什么", "tag": "名解"}, {"a": "歪曲事实或捏造虚假事件、通过网络大量传播、误导网民、煽动对立情绪的信息。常与煽动分裂国家、煽动颠覆国家政权、煽动民族仇恨等犯罪相关联，是网络空间治理的重点打击对象。", "freq": 2, "q": "网络煽动性信息是什么", "tag": "名解"}, {"a": "自然人对其个人信息享有的支配、控制并排除他人侵害的权利，包括信息的决定权、查询权、更正权、删除权等。《网络安全法》《个人信息保护法》是其主要法律保障。注意：个人信息侧重识别性，隐私侧重不愿公开性。", "freq": 2, "q": "个人信息权是什么", "tag": "名解"}, {"a": "以公认的广告方式以外的手段发布的广告，如软文、种草笔记、竞价排名伪装成自然搜索结果。危害在于受众难辨广告与内容界限，损害消费者知情权；《互联网广告管理办法》要求广告必须显著标明\"广告\"字样。", "freq": 2, "q": "隐性网络广告是什么", "tag": "名解"}, {"a": "新闻报道中虚构事实、无中生有或严重失实的内容；违背新闻真实性原则，损害媒体公信力。治理虚假新闻要坚持\"先核实后发布\"，建立事实核查机制，对\"抢独家未经求证刊发\"等违反专业规范的行为追责。", "freq": 1, "q": "虚假新闻是什么", "tag": "名解"}, {"a": "受雇在网络上发布虚假评论、刷量控评、制造虚假舆论声势的群体或组织；是虚假评论的主要生产者，常服务于商业炒作、舆论操纵。其行为可能构成不正当竞争，情节严重的触犯寻衅滋事等罪名。", "freq": 1, "q": "网络水军是什么", "tag": "名解"}, {"a": "名誉权侵权纠纷中，行为人可以主张免除或减轻侵权责任的法定理由。受害人同意是抗辩事由；无效评论、多次引用、打字错误等不是抗辩事由。真实性抗辩是最常见的抗辩事由之一。", "freq": 2, "q": "抗辩事由是什么", "tag": "名解"}, {"a": "自然人不愿为他人知晓的私密空间、私密活动和私密信息。隐私权的客体包括宁居权（住宅安宁不受侵扰）等。2009年12月通过的《侵权责任法》是侵犯隐私权的重要救济法。隐私与个人信息既有交叉又有区别。", "freq": 2, "q": "隐私是什么", "tag": "名解"}, {"a": "又称版权；指作者对其创作的文学、艺术和科学作品享有的专有权利。包括人身权（发表权、署名权、修改权、保护作品完整权）和财产权（复制权、发行权、信息网络传播权等）。侵犯著作权情节严重的，适用《刑法》第217、218条追究刑事责任。", "freq": 2, "q": "著作权是什么", "tag": "名解"}, {"a": "国家主权在网络空间的延伸，指国家在网络空间享有的独立、自主、自卫和管辖的最高权力。表现为管辖权、自卫权、空间独立权、资源平等共享权四个方面。中国坚定维护网络空间主权，反对\"全球公域\"说。", "freq": 1, "q": "网络空间主权是什么", "tag": "名解"}, {"a": "在网络上编造、传播的没有事实依据的信息。其界定有四个标准：无根据性、具体性、可行性、危害性。它扰乱网络秩序、误导公众决策，治理上坚持\"依法打击+平台治理+公众辨识\"多管齐下。", "freq": 3, "q": "网络虚假信息是什么", "tag": "名解"}, {"a": "自然人在网络空间中对其私密信息、私密活动享有的不受侵扰的权利。包括网络宁居权（不受垃圾信息、骚扰侵扰）和网络私密信息保护。网络运营者收集、使用个人信息必须遵循合法、正当、必要原则并经用户同意。", "freq": 2, "q": "网络隐私权是什么", "tag": "名解"}, {"a": "自然人、法人依法享有的在网络空间中名誉不受贬损的权利；主要表现为侮辱、诽谤。行为人主张真实性抗辩或受害人同意的，可以免除侵权责任；无效评论、多次引用、打字错误不能作为抗辩事由。", "freq": 1, "q": "网络名誉权是什么", "tag": "名解"}, {"a": "与著作权相邻的权利，是作品传播者（表演者、录音录像制作者、广播组织等）对其传播成果享有的权利，依附于著作权而存在。与著作权在主体、保护对象、权利内容、保护期限四个方面存在不同。", "freq": 2, "q": "邻接权是什么", "tag": "名解"}, {"a": "管辖权、自卫权、空间独立权、资源平等共享权（口诀\"管自空资\"）", "freq": 5, "q": "网络空间主权四项表现：__、__、__、__", "tag": "选择"}, {"a": "美国；网络空间主权原则", "freq": 2, "q": "\"全球公域\"说是__的主张；中国坚持__原则", "tag": "选择"}, {"a": "网络伦理建设；国家管理、社会调节、社会自治", "freq": 1, "q": "网络空间治理原则：持续推进__；处理好__、__与__的关系", "tag": "选择"}, {"a": "国家安全和利益；绝密、机密、秘密（口诀\"绝机秘\"）", "freq": 2, "q": "国家秘密是指关系__和__的事项；密级分为__、__、__三级", "tag": "选择"}, {"a": "立即停止传输、保存有关记录、向公安/国安机关报告（口诀\"停、存、报\"）", "freq": 1, "q": "2010年修订《保守国家秘密法》第28条：机关单位发现泄密应__、__、__", "tag": "选择"}, {"a": "煽动分裂国家罪、煽动颠覆国家政权罪、煽动民族仇恨民族歧视罪、煽动抗拒法律实施罪、煽动军人逃离部队罪", "freq": 1, "q": "煽动型犯罪的五个罪名：__、__、__、__、__", "tag": "选择"}, {"a": "歪曲事实/捏造虚假事件、大量传播、误导网民", "freq": 1, "q": "网络煽动性信息定义三要素：__、__、__", "tag": "选择"}, {"a": "无根据性、具体性、可行性、危害性（口诀\"无具可行危\"）", "freq": 3, "q": "网络虚假信息界定四标准：__、__、__、__", "tag": "选择"}, {"a": "受害人同意；无效评论、多次引用、打字错误", "freq": 2, "q": "抗辩事由判断：__是抗辩事由；__、__、__不是抗辩事由", "tag": "选择"}, {"a": "2009年12月；救济", "freq": 1, "q": "《侵权责任法》__年__月通过，是侵犯隐私权的重要__法", "tag": "选择"}, {"a": "版权；217、218、222", "freq": 2, "q": "著作权又称__；《刑法》第__、__、__条规定罚金、拘役、有期徒刑等刑罚", "tag": "选择"}, {"a": "ICANN；1998", "freq": 1, "q": "互联网名称与数字地址分配机构是__，诞生于__年", "tag": "选择"}, {"a": "产业导向→产业导向让位于媒体导向→（国家）战略实施（口诀\"产、媒、国\"）", "freq": 1, "q": "中国网络治理三阶段：__→__→__", "tag": "选择"}, {"a": "化运动式整治为长久式防控", "freq": 1, "q": "淫秽色情信息治理方针：\"__\"", "tag": "选择"}, {"a": "合法、正当、必要；被收集者", "freq": 2, "q": "网络运营者收集、使用个人信息应遵循__、__、__原则，并经__同意", "tag": "选择"}, {"a": "先核实后发布", "freq": 1, "q": "治理虚假新闻坚持\"__\"，建立事实核查机制", "tag": "选择"}, {"a": "广告", "freq": 1, "q": "《互联网广告管理办法》要求广告必须显著标明\"__\"字样", "tag": "选择"}, {"a": "政府未公开信息", "freq": 1, "q": "国家秘密属于__", "tag": "选择"}]</script>
+<script>
+var SLUG="14339", NAME="网络传播法规";
+var RAW=JSON.parse(document.getElementById('cards-data').textContent);
+var ORDER=RAW.map(function(c,i){return i;}).sort(function(a,b){return RAW[b].freq-RAW[a].freq;});
+var KEY='zk_cards_'+SLUG;
+function load(){try{var s=JSON.parse(localStorage.getItem(KEY));if(s&&s.known&&s.wrong)return s;}catch(e){}return {known:[],wrong:[]};}
+function save(){localStorage.setItem(KEY,JSON.stringify(store));}
+var store=load();
+var queue=[],retry=[],qi=0,roundTotal=0,roundKnown=0,roundAttempted={},phase='';
+var TAGC={"名解": "#2a7a4b", "简答": "#b3541e", "论述": "#7a3b12", "选择": "#1a6fa8", "综合": "#6a3fa0", "填空": "#1a6fa8"};
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').split('\n').join('<br>');}
+function freqLabel(f){var hot=f>=2?' hot':'';return '<span class="freq'+hot+'">真题考过 '+f+' 次</span>';}
+function tagPill(t){var c=TAGC[t]||'#888';return '<span class="tag" style="background:'+c+'">'+esc(t)+'</span>';}
+function knownCount(){return store.known.length;}
+function paintProg(done,total){
+  document.getElementById('pfill').style.width=(total?Math.round(done/total*100):0)+'%';
+  document.getElementById('ptext').textContent='已掌握 '+knownCount()+' / '+RAW.length+'（本轮 '+done+'/'+total+'）';
+}
+function startScreen(){
+  phase='menu';paintProg(0,0);
+  var nWrong=store.wrong.length;
+  var h='<div class="center">共 '+RAW.length+' 张卡片<br>已掌握 '+knownCount()+' 张 · 待加强 '+nWrong+' 张<br><br>'+
+    '<div class="btnrow"><button class="btn-show" onclick="startRound(\'full\')">开始自测</button></div>';
+  if(nWrong){h+='<div class="btnrow"><button class="btn-know" onclick="startRound(\'wrong\')">只练错题（'+nWrong+'）</button></div>';}
+  h+='</div>';
+  document.getElementById('stage').innerHTML=h;
+  document.getElementById('b-retry').disabled=!nWrong;
+}
+function startRound(mode){
+  roundAttempted={};roundKnown=0;
+  if(mode==='wrong'){queue=store.wrong.slice().sort(function(a,b){return RAW[b].freq-RAW[a].freq;});}
+  else{queue=ORDER.slice();}
+  retry=[];qi=0;roundTotal=queue.length;phase='quiz';
+  if(!queue.length){startScreen();return;}
+  showCard(false);
+}
+function showCard(revealed){
+  var i=queue[qi],c=RAW[i],st=document.getElementById('stage');
+  paintProg(qi,roundTotal);
+  var h='<div class="fcard">'+freqLabel(c.freq)+tagPill(c.tag)+'<div class="q">'+esc(c.q)+'</div>';
+  if(revealed){
+    h+='<div class="a"><div class="alabel">✓ 答案要点</div>'+esc(c.a)+'</div></div>';
+    h+='<div class="btnrow"><button class="btn-know" onclick="mark(true)">会 ✓</button><button class="btn-unknow" onclick="mark(false)">不会 ✗</button></div>';
+  }else{
+    h+='</div><div class="btnrow"><button class="btn-show" onclick="showCard(true)">显示答案</button></div>';
+  }
+  st.innerHTML=h;
+  window.scrollTo(0,0);
+}
+function mark(know){
+  var i=queue[qi];
+  roundAttempted[i]=1;
+  var ki=store.known.indexOf(i),wi=store.wrong.indexOf(i);
+  if(know){
+    if(ki<0)store.known.push(i);
+    if(wi>=0)store.wrong.splice(wi,1);
+    roundKnown++;
+  }else{
+    if(wi<0)store.wrong.push(i);
+    if(retry.indexOf(i)<0)retry.push(i);
+  }
+  save();qi++;next();
+}
+function next(){
+  if(qi<queue.length){showCard(false);return;}
+  if(retry.length){queue=retry;retry=[];qi=0;roundTotal=queue.length;showCard(false);return;}
+  summary();
+}
+function summary(){
+  phase='done';
+  var total=Object.keys(roundAttempted).length;
+  var rate=total?Math.round(roundKnown/total*100):0;
+  paintProg(roundTotal,roundTotal);
+  var h='<div class="sum"><div style="text-align:center;color:#888;font-size:14px">本轮结算</div>'+
+    '<div class="rate">'+roundKnown+' / '+total+'（'+rate+'%）</div>';
+  if(store.wrong.length){
+    h+='<div style="font-size:14px;color:#888;margin:10px 0 4px">错题本（'+store.wrong.length+'）· 点击展开看答案</div>';
+    var ws=store.wrong.slice().sort(function(a,b){return RAW[b].freq-RAW[a].freq;});
+    ws.forEach(function(i){
+      var c=RAW[i];
+      h+='<div class="witem"><div class="wq" onclick="this.parentNode.classList.toggle(\'open\')">'+esc(c.q)+'</div><div class="wa">'+freqLabel(c.freq)+' '+tagPill(c.tag)+'<br>'+esc(c.a)+'</div></div>';
+    });
+  }else{
+    h+='<div class="center">🎉 全部掌握！</div>';
+  }
+  h+='</div><div class="btnrow"><button class="btn-know" onclick="startRound(\'wrong\')"'+(store.wrong.length?'':' disabled')+'>再练错题</button>'+
+     '<button class="btn-ghost" onclick="startRound(\'full\')">重新开始</button></div>';
+  document.getElementById('stage').innerHTML=h;
+  window.scrollTo(0,0);
+}
+document.getElementById('b-retry').onclick=function(){if(store.wrong.length)startRound('wrong');};
+document.getElementById('b-reset').onclick=function(){
+  if(confirm('清空本门课的全部自测进度？')){localStorage.removeItem(KEY);store={known:[],wrong:[]};startScreen();}
+};
+startScreen();
+</script>
+</body></html>
