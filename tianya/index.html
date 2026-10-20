@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>天娅的学习小站</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#f3f4f6;color:#111827}
+header{background:#2563eb;color:#fff;padding:14px 16px;position:sticky;top:0;z-index:20}
+header h1{margin:0;font-size:19px}
+header p{margin:2px 0 0;font-size:12px;opacity:.85}
+nav{display:flex;gap:6px;padding:10px 12px 0;flex-wrap:wrap}
+nav button{flex:1;min-width:30%;padding:10px 4px;border:1px solid #d1d5db;background:#fff;border-radius:10px;font-size:14px}
+nav button.on{background:#2563eb;color:#fff;border-color:#2563eb}
+main{padding:12px;max-width:720px;margin:0 auto}
+.card{background:#fff;border-radius:14px;padding:16px;margin-bottom:12px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.btn{display:block;width:100%;padding:13px;background:#2563eb;color:#fff;border:0;border-radius:10px;font-size:16px;margin:8px 0;text-align:center;text-decoration:none;cursor:pointer}
+.btn.gray{background:#e5e7eb;color:#111827}
+.btn.green{background:#16a34a}
+.btn.red{background:#dc2626}
+.mut{color:#6b7280;font-size:14px}
+.bar{height:14px;background:#e5e7eb;border-radius:7px;overflow:hidden;margin:6px 0}
+.bar i{display:block;height:100%;background:#2563eb}
+.tag{display:inline-block;background:#eff6ff;color:#2563eb;border-radius:6px;padding:2px 8px;font-size:12px;margin:2px 4px 2px 0}
+.flash{min-height:220px;display:flex;flex-direction:column;justify-content:center;cursor:pointer;user-select:none;-webkit-user-select:none}
+.flash.front,.flash.back{white-space:pre-wrap;word-break:break-word;line-height:1.7}
+.opt{display:block;width:100%;text-align:left;padding:12px;border:1px solid #d1d5db;border-radius:10px;background:#fff;margin:6px 0;font-size:15px;cursor:pointer}
+.opt.ok{border-color:#16a34a;background:#f0fdf4}
+.opt.bad{border-color:#dc2626;background:#fef2f2}
+.explain{background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:12px;white-space:pre-wrap;line-height:1.7;margin-top:8px}
+textarea,input[type=text]{width:100%;padding:12px;border:1px solid #d1d5db;border-radius:10px;font-size:16px}
+.row{display:flex;gap:8px}
+.row.btn{margin:8px 0}
+.task{display:flex;align-items:center;gap:10px;padding:12px;border:1px solid #e5e7eb;border-radius:10px;margin:8px 0;background:#fff}
+.task input{width:22px;height:22px}
+.pill{display:inline-block;padding:2px 10px;border-radius:999px;font-size:12px;background:#fef3c7;color:#92400e}
+select{padding:10px;border:1px solid #d1d5db;border-radius:10px;font-size:15px;width:100%}
+.qa{border:1px solid #e5e7eb;border-radius:10px;padding:12px;margin:8px 0;background:#fff}
+.qa.ans{background:#f0fdf4;border-radius:8px;padding:10px;margin-top:8px;white-space:pre-wrap;line-height:1.7}
+</style>
+</head>
+<body>
+<header><h1>天娅的学习小站</h1><p>错题卡片 · 间隔复习 · 举一反三 · 每日打卡</p></header>
+<nav id="tabs">
+<button data-t="today" class="on">今日任务</button>
+<button data-t="cards">记忆卡片</button>
+<button data-t="practice">专项练习</button>
+<button data-t="dict">默写工坊</button>
+<button data-t="book">错题本</button>
+<button data-t="ask">我要提问</button>
+<button data-t="report">学习报告</button>
+</nav>
+<main id="app"></main>
+<script src="data.js"></script>
+<script>
+var D = window.STUDY_DATA || {scores:[],wrong:[],practice:[],dictation:[]};
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function todayStr(){var d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+function lsGet(k,def){try{var v=localStorage.getItem(k);return v?JSON.parse(v):def}catch(e){return def}}
+function lsSet(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+/* 间隔重复：Leitner 盒子，间隔天数 0,1,2,4,7,15,30 */
+var INTERVALS=[0,1,2,4,7,15,30];
+function srAll(){return lsGet('ty_sr',{})}
+function srGet(id){return srAll()[id]||{box:0,due:0,seen:0}}
+function srMark(id,know){
+var all=srAll();var r=all[id]||{box:0,due:0,seen:0};
+r.seen=(r.seen||0)+1;
+r.box=know?Math.min(r.box+1,INTERVALS.length-1):0;
+var days=INTERVALS[r.box];
+r.due=Date.now()+days*86400000;
+all[id]=r;lsSet('ty_sr',all);return r;
+}
+function isDue(id){return srGet(id).due<=Date.now()}
+/* 卡片池：错题卡 + 默写卡 */
+var CARDS=[];
+D.wrong.forEach(function(w,i){
+CARDS.push({id:'w'+i,kind:'wrong',subject:w.subject,no:w.question_no,
+kp:w.knowledge_point||'',etype:w.error_type||'',
+front:'['+w.subject+' · 第'+w.question_no+'题]\n知识点：'+(w.knowledge_point||'见背面')+'\n\n你当时答：'+(w.student_answer||'（未记录）'),
+back:'标准答案：'+(w.std_answer||'见解析')+'\n\n'+(w.note||'')+'\n\n得分：'+w.got_score+' / '+w.full_score,
+raw:w});
+});
+D.dictation.forEach(function(d){
+CARDS.push({id:'d'+d.id,kind:'dict',subject:d.subject,no:d.set,
+kp:d.prompt,etype:'默写',
+front:'['+d.set+']\n'+d.prompt+'\n\n（先在心里默写出来，再点卡片看答案）',
+back:d.answer+'\n\n'+(d.explain||''),
+raw:d});
+});
+var app=document.getElementById('app');
+var curTab='today';
+document.getElementById('tabs').addEventListener('click',function(e){
+if(e.target.tagName!=='BUTTON')return;
+curTab=e.target.getAttribute('data-t');
+var bs=document.querySelectorAll('#tabs button');for(var i=0;i<bs.length;i++)bs[i].classList.toggle('on',bs[i]===e.target);
+render();
+});
+function render(){
+if(curTab==='today')renderToday();
+else if(curTab==='cards')renderCards();
+else if(curTab==='practice')renderPractice();
+else if(curTab==='dict')renderDict();
+else if(curTab==='book')renderBook();
+else if(curTab==='ask')renderAsk();
+else if(curTab==='report')renderReport();
+}
+/* ===== 今日任务 ===== */
+function doneDays(){return lsGet('ty_days',{})}
+function streak(){
+  var days=doneDays();var s=0;var d=new Date();
+  if(!days[todayStr()])d.setDate(d.getDate()-1);
+  while(true){
+    var k=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+    if(days[k]){s++;d.setDate(d.getDate()-1)}else break;
+  }
+  return s;
+}
+function markToday(){var days=doneDays();days[todayStr()]=true;lsSet('ty_days',days)}
+function renderToday(){
+  var due=CARDS.filter(function(c){return isDue(c.id)});
+  var key='ty_task_'+todayStr();
+  var done=lsGet(key,{});
+  var mastered=CARDS.filter(function(c){return srGet(c.id).box>=3}).length;
+  var h='<div class="card"><h2 style="margin-top:0">今日任务</h2>'
+    +'<p class="mut">连续打卡 <b style="color:#2563eb">'+streak()+'</b> 天 · 卡片已掌握 '+mastered+' / '+CARDS.length+' 张</p>';
+  var tasks=[
+    {id:'t1',label:'复习到期卡片（'+due.length+' 张到期）',tab:'cards'},
+    {id:'t2',label:'专项练习 5 题',tab:'practice'},
+    {id:'t3',label:'默写工坊做一组',tab:'dict'}
+  ];
+  tasks.forEach(function(t){
+    h+='<label class="task"><input type="checkbox" data-task="'+t.id+'"'+(done[t.id]?' checked':'')+'>'
+      +'<span style="flex:1">'+esc(t.label)+'</span>'
+      +'<button class="btn gray" style="width:auto;margin:0;padding:8px 14px" data-go="'+t.tab+'">去做</button></label>';
+  });
+  h+='<p class="mut">规则：卡片点"不会"明天再出现；连对几次，间隔会拉长到 4 天、7 天、15 天、30 天。忘了也没关系，它会自己回来。</p></div>';
+  h+='<div class="card"><h2 style="margin-top:0">三个病根（提醒）</h2>'
+    +'<p><b>1. 概念地基有洞</b>——先把概念弄懂，再刷题。</p>'
+    +'<p><b>2. 输出说不到点上</b>——答题先想"得分点是什么"。</p>'
+    +'<p><b>3. 选择题暗坑</b>——错题遮住答案重做，才算真会。</p>'
+    +'<p class="mut">完整分析在「学习报告」里。</p></div>';
+  app.innerHTML=h;
+  app.querySelectorAll('[data-task]').forEach(function(cb){
+    cb.addEventListener('change',function(){
+      var d2=lsGet(key,{});d2[cb.getAttribute('data-task')]=cb.checked;lsSet(key,d2);
+      if(cb.checked)markToday();
+      renderToday();
+    });
+  });
+  app.querySelectorAll('[data-go]').forEach(function(b){
+    b.addEventListener('click',function(e){
+      e.preventDefault();
+      var t=b.getAttribute('data-go');
+      var bs=document.querySelectorAll('#tabs button');
+      bs.forEach(function(x){x.classList.toggle('on',x.getAttribute('data-t')===t)});
+      curTab=t;render();
+    });
+  });
+}
+/* ===== 记忆卡片 ===== */
+var CARD={list:[],idx:0,flipped:false,subject:'全部',dueOnly:true};
+function buildDeck(){
+  var list=CARDS.filter(function(c){
+    if(CARD.subject!=='全部'&&c.subject!==CARD.subject)return false;
+    if(CARD.dueOnly&&!isDue(c.id))return false;
+    return true;
+  });
+  list.sort(function(a,b){return srGet(a.id).box-srGet(b.id).box});
+  CARD.list=list;
+  if(CARD.idx>=list.length)CARD.idx=0;
+}
+function renderCards(){
+  buildDeck();
+  var subjects=['全部','语文','数学','英语','物理','化学','生物','历史','政治','地理'];
+  var h='<div class="card"><div class="row">'
+    +'<select id="cSubj" style="flex:1">'+subjects.map(function(s){return '<option'+(s===CARD.subject?' selected':'')+'>'+s+'</option>'}).join('')+'</select>'
+    +'<button class="btn gray" id="cDue" style="flex:0 0 auto;width:auto;margin:0;padding:10px 12px">'+(CARD.dueOnly?'只看到期':'看全部')+'</button></div>';
+  if(!CARD.list.length){
+    h+='<p class="mut" style="margin-top:14px">这个范围里没有到期的卡片。点"看全部"可以提前复习，或者去做专项练习。</p></div>';
+    app.innerHTML=h;bindCardHead();return;
+  }
+  var c=CARD.list[CARD.idx];
+  var r=srGet(c.id);
+  h+='<p class="mut" style="margin:10px 0 4px">第 '+(CARD.idx+1)+' / '+CARD.list.length+' 张 · 熟练度盒子 '+r.box+' · 已复习 '+r.seen+' 次 <span class="pill">'+esc(c.subject)+'</span>'+(c.etype?' <span class="pill">'+esc(c.etype)+'</span>':'')+'</p>'
+    +'<div class="card flash" id="flash" style="box-shadow:none;border:1px solid #e5e7eb;margin-top:8px">'
+    +(CARD.flipped?'<div class="back">'+esc(c.back)+'</div>':'<div class="front">'+esc(c.front)+'</div><p class="mut" style="text-align:center">点卡片翻面看答案</p>')
+    +'</div>'
+    +'<div class="row"><button class="btn gray" id="cPrev">上一题</button><button class="btn gray" id="cNext">下一题</button></div>'
+    +'<div class="row"><button class="btn red" id="cNo">不会</button><button class="btn green" id="cYes">会了</button></div>'
+    +'<button class="btn" id="cSimilar">举一反三：练一道同类题</button>'
+    +'</div>';
+  app.innerHTML=h;bindCardHead();
+  document.getElementById('flash').addEventListener('click',function(){CARD.flipped=!CARD.flipped;renderCards()});
+  document.getElementById('cPrev').addEventListener('click',function(){CARD.idx=(CARD.idx-1+CARD.list.length)%CARD.list.length;CARD.flipped=false;renderCards()});
+  document.getElementById('cNext').addEventListener('click',function(){CARD.idx=(CARD.idx+1)%CARD.list.length;CARD.flipped=false;renderCards()});
+  document.getElementById('cYes').addEventListener('click',function(){srMark(c.id,true);markToday();CARD.flipped=false;CARD.idx++;renderCards()});
+  document.getElementById('cNo').addEventListener('click',function(){srMark(c.id,false);markToday();CARD.flipped=false;CARD.idx++;renderCards()});
+  document.getElementById('cSimilar').addEventListener('click',function(){goSimilar(c)});
+}
+function bindCardHead(){
+  var s=document.getElementById('cSubj');
+  if(s)s.addEventListener('change',function(){CARD.subject=s.value;CARD.idx=0;CARD.flipped=false;renderCards()});
+  var d=document.getElementById('cDue');
+  if(d)d.addEventListener('click',function(){CARD.dueOnly=!CARD.dueOnly;CARD.idx=0;CARD.flipped=false;renderCards()});
+}
+function goSimilar(card){
+  /* 按知识点关键词在练习题里找同类题 */
+  var kw=String(card.kp||'');
+  var hit=D.practice.filter(function(p){
+    var hay=(p.knowledge||'')+(p.stem||'');
+    return kw&&hay.indexOf(kw.slice(0,4))>=0;
+  });
+  if(!hit.length&&card.kind==='wrong'){
+    hit=D.practice.filter(function(p){return p.subject===card.subject});
+  }
+  if(!hit.length&&card.kind==='dict'){
+    var others=D.dictation.filter(function(d){return d.set===card.raw.set&&d.id!==card.raw.id});
+    if(others.length){DICT.set=card.raw.set;DICT.idx=0;switchTab('dict');return}
+  }
+  if(hit.length){PRAC.only=hit[0].id;PRAC.idx=0;PRAC.answered={};switchTab('practice')}
+  else alert('暂时没有同类题，去专项练习随便练一道同科目的吧');
+}
+function switchTab(t){
+  curTab=t;
+  var bs=document.querySelectorAll('#tabs button');
+  bs.forEach(function(x){x.classList.toggle('on',x.getAttribute('data-t')===t)});
+  render();
+}
+
+/* ===== 专项练习 ===== */
+var PRAC={list:[],idx:0,answered:{},subject:'全部',only:null};
+function buildPrac(){
+  var list=D.practice.filter(function(p){
+    if(PRAC.only)return p.id===PRAC.only;
+    if(PRAC.subject!=='全部'&&p.subject!==PRAC.subject)return false;
+    return true;
+  });
+  PRAC.list=list;
+  if(PRAC.idx>=list.length)PRAC.idx=0;
+}
+function renderPractice(){
+  buildPrac();
+  var h='<div class="card">';
+  if(PRAC.only){
+    h+='<p><span class="pill">举一反三</span> <button class="btn gray" id="pAll" style="width:auto;display:inline-block;margin:0;padding:6px 12px">回到全部练习</button></p>';
+  }else{
+    h+='<select id="pSubj">'+['全部','物理','数学','化学'].map(function(s){return '<option'+(s===PRAC.subject?' selected':'')+'>'+s+'</option>'}).join('')+'</select>';
+  }
+  if(!PRAC.list.length){h+='<p class="mut">没有题目</p></div>';app.innerHTML=h;bindPracHead();return}
+  var q=PRAC.list[PRAC.idx];
+  var ans=PRAC.answered[q.id];
+  h+='<p class="mut" style="margin-top:10px">第 '+(PRAC.idx+1)+' / '+PRAC.list.length+' 题 · '+esc(q.subject)+' · '+esc(q.knowledge||'')+' · '+q.points+' 分</p>'
+    +'<p style="font-size:17px;line-height:1.7;white-space:pre-wrap">'+esc(q.stem)+'</p>';
+  var opts=q.options||{};
+  Object.keys(opts).sort().forEach(function(k){
+    var cls='opt';
+    if(ans){
+      if(k===q.answer)cls+=' ok';
+      else if(k===ans)cls+=' bad';
+    }
+    h+='<button class="'+cls+'" data-opt="'+k+'">'+k+'. '+esc(opts[k])+'</button>';
+  });
+  if(ans){
+    h+='<div class="explain">'+(ans===q.answer?'答对了。':'答错了，正确答案 '+esc(q.answer)+'。')+'\n\n'+esc(q.explain||'')+'</div>';
+  }
+  h+='<div class="row"><button class="btn gray" id="pPrev">上一题</button><button class="btn gray" id="pNext">下一题</button></div></div>';
+  app.innerHTML=h;bindPracHead();
+  app.querySelectorAll('[data-opt]').forEach(function(b){
+    b.addEventListener('click',function(){
+      if(PRAC.answered[q.id])return;
+      PRAC.answered[q.id]=b.getAttribute('data-opt');
+      markToday();
+      var done=lsGet('ty_prac_done',{});done[q.id]=PRAC.answered[q.id]===q.answer;lsSet('ty_prac_done',done);
+      renderPractice();
+    });
+  });
+  document.getElementById('pPrev').addEventListener('click',function(){PRAC.idx=(PRAC.idx-1+PRAC.list.length)%PRAC.list.length;renderPractice()});
+  document.getElementById('pNext').addEventListener('click',function(){PRAC.idx=(PRAC.idx+1)%PRAC.list.length;renderPractice()});
+}
+function bindPracHead(){
+  var s=document.getElementById('pSubj');
+  if(s)s.addEventListener('change',function(){PRAC.subject=s.value;PRAC.idx=0;renderPractice()});
+  var a=document.getElementById('pAll');
+  if(a)a.addEventListener('click',function(){PRAC.only=null;PRAC.idx=0;renderPractice()});
+}
+/* ===== 默写工坊 ===== */
+var DICT={set:'方程式默写',idx:0,revealed:false};
+function normEq(s){
+  return String(s||'').replace(/\s+/g,'').replace(/＝/g,'=').replace(/→/g,'=').replace(/↑/g,'up').replace(/↓/g,'dn').replace(/△/g,'').replace(/（/g,'(').replace(/）/g,')');
+}
+function renderDict(){
+  var sets=[];D.dictation.forEach(function(d){if(sets.indexOf(d.set)<0)sets.push(d.set)});
+  var items=D.dictation.filter(function(d){return d.set===DICT.set});
+  if(DICT.idx>=items.length)DICT.idx=0;
+  var d=items[DICT.idx];
+  var h='<div class="card"><select id="dSet">'+sets.map(function(s){return '<option'+(s===DICT.set?' selected':'')+'>'+esc(s)+'</option>'}).join('')+'</select>'
+    +'<p class="mut" style="margin-top:10px">第 '+(DICT.idx+1)+' / '+items.length+' 条 · '+esc(d.subject)+'</p>'
+    +'<p style="font-size:18px;line-height:1.7">'+esc(d.prompt)+'</p>';
+  if(DICT.set==='方程式默写'){
+    h+='<input type="text" id="dInput" placeholder="在这里写方程式，比如 2Na + 2H2O = 2NaOH + H2↑">'
+      +'<button class="btn" id="dCheck">检查</button><div id="dResult"></div>';
+  }
+  if(DICT.revealed){
+    h+='<div class="explain">答案：'+esc(d.answer)+'\n\n'+esc(d.explain||'')+'</div>'
+      +'<div class="row"><button class="btn red" id="dNo">没记住</button><button class="btn green" id="dYes">记住了</button></div>';
+  }else{
+    h+='<button class="btn gray" id="dShow">看答案</button>';
+  }
+  h+='<div class="row"><button class="btn gray" id="dPrev">上一条</button><button class="btn gray" id="dNext">下一条</button></div></div>';
+  app.innerHTML=h;
+  document.getElementById('dSet').addEventListener('change',function(e){DICT.set=e.target.value;DICT.idx=0;DICT.revealed=false;renderDict()});
+  document.getElementById('dPrev').addEventListener('click',function(){DICT.idx=(DICT.idx-1+items.length)%items.length;DICT.revealed=false;renderDict()});
+  document.getElementById('dNext').addEventListener('click',function(){DICT.idx=(DICT.idx+1)%items.length;DICT.revealed=false;renderDict()});
+  var sh=document.getElementById('dShow');
+  if(sh)sh.addEventListener('click',function(){DICT.revealed=true;renderDict()});
+  var ck=document.getElementById('dCheck');
+  if(ck)ck.addEventListener('click',function(){
+    var v=document.getElementById('dInput').value;
+    var ok=normEq(v)===normEq(d.answer);
+    document.getElementById('dResult').innerHTML='<div class="explain">'+(ok?'写对了。再点"看答案"对一遍细节（气体符号、条件）。':'不对。点"看答案"看看错在哪。')+'</div>';
+    DICT.revealed=true;
+    setTimeout(renderDict,900);
+  });
+  var dy=document.getElementById('dYes');
+  if(dy)dy.addEventListener('click',function(){srMark('d'+d.id,true);markToday();DICT.idx++;DICT.revealed=false;renderDict()});
+  var dn=document.getElementById('dNo');
+  if(dn)dn.addEventListener('click',function(){srMark('d'+d.id,false);markToday();DICT.idx++;DICT.revealed=false;renderDict()});
+}
+/* ===== 错题本 ===== */
+var BOOK={subject:'全部',kw:''};
+function renderBook(){
+  var subjects=['全部','语文','数学','英语','物理','化学','生物','历史','政治','地理'];
+  var list=D.wrong.filter(function(w){
+    if(BOOK.subject!=='全部'&&w.subject!==BOOK.subject)return false;
+    if(BOOK.kw&&(w.knowledge_point||'').indexOf(BOOK.kw)<0&&(w.note||'').indexOf(BOOK.kw)<0)return false;
+    return true;
+  });
+  var h='<div class="card"><div class="row"><select id="bSubj" style="flex:1">'+subjects.map(function(s){return '<option'+(s===BOOK.subject?' selected':'')+'>'+s+'</option>'}).join('')+'</select></div>'
+    +'<input type="text" id="bKw" placeholder="搜知识点，比如：配平、刹车、集合" value="'+esc(BOOK.kw)+'" style="margin-top:8px">'
+    +'<p class="mut">共 '+list.length+' 道错题（第一次月考）。点任意一道可以展开看解析。</p></div>';
+  list.forEach(function(w,i){
+    h+='<div class="card" style="cursor:pointer" data-w="'+i+'"><b>'+esc(w.subject)+' · 第'+esc(w.question_no)+'题</b> '
+      +(w.error_type?'<span class="pill">'+esc(w.error_type)+'</span>':'')
+      +'<p style="margin:6px 0">'+esc(w.knowledge_point||'')+'</p>'
+      +'<p class="mut" style="margin:0">你答：'+esc(w.student_answer||'—')+' · 正确：'+esc(w.std_answer||'—')+' · 得分 '+w.got_score+'/'+w.full_score+'</p>'
+      +'<div class="explain" style="display:none">'+esc(w.note||'暂无解析')+'</div></div>';
+  });
+  app.innerHTML=h;
+  document.getElementById('bSubj').addEventListener('change',function(e){BOOK.subject=e.target.value;renderBook()});
+  var kw=document.getElementById('bKw');
+  kw.addEventListener('change',function(){BOOK.kw=kw.value;renderBook()});
+  app.querySelectorAll('[data-w]').forEach(function(el){
+    el.addEventListener('click',function(){
+      var ex=el.querySelector('.explain');
+      ex.style.display=ex.style.display==='none'?'block':'none';
+    });
+  });
+}
+/* ===== 提问 ===== */
+function renderAsk(){
+  var newUrl='https://github.com/santalin87/zk-study/issues/new?labels=tianya-q&title='+encodeURIComponent('[提问] ')+'&body='+encodeURIComponent('科目：\n题目（可以把题目打出来，或者写试卷第几题）：\n\n我卡在哪里：\n');
+  var h='<div class="card"><h2 style="margin-top:0">我要提问</h2>'
+    +'<p>遇到弄不懂的题，点下面按钮提交。爸爸和 AI 老师看到后会回答，答案会出现在这个页面下面。不用等，提交完先去做别的题。</p>'
+    +'<a class="btn" href="'+newUrl+'" target="_blank" rel="noopener">提交新问题（需要登录 GitHub）</a>'
+    +'<p class="mut">没有 GitHub 账号的话，把问题发给爸爸代提交也行。</p></div>'
+    +'<div class="card"><h2 style="margin-top:0">我的问题</h2><div id="qaList"><p class="mut">加载中…</p></div></div>';
+  app.innerHTML=h;
+  fetch('https://api.github.com/repos/santalin87/zk-study/issues?labels=tianya-q&state=all&per_page=50')
+    .then(function(r){return r.json()})
+    .then(function(list){
+      var box=document.getElementById('qaList');
+      if(!box)return;
+      if(!Array.isArray(list)||!list.length){box.innerHTML='<p class="mut">还没有提过问题</p>';return}
+      box.innerHTML=list.map(function(it){
+        return '<div class="qa"><b>'+esc(it.title)+'</b> <span class="pill">'+(it.state==='open'?'等回答':'已回答/关闭')+'</span>'
+          +'<p style="white-space:pre-wrap;line-height:1.7">'+esc(it.body||'')+'</p>'
+          +'<button class="btn gray" data-c="'+it.number+'" style="margin:0">看回答（'+it.comments+'）</button><div id="cmt'+it.number+'"></div></div>';
+      }).join('');
+      box.querySelectorAll('[data-c]').forEach(function(b){
+        b.addEventListener('click',function(){
+          var n=b.getAttribute('data-c');
+          fetch('https://api.github.com/repos/santalin87/zk-study/issues/'+n+'/comments')
+            .then(function(r){return r.json()})
+            .then(function(cs){
+              document.getElementById('cmt'+n).innerHTML=(cs||[]).map(function(c){
+                return '<div class="ans"><b>'+esc(c.user.login)+'：</b>\n'+esc(c.body||'')+'</div>';
+              }).join('')||'<p class="mut">还没有回答</p>';
+            });
+        });
+      });
+    })
+    .catch(function(){
+      var box=document.getElementById('qaList');
+      if(box)box.innerHTML='<p class="mut">网络不通，暂时加载不了问题列表</p>';
+    });
+}
+/* ===== 学习报告 ===== */
+function renderReport(){
+  var order=['语文','英语','数学','物理','历史','政治','生物','地理','化学'];
+  var map={};D.scores.forEach(function(x){map[x.subject]=x});
+  var total=0,full=0;
+  var h='<div class="card"><h2 style="margin-top:0">成绩看板 · 高一上第一次月考</h2>';
+  order.forEach(function(s){
+    var x=map[s];if(!x)return;
+    total+=x.score;full+=x.full;
+    var pct=Math.round(x.score/x.full*100);
+    h+='<div style="margin:8px 0"><div>'+s+' <b>'+x.score+'</b> / '+x.full+'（'+pct+'%）</div><div class="bar"><i style="width:'+pct+'%"></i></div></div>';
+  });
+  h+='<p><b>总分 '+total+' / '+full+'</b></p></div>';
+  h+='<div class="card"><h2 style="margin-top:0">三个病根</h2>'
+    +'<p><b>1. 概念地基有洞</b>——化学方程式从不配平、物理刹车不算停止时间、地理把"大气逆辐射"写成"反射"。不是粗心，是真不会。</p>'
+    +'<p><b>2. 输出说不到点上</b>——政治"四个彻底结束"一个没写出来，历史江南农业关键词全缺。有话，但写不到得分点上。</p>'
+    +'<p><b>3. 选择题暗坑</b>——地理错 10 题、生物错 7 题、化学错 6 题。拿回试卷后遮答案重做复盘。</p></div>';
+  var sr=srAll();var boxes=[0,0,0,0,0,0,0];
+  CARDS.forEach(function(c){boxes[srGet(c.id).box]++});
+  var pracDone=lsGet('ty_prac_done',{});var pracOk=0,pracN=0;
+  Object.keys(pracDone).forEach(function(k){pracN++;if(pracDone[k])pracOk++});
+  h+='<div class="card"><h2 style="margin-top:0">我的进度（这台设备）</h2>'
+    +'<p>连续打卡：<b>'+streak()+'</b> 天</p>'
+    +'<p>卡片熟练度分布（盒子 0 到 6，越高越熟）：'+boxes.join(' · ')+'，共 '+CARDS.length+' 张</p>'
+    +'<p>专项练习已做：'+pracN+' 题，答对 '+pracOk+' 题</p>'
+    +'<p class="mut">进度存在这台手机的浏览器里，换手机不会同步。每天打开做一点，比一次做很多更管用。</p></div>';
+  app.innerHTML=h;
+}
+render();
+
+</script>
+</body>
+</html>
