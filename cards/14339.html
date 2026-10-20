@@ -44,6 +44,13 @@ button{flex:1;border:none;border-radius:12px;padding:14px;font-size:16px;font-we
 .srcb{display:inline-block;font-size:12px;color:#fff;background:#6a3fa0;border-radius:20px;padding:2px 10px;white-space:nowrap}
 .fcard .srcb{position:absolute;top:38px;right:12px}
 footer{max-width:720px;margin:0 auto;padding:20px 16px 40px;color:#aaa;font-size:12px;text-align:center}
+
+#navctrl{position:fixed;left:0;right:0;bottom:0;background:#1a1a1a;color:#fff;align-items:center;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));z-index:30;box-shadow:0 -2px 10px rgba(0,0,0,.18)}
+#navctrl span{font-size:14px;font-weight:700;white-space:nowrap}
+#navctrl input{flex:1;min-width:0;border:none;border-radius:8px;padding:9px 10px;font-size:15px;background:#fff;color:#222}
+#navctrl button{flex:none;border:none;border-radius:8px;padding:9px 12px;font-size:14px;font-weight:700;cursor:pointer;background:#b3541e;color:#fff}
+#navctrl #restartbtn{background:#444}
+.wrap{padding-bottom:120px}
 </style></head><body>
 <header class="top"><div class="in"><a class="t" href="../index.html">📚 自考学习站</a><span class="r">网络传播法规</span></div></header>
 <div class="wrap"><a class="back" href="../s/14339.html">← 返回网络传播法规</a>
@@ -53,6 +60,7 @@ footer{max-width:720px;margin:0 auto;padding:20px 16px 40px;color:#aaa;font-size
 
 <div class="prog"><div class="bar"><div id="pfill"></div></div><div id="ptext" class="ptext"></div></div>
 <div id="stage"></div>
+<div id="navctrl" style="display:none"><span id="navpos"></span><input id="jumpin" type="number" min="1" inputmode="numeric" placeholder="跳到第几题"><button id="jumpbtn" type="button">跳转</button><button id="restartbtn" type="button">从头开始</button></div>
 <div class="btnrow" id="menubtns" style="margin-top:18px">
 <button class="btn-ghost" id="b-retry">再练错题</button>
 <button class="btn-ghost" id="b-reset">重置进度</button>
@@ -68,6 +76,19 @@ function load(){try{var s=JSON.parse(localStorage.getItem(KEY));if(s&&s.known&&s
 function save(){localStorage.setItem(KEY,JSON.stringify(store));}
 var store=load();
 var queue=[],retry=[],qi=0,roundTotal=0,roundKnown=0,roundAttempted={},phase='';
+var roundMode='full',inRetry=false,resumed=false;
+var POSKEY='zk_pos_'+SLUG;
+function loadPos(){try{var p=parseInt(localStorage.getItem(POSKEY),10);if(!isNaN(p))return p;}catch(e){}return 0;}
+function savePos(){if(roundMode==='full'&&!inRetry&&qi>=0&&qi<RAW.length){try{localStorage.setItem(POSKEY,String(qi));}catch(e){}}}
+function clearPos(){try{localStorage.removeItem(POSKEY);}catch(e){}}
+function paintBar(){var bar=document.getElementById('navctrl');if(!bar)return;if(phase==='quiz'){bar.style.display='flex';document.getElementById('navpos').textContent='第 '+(qi+1)+' / '+roundTotal+' 题';}else{bar.style.display='none';}}
+function navRowHtml(){return '<div class="btnrow navrow"><button class="btn-ghost" onclick="goPrev()"'+(qi<=0?' disabled':'')+'>← 上一题</button><button class="btn-ghost" onclick="goNext()">'+(qi>=queue.length-1?'进入结算 →':'下一题 →')+'</button></div>';}
+function goPrev(){if(phase!=='quiz'||qi<=0)return;resumed=false;qi--;savePos();showCard(false);}
+function goNext(){if(phase!=='quiz')return;resumed=false;if(qi<queue.length-1){qi++;savePos();showCard(false);}else{qi++;advance();}}
+function goJump(){var inp=document.getElementById('jumpin');var v=parseInt(inp.value,10);if(isNaN(v)||v<1||v>roundTotal){alert('请输入 1 到 '+roundTotal+' 之间的题号');return;}resumed=false;qi=v-1;savePos();inp.value='';showCard(false);}
+function restartAll(){clearPos();startRound('full');}
+function advance(){next();}
+
 var TAGC={"名解": "#2a7a4b", "简答": "#b3541e", "论述": "#7a3b12", "选择": "#1a6fa8", "单选": "#1a6fa8", "综合": "#6a3fa0", "填空": "#1a6fa8"};
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').split('\n').join('<br>');}
 function freqLabel(f){var hot=f>=2?' hot':'';return '<span class="freq'+hot+'">真题考过 '+f+' 次</span>';}
@@ -79,7 +100,7 @@ function paintProg(done,total){
   document.getElementById('ptext').textContent='已掌握 '+knownCount()+' / '+RAW.length+'（本轮 '+done+'/'+total+'）';
 }
 function startScreen(){
-  phase='menu';paintProg(0,0);setTab('all');paintWCount();paintKCount();
+  phase='menu';paintBar();paintProg(0,0);setTab('all');paintWCount();paintKCount();
   var nWrong=store.wrong.length;
   var h='<div class="center">共 '+RAW.length+' 张卡片<br>已掌握 '+knownCount()+' 张 · 待加强 '+nWrong+' 张<br><br>'+
     '<div class="btnrow"><button class="btn-show" onclick="startRound(\'full\')">开始自测</button></div>';
@@ -92,21 +113,26 @@ function startRound(mode){
   roundAttempted={};roundKnown=0;
   if(mode==='wrong'){queue=store.wrong.slice().sort(function(a,b){return RAW[b].freq-RAW[a].freq;});}
   else{queue=ORDER.slice();}
-  retry=[];qi=0;roundTotal=queue.length;phase='quiz';
+  retry=[];roundMode=mode;inRetry=false;resumed=false;qi=0;roundTotal=queue.length;phase='quiz';
+  if(mode==='full'){var _p=loadPos();if(_p>0&&_p<queue.length){qi=_p;resumed=true;}}
   if(!queue.length){startScreen();return;}
   showCard(false);
 }
 function showCard(revealed){
   var i=queue[qi],c=RAW[i],st=document.getElementById('stage');
   paintProg(qi,roundTotal);
+  if(resumed)document.getElementById('ptext').textContent='第 '+(qi+1)+' / '+roundTotal+' 题 · 已从上次进度恢复';
   var h='<div class="fcard">'+freqLabel(c.freq)+srcBadge(c)+tagPill(c.tag)+'<div class="q">'+esc(c.q)+'</div>';
   if(revealed){
     h+='<div class="a"><div class="alabel">✓ 答案要点</div>'+esc(c.a)+'</div></div>';
     h+='<div class="btnrow"><button class="btn-know" onclick="mark(true)">会 ✓</button><button class="btn-unknow" onclick="mark(false)">不会 ✗</button></div>';
+    h+=navRowHtml();
   }else{
     h+='</div><div class="btnrow"><button class="btn-show" onclick="showCard(true)">显示答案</button></div>';
+    h+=navRowHtml();
   }
   st.innerHTML=h;
+  paintBar();resumed=false;
   window.scrollTo(0,0);
 }
 function mark(know){
@@ -121,15 +147,15 @@ function mark(know){
     if(wi<0)store.wrong.push(i);
     if(retry.indexOf(i)<0)retry.push(i);
   }
-  save();qi++;next();
+  save();qi++;savePos();next();
 }
 function next(){
   if(qi<queue.length){showCard(false);return;}
-  if(retry.length){queue=retry;retry=[];qi=0;roundTotal=queue.length;showCard(false);return;}
+  if(retry.length){queue=retry;retry=[];qi=0;inRetry=true;roundTotal=queue.length;showCard(false);return;}
   summary();
 }
 function summary(){
-  phase='done';
+  phase='done';clearPos();paintBar();
   var total=Object.keys(roundAttempted).length;
   var rate=total?Math.round(roundKnown/total*100):0;
   paintProg(roundTotal,roundTotal);
@@ -173,6 +199,7 @@ function showWrongList(){
     });
   }
   st.innerHTML=h;
+  paintBar();resumed=false;
   window.scrollTo(0,0);
 }
 function markKnownFromList(i,btn){
@@ -203,6 +230,7 @@ function showKnownList(){
     });
   }
   st.innerHTML=h;
+  paintBar();resumed=false;
   window.scrollTo(0,0);
 }
 function unmarkKnown(i,btn){
@@ -219,8 +247,12 @@ document.getElementById('tab-wrong').onclick=function(){showWrongList();};
 document.getElementById('tab-known').onclick=function(){showKnownList();};
 document.getElementById('b-retry').onclick=function(){if(store.wrong.length)startRound('wrong');};
 document.getElementById('b-reset').onclick=function(){
-  if(confirm('清空本门课的全部自测进度？')){localStorage.removeItem(KEY);store={known:[],wrong:[]};startScreen();}
+  if(confirm('清空本门课的全部自测进度？')){localStorage.removeItem(KEY);localStorage.removeItem(POSKEY);store={known:[],wrong:[]};startScreen();}
 };
-startScreen();
+document.getElementById('jumpbtn').onclick=function(){goJump();};
+document.getElementById('restartbtn').onclick=function(){restartAll();};
+document.getElementById('jumpin').addEventListener('keydown',function(e){if(e.key==='Enter')goJump();});
+(function(){var _sx=0,_sy=0;var _st=document.getElementById('stage');_st.addEventListener('touchstart',function(e){if(e.touches.length===1){_sx=e.touches[0].clientX;_sy=e.touches[0].clientY;}},false);_st.addEventListener('touchend',function(e){if(phase!=='quiz')return;var _t=e.changedTouches[0];var _dx=_t.clientX-_sx,_dy=_t.clientY-_sy;if(Math.abs(_dx)>=48&&Math.abs(_dx)>Math.abs(_dy)*1.4){if(_dx>0)goNext();else goPrev();}},false);})();
+(function(){var _p=loadPos();if(_p>0&&_p<RAW.length){startRound('full');}else{startScreen();}})();
 </script>
 </body></html>
