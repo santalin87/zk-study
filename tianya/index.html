@@ -77,7 +77,7 @@ var CARDS=[];
 D.wrong.forEach(function(w,i){
 CARDS.push({id:'w'+i,kind:'wrong',subject:w.subject,no:w.question_no,
 kp:w.knowledge_point||'',etype:w.error_type||'',
-front:'['+w.subject+' · 第'+w.question_no+'题]\n知识点：'+(w.knowledge_point||'见背面')+'\n\n你当时答：'+(w.student_answer||'（未记录）'),
+front:'['+w.subject+' · 第'+w.question_no+'题]\n'+(w.stem? w.stem+'\n\n' : '')+'知识点：'+(w.knowledge_point||'见背面')+'\n\n你当时答：'+(w.student_answer||'（未记录）'),
 back:'标准答案：'+(w.std_answer||'见解析')+'\n\n'+(w.note||'')+'\n\n得分：'+w.got_score+' / '+w.full_score,
 raw:w});
 });
@@ -344,7 +344,7 @@ function renderBook(){
       +(w.error_type?'<span class="pill">'+esc(w.error_type)+'</span>':'')
       +'<p style="margin:6px 0">'+esc(w.knowledge_point||'')+'</p>'
       +'<p class="mut" style="margin:0">你答：'+esc(w.student_answer||'—')+' · 正确：'+esc(w.std_answer||'—')+' · 得分 '+w.got_score+'/'+w.full_score+'</p>'
-      +'<div class="explain" style="display:none">'+esc(w.note||'暂无解析')+'</div></div>';
+      +'<div class="explain" style="display:none">'+(w.stem? esc(w.stem)+'\n\n' : '')+esc(w.note||'暂无解析')+'</div></div>';
   });
   app.innerHTML=h;
   document.getElementById('bSubj').addEventListener('change',function(e){BOOK.subject=e.target.value;renderBook()});
