@@ -1,0 +1,127 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>60分备考方案 - 自考学习站</title><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#f7f5f0;color:#222;font-size:16px;line-height:1.9}
+.wrap{max-width:720px;margin:0 auto;padding:16px 16px 64px}
+header.top{background:#1a1a1a;color:#fff;padding:14px 16px;position:sticky;top:0;z-index:10}
+header.top .in{max-width:720px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+header.top a{color:#fff;text-decoration:none}
+header.top .t{font-size:17px;font-weight:700}
+header.top .r{font-size:13px;color:#bbb}
+.card{background:#fff;border-radius:12px;padding:16px;margin:12px 0;box-shadow:0 1px 6px rgba(0,0,0,.05);display:block;color:inherit;text-decoration:none}
+.card h3{font-size:17px;margin-bottom:4px}
+.card .meta{font-size:13px;color:#888}
+.card .go{float:right;color:#b3541e;font-size:14px}
+.doc h3{font-size:20px;margin:18px 0 6px}
+.doc h4{font-size:17px;margin:16px 0 4px;color:#7a3b12}
+.doc p{margin:8px 0}
+.doc p.li{margin:4px 0;padding-left:4px}
+.doc strong{color:#a33}
+.doc .tbl-wrap{overflow-x:auto;margin:12px -4px}
+.doc table{border-collapse:collapse;min-width:100%;font-size:14px;line-height:1.6}
+.doc th{background:#1a1a1a;color:#fff;padding:8px 10px;white-space:nowrap}
+.doc td{border:1px solid #e2ddd2;padding:8px 10px;vertical-align:top}
+.doc tbody tr:nth-child(even){background:#faf8f3}
+.back{display:inline-block;margin:12px 0;font-size:14px;color:#b3541e;text-decoration:none}
+.sect{font-size:13px;color:#999;margin:20px 0 4px;letter-spacing:2px}
+.pdfrow{display:flex;justify-content:space-between;align-items:center;background:#fff;border-radius:10px;padding:12px 14px;margin:8px 0;text-decoration:none;color:inherit;box-shadow:0 1px 4px rgba(0,0,0,.04)}
+.pdfrow .n{font-size:15px}
+.pdfrow .s{font-size:12px;color:#999}
+.pdfrow .d{font-size:13px;color:#b3541e;white-space:nowrap;margin-left:8px}
+footer{max-width:720px;margin:0 auto;padding:20px 16px 40px;color:#aaa;font-size:12px;text-align:center}
+</style></head><body><header class="top"><div class="in"><a class="t" href="../index.html">📚 自考学习站</a></div></header><div class="wrap"><a class="back" href="../s/04741.html">← 计算机网络原理</a>
+    <div class="doc"><h3>04741 · 60分备考方案</h3>
+<p class="li">- 考试：2026-10-25（周日）下午 14:30-17:00，全国统考卷；目标只有一个：<strong>60 分通过，不求全对</strong></p>
+<p class="li">- 打法：单选填空靠高频覆盖，简答靠固定题型踩分，综合靠步骤分；低频深水区直接放弃</p>
+<p class="li">- 依据：5 份全国卷真题（2023.4 / 2023.10 / 2024.4 / 2024.10 / 2025.10）实测题型与频次，频次口径与《高频考点（真题校准版）》一致</p>
+<h3>一、分数账：60 分怎么拼</h3>
+<div class="tbl-wrap"><table><thead><tr><th>题型</th><th>总分</th><th>目标</th><th>怎么拿</th></tr></thead><tbody><tr><td>单项选择 25 题 × 1 分</td><td>25</td><td><strong>17</strong></td><td>高频考点全覆盖 + 易错清单过一遍，允许错 8 题</td></tr><tr><td>填空 10 题 × 1 分</td><td>10</td><td><strong>6</strong></td><td>只背高频挖空（端口号、字段位数、公式量），冷僻题放弃</td></tr><tr><td>简答 6 题 × 5 分</td><td>30</td><td><strong>19</strong></td><td>6 题里约 4 题是固定题型，踩分点写满、宁多勿缺</td></tr><tr><td>综合 3 题</td><td>35</td><td><strong>18</strong></td><td>每题先列公式、写步骤、带单位，算错结果也有步骤分</td></tr><tr><td>合计</td><td>100</td><td><strong>60</strong></td><td></td></tr></tbody></table></div>
+<h3>二、必拿模块（按性价比排序）</h3>
+<h4>① 编码规则 + 画波形（简答 5 分，5 份真题考 3 次）</h4>
+<p class="li">- 曼彻斯特码（双相码）：中间必跳变；<strong>1 是高到低（下坡），0 是低到高（上坡）</strong>，口诀&quot;1 下坡，0 上坡&quot;（教材 P229 口径，别记反）</p>
+<p class="li">- 差分曼彻斯特码（差分双相码）：中间必跳变，看开头：<strong>0 开头跳变、1 开头不跳变</strong>，口诀&quot;0 动 1 静&quot;</p>
+<p class="li">- CMI 码：<strong>0 固定编 01；1 交替编 11 和 00</strong>，口诀&quot;0 是 01，1 翻跟头&quot;（2025.10 官方答案原话）</p>
+<p class="li">- 真题原题：2024.4 差分码画 1011010010、2024.10 曼彻斯特画 1001011010、2025.10 CMI 画 0100110011；规则默写约 2 分、波形约 3 分，带尺子画两条电平线、按比特分格即可</p>
+<h4>② 子网划分五件套（综合大题，5 份考 2 次）</h4>
+<p class="li">- 五步：网络地址（IP 与掩码逐位&quot;与&quot;）→ 掩码（由 / 位数换算，1 对应网络位）→ 广播地址（主机位全置 1，或下一子网地址减 1）→ 地址总数（2 的主机位数次方）→ 可分配范围（总数减 2，即网络地址 +1 到广播地址 −1）</p>
+<p class="li">- 例：203.123.1.135、掩码 255.255.255.192（即 /26，主机位 6 位）：网络地址 203.123.1.128，广播地址 203.123.1.191，总数 64，可分配 62 个，范围 203.123.1.129 ~ 203.123.1.190</p>
+<p class="li">- 附带：超网/CIDR 地址总数 = 2 的（32 − 前缀长度）次方（2024.4 单选考过 /22 共 1024 个地址）</p>
+<h4>③ CRC 模 2 除法（简答、单选、填空共出现 3 次）</h4>
+<p class="li">- 三步：G(x) 写成二进制位串（位数减 1 = 冗余位 r）→ 数据后面补 r 个 0 → 与生成位串做模 2 除法（逐位异或、不借位），余数不足 r 位高位补 0，拼到数据尾部即编码结果；接收方再除一次，余数为 0 则无错</p>
+<p class="li">- 真题：2024.4 简答给 G(x)=x⁴+x²+x+1 对 100111011101 求校验位；步骤写全，结果算错也能拿大部分分</p>
+<h4>④ TCP 拥塞控制（简答 3 次 + 综合 1 次）</h4>
+<p class="li">- 四算法：慢启动（cwnd 每 RTT 翻倍）、拥塞避免（每 RTT 加 1）、快重传（收到 3 个重复 ACK 立即重传）、快恢复</p>
+<p class="li">- 计时器超时：阈值 ssthresh = cwnd / 2，cwnd 重置为 1 MSS，重新慢启动</p>
+<p class="li">- 3 个重复 ACK：ssthresh = cwnd / 2，cwnd 直接设为 ssthresh，进拥塞避免（不回 1）</p>
+<p class="li">- 三次握手：SYN → SYN+ACK → ACK；四次挥手：FIN → ACK → FIN → ACK；确认号 = 期望收到的下一个序号（2023 年两份卷子单选都考过序号计算）</p>
+<h4>⑤ 差错控制四方式（简答考 3 次）</h4>
+<p class="li">- 四方式：检错重发、前向纠错、反馈校验、检错丢弃；定义默写原话：通过差错编码技术实现对传输差错的检测，并基于某种机制进行差错纠正和处理</p>
+<p class="li">- 随机差错（随机噪声引起，孤立、稀疏、互不相关）vs 突发差错（冲击噪声引起，成串出现）；突发长度 = 第一个出错位到最后一个出错位之间的位数</p>
+<h4>⑥ 停-等 / GBN / SR（简答 1 次 + 综合 2 次）</h4>
+<p class="li">- 停-等：发送、接收窗口都是 1，最简单、利用率最低；信道利用率 = 发送时延 /（发送时延 + RTT）</p>
+<p class="li">- GBN：累积确认，一个分组出错则后面已发的全部回退重传，适合低误码信道</p>
+<p class="li">- SR：逐个确认，只重传出错的那一个，接收方缓存乱序分组，适合高误码信道</p>
+<p class="li">- 一句话规律：窗口越大信道利用率越高，窗口足够大时接近 1</p>
+<h4>⑦ CSMA 三兄弟 + CSMA/CD（简答 2 次 + 计算 2 次）</h4>
+<p class="li">- 非坚持（忙就随机等）、1-坚持（忙就盯着，空闲立刻发）、P-坚持（时隙制，空闲以概率 P 发）；统一口号&quot;先听后说&quot;</p>
+<p class="li">- CSMA/CD：&quot;边听边说&quot;，靠信号强度检测冲突，只用于有线信道；冲突后用截断二进制指数退避</p>
+<p class="li">- 最短帧长公式：最短帧长 ≥ 往返传播时延 × 发送速率（保证发完前能检测到冲突）；2024.4 单选考最远距离、2024.10 填空考最小帧长，套的都是这一个公式</p>
+<h4>⑧ 时延三公式（综合 5 份考 4 次，计算第一优先级）</h4>
+<p class="li">- 传输（发送）时延 = 分组长度 L / 链路速率 R</p>
+<p class="li">- 传播时延 = 距离 D / 传播速率 V（按题给值代入）</p>
+<p class="li">- 时延带宽积 = 传播时延 × 带宽（表示链路上能容纳的比特数）</p>
+<p class="li">- 吞吐量取全程最慢一段（瓶颈）的速率；做题先写公式再代数，结果错也有步骤分</p>
+<h4>⑨ 应用层速记（简答、填空高频区）</h4>
+<p class="li">- Cookie：网站辨别用户身份、会话跟踪用的小型文本文件，存在用户本地；用途：统计访问人数、限制特定用户、记录偏好与登录信息、购物车（简答考 2 次）</p>
+<p class="li">- SMTP（TCP 25 端口）：握手、邮件传输、关闭三阶段；只能传 7 位 ASCII 内容，是&quot;推&quot;协议（简答考 1 次）</p>
+<p class="li">- POP3（110 端口）：授权、事务处理、更新三阶段；IMAP 的区别是可只读取邮件的一部分、服务器保留会话状态（出现 2 次）</p>
+<p class="li">- HTTP：非持久连接（一请求一连接）vs 持久连接（流水 / 非流水，2023.4 简答）；状态码 404 = 请求对象不存在</p>
+<p class="li">- DNS：递归查询（替你查到底）vs 迭代查询（告诉你下一步问谁）；分级：根（root）、顶级、权威、本地</p>
+<p class="li">- Socket 函数只记对应关系：TCP 服务端 socket → bind → listen → accept，客户端 connect，收发 recv / send；UDP 收发 recvfrom / sendto（综合题填函数名出现过）</p>
+<h4>⑩ IP 分片（简答 1 次 + 单选 1 次）</h4>
+<p class="li">- 每片数据长度 ≤ MTU − 20（首部），且必须是 8 字节的整数倍（最后一片除外）</p>
+<p class="li">- 片偏移 = 该片数据起始字节数 / 8；MF=1 表示后面还有分片，MF=0 是最后一片；标识相同才属于同一原数据报</p>
+<p class="li">- 例：3400 字节数据报过 MTU=1500 的链路，分 3 片，数据 1480 / 1480 / 420，片偏移 0 / 185 / 370，MF 为 1 / 1 / 0</p>
+<h4>⑪ 路由三件套（单选年年考归属）</h4>
+<p class="li">- 链路状态 LS（OSPF 用）：每结点洪泛链路状态，用 Dijkstra 算最短路，需要全局信息</p>
+<p class="li">- 距离向量 DV（RIP 用）：只和邻居交换距离表，基于 Bellman-Ford，收到通告后跳数 +1 比较取优</p>
+<p class="li">- OSPF 特点：链路状态、安全认证、分层（区域）、支持多条等价路径；BGP 是 AS 之间的外部协议，通告或撤销路由用 UPDATE 报文（BGP 简答 2024.10 考过）</p>
+<h4>⑫ 安全速记（以选择、填空为主）</h4>
+<p class="li">- DES 密钥 56 位（名义 64 位含 8 位校验）</p>
+<p class="li">- 数字签名：发送方用私钥签名、接收方用公钥验证；配套单向散列算法用 SHA-1（2024.4 单选）；PGP 保护电子邮件安全，其分组密码是 IDEA（2025.10 单选）</p>
+<p class="li">- 报文认证 = 验&quot;信&quot;真不真（有没有被篡改），身份认证 = 验&quot;人&quot;是谁（见易错清单第 1 条）</p>
+<p class="li">- IDS 入侵检测：监视网络并产生警告；与防火墙的区别：防火墙按规则放行或拦截，IDS 负责发现并报警</p>
+<p class="li">- IPSec 核心两协议：AH + ESP；VPN 最核心的技术是隧道技术</p>
+<p class="li">- 凯撒密码：字母按密钥 k 循环移位，逐个字母算即可（2023.4 简答原题，k=3）</p>
+<h4>⑬ 无线速记（选择题区，记结论不抠原理）</h4>
+<p class="li">- 802.11 共同特征：都用 CSMA/CA、帧格式相同、支持基础设施与自组织两种模式；&quot;速率越高传得越远&quot;是假话（见易错清单第 2 条）</p>
+<p class="li">- 无线不能边发边听，所以用 CSMA/CA（RTS/CTS + ACK），不用 CSMA/CD（2025.10 单选）</p>
+<p class="li">- 移动 IP：永久居所是家网，管事的是家代理；两个地址：永久地址 + 转交地址 COA；注册报文里的注册标识是 64 位（见易错清单第 8 条）</p>
+<h4>⑭ 附赠高频：交换机自学习转发表（综合 5 份考 3 次）</h4>
+<p class="li">- 三步写满：按帧的源 MAC 自学习建表（记下入端口）→ 按目的 MAC 查表转发 → 查不到就泛洪（除入端口外全发）</p>
+<p class="li">- 广播帧永远泛洪；交换机只分割冲突域、不分割广播域；2025.10 综合 44 是 15 分大题，只考填两台交换机的 MAC 表</p>
+<h3>三、易错清单（考前速览，刷题实测 8 条）</h3>
+<p class="li">1. <strong>消息认证 vs 报文认证</strong>：题干&quot;检验收到的消息是否是真实的&quot;→选<strong>报文认证</strong>（教材术语，message authentication 的标准译法）。身份认证=验人，报文认证=验信。</p>
+<p class="li">2. <strong>IEEE 802.11 共同特征</strong>：都用 CSMA/CA、帧格式相同、支持基础设施+自组织模式。不属于共同特征的是&quot;<strong>提高传输速率以传输更远距离</strong>&quot;——速率越高距离越短，这句是假的。</p>
+<p class="li">3. <strong>换位密码</strong>：属于<strong>传统加密</strong>（古典密码：换位、代换），不是对称密钥加密。</p>
+<p class="li">4. <strong>AES 特点</strong>：分组长度固定 128 位不可变，但<strong>密钥长度可选 128/192/256</strong>；&quot;分组长度和密钥长度均不可变&quot;不是 AES 特点。</p>
+<p class="li">5. <strong>局域网最常见 UTP</strong>：<strong>5 类</strong>（教材口径）。</p>
+<p class="li">6. <strong>传输层报文段</strong>：必须设置若干个<strong>字段</strong>用于携带信息（不是字节）。</p>
+<p class="li">7. <strong>发送窗口内序号状态</strong>：只有&quot;已用未被确认序号&quot;和&quot;可用但未使用序号&quot;两种；&quot;<strong>未用序号</strong>&quot;不在发送窗口内。</p>
+<p class="li">8. <strong>移动 IP 注册报文</strong>：携带 COA、HA、移动结点永久地址和注册标识；注册标识是 <strong>64 位</strong>，不是 32 位（&quot;位数记错&quot;型坑，同类：TCP 紧急指针 16 位、首部长度字段 4 位、DES 密钥 56 位）。</p>
+<h3>四、明确放弃区（60 分不需要，时间不够直接跳过）</h3>
+<p class="li">- 米勒码波形细节：只在老卷里出现过，新卷规律是曼彻斯特 / 差分 / CMI 三选一，不押</p>
+<p class="li">- ZigBee 速率：纯冷门记忆点，考到也只值 1 分</p>
+<p class="li">- Socket 编程写代码：只记函数名对应关系（见模块⑨），不学写代码</p>
+<p class="li">- IPv6 深水区：只记两个填空点——地址 128 位、基本首部固定 40 字节，其余不看</p>
+<p class="li">- nBmB 码：编码细节不背，规律题不会轮到它</p>
+<h3>五、时间安排</h3>
+<p class="li">- <strong>10-22 主攻日</strong>：必拿模块 ① ~ ⑭ 过一遍（先计算类：②③⑧⑩，再背诵类），然后刷卡片里的真题来源卡、红标卡</p>
+<p class="li">- <strong>10-23</strong>：碎片时间刷&quot;不会的&quot;专栏 + 易错清单 8 条，不学新东西</p>
+<p class="li">- <strong>10-24 考试日</strong>：不碰这门，全力当天两科</p>
+<p class="li">- <strong>10-25 上午</strong>：只看易错清单 + 波形口诀（1 下坡 0 上坡 / 0 动 1 静 / 0 是 01）+ 子网五件套和三个时延公式，下午进场</p>
+<h3>六、卡片刷法</h3>
+<p class="li">- 第一优先：带真题来源标记的卡（原题重现概率最高）</p>
+<p class="li">- 第二优先：红标卡（真题考过 2 次以上）</p>
+<p class="li">- 刷下来的&quot;不会&quot;全部进&quot;不会的&quot;专栏，10-23 和 10-25 上午只刷这一栏，反复刷到全会为止</p>
+<p class="li">- 熟悉的卡直接右滑跳过，不在已会的内容上耗时间</p></div>
+    <a class="back" href="../s/04741.html">← 计算机网络原理</a></div><footer>网络与新媒体 · 专升本冲刺 · 10月24-25日考试加油</footer></body></html>
