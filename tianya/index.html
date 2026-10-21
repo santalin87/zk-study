@@ -135,10 +135,12 @@ function renderToday(){
       +'<button class="btn gray" style="width:auto;margin:0;padding:8px 14px" data-go="'+t.tab+'">去做</button></label>';
   });
   h+='<p class="mut">规则：卡片点"不会"明天再出现；连对几次，间隔会拉长到 4 天、7 天、15 天、30 天。忘了也没关系，它会自己回来。</p></div>';
-  h+='<div class="card"><h2 style="margin-top:0">三个病根（提醒）</h2>'
+  h+='<div class="card"><h2 style="margin-top:0">五个病根（提醒）</h2>'
     +'<p><b>1. 概念地基有洞</b>——先把概念弄懂，再刷题。</p>'
     +'<p><b>2. 输出说不到点上</b>——答题先想"得分点是什么"。</p>'
     +'<p><b>3. 选择题暗坑</b>——错题遮住答案重做，才算真会。</p>'
+    +'<p><b>4. 大题别空着</b>——先动笔写公式写要点；草稿想通了一定要誊到答题卡上。</p>'
+    +'<p><b>5. 成对概念成对记</b>——方向、包含、职能这类成对的，放在一起辨析。</p>'
     +'<p class="mut">完整分析在「学习报告」里。</p></div>';
   app.innerHTML=h;
   app.querySelectorAll('[data-task]').forEach(function(cb){
@@ -159,7 +161,7 @@ function renderToday(){
   });
 }
 /* ===== 记忆卡片 ===== */
-var CARD={list:[],idx:0,flipped:false,subject:'全部',dueOnly:true};
+var CARD={list:[],idx:0,flipped:false,subject:'全部',dueOnly:true,stage:0,picked:null,checkOpen:false};
 function buildDeck(){
   var list=CARDS.filter(function(c){
     if(CARD.subject!=='全部'&&c.subject!==CARD.subject)return false;
@@ -170,6 +172,7 @@ function buildDeck(){
   CARD.list=list;
   if(CARD.idx>=list.length)CARD.idx=0;
 }
+function resetCardState(){CARD.stage=0;CARD.picked=null;CARD.checkOpen=false;CARD.flipped=false}
 function renderCards(){
   buildDeck();
   var subjects=['全部','语文','数学','英语','物理','化学','生物','历史','政治','地理'];
@@ -182,44 +185,99 @@ function renderCards(){
   }
   var c=CARD.list[CARD.idx];
   var r=srGet(c.id);
-  h+='<p class="mut" style="margin:10px 0 4px">第 '+(CARD.idx+1)+' / '+CARD.list.length+' 张 · 熟练度盒子 '+r.box+' · 已复习 '+r.seen+' 次 <span class="pill">'+esc(c.subject)+'</span>'+(c.etype?' <span class="pill">'+esc(c.etype)+'</span>':'')+'</p>'
-    +'<div class="card flash" id="flash" style="box-shadow:none;border:1px solid #e5e7eb;margin-top:8px">'
+  h+='<p class="mut" style="margin:10px 0 4px">第 '+(CARD.idx+1)+' / '+CARD.list.length+' 张 · 熟练度盒子 '+r.box+' · 已复习 '+r.seen+' 次 <span class="pill">'+esc(c.subject)+'</span>'+(c.etype?' <span class="pill">'+esc(c.etype)+'</span>':'')+'</p>';
+  if(c.kind==='wrong')h+=wrongCardHtml(c);
+  else h+=dictCardHtml(c);
+  h+='<div class="row"><button class="btn gray" id="cPrev">上一题</button><button class="btn gray" id="cNext">下一题</button></div></div>';
+  app.innerHTML=h;bindCardHead();bindCardBody(c);
+}
+function wrongCardHtml(c){
+  var w=c.raw;
+  var h='';
+  if(w.card_type==='concept'){
+    /* 知识点卡：先讲透，再考一下 */
+    h+='<div style="line-height:1.8;white-space:pre-wrap"><b>这个知识点当时没掌握：</b>\n'+esc(w.teach||w.note||'')+'</div>';
+    if(CARD.stage===0){
+      h+='<button class="btn" id="cReveal" style="margin-top:12px">学完了，考考我</button>';
+    }else{
+      h+=checkHtml(w);
+      h+=rateHtml();
+    }
+    return h;
+  }
+  /* 重做卡：先做题，再看讲解 */
+  h+='<p style="font-size:16px;line-height:1.75;white-space:pre-wrap">'+esc(w.stem||w.knowledge_point||'')+'</p>';
+  if(w.options){
+    var ansLetters=String(w.std_answer||'').replace(/[^A-D]/g,'');
+    Object.keys(w.options).sort().forEach(function(k){
+      var cls='opt';
+      if(CARD.picked){
+        if(ansLetters.indexOf(k)>=0)cls+=' ok';
+        else if(k===CARD.picked)cls+=' bad';
+      }
+      h+='<button class="'+cls+'" data-copt="'+k+'">'+k+'. '+esc(w.options[k])+'</button>';
+    });
+  }
+  if(CARD.stage===0){
+    if(!w.options)h+='<button class="btn" id="cReveal">做完了，看答案和讲解</button>';
+    else h+='<p class="mut">点一个选项，就是重做这道题</p>';
+  }else{
+    h+=learnHtml(w);
+    h+=checkHtml(w);
+    h+=rateHtml();
+  }
+  return h;
+}
+function learnHtml(w){
+  var h='<div class="explain"><b>正确答案：</b>'+esc(w.std_answer||'')+'\n\n';
+  if(w.why)h+='<b>当时错在：</b>'+esc(w.why)+'\n\n';
+  h+='<b>把这个点弄懂：</b>\n'+esc(w.teach||w.note||'')+'</div>';
+  return h;
+}
+function checkHtml(w){
+  if(!w.check_q)return '';
+  var h='<div style="margin-top:12px"><b>举一反三，验证一下：</b><p style="line-height:1.7;white-space:pre-wrap;margin:6px 0">'+esc(w.check_q)+'</p>';
+  if(CARD.checkOpen)h+='<div class="explain">答案：'+esc(w.check_a||'')+'</div>';
+  else h+='<button class="btn gray" id="cCheck">看这道小题的答案</button>';
+  return h+'</div>';
+}
+function rateHtml(){
+  return '<p class="mut" style="margin-top:14px">这张卡现在掌握得怎么样？</p><div class="row"><button class="btn red" id="cNo">还不会</button><button class="btn green" id="cYes">会了</button></div>';
+}
+function dictCardHtml(c){
+  var h='<div class="card flash" id="flash" style="box-shadow:none;border:1px solid #e5e7eb;margin-top:8px">'
     +(CARD.flipped?'<div class="back">'+esc(c.back)+'</div>':'<div class="front">'+esc(c.front)+'</div><p class="mut" style="text-align:center">点卡片翻面看答案</p>')
-    +'</div>'
-    +'<div class="row"><button class="btn gray" id="cPrev">上一题</button><button class="btn gray" id="cNext">下一题</button></div>'
-    +'<div class="row"><button class="btn red" id="cNo">不会</button><button class="btn green" id="cYes">会了</button></div>'
-    +'<button class="btn" id="cSimilar">举一反三：练一道同类题</button>'
-    +'</div>';
-  app.innerHTML=h;bindCardHead();
-  document.getElementById('flash').addEventListener('click',function(){CARD.flipped=!CARD.flipped;renderCards()});
-  document.getElementById('cPrev').addEventListener('click',function(){CARD.idx=(CARD.idx-1+CARD.list.length)%CARD.list.length;CARD.flipped=false;renderCards()});
-  document.getElementById('cNext').addEventListener('click',function(){CARD.idx=(CARD.idx+1)%CARD.list.length;CARD.flipped=false;renderCards()});
-  document.getElementById('cYes').addEventListener('click',function(){srMark(c.id,true);markToday();CARD.flipped=false;CARD.idx++;renderCards()});
-  document.getElementById('cNo').addEventListener('click',function(){srMark(c.id,false);markToday();CARD.flipped=false;CARD.idx++;renderCards()});
-  document.getElementById('cSimilar').addEventListener('click',function(){goSimilar(c)});
+    +'</div><div class="row"><button class="btn red" id="cNo">不会</button><button class="btn green" id="cYes">会了</button></div>';
+  return h;
+}
+function bindCardBody(c){
+  var prev=document.getElementById('cPrev');
+  if(prev)prev.addEventListener('click',function(){CARD.idx=(CARD.idx-1+CARD.list.length)%CARD.list.length;resetCardState();renderCards()});
+  var next=document.getElementById('cNext');
+  if(next)next.addEventListener('click',function(){CARD.idx=(CARD.idx+1)%CARD.list.length;resetCardState();renderCards()});
+  var rev=document.getElementById('cReveal');
+  if(rev)rev.addEventListener('click',function(){CARD.stage=1;renderCards()});
+  var chk=document.getElementById('cCheck');
+  if(chk)chk.addEventListener('click',function(){CARD.checkOpen=true;renderCards()});
+  app.querySelectorAll('[data-copt]').forEach(function(b){
+    b.addEventListener('click',function(){
+      if(CARD.stage===1)return;
+      CARD.picked=b.getAttribute('data-copt');
+      CARD.stage=1;renderCards();
+    });
+  });
+  var fl=document.getElementById('flash');
+  if(fl)fl.addEventListener('click',function(){CARD.flipped=!CARD.flipped;renderCards()});
+  var yes=document.getElementById('cYes');
+  if(yes)yes.addEventListener('click',function(){srMark(c.id,true);markToday();resetCardState();CARD.idx++;renderCards()});
+  var no=document.getElementById('cNo');
+  if(no)no.addEventListener('click',function(){srMark(c.id,false);markToday();resetCardState();CARD.idx++;renderCards()});
 }
 function bindCardHead(){
   var s=document.getElementById('cSubj');
-  if(s)s.addEventListener('change',function(){CARD.subject=s.value;CARD.idx=0;CARD.flipped=false;renderCards()});
+  if(s)s.addEventListener('change',function(){CARD.subject=s.value;CARD.idx=0;resetCardState();renderCards()});
   var d=document.getElementById('cDue');
-  if(d)d.addEventListener('click',function(){CARD.dueOnly=!CARD.dueOnly;CARD.idx=0;CARD.flipped=false;renderCards()});
-}
-function goSimilar(card){
-  /* 按知识点关键词在练习题里找同类题 */
-  var kw=String(card.kp||'');
-  var hit=D.practice.filter(function(p){
-    var hay=(p.knowledge||'')+(p.stem||'');
-    return kw&&hay.indexOf(kw.slice(0,4))>=0;
-  });
-  if(!hit.length&&card.kind==='wrong'){
-    hit=D.practice.filter(function(p){return p.subject===card.subject});
-  }
-  if(!hit.length&&card.kind==='dict'){
-    var others=D.dictation.filter(function(d){return d.set===card.raw.set&&d.id!==card.raw.id});
-    if(others.length){DICT.set=card.raw.set;DICT.idx=0;switchTab('dict');return}
-  }
-  if(hit.length){PRAC.only=hit[0].id;PRAC.idx=0;PRAC.answered={};switchTab('practice')}
-  else alert('暂时没有同类题，去专项练习随便练一道同科目的吧');
+  if(d)d.addEventListener('click',function(){CARD.dueOnly=!CARD.dueOnly;CARD.idx=0;resetCardState();renderCards()});
 }
 function switchTab(t){
   curTab=t;
@@ -344,7 +402,7 @@ function renderBook(){
       +(w.error_type?'<span class="pill">'+esc(w.error_type)+'</span>':'')
       +'<p style="margin:6px 0">'+esc(w.knowledge_point||'')+'</p>'
       +'<p class="mut" style="margin:0">你答：'+esc(w.student_answer||'—')+' · 正确：'+esc(w.std_answer||'—')+' · 得分 '+w.got_score+'/'+w.full_score+'</p>'
-      +'<div class="explain" style="display:none">'+(w.stem? esc(w.stem)+'\n\n' : '')+esc(w.note||'暂无解析')+'</div></div>';
+      +'<div class="explain" style="display:none">'+(w.stem? esc(w.stem)+'\n\n' : '')+(w.why? '当时错在：'+esc(w.why)+'\n\n' : '')+esc(w.teach||w.note||'暂无解析')+(w.check_q? '\n\n举一反三：'+esc(w.check_q)+'\n答案：'+esc(w.check_a||'') : '')+'</div></div>';
   });
   app.innerHTML=h;
   document.getElementById('bSubj').addEventListener('change',function(e){BOOK.subject=e.target.value;renderBook()});
@@ -408,10 +466,12 @@ function renderReport(){
     h+='<div style="margin:8px 0"><div>'+s+' <b>'+x.score+'</b> / '+x.full+'（'+pct+'%）</div><div class="bar"><i style="width:'+pct+'%"></i></div></div>';
   });
   h+='<p><b>总分 '+total+' / '+full+'</b></p></div>';
-  h+='<div class="card"><h2 style="margin-top:0">三个病根</h2>'
-    +'<p><b>1. 概念地基有洞</b>——化学方程式从不配平、物理刹车不算停止时间、地理把"大气逆辐射"写成"反射"。不是粗心，是真不会。</p>'
-    +'<p><b>2. 输出说不到点上</b>——政治"四个彻底结束"一个没写出来，历史江南农业关键词全缺。有话，但写不到得分点上。</p>'
-    +'<p><b>3. 选择题暗坑</b>——地理错 10 题、生物错 7 题、化学错 6 题。拿回试卷后遮答案重做复盘。</p></div>';
+  h+='<div class="card"><h2 style="margin-top:0">五个病根</h2>'
+    +'<p><b>1. 概念地基有洞</b>——化学方程式从不配平、地理把"大气逆辐射"写成"反射"。不是粗心，是真不会。</p>'
+    +'<p><b>2. 输出说不到点上</b>——政治材料题丢 26 分、历史主观题丢 17 分。有话，但写不到得分点上。</p>'
+    +'<p><b>3. 选择题暗坑</b>——概念边界不清，一比较就选错。错题遮住答案重做，才算真会。</p>'
+    +'<p><b>4. 大题空白/没写完</b>——物理刹车题、化学大题整片空白；数学第 19 题草稿都做对了，却没誊到答题卡上。先保证每道题都动笔、草稿定稿再誊写。</p>'
+    +'<p><b>5. 关系类判断成对翻车</b>——充分/必要方向、相等与包含、中书省与门下省。成对概念要成对记、互相辨析。</p></div>';
   var sr=srAll();var boxes=[0,0,0,0,0,0,0];
   CARDS.forEach(function(c){boxes[srGet(c.id).box]++});
   var pracDone=lsGet('ty_prac_done',{});var pracOk=0,pracN=0;
