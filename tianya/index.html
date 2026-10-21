@@ -56,6 +56,7 @@ select{padding:10px;border:1px solid #d1d5db;border-radius:10px;font-size:15px;w
 <button data-t="fav">收藏</button>
 </nav>
 <main id="app"></main>
+<div id="exitBar" style="display:none;position:fixed;left:12px;right:12px;bottom:14px;background:#111827;color:#fff;border-radius:12px;padding:12px 14px;z-index:50;font-size:14px;line-height:1.6;box-shadow:0 4px 16px rgba(0,0,0,.3)">差点就退出啦——刚才是返回手势，怕你误触。继续学习不用管这条；真要退出，点页面左上角的 × 就行。<button onclick="document.getElementById('exitBar').style.display='none'" style="float:right;background:#374151;color:#fff;border:0;border-radius:8px;padding:5px 12px;font-size:14px">知道了</button></div>
 <script src="data.js"></script>
 <script src="img.js"></script>
 <script>
@@ -149,8 +150,18 @@ function renderToday(){
   var key='ty_task_'+todayStr();
   var done=lsGet(key,{});
   var mastered=CARDS.filter(function(c){return srGet(c.id).box>=3}).length;
-  var h='<div class="card"><h2 style="margin-top:0">每日任务</h2>'
-    +'<p class="mut">连续打卡 <b style="color:#2563eb">'+streak()+'</b> 天 · 已掌握 '+mastered+' / '+CARDS.length+' 张卡</p>';
+  var boxes=[0,0,0,0,0,0,0];
+  CARDS.forEach(function(c){boxes[srGet(c.id).box]++});
+  var pracDone0=lsGet('ty_prac_done',{});var pracOk=0,pracN=0;
+  Object.keys(pracDone0).forEach(function(k){pracN++;if(pracDone0[k])pracOk++});
+  var concOkN=lsGet('ty_conc_ok',[]).length;
+  var pctM=CARDS.length?Math.round(mastered/CARDS.length*100):0;
+  var h='<div class="card"><h2 style="margin-top:0">我的进度</h2>'
+    +'<p style="margin:4px 0">连续打卡 <b style="color:#2563eb">'+streak()+'</b> 天 · 已掌握卡片 <b>'+mastered+' / '+CARDS.length+'</b> 张</p>'
+    +'<div class="bar"><i style="width:'+pctM+'%"></i></div>'
+    +'<p class="mut" style="margin:4px 0">卡片熟练度（盒子 0→6）：'+boxes.join(' · ')+'</p>'
+    +'<p class="mut" style="margin:4px 0">专项练习：已做 '+pracN+' 题，答对 '+pracOk+' 题 · 概念自查：已打勾 '+concOkN+' / '+(D.concepts||[]).length+' 个 · 收藏 '+favs().length+' 道</p></div>';
+  h+='<div class="card"><h2 style="margin-top:0">每日任务</h2>';
   var tasks=[
     {id:'t1',label:'错题本：复习到期错题（'+dueWrong+' 道到期）',tab:'book'},
     {id:'t2',label:'记忆卡片：背到期的概念/公式/短语（'+dueMem+' 张到期）',tab:'memory'},
@@ -639,6 +650,21 @@ function renderReport(){
     +'<p class="mut">进度存在这台手机的浏览器里，换手机不会同步。每天打开做一点，比一次做很多更管用。</p></div>';
   app.innerHTML=h;
 }
+/* 防误滑退出：微信/浏览器里左滑=历史后退，单页站后退即退出，这里拦一层 */
+(function(){
+  try{
+    history.pushState({tguard:1},'');
+    window.addEventListener('popstate',function(){
+      history.pushState({tguard:1},'');
+      var bar=document.getElementById('exitBar');
+      if(bar){
+        bar.style.display='block';
+        clearTimeout(window.__ebT);
+        window.__ebT=setTimeout(function(){bar.style.display='none'},5000);
+      }
+    });
+  }catch(e){}
+})();
 render();
 
 </script>
