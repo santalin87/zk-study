@@ -139,7 +139,7 @@ function renderToday(){
     +'<p><b>1. 概念地基有洞</b>——先把概念弄懂，再刷题。</p>'
     +'<p><b>2. 输出说不到点上</b>——答题先想"得分点是什么"。</p>'
     +'<p><b>3. 选择题暗坑</b>——错题遮住答案重做，才算真会。</p>'
-    +'<p><b>4. 大题别空着</b>——先动笔写公式写要点；草稿想通了一定要誊到答题卡上。</p>'
+    +'<p><b>4. 大题别空着</b>——先按框架动笔写公式、写要点；评讲订正听懂了不等于考试会做，要自己限时重做一遍。</p>'
     +'<p><b>5. 成对概念成对记</b>——方向、包含、职能这类成对的，放在一起辨析。</p>'
     +'<p class="mut">完整分析在「学习报告」里。</p></div>';
   app.innerHTML=h;
@@ -231,8 +231,13 @@ function wrongCardHtml(c){
 function learnHtml(w){
   var h='<div class="explain"><b>正确答案：</b>'+esc(w.std_answer||'')+'\n\n';
   if(w.why)h+='<b>当时错在：</b>'+esc(w.why)+'\n\n';
-  h+='<b>把这个点弄懂：</b>\n'+esc(w.teach||w.note||'')+'</div>';
-  return h;
+  h+='<b>把这个点弄懂：</b>\n'+esc(w.teach||w.note||'');
+  if(w.steps)h+='\n\n<b>再碰到这类题，这样想：</b>\n'+esc(w.steps);
+  if(w.need){
+    var items=Array.isArray(w.need)? w.need : [w.need];
+    h+='\n\n<b>先掌握这些知识点（照着补）：</b>\n'+items.map(function(x){return '· '+esc(x)}).join('\n');
+  }
+  return h+'</div>';
 }
 function checkHtml(w){
   if(!w.check_q)return '';
@@ -402,7 +407,7 @@ function renderBook(){
       +(w.error_type?'<span class="pill">'+esc(w.error_type)+'</span>':'')
       +'<p style="margin:6px 0">'+esc(w.knowledge_point||'')+'</p>'
       +'<p class="mut" style="margin:0">你答：'+esc(w.student_answer||'—')+' · 正确：'+esc(w.std_answer||'—')+' · 得分 '+w.got_score+'/'+w.full_score+'</p>'
-      +'<div class="explain" style="display:none">'+(w.stem? esc(w.stem)+'\n\n' : '')+(w.why? '当时错在：'+esc(w.why)+'\n\n' : '')+esc(w.teach||w.note||'暂无解析')+(w.check_q? '\n\n举一反三：'+esc(w.check_q)+'\n答案：'+esc(w.check_a||'') : '')+'</div></div>';
+      +'<div class="explain" style="display:none">'+(w.stem? esc(w.stem)+'\n\n' : '')+(w.why? '当时错在：'+esc(w.why)+'\n\n' : '')+esc(w.teach||w.note||'暂无解析')+(w.steps? '\n\n解题思路：\n'+esc(w.steps) : '')+(w.need? '\n\n先掌握：'+(Array.isArray(w.need)? w.need.map(function(x){return esc(x)}).join('；') : esc(w.need)) : '')+(w.check_q? '\n\n举一反三：'+esc(w.check_q)+'\n答案：'+esc(w.check_a||'') : '')+'</div></div>';
   });
   app.innerHTML=h;
   document.getElementById('bSubj').addEventListener('change',function(e){BOOK.subject=e.target.value;renderBook()});
@@ -470,7 +475,7 @@ function renderReport(){
     +'<p><b>1. 概念地基有洞</b>——化学方程式从不配平、地理把"大气逆辐射"写成"反射"。不是粗心，是真不会。</p>'
     +'<p><b>2. 输出说不到点上</b>——政治材料题丢 26 分、历史主观题丢 17 分。有话，但写不到得分点上。</p>'
     +'<p><b>3. 选择题暗坑</b>——概念边界不清，一比较就选错。错题遮住答案重做，才算真会。</p>'
-    +'<p><b>4. 大题空白/没写完</b>——物理刹车题、化学大题整片空白；数学第 19 题草稿都做对了，却没誊到答题卡上。先保证每道题都动笔、草稿定稿再誊写。</p>'
+    +'<p><b>4. 大题空白/没写完</b>——物理刹车题、化学大题整片空白；数学第 19 题考试时写跑偏了（试卷上的完整解法是考后评讲订正补的，订正懂了不等于考试会做）。先保证每道题都按框架动笔。</p>'
     +'<p><b>5. 关系类判断成对翻车</b>——充分/必要方向、相等与包含、中书省与门下省。成对概念要成对记、互相辨析。</p></div>';
   var sr=srAll();var boxes=[0,0,0,0,0,0,0];
   CARDS.forEach(function(c){boxes[srGet(c.id).box]++});
