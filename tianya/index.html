@@ -49,6 +49,7 @@ select{padding:10px;border:1px solid #d1d5db;border-radius:10px;font-size:15px;w
 <button data-t="dict">默写工坊</button>
 <button data-t="book">错题本</button>
 <button data-t="ask">我要提问</button>
+<button data-t="fav">我的收藏</button>
 <button data-t="report">学习报告</button>
 </nav>
 <main id="app"></main>
@@ -98,7 +99,7 @@ render();
 });
 function render(){
 if(curTab==='today')renderToday();
-else if(curTab==='cards')renderCards();
+else if(curTab==='cards'||curTab==='fav')renderCards();
 else if(curTab==='practice')renderPractice();
 else if(curTab==='dict')renderDict();
 else if(curTab==='book')renderBook();
@@ -162,9 +163,18 @@ function renderToday(){
 }
 /* ===== 记忆卡片 ===== */
 var CARD={list:[],idx:0,flipped:false,subject:'全部',dueOnly:true,stage:0,picked:null,checkOpen:false};
+function favs(){return lsGet('ty_favs',[])}
+function isFav(id){return favs().indexOf(id)>=0}
+function toggleFav(id){
+  var f=favs();var i=f.indexOf(id);
+  if(i>=0)f.splice(i,1);else f.push(id);
+  lsSet('ty_favs',f);
+}
 function buildDeck(){
+  var favOnly=(curTab==='fav');
   var list=CARDS.filter(function(c){
     if(CARD.subject!=='全部'&&c.subject!==CARD.subject)return false;
+    if(favOnly)return isFav(c.id);
     if(CARD.dueOnly&&!isDue(c.id))return false;
     return true;
   });
@@ -176,16 +186,18 @@ function resetCardState(){CARD.stage=0;CARD.picked=null;CARD.checkOpen=false;CAR
 function renderCards(){
   buildDeck();
   var subjects=['全部','语文','数学','英语','物理','化学','生物','历史','政治','地理'];
-  var h='<div class="card"><div class="row">'
+  var h='<div class="card" id="cardBox"><div class="row">'
     +'<select id="cSubj" style="flex:1">'+subjects.map(function(s){return '<option'+(s===CARD.subject?' selected':'')+'>'+s+'</option>'}).join('')+'</select>'
-    +'<button class="btn gray" id="cDue" style="flex:0 0 auto;width:auto;margin:0;padding:10px 12px">'+(CARD.dueOnly?'只看到期':'看全部')+'</button></div>';
+    +(curTab==='fav'?'<span class="mut" style="align-self:center">共 '+favs().length+' 道收藏</span>':'<button class="btn gray" id="cDue" style="flex:0 0 auto;width:auto;margin:0;padding:10px 12px">'+(CARD.dueOnly?'只看到期':'看全部')+'</button>')+'</div>';
   if(!CARD.list.length){
-    h+='<p class="mut" style="margin-top:14px">这个范围里没有到期的卡片。点"看全部"可以提前复习，或者去做专项练习。</p></div>';
+    h+='<p class="mut" style="margin-top:14px">'+(curTab==='fav'?'还没有收藏的题目。在记忆卡片里点"☆ 收藏"，就能把想多刷的题攒到这里集中重刷。':'这个范围里没有到期的卡片。点"看全部"可以提前复习，或者去做专项练习。')+'</p></div>';
     app.innerHTML=h;bindCardHead();return;
   }
   var c=CARD.list[CARD.idx];
   var r=srGet(c.id);
-  h+='<p class="mut" style="margin:10px 0 4px">第 '+(CARD.idx+1)+' / '+CARD.list.length+' 张 · 熟练度盒子 '+r.box+' · 已复习 '+r.seen+' 次 <span class="pill">'+esc(c.subject)+'</span>'+(c.etype?' <span class="pill">'+esc(c.etype)+'</span>':'')+'</p>';
+  h+='<p class="mut" style="margin:10px 0 4px">第 '+(CARD.idx+1)+' / '+CARD.list.length+' 张 · 熟练度盒子 '+r.box+' · 已复习 '+r.seen+' 次 <span class="pill">'+esc(c.subject)+'</span>'+(c.etype?' <span class="pill">'+esc(c.etype)+'</span>':'')
+    +' <button id="cFav" style="float:right;border:1px solid #d1d5db;background:'+(isFav(c.id)?'#fef3c7':'#fff')+';border-radius:8px;padding:4px 10px;font-size:13px">'+(isFav(c.id)?'★ 已收藏':'☆ 收藏')+'</button></p>'
+    +'<p class="mut" style="margin:0 0 4px;font-size:12px">小提示：左右滑动可以切题</p>';
   if(c.kind==='wrong')h+=wrongCardHtml(c);
   else h+=dictCardHtml(c);
   h+='<div class="row"><button class="btn gray" id="cPrev">上一题</button><button class="btn gray" id="cNext">下一题</button></div></div>';
@@ -256,6 +268,22 @@ function dictCardHtml(c){
   return h;
 }
 function bindCardBody(c){
+  var fb=document.getElementById('cFav');
+  if(fb)fb.addEventListener('click',function(){toggleFav(c.id);renderCards()});
+  var box=document.getElementById('cardBox');
+  if(box){
+    var sx=0,sy=0;
+    box.addEventListener('touchstart',function(e){var t=e.changedTouches[0];sx=t.clientX;sy=t.clientY},{passive:true});
+    box.addEventListener('touchend',function(e){
+      var t=e.changedTouches[0];var dx=t.clientX-sx;var dy=t.clientY-sy;
+      if(Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)*1.5){
+        CARD.lastSwipe=Date.now();
+        if(dx<0)CARD.idx=(CARD.idx+1)%CARD.list.length;
+        else CARD.idx=(CARD.idx-1+CARD.list.length)%CARD.list.length;
+        resetCardState();renderCards();
+      }
+    },{passive:true});
+  }
   var prev=document.getElementById('cPrev');
   if(prev)prev.addEventListener('click',function(){CARD.idx=(CARD.idx-1+CARD.list.length)%CARD.list.length;resetCardState();renderCards()});
   var next=document.getElementById('cNext');
@@ -272,7 +300,7 @@ function bindCardBody(c){
     });
   });
   var fl=document.getElementById('flash');
-  if(fl)fl.addEventListener('click',function(){CARD.flipped=!CARD.flipped;renderCards()});
+  if(fl)fl.addEventListener('click',function(){if(CARD.lastSwipe&&Date.now()-CARD.lastSwipe<350)return;CARD.flipped=!CARD.flipped;renderCards()});
   var yes=document.getElementById('cYes');
   if(yes)yes.addEventListener('click',function(){srMark(c.id,true);markToday();resetCardState();CARD.idx++;renderCards()});
   var no=document.getElementById('cNo');
