@@ -48,6 +48,7 @@ select{padding:10px;border:1px solid #d1d5db;border-radius:10px;font-size:15px;w
 <button data-t="practice">专项练习</button>
 <button data-t="dict">默写工坊</button>
 <button data-t="book">错题本</button>
+<button data-t="concepts">概念清单</button>
 <button data-t="ask">我要提问</button>
 <button data-t="fav">我的收藏</button>
 <button data-t="report">学习报告</button>
@@ -89,11 +90,17 @@ front:'['+d.set+']\n'+d.prompt+'\n\n（先在心里默写出来，再点卡片�
 back:d.answer+'\n\n'+(d.explain||''),
 raw:d});
 });
+(D.pairs||[]).forEach(function(p,i){
+CARDS.push({id:'pair'+i,kind:'pair',subject:p.subject,no:'辨析',
+kp:p.a_name+' vs '+p.b_name,etype:'成对辨析',
+front:'',back:'',raw:p});
+});
 var app=document.getElementById('app');
 var curTab='today';
 document.getElementById('tabs').addEventListener('click',function(e){
 if(e.target.tagName!=='BUTTON')return;
 curTab=e.target.getAttribute('data-t');
+if(curTab==='cards'||curTab==='fav'){CARD.idx=0;resetCardState()}
 var bs=document.querySelectorAll('#tabs button');for(var i=0;i<bs.length;i++)bs[i].classList.toggle('on',bs[i]===e.target);
 render();
 });
@@ -103,6 +110,7 @@ else if(curTab==='cards'||curTab==='fav')renderCards();
 else if(curTab==='practice')renderPractice();
 else if(curTab==='dict')renderDict();
 else if(curTab==='book')renderBook();
+else if(curTab==='concepts')renderConcepts();
 else if(curTab==='ask')renderAsk();
 else if(curTab==='report')renderReport();
 }
@@ -181,6 +189,10 @@ function buildDeck(){
   list.sort(function(a,b){return srGet(a.id).box-srGet(b.id).box});
   CARD.list=list;
   if(CARD.idx>=list.length)CARD.idx=0;
+  if(window.__jumpId){
+    for(var ji=0;ji<list.length;ji++){if(list[ji].id===window.__jumpId){CARD.idx=ji;break}}
+    window.__jumpId=null;resetCardState();
+  }
 }
 function resetCardState(){CARD.stage=0;CARD.picked=null;CARD.checkOpen=false;CARD.flipped=false}
 function renderCards(){
@@ -198,12 +210,13 @@ function renderCards(){
   h+='<p class="mut" style="margin:10px 0 4px">第 '+(CARD.idx+1)+' / '+CARD.list.length+' 张 · 熟练度盒子 '+r.box+' · 已复习 '+r.seen+' 次 <span class="pill">'+esc(c.subject)+'</span>'+(c.etype?' <span class="pill">'+esc(c.etype)+'</span>':'')
     +' <button id="cFav" style="float:right;border:1px solid #d1d5db;background:'+(isFav(c.id)?'#fef3c7':'#fff')+';border-radius:8px;padding:4px 10px;font-size:13px">'+(isFav(c.id)?'★ 已收藏':'☆ 收藏')+'</button></p>'
     +'<p class="mut" style="margin:0 0 4px;font-size:12px">小提示：左右滑动可以切题</p>';
-  if(c.kind==='wrong')h+=wrongCardHtml(c);
+  if(c.kind==='wrong'||c.kind==='pair')h+=wrongCardHtml(c);
   else h+=dictCardHtml(c);
   h+='<div class="row"><button class="btn gray" id="cPrev">上一题</button><button class="btn gray" id="cNext">下一题</button></div></div>';
   app.innerHTML=h;bindCardHead();bindCardBody(c);
 }
 function wrongCardHtml(c){
+  if(c.kind==='pair')return pairCardHtml(c);
   var w=c.raw;
   var h='';
   if(w.card_type==='concept'){
@@ -243,6 +256,8 @@ function wrongCardHtml(c){
 function learnHtml(w){
   var h='<div class="explain"><b>正确答案：</b>'+esc(w.std_answer||'')+'\n\n';
   if(w.why)h+='<b>当时错在：</b>'+esc(w.why)+'\n\n';
+  if(w.points&&w.points.length)h+='<b>这道题的得分点（写到才给分）：</b>\n'+w.points.map(function(p){return '· '+esc(p)}).join('\n')+'\n\n';
+  if(w.frame)h+='<b>落笔框架（大题先搭架子再填内容）：</b>\n'+esc(w.frame)+'\n\n';
   h+='<b>把这个点弄懂：</b>\n'+esc(w.teach||w.note||'');
   if(w.steps)h+='\n\n<b>再碰到这类题，这样想：</b>\n'+esc(w.steps);
   if(w.need){
@@ -260,6 +275,24 @@ function checkHtml(w){
 }
 function rateHtml(){
   return '<p class="mut" style="margin-top:14px">这张卡现在掌握得怎么样？</p><div class="row"><button class="btn red" id="cNo">还不会</button><button class="btn green" id="cYes">会了</button></div>';
+}
+function pairCardHtml(c){
+  var p=c.raw;
+  if(CARD.stage===0){
+    return '<div style="line-height:1.9;white-space:pre-wrap"><b>成对辨析</b>：这两个概念最容易混。先自己想一想，它们到底差在哪？\n\n<b style="font-size:17px">'+esc(p.a_name)+'</b>\n　　vs\n<b style="font-size:17px">'+esc(p.b_name)+'</b></div>'
+      +'<button class="btn" id="cReveal" style="margin-top:12px">想好了，看辨析</button>';
+  }
+  var h='<div class="explain"><b>'+esc(p.a_name)+'</b>：'+esc(p.a_def)
+    +'\n\n<b>'+esc(p.b_name)+'</b>：'+esc(p.b_def)
+    +'\n\n<b>辨析（差在哪、怎么区分）：</b>\n'+esc(p.diff)+'</div>';
+  if(p.check_q){
+    h+='<div style="margin-top:12px"><b>辨析一下：</b><p style="line-height:1.7;white-space:pre-wrap;margin:6px 0">'+esc(p.check_q)+'</p>';
+    if(CARD.checkOpen)h+='<div class="explain">答案：'+esc(p.check_a||'')+'</div>';
+    else h+='<button class="btn gray" id="cCheck">看这道小题的答案</button>';
+    h+='</div>';
+  }
+  h+=rateHtml();
+  return h;
 }
 function dictCardHtml(c){
   var h='<div class="card flash" id="flash" style="box-shadow:none;border:1px solid #e5e7eb;margin-top:8px">'
@@ -332,7 +365,7 @@ function buildPrac(){
 }
 function renderPractice(){
   buildPrac();
-  var h='<div class="card">';
+  var h='<div class="card" id="pracBox">';
   if(PRAC.only){
     h+='<p><span class="pill">举一反三</span> <button class="btn gray" id="pAll" style="width:auto;display:inline-block;margin:0;padding:6px 12px">回到全部练习</button></p>';
   }else{
@@ -368,6 +401,19 @@ function renderPractice(){
   });
   document.getElementById('pPrev').addEventListener('click',function(){PRAC.idx=(PRAC.idx-1+PRAC.list.length)%PRAC.list.length;renderPractice()});
   document.getElementById('pNext').addEventListener('click',function(){PRAC.idx=(PRAC.idx+1)%PRAC.list.length;renderPractice()});
+  var pb=document.getElementById('pracBox');
+  if(pb&&PRAC.list.length>1){
+    var psx=0,psy=0;
+    pb.addEventListener('touchstart',function(e){var t=e.changedTouches[0];psx=t.clientX;psy=t.clientY},{passive:true});
+    pb.addEventListener('touchend',function(e){
+      var t=e.changedTouches[0];var dx=t.clientX-psx;var dy=t.clientY-psy;
+      if(Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)*1.5){
+        if(dx<0)PRAC.idx=(PRAC.idx+1)%PRAC.list.length;
+        else PRAC.idx=(PRAC.idx-1+PRAC.list.length)%PRAC.list.length;
+        renderPractice();
+      }
+    },{passive:true});
+  }
 }
 function bindPracHead(){
   var s=document.getElementById('pSubj');
@@ -435,7 +481,7 @@ function renderBook(){
       +(w.error_type?'<span class="pill">'+esc(w.error_type)+'</span>':'')
       +'<p style="margin:6px 0">'+esc(w.knowledge_point||'')+'</p>'
       +'<p class="mut" style="margin:0">你答：'+esc(w.student_answer||'—')+' · 正确：'+esc(w.std_answer||'—')+' · 得分 '+w.got_score+'/'+w.full_score+'</p>'
-      +'<div class="explain" style="display:none">'+(w.stem? esc(w.stem)+'\n\n' : '')+(w.why? '当时错在：'+esc(w.why)+'\n\n' : '')+esc(w.teach||w.note||'暂无解析')+(w.steps? '\n\n解题思路：\n'+esc(w.steps) : '')+(w.need? '\n\n先掌握：'+(Array.isArray(w.need)? w.need.map(function(x){return esc(x)}).join('；') : esc(w.need)) : '')+(w.check_q? '\n\n举一反三：'+esc(w.check_q)+'\n答案：'+esc(w.check_a||'') : '')+'</div></div>';
+      +'<div class="explain" style="display:none">'+(w.stem? '【题目】'+esc(w.stem)+'\n\n' : '')+(w.why? '当时错在：'+esc(w.why)+'\n\n' : '')+esc(w.teach||w.note||'暂无解析')+(w.points&&w.points.length? '\n\n得分点：\n'+w.points.map(function(p){return '· '+esc(p)}).join('\n') : '')+(w.frame? '\n\n落笔框架：\n'+esc(w.frame) : '')+(w.steps? '\n\n解题思路：\n'+esc(w.steps) : '')+(w.need? '\n\n先掌握：'+(Array.isArray(w.need)? w.need.map(function(x){return esc(x)}).join('；') : esc(w.need)) : '')+(w.check_q? '\n\n举一反三：'+esc(w.check_q)+'\n答案：'+esc(w.check_a||'') : '')+'</div></div>';
   });
   app.innerHTML=h;
   document.getElementById('bSubj').addEventListener('change',function(e){BOOK.subject=e.target.value;renderBook()});
@@ -449,6 +495,46 @@ function renderBook(){
   });
 }
 /* ===== 提问 ===== */
+/* ===== 概念清单 ===== */
+var CONC={subject:'全部'};
+function concOkKey(c){return c.subject+'|'+c.name}
+function jumpToWrong(key){
+  var idx=-1;
+  D.wrong.forEach(function(w,i){if(w.key===key)idx=i});
+  if(idx<0)return;
+  window.__jumpId='w'+idx;
+  CARD.subject='全部';CARD.dueOnly=false;CARD.idx=0;resetCardState();
+  switchTab('cards');
+}
+function renderConcepts(){
+  var subjects=['全部','语文','数学','英语','物理','化学','生物','历史','政治','地理'];
+  var list=(D.concepts||[]).filter(function(c){return CONC.subject==='全部'||c.subject===CONC.subject});
+  var okSet=lsGet('ty_conc_ok',[]);
+  var wN=0;list.forEach(function(c){if(c.wrong)wN++});
+  var h='<div class="card"><div class="row"><select id="kSubj" style="flex:1">'+subjects.map(function(s){return '<option'+(s===CONC.subject?' selected':'')+'>'+s+'</option>'}).join('')+'</select></div>'
+    +'<p class="mut" style="margin:10px 0">这次考试涉及的概念都在这儿：共 '+list.length+' 个，其中 <b style="color:#dc2626">'+wN+' 个失了分</b>。先攻红的；觉得会了的点"✓ 我会了"打勾自查。</p>';
+  list=list.slice().sort(function(a,b){return (b.wrong?1:0)-(a.wrong?1:0)});
+  list.forEach(function(c,i){
+    var ok=okSet.indexOf(concOkKey(c))>=0;
+    h+='<div style="border-top:1px solid #eef1f4;padding:10px 0">'
+      +'<div><b>'+esc(c.name)+'</b> <span class="pill">'+esc(c.subject)+'</span> '+(c.wrong?'<span class="pill" style="background:#fee2e2;color:#b91c1c">这次失分</span>':'<span class="pill" style="background:#dcfce7;color:#166534">这次过关</span>')+(ok?' <span class="pill" style="background:#dbeafe;color:#1d4ed8">自查✓</span>':'')+'</div>'
+      +'<div style="line-height:1.7;margin-top:4px;white-space:pre-wrap">'+esc(c.core)+'</div>'
+      +'<div style="margin-top:6px;display:flex;gap:8px">'
+      +(c.keys&&c.keys.length?'<button class="btn gray" data-kjump="'+esc(c.keys[0])+'" style="flex:0 0 auto;width:auto;padding:8px 12px">看这道错题</button>':'')
+      +'<button class="btn '+(ok?'gray':'green')+'" data-kok="'+i+'" style="flex:0 0 auto;width:auto;padding:8px 12px;margin-left:auto">'+(ok?'↩ 其实没会':'✓ 我会了')+'</button>'
+      +'</div></div>';
+  });
+  h+='</div>';
+  app.innerHTML=h;
+  var s=document.getElementById('kSubj');
+  s.addEventListener('change',function(){CONC.subject=s.value;renderConcepts()});
+  app.querySelectorAll('[data-kjump]').forEach(function(b){b.addEventListener('click',function(){jumpToWrong(b.getAttribute('data-kjump'))})});
+  app.querySelectorAll('[data-kok]').forEach(function(b){b.addEventListener('click',function(){
+    var c=list[parseInt(b.getAttribute('data-kok'),10)];var k=concOkKey(c);var arr=lsGet('ty_conc_ok',[]);var ix=arr.indexOf(k);
+    if(ix>=0)arr.splice(ix,1);else arr.push(k);
+    lsSet('ty_conc_ok',arr);renderConcepts();
+  })});
+}
 function renderAsk(){
   var newUrl='https://github.com/santalin87/zk-study/issues/new?labels=tianya-q&title='+encodeURIComponent('[提问] ')+'&body='+encodeURIComponent('科目：\n题目（可以把题目打出来，或者写试卷第几题）：\n\n我卡在哪里：\n');
   var h='<div class="card"><h2 style="margin-top:0">我要提问</h2>'
@@ -499,6 +585,15 @@ function renderReport(){
     h+='<div style="margin:8px 0"><div>'+s+' <b>'+x.score+'</b> / '+x.full+'（'+pct+'%）</div><div class="bar"><i style="width:'+pct+'%"></i></div></div>';
   });
   h+='<p><b>总分 '+total+' / '+full+'</b></p></div>';
+  (function(){
+    var cs=D.concepts||[];if(!cs.length)return;
+    var byS={};
+    cs.forEach(function(c){byS[c.subject]=byS[c.subject]||{t:0,w:0};byS[c.subject].t++;if(c.wrong)byS[c.subject].w++});
+    var totW=0;cs.forEach(function(c){if(c.wrong)totW++});
+    h+='<div class="card"><h2 style="margin-top:0">概念地基盘点</h2><p class="mut">这次考试共涉及 '+cs.length+' 个概念，其中 '+totW+' 个失了分（病根 1 的明细账）：</p>';
+    order.forEach(function(s){var b=byS[s];if(!b)return;h+='<p style="margin:4px 0">'+s+'：失分概念 <b style="color:#dc2626">'+b.w+'</b> / 共 '+b.t+' 个</p>'});
+    h+='<button class="btn" onclick="switchTab(\'concepts\')">去概念清单逐个补洞</button></div>';
+  })();
   h+='<div class="card"><h2 style="margin-top:0">五个病根</h2>'
     +'<p><b>1. 概念地基有洞</b>——化学方程式从不配平、地理把"大气逆辐射"写成"反射"。不是粗心，是真不会。</p>'
     +'<p><b>2. 输出说不到点上</b>——政治材料题丢 26 分、历史主观题丢 17 分。有话，但写不到得分点上。</p>'
