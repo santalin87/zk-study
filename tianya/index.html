@@ -36,25 +36,28 @@ textarea,input[type=text]{width:100%;padding:12px;border:1px solid #d1d5db;borde
 .task input{width:22px;height:22px}
 .pill{display:inline-block;padding:2px 10px;border-radius:999px;font-size:12px;background:#fef3c7;color:#92400e}
 select{padding:10px;border:1px solid #d1d5db;border-radius:10px;font-size:15px;width:100%}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 8px}
+.chip{padding:7px 13px;border:1px solid #d1d5db;background:#fff;border-radius:999px;font-size:14px;cursor:pointer}
+.chip.on{background:#2563eb;color:#fff;border-color:#2563eb}
+.seg{display:flex;background:#e5e7eb;border-radius:10px;padding:3px;margin-bottom:10px}
+.seg button{flex:1;padding:9px;border:0;border-radius:8px;background:transparent;font-size:15px;cursor:pointer;color:#374151}
+.seg button.on{background:#fff;font-weight:600;box-shadow:0 1px 2px rgba(0,0,0,.12);color:#111827}
 .qa{border:1px solid #e5e7eb;border-radius:10px;padding:12px;margin:8px 0;background:#fff}
 .qa.ans{background:#f0fdf4;border-radius:8px;padding:10px;margin-top:8px;white-space:pre-wrap;line-height:1.7}
 </style>
 </head>
 <body>
-<header><h1>天娅的学习小站</h1><p>错题卡片 · 间隔复习 · 举一反三 · 每日打卡</p></header>
+<header><h1>天娅的学习小站</h1><p>每日任务 · 记忆卡片 · 错题本 · 练习 · 收藏</p></header>
 <nav id="tabs">
-<button data-t="today" class="on">今日任务</button>
-<button data-t="cards">记忆卡片</button>
-<button data-t="practice">专项练习</button>
-<button data-t="dict">默写工坊</button>
+<button data-t="today" class="on">每日任务</button>
+<button data-t="memory">记忆卡片</button>
 <button data-t="book">错题本</button>
-<button data-t="concepts">概念清单</button>
-<button data-t="ask">我要提问</button>
-<button data-t="fav">我的收藏</button>
-<button data-t="report">学习报告</button>
+<button data-t="practice">练习</button>
+<button data-t="fav">收藏</button>
 </nav>
 <main id="app"></main>
 <script src="data.js"></script>
+<script src="img.js"></script>
 <script>
 var D = window.STUDY_DATA || {scores:[],wrong:[],practice:[],dictation:[]};
 function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
@@ -97,22 +100,36 @@ front:'',back:'',raw:p});
 });
 var app=document.getElementById('app');
 var curTab='today';
+var TODAY={view:'home'};
+var MEM={view:'cards'};
+var HUB={view:'prac'};
 document.getElementById('tabs').addEventListener('click',function(e){
 if(e.target.tagName!=='BUTTON')return;
 curTab=e.target.getAttribute('data-t');
-if(curTab==='cards'||curTab==='fav'){CARD.idx=0;resetCardState()}
+if(curTab==='today')TODAY.view='home';
+if(curTab==='book'||curTab==='memory'||curTab==='fav'){CARD.idx=0;resetCardState()}
 var bs=document.querySelectorAll('#tabs button');for(var i=0;i<bs.length;i++)bs[i].classList.toggle('on',bs[i]===e.target);
 render();
 });
 function render(){
-if(curTab==='today')renderToday();
-else if(curTab==='cards'||curTab==='fav')renderCards();
-else if(curTab==='practice')renderPractice();
-else if(curTab==='dict')renderDict();
-else if(curTab==='book')renderBook();
-else if(curTab==='concepts')renderConcepts();
-else if(curTab==='ask')renderAsk();
-else if(curTab==='report')renderReport();
+if(curTab==='today')renderTodayHub();
+else if(curTab==='memory'){if(MEM.view==='concepts')renderConcepts();else renderCards()}
+else if(curTab==='book'||curTab==='fav')renderCards();
+else if(curTab==='practice'){if(HUB.view==='dict')renderDict();else renderPractice()}
+}
+function renderTodayHub(){
+  if(TODAY.view==='home'){renderToday();return}
+  if(TODAY.view==='ask')renderAsk();else if(TODAY.view==='report')renderReport();
+  app.innerHTML='<div class="card" style="padding:10px 16px"><button class="btn gray" id="bkHome" style="width:auto;margin:0;padding:8px 14px">← 返回每日任务</button></div>'+app.innerHTML;
+  document.getElementById('bkHome').addEventListener('click',function(){TODAY.view='home';render()});
+}
+function goConcepts(){MEM.view='concepts';TODAY.view='home';switchTab('memory')}
+function segHtml(items,cur,attr){
+  return '<div class="seg">'+items.map(function(it){return '<button data-'+attr+'="'+it.v+'"'+(it.v===cur?' class="on"':'')+'>'+it.t+'</button>'}).join('')+'</div>';
+}
+function subjChipsHtml(cur,attr,subs){
+  var subjects=subs||['全部','语文','数学','英语','物理','化学','生物','历史','政治','地理'];
+  return '<div class="chips">'+subjects.map(function(s){return '<button class="chip'+(s===cur?' on':'')+'" data-'+attr+'="'+s+'">'+s+'</button>'}).join('')+'</div>';
 }
 /* ===== 今日任务 ===== */
 function doneDays(){return lsGet('ty_days',{})}
@@ -127,30 +144,33 @@ function streak(){
 }
 function markToday(){var days=doneDays();days[todayStr()]=true;lsSet('ty_days',days)}
 function renderToday(){
-  var due=CARDS.filter(function(c){return isDue(c.id)});
+  var dueWrong=CARDS.filter(function(c){return c.kind==='wrong'&&isDue(c.id)}).length;
+  var dueMem=CARDS.filter(function(c){return c.kind!=='wrong'&&isDue(c.id)}).length;
   var key='ty_task_'+todayStr();
   var done=lsGet(key,{});
   var mastered=CARDS.filter(function(c){return srGet(c.id).box>=3}).length;
-  var h='<div class="card"><h2 style="margin-top:0">今日任务</h2>'
-    +'<p class="mut">连续打卡 <b style="color:#2563eb">'+streak()+'</b> 天 · 卡片已掌握 '+mastered+' / '+CARDS.length+' 张</p>';
+  var h='<div class="card"><h2 style="margin-top:0">每日任务</h2>'
+    +'<p class="mut">连续打卡 <b style="color:#2563eb">'+streak()+'</b> 天 · 已掌握 '+mastered+' / '+CARDS.length+' 张卡</p>';
   var tasks=[
-    {id:'t1',label:'复习到期卡片（'+due.length+' 张到期）',tab:'cards'},
-    {id:'t2',label:'专项练习 5 题',tab:'practice'},
-    {id:'t3',label:'默写工坊做一组',tab:'dict'}
+    {id:'t1',label:'错题本：复习到期错题（'+dueWrong+' 道到期）',tab:'book'},
+    {id:'t2',label:'记忆卡片：背到期的概念/公式/短语（'+dueMem+' 张到期）',tab:'memory'},
+    {id:'t3',label:'练习：专项练习 5 题 + 默写一组',tab:'practice'}
   ];
   tasks.forEach(function(t){
     h+='<label class="task"><input type="checkbox" data-task="'+t.id+'"'+(done[t.id]?' checked':'')+'>'
       +'<span style="flex:1">'+esc(t.label)+'</span>'
       +'<button class="btn gray" style="width:auto;margin:0;padding:8px 14px" data-go="'+t.tab+'">去做</button></label>';
   });
-  h+='<p class="mut">规则：卡片点"不会"明天再出现；连对几次，间隔会拉长到 4 天、7 天、15 天、30 天。忘了也没关系，它会自己回来。</p></div>';
+  h+='<p class="mut">规则：点"不会"的会很快再出现；连对几次，间隔拉长到 4 天、7 天、15 天、30 天。忘了也没关系，它会自己回来。</p></div>';
+  h+='<div class="card"><h2 style="margin-top:0">我的状态</h2>'
+    +'<p class="mut">最近学得怎么样、上次考试成绩和五个病根，都在学习报告里。</p>'
+    +'<div class="row"><button class="btn" data-tview="report">学习报告</button><button class="btn gray" data-tview="ask">我要提问</button></div></div>';
   h+='<div class="card"><h2 style="margin-top:0">五个病根（提醒）</h2>'
-    +'<p><b>1. 概念地基有洞</b>——先把概念弄懂，再刷题。</p>'
+    +'<p><b>1. 概念地基有洞</b>——先把概念弄懂，再刷题。概念清单在「记忆卡片」里。</p>'
     +'<p><b>2. 输出说不到点上</b>——答题先想"得分点是什么"。</p>'
     +'<p><b>3. 选择题暗坑</b>——错题遮住答案重做，才算真会。</p>'
     +'<p><b>4. 大题别空着</b>——先按框架动笔写公式、写要点；评讲订正听懂了不等于考试会做，要自己限时重做一遍。</p>'
-    +'<p><b>5. 成对概念成对记</b>——方向、包含、职能这类成对的，放在一起辨析。</p>'
-    +'<p class="mut">完整分析在「学习报告」里。</p></div>';
+    +'<p><b>5. 成对概念成对记</b>——方向、包含、职能这类成对的，放在一起辨析。</p></div>';
   app.innerHTML=h;
   app.querySelectorAll('[data-task]').forEach(function(cb){
     cb.addEventListener('change',function(){
@@ -162,15 +182,15 @@ function renderToday(){
   app.querySelectorAll('[data-go]').forEach(function(b){
     b.addEventListener('click',function(e){
       e.preventDefault();
-      var t=b.getAttribute('data-go');
-      var bs=document.querySelectorAll('#tabs button');
-      bs.forEach(function(x){x.classList.toggle('on',x.getAttribute('data-t')===t)});
-      curTab=t;render();
+      switchTab(b.getAttribute('data-go'));
     });
   });
+  app.querySelectorAll('[data-tview]').forEach(function(b){
+    b.addEventListener('click',function(){TODAY.view=b.getAttribute('data-tview');render()});
+  });
 }
-/* ===== 记忆卡片 ===== */
-var CARD={list:[],idx:0,flipped:false,subject:'全部',dueOnly:true,stage:0,picked:null,checkOpen:false};
+/* ===== 卡片池（错题本 / 记忆卡片 / 收藏 共用一套刷卡流程） ===== */
+var CARD={list:[],idx:0,flipped:false,subject:'全部',dueOnly:true,status:'all',stage:0,picked:null,checkOpen:false};
 function favs(){return lsGet('ty_favs',[])}
 function isFav(id){return favs().indexOf(id)>=0}
 function toggleFav(id){
@@ -180,9 +200,17 @@ function toggleFav(id){
 }
 function buildDeck(){
   var favOnly=(curTab==='fav');
+  var kinds=curTab==='book'?['wrong']:(curTab==='memory'?['dict','pair']:['wrong','dict','pair']);
   var list=CARDS.filter(function(c){
+    if(kinds.indexOf(c.kind)<0)return false;
     if(CARD.subject!=='全部'&&c.subject!==CARD.subject)return false;
     if(favOnly)return isFav(c.id);
+    if(curTab==='book'){
+      var bx=srGet(c.id).box;
+      if(CARD.status==='no'&&bx>=3)return false;
+      if(CARD.status==='yes'&&bx<3)return false;
+      return true;
+    }
     if(CARD.dueOnly&&!isDue(c.id))return false;
     return true;
   });
@@ -197,12 +225,24 @@ function buildDeck(){
 function resetCardState(){CARD.stage=0;CARD.picked=null;CARD.checkOpen=false;CARD.flipped=false}
 function renderCards(){
   buildDeck();
-  var subjects=['全部','语文','数学','英语','物理','化学','生物','历史','政治','地理'];
-  var h='<div class="card" id="cardBox"><div class="row">'
-    +'<select id="cSubj" style="flex:1">'+subjects.map(function(s){return '<option'+(s===CARD.subject?' selected':'')+'>'+s+'</option>'}).join('')+'</select>'
-    +(curTab==='fav'?'<span class="mut" style="align-self:center">共 '+favs().length+' 道收藏</span>':'<button class="btn gray" id="cDue" style="flex:0 0 auto;width:auto;margin:0;padding:10px 12px">'+(CARD.dueOnly?'只看到期':'看全部')+'</button>')+'</div>';
+  var h='<div class="card" id="cardBox">';
+  if(curTab==='memory')h+=segHtml([{v:'cards',t:'背卡片'},{v:'concepts',t:'概念清单'}],MEM.view,'memview');
+  h+=subjChipsHtml(CARD.subject,'csubj');
+  if(curTab==='fav'){
+    h+='<p class="mut" style="margin:2px 0 6px">共 '+favs().length+' 道收藏，集中在这里重刷。</p>';
+  }else if(curTab==='book'){
+    h+='<div class="chips">'
+      +'<button class="chip'+(CARD.status==='all'?' on':'')+'" data-cstatus="all">全部错题</button>'
+      +'<button class="chip'+(CARD.status==='no'?' on':'')+'" data-cstatus="no">还没会</button>'
+      +'<button class="chip'+(CARD.status==='yes'?' on':'')+'" data-cstatus="yes">已会了</button></div>';
+  }else{
+    h+='<div class="chips"><button class="chip" data-cdue="1">'+(CARD.dueOnly?'只看到期 ✓':'看全部')+'</button></div>';
+  }
   if(!CARD.list.length){
-    h+='<p class="mut" style="margin-top:14px">'+(curTab==='fav'?'还没有收藏的题目。在记忆卡片里点"☆ 收藏"，就能把想多刷的题攒到这里集中重刷。':'这个范围里没有到期的卡片。点"看全部"可以提前复习，或者去做专项练习。')+'</p></div>';
+    var emptyMsg=curTab==='fav'?'还没有收藏。在错题本或记忆卡片里点"☆ 收藏"，就能把想多刷的攒到这里。'
+      :curTab==='book'?(CARD.status==='yes'?'这个范围里还没有标记"会了"的题。刷题时点"会了"，它们会攒到这里。':'这个范围里没有错题。换个科目标签看看。')
+      :'这个范围里没有到期的卡片。点"看全部"可以提前背，或者去做练习。';
+    h+='<p class="mut" style="margin-top:14px">'+emptyMsg+'</p></div>';
     app.innerHTML=h;bindCardHead();return;
   }
   var c=CARD.list[CARD.idx];
@@ -232,6 +272,7 @@ function wrongCardHtml(c){
   }
   /* 重做卡：先做题，再看讲解 */
   h+='<p style="font-size:16px;line-height:1.75;white-space:pre-wrap">'+esc(w.stem||w.knowledge_point||'')+'</p>';
+  if(w.img&&(window.STUDY_IMGS||{})[w.img])h+='<img src="'+(window.STUDY_IMGS[w.img])+'" alt="题目配图" style="width:100%;border-radius:10px;border:1px solid #e5e7eb;margin:4px 0 8px">';
   if(w.options){
     var ansLetters=String(w.std_answer||'').replace(/[^A-D]/g,'');
     Object.keys(w.options).sort().forEach(function(k){
@@ -340,10 +381,18 @@ function bindCardBody(c){
   if(no)no.addEventListener('click',function(){srMark(c.id,false);markToday();resetCardState();CARD.idx++;renderCards()});
 }
 function bindCardHead(){
-  var s=document.getElementById('cSubj');
-  if(s)s.addEventListener('change',function(){CARD.subject=s.value;CARD.idx=0;resetCardState();renderCards()});
-  var d=document.getElementById('cDue');
-  if(d)d.addEventListener('click',function(){CARD.dueOnly=!CARD.dueOnly;CARD.idx=0;resetCardState();renderCards()});
+  app.querySelectorAll('[data-csubj]').forEach(function(b){
+    b.addEventListener('click',function(){CARD.subject=b.getAttribute('data-csubj');CARD.idx=0;resetCardState();renderCards()});
+  });
+  app.querySelectorAll('[data-cstatus]').forEach(function(b){
+    b.addEventListener('click',function(){CARD.status=b.getAttribute('data-cstatus');CARD.idx=0;resetCardState();renderCards()});
+  });
+  app.querySelectorAll('[data-cdue]').forEach(function(b){
+    b.addEventListener('click',function(){CARD.dueOnly=!CARD.dueOnly;CARD.idx=0;resetCardState();renderCards()});
+  });
+  app.querySelectorAll('[data-memview]').forEach(function(b){
+    b.addEventListener('click',function(){MEM.view=b.getAttribute('data-memview');render()});
+  });
 }
 function switchTab(t){
   curTab=t;
@@ -366,10 +415,11 @@ function buildPrac(){
 function renderPractice(){
   buildPrac();
   var h='<div class="card" id="pracBox">';
+  h+=segHtml([{v:'prac',t:'专项练习'},{v:'dict',t:'默写工坊'}],HUB.view,'hubview');
   if(PRAC.only){
     h+='<p><span class="pill">举一反三</span> <button class="btn gray" id="pAll" style="width:auto;display:inline-block;margin:0;padding:6px 12px">回到全部练习</button></p>';
   }else{
-    h+='<select id="pSubj">'+['全部','物理','数学','化学'].map(function(s){return '<option'+(s===PRAC.subject?' selected':'')+'>'+s+'</option>'}).join('')+'</select>';
+    h+=subjChipsHtml(PRAC.subject,'psubj',['全部','物理','数学','化学']);
   }
   if(!PRAC.list.length){h+='<p class="mut">没有题目</p></div>';app.innerHTML=h;bindPracHead();return}
   var q=PRAC.list[PRAC.idx];
@@ -416,8 +466,12 @@ function renderPractice(){
   }
 }
 function bindPracHead(){
-  var s=document.getElementById('pSubj');
-  if(s)s.addEventListener('change',function(){PRAC.subject=s.value;PRAC.idx=0;renderPractice()});
+  app.querySelectorAll('[data-hubview]').forEach(function(b){
+    b.addEventListener('click',function(){HUB.view=b.getAttribute('data-hubview');render()});
+  });
+  app.querySelectorAll('[data-psubj]').forEach(function(b){
+    b.addEventListener('click',function(){PRAC.subject=b.getAttribute('data-psubj');PRAC.idx=0;renderPractice()});
+  });
   var a=document.getElementById('pAll');
   if(a)a.addEventListener('click',function(){PRAC.only=null;PRAC.idx=0;renderPractice()});
 }
@@ -431,7 +485,9 @@ function renderDict(){
   var items=D.dictation.filter(function(d){return d.set===DICT.set});
   if(DICT.idx>=items.length)DICT.idx=0;
   var d=items[DICT.idx];
-  var h='<div class="card"><select id="dSet">'+sets.map(function(s){return '<option'+(s===DICT.set?' selected':'')+'>'+esc(s)+'</option>'}).join('')+'</select>'
+  var h='<div class="card">'
+    +segHtml([{v:'prac',t:'专项练习'},{v:'dict',t:'默写工坊'}],HUB.view,'hubview')
+    +'<div class="chips">'+sets.map(function(s){return '<button class="chip'+(s===DICT.set?' on':'')+'" data-dset="'+esc(s)+'">'+esc(s)+'</button>'}).join('')+'</div>'
     +'<p class="mut" style="margin-top:10px">第 '+(DICT.idx+1)+' / '+items.length+' 条 · '+esc(d.subject)+'</p>'
     +'<p style="font-size:18px;line-height:1.7">'+esc(d.prompt)+'</p>';
   if(DICT.set==='方程式默写'){
@@ -446,7 +502,8 @@ function renderDict(){
   }
   h+='<div class="row"><button class="btn gray" id="dPrev">上一条</button><button class="btn gray" id="dNext">下一条</button></div></div>';
   app.innerHTML=h;
-  document.getElementById('dSet').addEventListener('change',function(e){DICT.set=e.target.value;DICT.idx=0;DICT.revealed=false;renderDict()});
+  app.querySelectorAll('[data-hubview]').forEach(function(b){b.addEventListener('click',function(){HUB.view=b.getAttribute('data-hubview');render()})});
+  app.querySelectorAll('[data-dset]').forEach(function(b){b.addEventListener('click',function(){DICT.set=b.getAttribute('data-dset');DICT.idx=0;DICT.revealed=false;renderDict()})});
   document.getElementById('dPrev').addEventListener('click',function(){DICT.idx=(DICT.idx-1+items.length)%items.length;DICT.revealed=false;renderDict()});
   document.getElementById('dNext').addEventListener('click',function(){DICT.idx=(DICT.idx+1)%items.length;DICT.revealed=false;renderDict()});
   var sh=document.getElementById('dShow');
@@ -464,36 +521,6 @@ function renderDict(){
   var dn=document.getElementById('dNo');
   if(dn)dn.addEventListener('click',function(){srMark('d'+d.id,false);markToday();DICT.idx++;DICT.revealed=false;renderDict()});
 }
-/* ===== 错题本 ===== */
-var BOOK={subject:'全部',kw:''};
-function renderBook(){
-  var subjects=['全部','语文','数学','英语','物理','化学','生物','历史','政治','地理'];
-  var list=D.wrong.filter(function(w){
-    if(BOOK.subject!=='全部'&&w.subject!==BOOK.subject)return false;
-    if(BOOK.kw&&(w.knowledge_point||'').indexOf(BOOK.kw)<0&&(w.note||'').indexOf(BOOK.kw)<0)return false;
-    return true;
-  });
-  var h='<div class="card"><div class="row"><select id="bSubj" style="flex:1">'+subjects.map(function(s){return '<option'+(s===BOOK.subject?' selected':'')+'>'+s+'</option>'}).join('')+'</select></div>'
-    +'<input type="text" id="bKw" placeholder="搜知识点，比如：配平、刹车、集合" value="'+esc(BOOK.kw)+'" style="margin-top:8px">'
-    +'<p class="mut">共 '+list.length+' 道错题（第一次月考）。点任意一道可以展开看解析。</p></div>';
-  list.forEach(function(w,i){
-    h+='<div class="card" style="cursor:pointer" data-w="'+i+'"><b>'+esc(w.subject)+' · 第'+esc(w.question_no)+'题</b> '
-      +(w.error_type?'<span class="pill">'+esc(w.error_type)+'</span>':'')
-      +'<p style="margin:6px 0">'+esc(w.knowledge_point||'')+'</p>'
-      +'<p class="mut" style="margin:0">你答：'+esc(w.student_answer||'—')+' · 正确：'+esc(w.std_answer||'—')+' · 得分 '+w.got_score+'/'+w.full_score+'</p>'
-      +'<div class="explain" style="display:none">'+(w.stem? '【题目】'+esc(w.stem)+'\n\n' : '')+(w.why? '当时错在：'+esc(w.why)+'\n\n' : '')+esc(w.teach||w.note||'暂无解析')+(w.points&&w.points.length? '\n\n得分点：\n'+w.points.map(function(p){return '· '+esc(p)}).join('\n') : '')+(w.frame? '\n\n落笔框架：\n'+esc(w.frame) : '')+(w.steps? '\n\n解题思路：\n'+esc(w.steps) : '')+(w.need? '\n\n先掌握：'+(Array.isArray(w.need)? w.need.map(function(x){return esc(x)}).join('；') : esc(w.need)) : '')+(w.check_q? '\n\n举一反三：'+esc(w.check_q)+'\n答案：'+esc(w.check_a||'') : '')+'</div></div>';
-  });
-  app.innerHTML=h;
-  document.getElementById('bSubj').addEventListener('change',function(e){BOOK.subject=e.target.value;renderBook()});
-  var kw=document.getElementById('bKw');
-  kw.addEventListener('change',function(){BOOK.kw=kw.value;renderBook()});
-  app.querySelectorAll('[data-w]').forEach(function(el){
-    el.addEventListener('click',function(){
-      var ex=el.querySelector('.explain');
-      ex.style.display=ex.style.display==='none'?'block':'none';
-    });
-  });
-}
 /* ===== 提问 ===== */
 /* ===== 概念清单 ===== */
 var CONC={subject:'全部'};
@@ -503,15 +530,16 @@ function jumpToWrong(key){
   D.wrong.forEach(function(w,i){if(w.key===key)idx=i});
   if(idx<0)return;
   window.__jumpId='w'+idx;
-  CARD.subject='全部';CARD.dueOnly=false;CARD.idx=0;resetCardState();
-  switchTab('cards');
+  CARD.subject='全部';CARD.status='all';CARD.idx=0;resetCardState();
+  switchTab('book');
 }
 function renderConcepts(){
-  var subjects=['全部','语文','数学','英语','物理','化学','生物','历史','政治','地理'];
   var list=(D.concepts||[]).filter(function(c){return CONC.subject==='全部'||c.subject===CONC.subject});
   var okSet=lsGet('ty_conc_ok',[]);
   var wN=0;list.forEach(function(c){if(c.wrong)wN++});
-  var h='<div class="card"><div class="row"><select id="kSubj" style="flex:1">'+subjects.map(function(s){return '<option'+(s===CONC.subject?' selected':'')+'>'+s+'</option>'}).join('')+'</select></div>'
+  var h='<div class="card">'
+    +segHtml([{v:'cards',t:'背卡片'},{v:'concepts',t:'概念清单'}],MEM.view,'memview')
+    +subjChipsHtml(CONC.subject,'ksubj')
     +'<p class="mut" style="margin:10px 0">这次考试涉及的概念都在这儿：共 '+list.length+' 个，其中 <b style="color:#dc2626">'+wN+' 个失了分</b>。先攻红的；觉得会了的点"✓ 我会了"打勾自查。</p>';
   list=list.slice().sort(function(a,b){return (b.wrong?1:0)-(a.wrong?1:0)});
   list.forEach(function(c,i){
@@ -526,8 +554,8 @@ function renderConcepts(){
   });
   h+='</div>';
   app.innerHTML=h;
-  var s=document.getElementById('kSubj');
-  s.addEventListener('change',function(){CONC.subject=s.value;renderConcepts()});
+  app.querySelectorAll('[data-memview]').forEach(function(b){b.addEventListener('click',function(){MEM.view=b.getAttribute('data-memview');render()})});
+  app.querySelectorAll('[data-ksubj]').forEach(function(b){b.addEventListener('click',function(){CONC.subject=b.getAttribute('data-ksubj');renderConcepts()})});
   app.querySelectorAll('[data-kjump]').forEach(function(b){b.addEventListener('click',function(){jumpToWrong(b.getAttribute('data-kjump'))})});
   app.querySelectorAll('[data-kok]').forEach(function(b){b.addEventListener('click',function(){
     var c=list[parseInt(b.getAttribute('data-kok'),10)];var k=concOkKey(c);var arr=lsGet('ty_conc_ok',[]);var ix=arr.indexOf(k);
@@ -592,7 +620,7 @@ function renderReport(){
     var totW=0;cs.forEach(function(c){if(c.wrong)totW++});
     h+='<div class="card"><h2 style="margin-top:0">概念地基盘点</h2><p class="mut">这次考试共涉及 '+cs.length+' 个概念，其中 '+totW+' 个失了分（病根 1 的明细账）：</p>';
     order.forEach(function(s){var b=byS[s];if(!b)return;h+='<p style="margin:4px 0">'+s+'：失分概念 <b style="color:#dc2626">'+b.w+'</b> / 共 '+b.t+' 个</p>'});
-    h+='<button class="btn" onclick="switchTab(\'concepts\')">去概念清单逐个补洞</button></div>';
+    h+='<button class="btn" onclick="goConcepts()">去概念清单逐个补洞</button></div>';
   })();
   h+='<div class="card"><h2 style="margin-top:0">五个病根</h2>'
     +'<p><b>1. 概念地基有洞</b>——化学方程式从不配平、地理把"大气逆辐射"写成"反射"。不是粗心，是真不会。</p>'
