@@ -108,6 +108,7 @@ document.getElementById('tabs').addEventListener('click',function(e){
 if(e.target.tagName!=='BUTTON')return;
 curTab=e.target.getAttribute('data-t');
 if(curTab==='today')TODAY.view='home';
+CARD.planIds=null;
 if(curTab==='book'||curTab==='memory'||curTab==='fav'){CARD.idx=0;resetCardState()}
 var bs=document.querySelectorAll('#tabs button');for(var i=0;i<bs.length;i++)bs[i].classList.toggle('on',bs[i]===e.target);
 render();
@@ -120,7 +121,7 @@ else if(curTab==='practice'){if(HUB.view==='dict')renderDict();else renderPracti
 }
 function renderTodayHub(){
   if(TODAY.view==='home'){renderToday();afterNav();return}
-  if(TODAY.view==='ask')renderAsk();else if(TODAY.view==='report')renderReport();
+  if(TODAY.view==='ask')renderAsk();else if(TODAY.view==='report')renderReport();else if(TODAY.view==='plan')renderPlan();
   app.innerHTML='<div class="card" style="padding:10px 16px"><button class="btn gray" id="bkHome" style="width:auto;margin:0;padding:8px 14px">← 返回每日任务</button></div>'+app.innerHTML;
   document.getElementById('bkHome').addEventListener('click',function(){TODAY.view='home';render()});
   afterNav();
@@ -145,6 +146,157 @@ function streak(){
   return s;
 }
 function markToday(){var days=doneDays();days[todayStr()]=true;lsSet('ty_days',days)}
+/* ===== 半期考冲刺计划（11月11日开考）：按学科排，弱科多花时间 ===== */
+var PLAN1=[
+ ['2026-10-24',[['化学',4],['数学',4],['英语',6]]],
+ ['2026-10-25',[['生物',5],['物理',5],['语文',4]]],
+ ['2026-10-26',[['化学',4],['地理',3],['英语',4]]],
+ ['2026-10-27',[['数学',3],['生物',5],['历史',3]]],
+ ['2026-10-28',[['化学',4],['政治',3],['英语',4]]],
+ ['2026-10-29',[['生物',5],['地理',3],['物理',3]]],
+ ['2026-10-30',[['化学',4],['数学',3],['语文',4]]],
+ ['2026-10-31',[['英语',6],['政治',4],['历史',4]]],
+ ['2026-11-01',[['生物',5],['地理',4],['语文',5]]],
+ ['2026-11-02',[['化学',3],['数学',4],['物理',4]]],
+ ['2026-11-03',[['生物',3],['政治',2],['英语',4],['物理',2]]],
+ ['2026-11-04',[['英语',7],['历史',4]]]
+];
+var PLAN2=[
+ ['2026-11-05',['化学']],
+ ['2026-11-06',['数学','生物']],
+ ['2026-11-07',['地理','政治','物理']],
+ ['2026-11-08',['英语','历史']],
+ ['2026-11-09',['全部']]
+];
+var PLAN_SUBJ=[
+ ['化学','上次月考 31 分','重点攻坚'],['数学','上次月考 59 分（满分 150）','重点攻坚'],
+ ['生物','上次月考 55 分','多花时间'],['地理','上次月考 51 分','多花时间'],['政治','上次月考 59 分','多花时间'],
+ ['物理','上次月考 61 分','正常推进'],['历史','上次月考 60 分','正常推进'],
+ ['英语','上次月考 96.5 分（满分 150）','保持手感'],['语文','上次月考 100 分（满分 150）','保持手感']
+];
+var PLAN={todayQueues:{}};
+function wdOf(ds){return ['周日','周一','周二','周三','周四','周五','周六'][new Date(ds+'T00:00:00').getDay()]}
+function mdOf(ds){var p=ds.split('-');return (+p[1])+'月'+(+p[2])+'日'}
+function daysToExam(){return Math.round((new Date('2026-11-11T00:00:00')-new Date(todayStr()+'T00:00:00'))/86400000)}
+function planReviewed(){return lsGet('ty_plan_reviewed',{})}
+function planMarkReviewed(id){var pr=planReviewed();if(!pr[id]){pr[id]=todayStr();lsSet('ty_plan_reviewed',pr)}}
+function planSegments(){
+  var bySubj={};D.wrong.forEach(function(w,i){(bySubj[w.subject]=bySubj[w.subject]||[]).push('w'+i)});
+  var used={};var segs={};
+  PLAN1.forEach(function(day){day[1].forEach(function(it){
+    var s=it[0];used[s]=used[s]||0;var arr=bySubj[s]||[];var ids=arr.slice(used[s],used[s]+it[1]);used[s]+=it[1];
+    (segs[s]=segs[s]||[]).push({date:day[0],ids:ids});
+  })});
+  return segs;
+}
+function wrongLabel(id){var w=D.wrong[parseInt(id.slice(1),10)];return w?('第'+w.question_no+'题'):id}
+function planUnmastered(subjs){
+  var out=[];D.wrong.forEach(function(w,i){var id='w'+i;
+    if(subjs&&subjs.indexOf('全部')<0&&subjs.indexOf(w.subject)<0)return;
+    if(srGet(id).box<3)out.push(id)});
+  out.sort(function(a,b){return srGet(a).box-srGet(b).box});
+  return out;
+}
+function startPlan(ids,label){
+  if(!ids||!ids.length)return;
+  switchTab('book');
+  CARD.planIds=ids.slice();CARD.planLabel=label;CARD.idx=0;resetCardState();
+  renderCards();
+}
+function planCardHtml(){
+  var t=todayStr();
+  if(t>'2026-11-12')return '';
+  var rev=planReviewed();var revN=Object.keys(rev).length;
+  var total=D.wrong.length;
+  var head='<div class="card" style="border:2px solid #2563eb"><h2 style="margin-top:0">🎯 半期考冲刺 · 11月11日开考</h2>';
+  if(t<'2026-10-24'){
+    return head+'<p>冲刺计划 <b>10月24日（周六）开始</b>：错题按学科排好了——没掌握的学科（化学、数学、生物）排得密、开始得早；还好的学科（语文、英语）少占时间。先用 12 天把 '+total+' 道错题全部过一遍，11月5日起再专攻没掌握的。</p>'
+      +'<button class="btn gray" id="planView" style="width:auto;padding:8px 16px">查看完整计划（按学科）</button></div>';
+  }
+  if(t==='2026-11-11'){
+    return head+'<p><b>今天就是半期考，加油！</b></p><p class="mut">把会的都写满；不会的先跳过，回头再想。考完一科就放下，不要对答案。化学、数学是你这个月的主攻，该拿的分稳稳拿住。</p></div>';
+  }
+  if(t==='2026-11-10'){
+    var um=planUnmastered(null).length;
+    return head+'<p><b>明天开考，今天轻装回顾，不再刷新题：</b></p>'
+      +'<p>· 概念清单里的失分项过一遍 <button class="btn gray" data-lgo="concepts" style="width:auto;margin:0;padding:6px 12px">去看概念清单</button></p>'
+      +'<p>· 收藏夹里的题扫一遍 <button class="btn gray" data-lgo="fav" style="width:auto;margin:0;padding:6px 12px">去看收藏</button></p>'
+      +'<p>· 化学方程式默写一轮 <button class="btn gray" data-lgo="dict" style="width:auto;margin:0;padding:6px 12px">去默写</button></p>'
+      +'<p class="mut">第一轮已复习 '+revN+' / '+total+' 道，还没掌握的剩 '+um+' 道，今晚扫到哪算哪。早点休息，睡好比多刷两道题管用。</p></div>';
+  }
+  var left=daysToExam();
+  var p2=null;PLAN2.forEach(function(d){if(d[0]===t)p2=d});
+  if(p2){
+    var umAll=planUnmastered(null);
+    var q=planUnmastered(p2[1]);
+    PLAN.todayQueues={};PLAN.todayQueues[p2[1].join('+')]=q;
+    return head+'<p style="margin:4px 0"><b>第二轮 · 专攻没掌握的</b>（还有 '+left+' 天开考）</p>'
+      +'<p style="margin:4px 0">第一轮已复习 '+revN+' / '+total+' 道；目前还没掌握的共 <b>'+umAll.length+'</b> 道。</p>'
+      +'<p style="margin:4px 0">今天重点：<b>'+p2[1].join('、')+'</b> —— 这几科没掌握的 '+q.length+' 道</p>'
+      +(q.length?'<button class="btn" data-plango="'+p2[1].join('+')+'">开始今日专攻（'+q.length+' 道）</button>':'<p><b style="color:#16a34a">这几科都掌握啦 ✓</b></p>')
+      +'<p style="margin:8px 0 0"><button class="btn gray" id="planView" style="width:auto;padding:8px 16px">查看完整计划（按学科）</button></p></div>';
+  }
+  var day=null;PLAN1.forEach(function(d){if(d[0]===t)day=d});
+  if(!day)return head+'<p class="mut">今天没有安排新错题，按每日任务复习到期卡片就行。</p><button class="btn gray" id="planView" style="width:auto;padding:8px 16px">查看完整计划（按学科）</button></div>';
+  var segs=planSegments();PLAN.todayQueues={};
+  var pct=Math.round(revN/total*100);
+  var lines='';
+  day[1].forEach(function(it){
+    var s=it[0];var seg=null;(segs[s]||[]).forEach(function(g){if(g.date===t)seg=g});
+    if(!seg)return;
+    var doneN=seg.ids.filter(function(id){return !!rev[id]}).length;
+    var pend=seg.ids.filter(function(id){return !rev[id]});
+    PLAN.todayQueues[s]=pend;
+    lines+='<p style="margin:8px 0"><b>'+s+'</b>（'+seg.ids.length+' 道）：<span class="mut">'+seg.ids.map(wrongLabel).join('、')+'</span><br>'
+      +(pend.length?'<button class="btn" data-plango="'+s+'" style="width:auto;margin-top:4px;padding:8px 16px">复习'+s+'（还剩 '+pend.length+' 道）</button>':'<b style="color:#16a34a">✓ 已完成</b>')+'</p>';
+  });
+  return head+'<p style="margin:4px 0">还有 <b>'+left+'</b> 天开考 · 第一轮进度：已复习 <b>'+revN+' / '+total+'</b> 道</p>'
+    +'<div class="bar"><i style="width:'+pct+'%"></i></div>'
+    +'<p style="margin:8px 0 2px"><b>今天（'+mdOf(t)+' '+wdOf(t)+'）按学科复习：</b></p>'+lines
+    +'<p class="mut" style="margin:6px 0">每道题：先自己重做，再看讲解和举一反三，最后点"会了 / 不会"——点了就算复习过。不会的别慌，11月5日起第二轮专攻它们。</p>'
+    +'<button class="btn gray" id="planView" style="width:auto;padding:8px 16px">查看完整计划（按学科）</button></div>';
+}
+var PLAN_VIEW='subject';
+function renderPlan(){
+  var rev=planReviewed();var segs=planSegments();
+  var h='<div class="card"><h2 style="margin-top:0">🎯 半期考错题冲刺计划</h2>'
+    +'<p class="mut" style="margin:4px 0">11月11日开考。原则：<b>没掌握的学科多花时间</b>——复习次数多、开始得早；还好的学科少占时间。第一轮（10月24日–11月4日）把 144 道错题全部过一遍；第二轮（11月5–9日）专攻还没掌握的；11月10日轻装回顾。</p>'
+    +segHtml([{v:'subject',t:'按学科看'},{v:'day',t:'按日期看'}],PLAN_VIEW,'planview')+'</div>';
+  if(PLAN_VIEW==='subject'){
+    PLAN_SUBJ.forEach(function(info){
+      var s=info[0];var list=segs[s]||[];var tot=0;list.forEach(function(g){tot+=g.ids.length});
+      var doneN=0;list.forEach(function(g){g.ids.forEach(function(id){if(rev[id])doneN++})});
+      var pct=tot?Math.round(doneN/tot*100):0;
+      var p2days=[];PLAN2.forEach(function(d){if(d[1].indexOf(s)>=0||d[1].indexOf('全部')>=0)p2days.push(mdOf(d[0]))});
+      var umS=planUnmastered([s]).length;
+      h+='<div class="card"><h3 style="margin:0 0 4px">'+s+' <span class="pill">'+info[2]+'</span></h3>'
+        +'<p class="mut" style="margin:2px 0">'+info[1]+' · 共 '+tot+' 道错题，分 '+list.length+' 次复习 · 已复习 '+doneN+' / '+tot+'</p>'
+        +'<div class="bar"><i style="width:'+pct+'%"></i></div>';
+      list.forEach(function(g){
+        var gd=g.ids.filter(function(id){return !!rev[id]}).length;
+        var st=g.date<todayStr()?(gd===g.ids.length?'✓ 已完成':'还差 '+(g.ids.length-gd)+' 道'):(g.date===todayStr()?'就是今天':'未开始');
+        h+='<p style="margin:6px 0"><b>'+mdOf(g.date)+' '+wdOf(g.date)+'</b>（'+g.ids.length+' 道）：'+g.ids.map(wrongLabel).join('、')+' <span class="mut">'+st+'</span></p>';
+      });
+      h+='<p class="mut" style="margin:6px 0 0">第二轮 '+p2days.join('、')+'：专攻这一科还没掌握的（目前 '+umS+' 道）</p></div>';
+    });
+  }else{
+    h+='<div class="card">';
+    PLAN1.forEach(function(day){
+      var tot=0,doneN=0;day[1].forEach(function(it){tot+=it[1]});
+      var segsAll=planSegments();
+      day[1].forEach(function(it){(segsAll[it[0]]||[]).forEach(function(g){if(g.date===day[0])g.ids.forEach(function(id){if(rev[id])doneN++})})});
+      var st=day[0]<todayStr()?(doneN>=tot?'✓ 已完成':'还差 '+(tot-doneN)+' 道'):(day[0]===todayStr()?'就是今天':'未开始');
+      h+='<p style="margin:7px 0"><b>'+mdOf(day[0])+' '+wdOf(day[0])+'</b>：'+day[1].map(function(it){return it[0]+' '+it[1]+' 道'}).join(' · ')+' <span class="mut">'+st+'</span></p>';
+    });
+    PLAN2.forEach(function(d){
+      h+='<p style="margin:7px 0"><b>'+mdOf(d[0])+' '+wdOf(d[0])+'</b>：第二轮专攻 '+d[1].join('、')+' 没掌握的</p>';
+    });
+    h+='<p style="margin:7px 0"><b>11月10日 周二</b>：轻装回顾（概念失分项 + 收藏 + 方程式默写），早点休息</p>'
+      +'<p style="margin:7px 0"><b>11月11日 周三</b>：半期考 🎯</p></div>';
+  }
+  app.innerHTML=h;
+  app.querySelectorAll('[data-planview]').forEach(function(b){b.addEventListener('click',function(){PLAN_VIEW=b.getAttribute('data-planview');renderPlan()})});
+}
 function renderToday(){
   var dueWrong=CARDS.filter(function(c){return c.kind==='wrong'&&isDue(c.id)}).length;
   var dueMem=CARDS.filter(function(c){return c.kind!=='wrong'&&isDue(c.id)}).length;
@@ -157,7 +309,7 @@ function renderToday(){
   Object.keys(pracDone0).forEach(function(k){pracN++;if(pracDone0[k])pracOk++});
   var concOkN=lsGet('ty_conc_ok',[]).length;
   var pctM=CARDS.length?Math.round(mastered/CARDS.length*100):0;
-  var h='<div class="card"><h2 style="margin-top:0">我的进度</h2>'
+  var h=planCardHtml()+'<div class="card"><h2 style="margin-top:0">我的进度</h2>'
     +'<p style="margin:4px 0">连续打卡 <b style="color:#2563eb">'+streak()+'</b> 天 · 已掌握卡片 <b>'+mastered+' / '+CARDS.length+'</b> 张</p>'
     +'<div class="bar"><i style="width:'+pctM+'%"></i></div>'
     +'<p class="mut" style="margin:4px 0">卡片熟练度（盒子 0→6）：'+boxes.join(' · ')+'</p>'
@@ -200,9 +352,25 @@ function renderToday(){
   app.querySelectorAll('[data-tview]').forEach(function(b){
     b.addEventListener('click',function(){TODAY.view=b.getAttribute('data-tview');render()});
   });
+  app.querySelectorAll('[data-plango]').forEach(function(b){
+    b.addEventListener('click',function(){
+      var s=b.getAttribute('data-plango');var q=(PLAN.todayQueues||{})[s]||[];
+      if(q.length)startPlan(q,'半期考计划 · '+s.replace(/\+/g,'、'));
+    });
+  });
+  var pvv=document.getElementById('planView');
+  if(pvv)pvv.addEventListener('click',function(){TODAY.view='plan';render()});
+  app.querySelectorAll('[data-lgo]').forEach(function(b){
+    b.addEventListener('click',function(){
+      var v=b.getAttribute('data-lgo');
+      if(v==='concepts')goConcepts();
+      else if(v==='fav')switchTab('fav');
+      else if(v==='dict'){switchTab('practice');HUB.view='dict';render()}
+    });
+  });
 }
 /* ===== 卡片池（错题本 / 记忆卡片 / 收藏 共用一套刷卡流程） ===== */
-var CARD={list:[],idx:0,flipped:false,subject:'全部',dueOnly:true,status:'all',stage:0,picked:null,checkOpen:false};
+var CARD={list:[],idx:0,flipped:false,subject:'全部',dueOnly:true,status:'all',stage:0,picked:null,checkOpen:false,planIds:null,planLabel:''};
 function favs(){return lsGet('ty_favs',[])}
 function isFav(id){return favs().indexOf(id)>=0}
 function toggleFav(id){
@@ -211,6 +379,12 @@ function toggleFav(id){
   lsSet('ty_favs',f);
 }
 function buildDeck(){
+  if(curTab==='book'&&CARD.planIds&&CARD.planIds.length){
+    var byId={};CARDS.forEach(function(c){byId[c.id]=c});
+    CARD.list=CARD.planIds.map(function(id){return byId[id]}).filter(Boolean);
+    if(CARD.idx>=CARD.list.length)CARD.idx=0;
+    return;
+  }
   var favOnly=(curTab==='fav');
   var kinds=curTab==='book'?['wrong']:(curTab==='memory'?['dict','pair']:['wrong','dict','pair']);
   var list=CARDS.filter(function(c){
@@ -239,7 +413,12 @@ function renderCards(){
   buildDeck();
   var h='<div class="card" id="cardBox">';
   if(curTab==='memory')h+=segHtml([{v:'cards',t:'背卡片'},{v:'concepts',t:'概念清单'}],MEM.view,'memview');
-  h+=subjChipsHtml(CARD.subject,'csubj');
+  if(curTab==='book'&&CARD.planIds){
+    var pdn=CARD.planIds.filter(function(id){return !!planReviewed()[id]}).length;
+    h+='<div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:10px;padding:10px 12px;margin-bottom:4px">🎯 '+esc(CARD.planLabel)+' · 共 '+CARD.planIds.length+' 道，已复习 '+pdn+' 道<button id="planExit" style="float:right;border:1px solid #d1d5db;background:#fff;border-radius:8px;padding:4px 10px;font-size:13px">退出计划</button></div>';
+  }else{
+    h+=subjChipsHtml(CARD.subject,'csubj');
+  }
   if(curTab==='fav'){
     h+='<p class="mut" style="margin:2px 0 6px">共 '+favs().length+' 道收藏，集中在这里重刷。</p>';
   }else if(curTab==='book'){
@@ -388,16 +567,18 @@ function bindCardBody(c){
   var fl=document.getElementById('flash');
   if(fl)fl.addEventListener('click',function(){if(CARD.lastSwipe&&Date.now()-CARD.lastSwipe<350)return;CARD.flipped=!CARD.flipped;renderCards()});
   var yes=document.getElementById('cYes');
-  if(yes)yes.addEventListener('click',function(){srMark(c.id,true);markToday();resetCardState();CARD.idx++;renderCards()});
+  if(yes)yes.addEventListener('click',function(){srMark(c.id,true);markToday();if(c.kind==='wrong')planMarkReviewed(c.id);resetCardState();CARD.idx++;renderCards()});
   var no=document.getElementById('cNo');
-  if(no)no.addEventListener('click',function(){srMark(c.id,false);markToday();resetCardState();CARD.idx++;renderCards()});
+  if(no)no.addEventListener('click',function(){srMark(c.id,false);markToday();if(c.kind==='wrong')planMarkReviewed(c.id);resetCardState();CARD.idx++;renderCards()});
 }
 function bindCardHead(){
+  var px=document.getElementById('planExit');
+  if(px)px.addEventListener('click',function(){CARD.planIds=null;CARD.idx=0;renderCards()});
   app.querySelectorAll('[data-csubj]').forEach(function(b){
-    b.addEventListener('click',function(){CARD.subject=b.getAttribute('data-csubj');CARD.idx=0;resetCardState();renderCards()});
+    b.addEventListener('click',function(){CARD.planIds=null;CARD.subject=b.getAttribute('data-csubj');CARD.idx=0;resetCardState();renderCards()});
   });
   app.querySelectorAll('[data-cstatus]').forEach(function(b){
-    b.addEventListener('click',function(){CARD.status=b.getAttribute('data-cstatus');CARD.idx=0;resetCardState();renderCards()});
+    b.addEventListener('click',function(){CARD.planIds=null;CARD.status=b.getAttribute('data-cstatus');CARD.idx=0;resetCardState();renderCards()});
   });
   app.querySelectorAll('[data-cdue]').forEach(function(b){
     b.addEventListener('click',function(){CARD.dueOnly=!CARD.dueOnly;CARD.idx=0;resetCardState();renderCards()});
@@ -407,7 +588,7 @@ function bindCardHead(){
   });
 }
 function switchTab(t){
-  curTab=t;
+  curTab=t;CARD.planIds=null;
   var bs=document.querySelectorAll('#tabs button');
   bs.forEach(function(x){x.classList.toggle('on',x.getAttribute('data-t')===t)});
   render();
@@ -660,6 +841,7 @@ function navSnapshot(){
   var c=(CARD.list&&CARD.list[CARD.idx])||null;
   return {tab:curTab,tv:TODAY.view,mv:MEM.view,hv:HUB.view,
     cs:CARD.subject,ct:CARD.status,cd:CARD.dueOnly,cid:c?c.id:'',cst:CARD.stage,cpk:CARD.picked,cco:CARD.checkOpen,cfl:CARD.flipped,
+    cpi:CARD.planIds?CARD.planIds.join(','):'',cpl:CARD.planLabel,cix:CARD.idx,
     ps:PRAC.subject,pi:PRAC.idx,po:PRAC.only,ds:DICT.set,di:DICT.idx,dr:DICT.revealed,ks:CONC.subject};
 }
 function afterNav(){
@@ -677,8 +859,9 @@ function applySnap(s){
   PRAC.subject=s.ps;PRAC.idx=s.pi;PRAC.only=s.po;
   DICT.set=s.ds;DICT.idx=s.di;DICT.revealed=s.dr;
   CONC.subject=s.ks;
-  if(s.cid&&(s.tab==='book'||s.tab==='memory'||s.tab==='fav'))window.__jumpId=s.cid;
-  else window.__jumpId=null;
+  if(s.cpi){CARD.planIds=s.cpi.split(',');CARD.planLabel=s.cpl||'';CARD.idx=s.cix||0;window.__jumpId=null}
+  else if(s.cid&&(s.tab==='book'||s.tab==='memory'||s.tab==='fav')){CARD.planIds=null;window.__jumpId=s.cid}
+  else{CARD.planIds=null;window.__jumpId=null}
   var bs=document.querySelectorAll('#tabs button');
   bs.forEach(function(x){x.classList.toggle('on',x.getAttribute('data-t')===curTab)});
 }
