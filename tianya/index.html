@@ -46,7 +46,7 @@ select{padding:10px;border:1px solid #d1d5db;border-radius:10px;font-size:15px;w
 .qa.ans{background:#f0fdf4;border-radius:8px;padding:10px;margin-top:8px;white-space:pre-wrap;line-height:1.7}
 </style>
 <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
-<script>LA.init({id:"3Rd5inBkg1muJqzT",ck:"3Rd5inBkg1muJqzT"})</script>
+<script>LA.init({id:"3Rd5inBkg1muJqzT",ck:"3Rd5inBkg1muJqzT",autoTrack:true})</script>
 </head>
 <body>
 <header><h1>天娅的学习小站</h1><p>每日任务 · 记忆卡片 · 错题本 · 练习 · 收藏</p></header>
@@ -109,6 +109,7 @@ var HUB={view:'prac'};
 document.getElementById('tabs').addEventListener('click',function(e){
 if(e.target.tagName!=='BUTTON')return;
 curTab=e.target.getAttribute('data-t');
+trackTab(curTab);
 if(curTab==='today')TODAY.view='home';
 CARD.planIds=null;
 if(curTab==='book'||curTab==='memory'||curTab==='fav'){CARD.idx=0;resetCardState()}
@@ -147,7 +148,10 @@ function streak(){
   }
   return s;
 }
-function markToday(){var days=doneDays();days[todayStr()]=true;lsSet('ty_days',days)}
+function markToday(){var days=doneDays();var t=todayStr();var first=!days[t];days[t]=true;lsSet('ty_days',days);if(first)laTrack('checkin')}
+function laTrack(ev,params){try{if(window.LA&&LA.track){if(params)LA.track(ev,params);else LA.track(ev)}}catch(e){}}
+var __lastTab=null;
+function trackTab(t){if(t===__lastTab)return;__lastTab=t;laTrack('tab_switch',{tab:t})}
 /* ===== 半期考冲刺计划（11月11日开考）：按学科排，弱科多花时间 ===== */
 var PLAN1=[
  ['2026-10-24',[['化学',4],['数学',4],['英语',6]]],
@@ -569,9 +573,9 @@ function bindCardBody(c){
   var fl=document.getElementById('flash');
   if(fl)fl.addEventListener('click',function(){if(CARD.lastSwipe&&Date.now()-CARD.lastSwipe<350)return;CARD.flipped=!CARD.flipped;renderCards()});
   var yes=document.getElementById('cYes');
-  if(yes)yes.addEventListener('click',function(){srMark(c.id,true);markToday();if(c.kind==='wrong')planMarkReviewed(c.id);resetCardState();CARD.idx++;renderCards()});
+  if(yes)yes.addEventListener('click',function(){srMark(c.id,true);markToday();laTrack('card_rating',{result:'yes',kind:c.kind||'card'});if(c.kind==='wrong')planMarkReviewed(c.id);resetCardState();CARD.idx++;renderCards()});
   var no=document.getElementById('cNo');
-  if(no)no.addEventListener('click',function(){srMark(c.id,false);markToday();if(c.kind==='wrong')planMarkReviewed(c.id);resetCardState();CARD.idx++;renderCards()});
+  if(no)no.addEventListener('click',function(){srMark(c.id,false);markToday();laTrack('card_rating',{result:'no',kind:c.kind||'card'});if(c.kind==='wrong')planMarkReviewed(c.id);resetCardState();CARD.idx++;renderCards()});
 }
 function bindCardHead(){
   var px=document.getElementById('planExit');
@@ -590,6 +594,7 @@ function bindCardHead(){
   });
 }
 function switchTab(t){
+  trackTab(t);
   curTab=t;CARD.planIds=null;
   var bs=document.querySelectorAll('#tabs button');
   bs.forEach(function(x){x.classList.toggle('on',x.getAttribute('data-t')===t)});
@@ -713,9 +718,9 @@ function renderDict(){
     setTimeout(renderDict,900);
   });
   var dy=document.getElementById('dYes');
-  if(dy)dy.addEventListener('click',function(){srMark('d'+d.id,true);markToday();DICT.idx++;DICT.revealed=false;renderDict()});
+  if(dy)dy.addEventListener('click',function(){srMark('d'+d.id,true);markToday();laTrack('card_rating',{result:'yes',kind:'dict'});DICT.idx++;DICT.revealed=false;renderDict()});
   var dn=document.getElementById('dNo');
-  if(dn)dn.addEventListener('click',function(){srMark('d'+d.id,false);markToday();DICT.idx++;DICT.revealed=false;renderDict()});
+  if(dn)dn.addEventListener('click',function(){srMark('d'+d.id,false);markToday();laTrack('card_rating',{result:'no',kind:'dict'});DICT.idx++;DICT.revealed=false;renderDict()});
   afterNav();
 }
 /* ===== 提问 ===== */
