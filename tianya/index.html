@@ -44,6 +44,20 @@ select{padding:10px;border:1px solid #d1d5db;border-radius:10px;font-size:15px;w
 .seg button.on{background:#fff;font-weight:600;box-shadow:0 1px 2px rgba(0,0,0,.12);color:#111827}
 .qa{border:1px solid #e5e7eb;border-radius:10px;padding:12px;margin:8px 0;background:#fff}
 .qa.ans{background:#f0fdf4;border-radius:8px;padding:10px;margin-top:8px;white-space:pre-wrap;line-height:1.7}
+.chart{display:flex;align-items:flex-end;gap:3px;height:132px;margin:10px 0 2px}
+.chart .col{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;min-width:0}
+.chart .v{font-size:11px;color:#2563eb;font-weight:600;margin-bottom:2px;min-height:14px}
+.chart .b{width:100%;max-width:26px;background:#93c5fd;border-radius:3px 3px 0 0}
+.chart .b.today{background:#2563eb}
+.chart .b.zero{background:#e5e7eb}
+.chart .d{font-size:10px;color:#6b7280;margin-top:3px;white-space:nowrap}
+.dots{display:flex;gap:3px;margin:6px 0}
+.dots i{flex:1;height:8px;border-radius:4px;background:#e5e7eb}
+.dots i.on{background:#2563eb}
+.statgrid{display:flex;gap:8px;flex-wrap:wrap}
+.statgrid .sg{flex:1;min-width:70px;background:#f4f6fb;border-radius:10px;padding:10px;text-align:center}
+.statgrid .sg b{display:block;font-size:22px;color:#111827}
+.statgrid .sg span{font-size:12px;color:#6b7280}
 </style>
 <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
 <script>LA.init({id:"3Rd5inBkg1muJqzT",ck:"3Rd5inBkg1muJqzT",autoTrack:true})</script>
@@ -124,7 +138,7 @@ else if(curTab==='practice'){if(HUB.view==='dict')renderDict();else renderPracti
 }
 function renderTodayHub(){
   if(TODAY.view==='home'){renderToday();afterNav();return}
-  if(TODAY.view==='ask')renderAsk();else if(TODAY.view==='report')renderReport();else if(TODAY.view==='plan')renderPlan();
+  if(TODAY.view==='ask')renderAsk();else if(TODAY.view==='report')renderReport();else if(TODAY.view==='plan')renderPlan();else if(TODAY.view==='stats')renderStats();
   app.innerHTML='<div class="card" style="padding:10px 16px"><button class="btn gray" id="bkHome" style="width:auto;margin:0;padding:8px 14px">← 返回每日任务</button></div>'+app.innerHTML;
   document.getElementById('bkHome').addEventListener('click',function(){TODAY.view='home';render()});
   afterNav();
@@ -149,6 +163,11 @@ function streak(){
   return s;
 }
 function markToday(){var days=doneDays();var t=todayStr();var first=!days[t];days[t]=true;lsSet('ty_days',days);if(first)laTrack('checkin')}
+/* 每日学习量记录（2026-11-02 加）：给孩子的学习统计页用，按天数评卡/会不会/练习 */
+function dayLog(){return lsGet('ty_daylog',{})}
+function dlog(f,n){try{var L=dayLog();var t=todayStr();var e=L[t]||{rate:0,yes:0,no:0,prac:0,pracOk:0};e[f]=(e[f]||0)+(n||1);L[t]=e;lsSet('ty_daylog',L)}catch(err){}}
+function dstr(off){var d=new Date();d.setDate(d.getDate()-off);return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+function dayEntry(ds){var L=dayLog();return L[ds]||{rate:0,yes:0,no:0,prac:0,pracOk:0}}
 function laTrack(ev,params){try{if(window.LA&&LA.track){if(params)LA.track(ev,params);else LA.track(ev)}}catch(e){}}
 var __lastTab=null;
 function trackTab(t){if(t===__lastTab)return;__lastTab=t;laTrack('tab_switch',{tab:t})}
@@ -334,7 +353,7 @@ function renderToday(){
   h+='<p class="mut">规则：点"不会"的会很快再出现；连对几次，间隔拉长到 4 天、7 天、15 天、30 天。忘了也没关系，它会自己回来。</p></div>';
   h+='<div class="card"><h2 style="margin-top:0">我的状态</h2>'
     +'<p class="mut">最近学得怎么样、上次考试成绩和五个病根，都在学习报告里。</p>'
-    +'<div class="row"><button class="btn" data-tview="report">学习报告</button><button class="btn gray" data-tview="ask">我要提问</button></div></div>';
+    +'<div class="row"><button class="btn" data-tview="report">学习报告</button><button class="btn" data-tview="stats">学习统计</button><button class="btn gray" data-tview="ask">我要提问</button></div></div>';
   h+='<div class="card"><h2 style="margin-top:0">五个病根（提醒）</h2>'
     +'<p><b>1. 概念地基有洞</b>——先把概念弄懂，再刷题。概念清单在「记忆卡片」里。</p>'
     +'<p><b>2. 输出说不到点上</b>——答题先想"得分点是什么"。</p>'
@@ -573,9 +592,9 @@ function bindCardBody(c){
   var fl=document.getElementById('flash');
   if(fl)fl.addEventListener('click',function(){if(CARD.lastSwipe&&Date.now()-CARD.lastSwipe<350)return;CARD.flipped=!CARD.flipped;renderCards()});
   var yes=document.getElementById('cYes');
-  if(yes)yes.addEventListener('click',function(){srMark(c.id,true);markToday();laTrack('card_rating',{result:'yes',kind:c.kind||'card'});if(c.kind==='wrong')planMarkReviewed(c.id);resetCardState();CARD.idx++;renderCards()});
+  if(yes)yes.addEventListener('click',function(){srMark(c.id,true);markToday();laTrack('card_rating',{result:'yes',kind:c.kind||'card'});dlog('rate');dlog('yes');if(c.kind==='wrong')planMarkReviewed(c.id);resetCardState();CARD.idx++;renderCards()});
   var no=document.getElementById('cNo');
-  if(no)no.addEventListener('click',function(){srMark(c.id,false);markToday();laTrack('card_rating',{result:'no',kind:c.kind||'card'});if(c.kind==='wrong')planMarkReviewed(c.id);resetCardState();CARD.idx++;renderCards()});
+  if(no)no.addEventListener('click',function(){srMark(c.id,false);markToday();laTrack('card_rating',{result:'no',kind:c.kind||'card'});dlog('rate');dlog('no');if(c.kind==='wrong')planMarkReviewed(c.id);resetCardState();CARD.idx++;renderCards()});
 }
 function bindCardHead(){
   var px=document.getElementById('planExit');
@@ -645,7 +664,7 @@ function renderPractice(){
       if(PRAC.answered[q.id])return;
       PRAC.answered[q.id]=b.getAttribute('data-opt');
       markToday();
-      var done=lsGet('ty_prac_done',{});done[q.id]=PRAC.answered[q.id]===q.answer;lsSet('ty_prac_done',done);
+      var done=lsGet('ty_prac_done',{});done[q.id]=PRAC.answered[q.id]===q.answer;lsSet('ty_prac_done',done);dlog('prac');if(done[q.id])dlog('pracOk');
       renderPractice();
     });
   });
@@ -718,9 +737,9 @@ function renderDict(){
     setTimeout(renderDict,900);
   });
   var dy=document.getElementById('dYes');
-  if(dy)dy.addEventListener('click',function(){srMark('d'+d.id,true);markToday();laTrack('card_rating',{result:'yes',kind:'dict'});DICT.idx++;DICT.revealed=false;renderDict()});
+  if(dy)dy.addEventListener('click',function(){srMark('d'+d.id,true);markToday();laTrack('card_rating',{result:'yes',kind:'dict'});dlog('rate');dlog('yes');DICT.idx++;DICT.revealed=false;renderDict()});
   var dn=document.getElementById('dNo');
-  if(dn)dn.addEventListener('click',function(){srMark('d'+d.id,false);markToday();laTrack('card_rating',{result:'no',kind:'dict'});DICT.idx++;DICT.revealed=false;renderDict()});
+  if(dn)dn.addEventListener('click',function(){srMark('d'+d.id,false);markToday();laTrack('card_rating',{result:'no',kind:'dict'});dlog('rate');dlog('no');DICT.idx++;DICT.revealed=false;renderDict()});
   afterNav();
 }
 /* ===== 提问 ===== */
@@ -803,6 +822,54 @@ function renderAsk(){
       if(box)box.innerHTML='<p class="mut">网络不通，暂时加载不了问题列表</p>';
     });
 }
+/* ===== 学习统计（孩子自己看：昨日 / 近一周 / 近一个月，X 分析式柱形图） ===== */
+function renderStats(){
+  var days=doneDays();
+  function tot(ds){var e=dayEntry(ds);return (e.rate||0)+(e.prac||0)}
+  function chart(n){
+    var max=0,i,ds;
+    for(i=n-1;i>=0;i--){var v=tot(dstr(i));if(v>max)max=v}
+    var h='<div class="chart">';
+    for(i=n-1;i>=0;i--){
+      ds=dstr(i);var v2=tot(ds);
+      var pct=v2&&max?Math.max(Math.round(v2/max*100),10):0;
+      var lab=n<=7?wdOf(ds):(i%5===0||i===0?ds.slice(5).replace('-','/'):'');
+      h+='<div class="col"><div class="v">'+(v2||'')+'</div><div class="b'+(i===0?' today':(v2?'':' zero'))+'" style="height:'+(v2?pct:3)+'%"></div><div class="d">'+lab+'</div></div>';
+    }
+    return h+'</div>';
+  }
+  function sumN(n){
+    var s={rate:0,yes:0,no:0,prac:0,pracOk:0,chk:0};
+    for(var i=0;i<n;i++){var ds=dstr(i);var e=dayEntry(ds);s.rate+=e.rate||0;s.yes+=e.yes||0;s.no+=e.no||0;s.prac+=e.prac||0;s.pracOk+=e.pracOk||0;if(days[ds])s.chk++}
+    return s;
+  }
+  var yds=dstr(1),ye=dayEntry(yds),ytot=(ye.rate||0)+(ye.prac||0);
+  var h='<div class="card"><h2 style="margin-top:0">昨日学习情况（'+mdOf(yds)+' '+wdOf(yds)+'）</h2>';
+  if(!ytot&&!days[yds]){
+    h+='<p class="mut">昨天没有留下学习记录。今天补上，从今天开始每天的都会记在这里。</p>';
+  }else{
+    h+='<div class="statgrid">'
+      +'<div class="sg"><b>'+ytot+'</b><span>总学习次数</span></div>'
+      +'<div class="sg"><b>'+(ye.rate||0)+'</b><span>复习卡片（张）</span></div>'
+      +'<div class="sg"><b>'+(ye.yes||0)+' / '+(ye.no||0)+'</b><span>会了 / 不会</span></div>'
+      +'<div class="sg"><b>'+(ye.pracOk||0)+' / '+(ye.prac||0)+'</b><span>练习答对 / 共做</span></div>'
+      +'</div><p style="margin:8px 0 0">打卡：'+(days[yds]?'已完成 ✓':'未完成')+'</p>';
+  }
+  h+='</div>';
+  var s7=sumN(7);
+  h+='<div class="card"><h2 style="margin-top:0">近一周（近 7 天）</h2>'
+    +'<p class="mut" style="margin:0">共学习 '+(s7.rate+s7.prac)+' 次 · 评卡 '+s7.rate+' 张（会了 '+s7.yes+'、不会 '+s7.no+'）· 练习 '+s7.prac+' 题（答对 '+s7.pracOk+'）· 打卡 '+s7.chk+' 天</p>'
+    +chart(7)
+    +'<p class="mut">最右边一根是今天，柱子越高，当天学得越多。</p></div>';
+  var s30=sumN(30);
+  h+='<div class="card"><h2 style="margin-top:0">近一个月（近 30 天）</h2>'
+    +'<p class="mut" style="margin:0">共学习 '+(s30.rate+s30.prac)+' 次 · 评卡 '+s30.rate+' 张 · 练习 '+s30.prac+' 题 · 打卡 '+s30.chk+' 天 · 当前连续打卡 '+streak()+' 天</p>'
+    +chart(30)
+    +'<p class="mut" style="margin:10px 0 2px">打卡记录（蓝色 = 当天学过并打卡）：</p><div class="dots">';
+  for(var j=29;j>=0;j--){h+='<i class="'+(days[dstr(j)]?'on':'')+'"></i>'}
+  h+='</div><p class="mut">逐日次数从 '+mdOf(todayStr())+' 起开始记录；这之前的柱子偏低不代表没学，那时还没开始逐日记——打卡那排是全的，可以对照看。</p></div>';
+  app.innerHTML=h;
+}
 /* ===== 学习报告 ===== */
 function renderReport(){
   var order=['语文','英语','数学','物理','历史','政治','生物','地理','化学'];
@@ -839,7 +906,8 @@ function renderReport(){
     +'<p>连续打卡：<b>'+streak()+'</b> 天</p>'
     +'<p>卡片熟练度分布（盒子 0 到 6，越高越熟）：'+boxes.join(' · ')+'，共 '+CARDS.length+' 张</p>'
     +'<p>专项练习已做：'+pracN+' 题，答对 '+pracOk+' 题</p>'
-    +'<p class="mut">进度存在这台手机的浏览器里，换手机不会同步。每天打开做一点，比一次做很多更管用。</p></div>';
+    +'<p class="mut">进度存在这台手机的浏览器里，换手机不会同步。每天打开做一点，比一次做很多更管用。</p>'
+    +'<button class="btn" onclick="TODAY.view=\'stats\';render()">看我的学习统计（昨日 / 近一周 / 近一个月）</button></div>';
   app.innerHTML=h;
 }
 /* 站内后退：左滑/返回键 = 退到上一个步骤（上一张卡/上一页/讲解退回题目），退到第一步才提示退出 */
