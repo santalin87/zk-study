@@ -58,23 +58,45 @@ select{padding:10px;border:1px solid #d1d5db;border-radius:10px;font-size:15px;w
 .statgrid .sg{flex:1;min-width:70px;background:#f4f6fb;border-radius:10px;padding:10px;text-align:center}
 .statgrid .sg b{display:block;font-size:22px;color:#111827}
 .statgrid .sg span{font-size:12px;color:#6b7280}
+/* 学习路径 */
+.kprow{display:flex;align-items:center;gap:8px;padding:10px 4px;border-bottom:1px solid #eef1f5;cursor:pointer}
+.kprow .kn{flex:1;font-size:15px;line-height:1.45}
+.kprow .ks{font-size:12px;color:#6b7280;display:block}
+select.lvsel{padding:6px 6px;border:1.5px solid #d1d5db;border-radius:8px;font-size:13px;background:#fff;max-width:104px}
+.kpfig{margin:10px 0}
+.kpfig .cap{font-size:12px;color:#6b7280;text-align:center;margin-top:4px}
+.vidbox{position:relative;padding-top:56.25%;border-radius:10px;overflow:hidden;background:#000;margin:8px 0}
+.vidbox iframe{position:absolute;left:0;top:0;width:100%;height:100%;border:0}
+.hintbox{background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:10px 12px;margin:8px 0;font-size:14px;line-height:1.7}
+.caseans{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;padding:10px 12px;margin:8px 0;font-size:14px;line-height:1.8;white-space:pre-wrap}
+details.diag{margin:8px 0}
+details.diag summary{cursor:pointer;color:#1d4ed8;font-size:14px}
+.chip2{display:inline-block;padding:5px 10px;border-radius:99px;background:#eef2ff;color:#3730a3;font-size:12.5px;margin:0 6px 6px 0;border:1px solid #c7d2fe;cursor:pointer}
+.chip2.jz{background:#fef3c7;color:#92400e;border-color:#fde68a;cursor:default}
+.chip2.nx{background:#ecfdf5;color:#065f46;border-color:#a7f3d0}
+.pbar{height:10px;background:#e5e7eb;border-radius:99px;overflow:hidden;margin:8px 0}
+.pbar i{display:block;height:100%;background:#2563eb}
+.evd{font-size:12px;padding:3px 9px;border-radius:99px;background:#f3f4f6;color:#6b7280;margin-right:6px}
+.evd.ok{background:#dcfce7;color:#166534}
 </style>
 <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
 <script>LA.init({id:"3Rd5inBkg1muJqzT",ck:"3Rd5inBkg1muJqzT",autoTrack:true})</script>
 </head>
 <body>
-<header><h1>天娅的学习小站</h1><p>每日任务 · 记忆卡片 · 错题本 · 练习 · 收藏</p></header>
+<header><h1>天娅的学习小站</h1><p>每日任务 · 记忆卡片 · 错题本 · 练习 · 收藏 · 学习路径</p></header>
 <nav id="tabs">
 <button data-t="today" class="on">每日任务</button>
 <button data-t="memory">记忆卡片</button>
 <button data-t="book">错题本</button>
 <button data-t="practice">练习</button>
 <button data-t="fav">收藏</button>
+<button data-t="path">学习路径</button>
 </nav>
 <main id="app"></main>
 <div id="exitBar" style="display:none;position:fixed;left:12px;right:12px;bottom:14px;background:#111827;color:#fff;border-radius:12px;padding:12px 14px;z-index:50;font-size:14px;line-height:1.6;box-shadow:0 4px 16px rgba(0,0,0,.3)">已经退到第一步啦，再往后退就是离开这个页面。真要退出，点页面左上角的 × 就行。<button onclick="document.getElementById('exitBar').style.display='none'" style="float:right;background:#374151;color:#fff;border:0;border-radius:8px;padding:5px 12px;font-size:14px">知道了</button></div>
 <script src="data.js"></script>
 <script src="img.js"></script>
+<script src="path.js"></script>
 <script>
 var D = window.STUDY_DATA || {scores:[],wrong:[],practice:[],dictation:[]};
 function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
@@ -135,6 +157,7 @@ if(curTab==='today')renderTodayHub();
 else if(curTab==='memory'){if(MEM.view==='concepts')renderConcepts();else renderCards()}
 else if(curTab==='book'||curTab==='fav')renderCards();
 else if(curTab==='practice'){if(HUB.view==='dict')renderDict();else renderPractice()}
+else if(curTab==='path')renderPath();
 }
 function renderTodayHub(){
   if(TODAY.view==='home'){renderToday();afterNav();return}
@@ -610,6 +633,211 @@ function bindCardHead(){
   });
   app.querySelectorAll('[data-memview]').forEach(function(b){
     b.addEventListener('click',function(){MEM.view=b.getAttribute('data-memview');render()});
+  });
+}
+/* ===== 学习路径（数学必修第一册打样，2026-11-02） ===== */
+var PATHV={view:'list',id:null,caseMode:'read',hints:0,caseShown:false,ans:{}};
+var LVNAMES=['未开始','已预习','已学过','看懂了','能应用','综合应用'];
+var LVCOLORS=['#9ca3af','#60a5fa','#38bdf8','#34d399','#2563eb','#7c3aed'];
+function pStatus(){return lsGet('ty_path_status',{})}
+function pEv(){return lsGet('ty_path_ev',{})}
+function pLog(){return lsGet('ty_path_log',[])}
+function pathLv(id){var s=pStatus()[id];return s?s.lv:0}
+function pathLogEv(node,kind,item,ok,detail){
+  var log=pLog();log.push({ts:Date.now(),node:node,kind:kind,item:item||'',ok:(ok===null||ok===undefined?null:(ok?1:0)),detail:detail||''});
+  if(log.length>800)log=log.slice(log.length-800);lsSet('ty_path_log',log);
+  try{fetch('/api/path-event',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({node:node,kind:kind,item:item||'',ok:(ok===null||ok===undefined?null:(ok?1:0)),detail:detail||''})}).catch(function(){})}catch(e){}
+}
+function lvOptions(cur){
+  var h='';for(var i=0;i<6;i++)h+='<option value="'+i+'"'+(i===cur?' selected':'')+'>'+LVNAMES[i]+'</option>';return h;
+}
+function pathSetStatus(id,lv,selEl){
+  var ev=pEv()[id]||{};
+  if(lv===4&&!ev.apply){alert('「能应用」要先做对这个知识点下面的应用题，才算数。先去做题，做对了这里会自动解锁。');if(selEl)selEl.value=pathLv(id);var a=document.getElementById('kpApply');if(a)a.scrollIntoView({behavior:'smooth'});return}
+  if(lv===5&&!ev.adv){alert('「综合应用」要先做对下面的综合题。先去挑战，做对了再回来选。');if(selEl)selEl.value=pathLv(id);var b=document.getElementById('kpAdv');if(b)b.scrollIntoView({behavior:'smooth'});return}
+  var st=pStatus();st[id]={lv:lv,ts:Date.now()};lsSet('ty_path_status',st);
+  pathLogEv(id,'status','',null,LVNAMES[lv]);
+  renderPath();
+}
+function pathReviewItems(){
+  var now=Date.now(),week=now-7*864e5,log=pLog(),bad={},ev=pEv(),st=pStatus(),out=[];
+  function has(id){return out.some(function(o){return o.id===id})}
+  log.forEach(function(e){if(e.ts>=week&&(e.kind==='quiz'||e.kind==='redo')&&e.ok===0)bad[e.node]=(bad[e.node]||0)+1});
+  Object.keys(bad).forEach(function(id){if(PATH_BOOK.nodes[id])out.push({id:id,why:'本周做错 '+bad[id]+' 次'})});
+  Object.keys(ev).forEach(function(id){var e=ev[id];if(e.redoDue&&e.redoDue<=now&&PATH_BOOK.nodes[id]&&!has(id))out.push({id:id,why:'案例重做还没通过'})});
+  Object.keys(st).forEach(function(id){var s=st[id];if(s.lv>=1&&s.lv<=3&&s.ts<week&&PATH_BOOK.nodes[id]&&!has(id))out.push({id:id,why:'停在「'+LVNAMES[s.lv]+'」超过一周了'})});
+  return out.slice(0,8);
+}
+function renderPath(){if(PATHV.view==='kp'&&PATHV.id)renderKp(PATHV.id);else renderPathList()}
+function renderPathList(){
+  var B=PATH_BOOK,st=pStatus(),tot=B.order.length,start=0,lv3=0,lv4=0;
+  B.order.forEach(function(id){var s=st[id];if(s&&s.lv>0)start++;if(s&&s.lv>=3)lv3++;if(s&&s.lv>=4)lv4++});
+  var h='<div class="card"><h3 style="margin:2px 0 6px">学习路径 · 数学</h3>'
+    +'<p class="mut" style="margin:2px 0">必修第一册（人教A版）· 全册 '+tot+' 个知识点 · 顺序不限，想先学哪个都可以，状态自己评：「能应用」要做对应用题、「综合应用」要做对综合题才算数。</p>'
+    +'<div class="pbar"><i style="width:'+Math.round(lv4/tot*100)+'%"></i></div>'
+    +'<p style="margin:4px 0;font-size:14px">已启动 '+start+' · 看懂及以上 '+lv3+' · 能应用及以上 '+lv4+'</p></div>';
+  var rev=pathReviewItems();
+  h+='<div class="card"><h4 style="margin:2px 0 8px">本周复盘（自动生成）</h4>';
+  if(!rev.length)h+='<p class="mut" style="margin:2px 0">本周还没有需要复盘的知识点。做错的题、没通过的案例重做、停了一周没往前的知识点，会自动出现在这里。</p>';
+  rev.forEach(function(r){h+='<span class="chip2" data-kp="'+r.id+'">'+esc(B.nodes[r.id].name)+' · '+esc(r.why)+'</span>'});
+  h+='</div>';
+  B.chapters.forEach(function(ch){
+    var done=ch.nodes.filter(function(id){return pathLv(id)>=4}).length;
+    h+='<div class="card"><h4 style="margin:2px 0 4px">'+esc(ch.no)+' '+esc(ch.title)+' <span class="mut" style="font-size:12px">'+ch.nodes.length+' 个知识点 · 能应用 '+done+'</span></h4>';
+    ch.nodes.forEach(function(id){
+      var n=B.nodes[id],lv=pathLv(id);
+      h+='<div class="kprow" data-kp="'+id+'"><div class="kn">'+esc(n.name)+(n.content?' <span class="pill">精讲</span>':'')+(n.video?' <span class="pill" style="background:#fdf2f8;color:#9d174d">视频</span>':'')+'<span class="ks">'+esc(n.sec)+' '+esc(n.secTitle)+' · 课本第 '+n.page+' 页</span></div>'
+        +'<span style="width:10px;height:10px;border-radius:99px;background:'+LVCOLORS[lv]+';flex:none"></span>'
+        +'<select class="lvsel" data-lvsel="'+id+'">'+lvOptions(lv)+'</select></div>';
+    });
+    h+='</div>';
+  });
+  h+='<div class="card"><p class="mut" style="margin:2px 0">其他科目（语文、英语、物理、化学、生物、政治、历史、地理）的路径会按同一套框架陆续补上。数学必修第二册与选择性必修在后面排队。</p></div>';
+  app.innerHTML=h;bindPathCommon();afterNav();
+}
+function bindPathCommon(){
+  app.querySelectorAll('[data-kp]').forEach(function(el){
+    el.addEventListener('click',function(e){if(e.target.tagName==='SELECT')return;PATHV.view='kp';PATHV.id=el.getAttribute('data-kp');PATHV.caseMode='read';PATHV.hints=0;PATHV.caseShown=false;PATHV.ans={};renderPath();window.scrollTo(0,0)});
+  });
+  app.querySelectorAll('[data-lvsel]').forEach(function(sel){
+    sel.addEventListener('click',function(e){e.stopPropagation()});
+    sel.addEventListener('change',function(){pathSetStatus(sel.getAttribute('data-lvsel'),parseInt(sel.value,10),sel)});
+  });
+}
+function pqHtml(id,group,items){
+  if(!items||!items.length)return '';
+  var h='';
+  items.forEach(function(it,ix){
+    var key=group+ix,got=PATHV.ans[key];
+    h+='<div style="margin:12px 0"><p style="font-size:15.5px;line-height:1.7;margin:4px 0">'+esc(it.q)+'</p>';
+    (it.opts||[]).forEach(function(op,oi){
+      var cls='opt';if(got!==undefined){if(oi===it.ans)cls+=' ok';else if(oi===got)cls+=' bad'}
+      h+='<button class="'+cls+'" data-pq="'+key+'" data-oi="'+oi+'">'+'ABCD'[oi]+'. '+esc(op)+'</button>';
+    });
+    if(got!==undefined)h+='<div class="explain">'+(got===it.ans?'答对了。':'答错了，正确答案 '+'ABCD'[it.ans]+'。')+'\n\n'+esc(it.why||'')+'</div>';
+    h+='</div>';
+  });
+  return h;
+}
+function renderKp(id){
+  var B=PATH_BOOK,n=B.nodes[id];if(!n){PATHV.view='list';renderPathList();return}
+  var lv=pathLv(id),ev=pEv()[id]||{},c=n.content||null;
+  var h='<div class="card" style="padding:10px 16px"><button class="btn gray" id="kpBack" style="width:auto;margin:0;padding:8px 14px">← 返回学习路径</button></div>';
+  h+='<div class="card"><h3 style="margin:2px 0 4px">'+esc(n.name)+'</h3>'
+    +'<p class="mut" style="margin:2px 0">数学 · 必修第一册 · '+esc(n.sec)+' '+esc(n.secTitle)+' · 课本第 '+n.page+' 页</p>'
+    +'<p style="font-size:15px;line-height:1.7;margin:8px 0">'+esc(n.desc)+'</p>'
+    +'<p style="margin:8px 0"><span class="mut">我目前处于：</span><select class="lvsel" id="kpLvSel" style="max-width:130px">'+lvOptions(lv)+'</select></p>'
+    +'<p style="margin:4px 0"><span class="evd'+(ev.redo?' ok':'')+'">案例重做'+(ev.redo?' ✓':' 未完成')+'</span><span class="evd'+(ev.apply?' ok':'')+'">应用题'+(ev.apply?' ✓ 已通过':' 未通过')+'</span><span class="evd'+(ev.adv?' ok':'')+'">综合题'+(ev.adv?' ✓ 已通过':' 未通过')+'</span></p>';
+  if(n.pre&&n.pre.length){
+    h+='<p style="margin:10px 0 2px"><b>学这个之前，最好先会：</b></p><p style="margin:2px 0">';
+    n.pre.forEach(function(p){
+      if(B.nodes[p.id])h+='<span class="chip2" data-kp="'+p.id+'">'+esc(p.name)+'</span>';
+      else h+='<span class="chip2 jz">'+esc(p.stage)+' · '+esc(p.name)+'</span>';
+    });
+    h+='</p>';
+  }
+  if(n.video){
+    h+='<h4 style="margin:14px 0 4px">老师讲解（预习、看懂阶段先看这个）</h4>'
+      +'<div class="vidbox"><iframe src="https://player.bilibili.com/player.html?bvid='+n.video.bvid+'&page='+n.video.p+'&high_quality=1" allowfullscreen loading="lazy"></iframe></div>'
+      +'<p class="mut" style="margin:2px 0">'+esc(n.video.from)+'《'+esc(n.video.t)+'》</p>';
+  }
+  if(n.criteria&&n.criteria.length){
+    h+='<h4 style="margin:14px 0 4px">掌握标准（对着自查）</h4><ul style="margin:4px 0;padding-left:20px;line-height:1.8;font-size:14.5px">';
+    n.criteria.forEach(function(x){h+='<li>'+esc(x)+'</li>'});
+    h+='</ul>';
+  }
+  if(n.diag){
+    h+='<details class="diag"><summary>热身自测（先想一想，再点开看答案）</summary><p style="font-size:14.5px;line-height:1.7;margin:6px 0">'+esc(n.diag.question)+'</p><p class="mut" style="margin:2px 0">答案：'+esc(n.diag.answer)+'</p></details>';
+  }
+  h+='</div>';
+  if(c){
+    h+='<div class="card"><h4 style="margin:2px 0 6px">讲解</h4><p style="font-size:15px;line-height:1.85;margin:4px 0">'+esc(c.intro)+'</p>';
+    (c.learn||[]).forEach(function(b){h+='<p style="font-size:15px;line-height:1.85;margin:8px 0"><b>'+esc(b.h)+'。</b>'+esc(b.p)+'</p>'});
+    if(c.svg)h+='<figure class="kpfig">'+c.svg+'<div class="cap">'+esc(c.svgCap||'')+'</div></figure>';
+    h+='</div>';
+    if(c.case){
+      var cs=c.case;
+      h+='<div class="card"><h4 style="margin:2px 0 6px">案例精讲 · '+esc(cs.title)+(cs.tier==='redo'?' <span class="pill">要自己重做</span>':'')+'</h4>'
+        +'<div class="seg"><button data-casemode="read"'+(PATHV.caseMode==='read'?' class="on"':'')+'>看讲解</button><button data-casemode="redo"'+(PATHV.caseMode==='redo'?' class="on"':'')+'>自己重做一遍</button></div>'
+        +'<p style="font-size:15.5px;line-height:1.75;margin:8px 0">'+esc(cs.q)+'</p>';
+      if(PATHV.caseMode==='read'){
+        (cs.talk||[]).forEach(function(t){h+='<p style="font-size:15px;line-height:1.85;margin:6px 0">'+esc(t)+'</p>'});
+        h+='<div class="caseans">完整解答：\n'+(cs.steps||[]).map(function(s,i){return (i+1)+'. '+esc(s)}).join('\n')+'\n答案：'+esc(cs.a)+'</div>';
+      }else{
+        h+='<p class="mut" style="margin:4px 0">先自己在草稿纸上做一遍。卡住了再点提示，一次只看一条。</p>';
+        (cs.hints||[]).forEach(function(ht,ix){if(ix<PATHV.hints)h+='<div class="hintbox">提示 '+(ix+1)+'：'+esc(ht)+'</div>'});
+        if(PATHV.hints<(cs.hints||[]).length)h+='<button class="btn gray" id="kpHint" style="width:auto;padding:8px 14px">给我一条提示</button> ';
+        if(!PATHV.caseShown)h+='<button class="btn gray" id="kpShowAns" style="width:auto;padding:8px 14px">做完了，看解答对一对</button>';
+        if(PATHV.caseShown){
+          h+='<div class="caseans">完整解答：\n'+(cs.steps||[]).map(function(s,i){return (i+1)+'. '+esc(s)}).join('\n')+'\n答案：'+esc(cs.a)+'</div>'
+            +'<p style="margin:8px 0"><button class="btn" id="kpRedoOk" style="width:auto;padding:9px 16px">我做出来了</button> <button class="btn gray" id="kpRedoNo" style="width:auto;padding:9px 16px">还没做出来</button></p>'
+            +(ev.redo?'<p class="mut">这个案例你已经重做通过了。</p>':'');
+        }
+      }
+      h+='</div>';
+    }
+    if(c.basics&&c.basics.length){
+      h+='<div class="card"><h4 style="margin:2px 0 4px">基础练习（确认真的看懂了）</h4>'+pqHtml(id,'b',c.basics)+'</div>';
+    }
+    if(c.apply&&c.apply.length){
+      h+='<div class="card" id="kpApply"><h4 style="margin:2px 0 4px">应用题（做对任意一道，才能选「能应用」）</h4>'+pqHtml(id,'a',c.apply)+'</div>';
+    }
+    if(c.advance){
+      h+='<div class="card" id="kpAdv"><h4 style="margin:2px 0 4px">综合题（做对才能选「综合应用」）</h4>';
+      if(c.advance.kind==='mcq')h+=pqHtml(id,'v',[c.advance]);
+      else{
+        h+='<p style="font-size:15.5px;line-height:1.75;margin:6px 0">'+esc(c.advance.q)+'</p>'
+          +'<details class="diag"><summary>在草稿纸上做完后，点开看参考答案</summary><div class="caseans">'+esc(c.advance.a)+'</div></details>'
+          +'<p style="margin:8px 0"><button class="btn" id="kpAdvOk" style="width:auto;padding:9px 16px">对照答案，我做对了</button></p>'
+          +(ev.adv?'<p class="mut">综合题已通过，可以选「综合应用」了。</p>':'');
+      }
+      h+='</div>';
+    }
+    if(c.pitfalls&&c.pitfalls.length){
+      h+='<div class="card"><h4 style="margin:2px 0 4px">易错点</h4><ul style="margin:4px 0;padding-left:20px;line-height:1.8;font-size:14.5px">';
+      c.pitfalls.forEach(function(x){h+='<li>'+esc(x)+'</li>'});
+      h+='</ul></div>';
+    }
+  }else{
+    h+='<div class="card"><p style="margin:2px 0;line-height:1.8">这个知识点的图文精讲还在打磨中。先看上面的老师讲解视频和课本第 '+n.page+' 页，再对着「掌握标准」自查；练习和案例补上后这里会更新。</p></div>';
+  }
+  var rel=(D.wrong||[]).filter(function(w){return w.subject==='数学'&&w.knowledge_point&&(w.knowledge_point.indexOf(n.name.slice(0,3))>=0||n.name.indexOf((w.knowledge_point||'').slice(0,3))>=0)}).slice(0,3);
+  if(rel.length){
+    h+='<div class="card"><h4 style="margin:2px 0 4px">你在月考里错过的相关题</h4>';
+    rel.forEach(function(w){h+='<p style="margin:4px 0;font-size:14.5px">第 '+esc(w.question_no)+' 题 · '+esc(w.knowledge_point)+' · 得 '+esc(w.got_score)+'/'+esc(w.full_score)+' 分（去错题本里重做）</p>'});
+    h+='</div>';
+  }
+  if(n.next&&n.next.length){
+    h+='<div class="card"><h4 style="margin:2px 0 6px">学完这个，接着学</h4><p style="margin:2px 0">';
+    n.next.forEach(function(x){h+='<span class="chip2 nx" data-kp="'+x.id+'">'+esc(x.name)+'</span>'});
+    h+='</p></div>';
+  }
+  app.innerHTML=h;bindPathCommon();bindKp(id);afterNav();
+}
+function bindKp(id){
+  var back=document.getElementById('kpBack');if(back)back.addEventListener('click',function(){PATHV.view='list';renderPath();window.scrollTo(0,0)});
+  var sel=document.getElementById('kpLvSel');if(sel)sel.addEventListener('change',function(){pathSetStatus(id,parseInt(sel.value,10),sel)});
+  app.querySelectorAll('[data-casemode]').forEach(function(b){b.addEventListener('click',function(){PATHV.caseMode=b.getAttribute('data-casemode');PATHV.hints=0;PATHV.caseShown=false;renderKp(id)})});
+  var hb=document.getElementById('kpHint');if(hb)hb.addEventListener('click',function(){PATHV.hints++;renderKp(id)});
+  var sb=document.getElementById('kpShowAns');if(sb)sb.addEventListener('click',function(){PATHV.caseShown=true;renderKp(id)});
+  var ro=document.getElementById('kpRedoOk');if(ro)ro.addEventListener('click',function(){var e=pEv();e[id]=e[id]||{};e[id].redo=Date.now();delete e[id].redoDue;lsSet('ty_path_ev',e);pathLogEv(id,'redo','case',true,'');alert('记下了：这个案例你已经能自己做出来。');renderKp(id)});
+  var rn=document.getElementById('kpRedoNo');if(rn)rn.addEventListener('click',function(){var e=pEv();e[id]=e[id]||{};e[id].redoDue=Date.now()+2*864e5;lsSet('ty_path_ev',e);pathLogEv(id,'redo','case',false,'');alert('没关系，已经帮你记进复盘：过两天它会出现在「本周复盘」里，再做一遍。');renderKp(id)});
+  var ao=document.getElementById('kpAdvOk');if(ao)ao.addEventListener('click',function(){var e=pEv();e[id]=e[id]||{};e[id].adv=Date.now();lsSet('ty_path_ev',e);pathLogEv(id,'quiz','adv',true,'self');alert('综合题通过，现在可以把状态选成「综合应用」了。');renderKp(id)});
+  app.querySelectorAll('[data-pq]').forEach(function(b){
+    b.addEventListener('click',function(){
+      var key=b.getAttribute('data-pq'),oi=parseInt(b.getAttribute('data-oi'),10);
+      if(PATHV.ans[key]!==undefined)return;
+      PATHV.ans[key]=oi;
+      var n=PATH_BOOK.nodes[id],c=n.content||{},group=key.charAt(0),ix=parseInt(key.slice(1),10),item=null;
+      if(group==='b')item=(c.basics||[])[ix];else if(group==='a')item=(c.apply||[])[ix];else if(group==='v')item=c.advance;
+      if(!item)return;
+      var ok=oi===item.ans;
+      pathLogEv(id,'quiz',key,ok,'');
+      if(ok&&(group==='a'||group==='v')){
+        var e=pEv();e[id]=e[id]||{};if(group==='a')e[id].apply=Date.now();else e[id].adv=Date.now();lsSet('ty_path_ev',e);
+      }
+      renderKp(id);
+    });
   });
 }
 function switchTab(t){
