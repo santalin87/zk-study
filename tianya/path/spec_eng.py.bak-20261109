@@ -1,0 +1,52 @@
+# -*- coding: utf-8 -*-
+"""英语必修第一册（人教版2019）首批数据包规格：Welcome Unit + Unit 1 Teenage Life。
+Welcome Unit 在人教版中是全册的导入单元，单列为一课（与 Unit 1 并列），不并入 Unit 1：
+它有独立的阅读篇目（First Impressions）与语法点（基本句式结构），合并会丢结构。"""
+CRIT = ['能复述定义和公式', '能看懂例题的每一步', '能独立做对基础题', '能独立做对应用题', '能独立做对综合题并讲清思路']
+def node(name, sec, secTitle, page, desc, pre):
+    return dict(name=name, sec=sec, secTitle=secTitle, page=page, desc=desc,
+                criteria=['能说出本节的核心概念', '能看懂课文/例句的每一步', '能独立做对基础题',
+                          '能独立做对应用题', '能独立做对综合题并讲清思路'],
+                diag=None, pre=pre, next=[])
+
+VARNAME = 'PATH_BOOK_ENG'
+SUBJECT = '英语'
+BOOKNAME = '必修第一册'
+VERSION = '人教版'
+CHAPTER = dict(no='Welcome + Unit 1', title='Welcome Unit 与 Teenage Life')
+OUTFILE = 'path-eng.js'
+CONTENT_FILES = ['eng/content.json']
+
+BV = 'BV1gY4y1T73a'
+UNITS = [
+ dict(id='u_eng_1', name='Welcome Unit：走进高中英语', secs='Welcome Unit', pageFrom=1, pageTo=10,
+      members=['eng_e001', 'eng_e002'],
+      video=dict(bvid=BV, p=1, t='必修一 Welcome Unit 课文讲解', dur='17:34')),
+ dict(id='u_eng_2', name='Unit 1 Teenage Life', secs='Unit 1', pageFrom=11, pageTo=22,
+      members=['eng_e003', 'eng_e004', 'eng_e005'],
+      video=dict(bvid=BV, p=2, t='必修一 Unit 1 课文讲解', dur='31:30')),
+]
+NODES = {
+ 'eng_e001': node('英语的五大基本句式', 1, 'Welcome Unit', 1,
+    'SV、SVO、SVP、SVOO、SVOC 五种骨架：找谓语、数宾语、看末尾成分说明谁。', []),
+ 'eng_e002': node('阅读：First Impressions 与情感线', 2, 'Welcome Unit', 1,
+    '韩静开学第一天的日记：按时间轴读情感变化（anxious→confident）。', ['eng_e001']),
+ 'eng_e003': node('短语三类型：名词/形容词/副词短语', 3, 'Unit 1 Teenage Life', 11,
+    '按句中功能分类：顶名词的、顶形容词的、顶副词的；介词短语看修饰对象。', ['eng_e001']),
+ 'eng_e004': node('课文 The Freshman Challenge 与话题短语', 4, 'Unit 1 Teenage Life', 11,
+    '挑战—应对配对读法；sign up for、keep up with、be responsible for 等必背短语。', ['eng_e002']),
+ 'eng_e005': node('写作：建议信（A Letter of Advice）', 5, 'Unit 1 Teenage Life', 11,
+    '三段式：表明目的→分条建议→鼓励收尾；suggest/Why not 等提建议句式库。', ['eng_e004']),
+}
+VTOP = {
+ 'u_eng_1': ['英语句子只有五大基本句式，先认骨架再看修饰。', '日记体阅读抓两条线：时间顺序和情感词。', 'First Impressions 的情感弧线：anxious → confident。'],
+ 'u_eng_2': ['短语按功能分类，不按长相分类。', '课文按「挑战—应对」成对读，细节题就这么出。', '建议信三段式：目的、建议、鼓励，句式要多样。'],
+}
+VSUM = {
+ 'u_eng_1': 'Welcome Unit 做两件事：语法上确立五大基本句式（SV/SVO/SVP/SVOO/SVOC），判句式先找谓语、再数宾语、最后看末尾成分在说明谁；阅读上用韩静的开学日记 First Impressions 练「时间轴+情感词」读法——7:00 的 anxious 与 10:30 的 confident 是全篇的两个锚点。配套视频为该单元课文讲解（17:34）。',
+ 'u_eng_2': 'Unit 1 Teenage Life：语法是短语三类型（名词/形容词/副词短语，按句中功能分，介词短语看它修饰谁）；课文 The Freshman Challenge 用「挑战—应对」配对读（选课、足球队、跟上课程），同时收下 sign up for、keep up with、be responsible for、be addicted to 等高频短语；写作是建议信三段式，suggest 的用法与 advice 不可数是两个必查易错点。配套视频为 Unit 1 课文讲解（31:30）。',
+}
+VTECH = {
+ 'u_eng_1': ['看到判句式题 → 先圈谓语动词：是 be/look 等系动词就往 SVP 想，有两个宾语再分双宾还是宾补。', '看到日记/书信体阅读 → 先标时间词，再在每段找情感词，情感变化题直接对号入座。', '看到 What if...? → 读作担忧语气「要是……怎么办」，是理解人物焦虑的钥匙。'],
+ 'u_eng_2': ['看到短语分类题 → 问一句「它顶替哪类词工作」，顶名词/形容词/副词即定类。', '看到人物故事类细节题 → 按「挑战—应对」成对定位，不要通读全文蛮找。', '写建议信 → 每条建议必须带具体做法（动作），句式在 suggest、Why not、It would be a good idea to 之间轮换。'],
+}
