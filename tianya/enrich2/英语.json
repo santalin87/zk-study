@@ -1,0 +1,126 @@
+{
+ "英语|2|1": {
+  "steps": "1. 听前先把四个选项里的颜色词扫一遍，心里记住每个选项是什么颜色\n2. 录音里每出现一个颜色，就在对应选项旁标上「谁说的」（先想要的、妈妈建议的）\n3. 专门等拍板信号词：but、in the end、let's take、so we took——信号出现之前不下笔选\n4. 信号之后出现的颜色（dark green）才是最终定下的，锁定它\n5. 第二遍播放时只核对一件事：自己选的是不是「最后定的」那个颜色",
+  "need": ["装修场景词：paint（刷漆）、decorate（装修）、curtain（窗帘）、dark/light green（深绿/浅绿）", "转折与拍板信号词：but、in the end、let's take", "prefer 的用法：prefer A to B（更喜欢 A）"]
+ },
+ "英语|3|1": {
+  "steps": "1. 听前先确认题目问的是谁（母亲），再把选项里的活动词发音在脑子里过一遍：jogging、swimming、cycling、yoga\n2. 听时只盯母亲这个人的信息，父亲或别人做的活动先在心里划掉\n3. 抓住答句里的动词短语——goes jogging outdoors 这类短语就是答案本体\n4. 警惕对话先提别人或以前的活动做干扰，以最后落到母亲身上的那个动词为准\n5. 第二遍只核对这一个动词短语有没有听错",
+  "need": ["锻炼方式词：jog（慢跑）、go cycling（骑行）、do yoga（做瑜伽）、take a walk（散步）", "keep fit（保持健康）", "by + 动名词表方式：by jogging outdoors"]
+ },
+ "英语|5|1": {
+  "steps": "1. 听前看选项构成：几个是具体小事、一个是概括性话题时，这题多半考主题\n2. 整段先听完，用一句中文在心里概括「他们到底在聊什么」（什么时候刷牙）\n3. 再回头对选项：牙膏、牙医这些词出现过不等于主题，是细节干扰，排除\n4. 话题题不抢答，等对话结束再定\n5. 第二遍验证：整段是不是都绕着这个主题转，是才坐实",
+  "need": ["刷牙场景词：brush one's teeth、twice a day、before breakfast、after meals、dentist", "区分「对话主题」与「对话中顺带提到的细节」"]
+ },
+ "英语|7|1": {
+  "steps": "1. 听前几秒扫选项，心里先给信息分类：时间、价格、地点、人物各归一类\n2. 录音一开始就动笔：听到任何数字立刻写在对应选项旁边，不靠脑记\n3. 数字题防双数字陷阱：7:20 是见面时间、7:40 是开场时间，问题问 starts 就抓 starts at 后面的那个数\n4. 听到地点词（cinema、car park）就在对应选项上打钩\n5. 第二遍只补第一遍漏记的信息，边听边和选项核对",
+  "need": ["电影场景词：cinema、start at、ticket、seat、car park、traffic jam", "时间数字听辨：7:20 与 7:40 这类近似数字的区分", "meet at（约定见面）与 start at（正式开始）的区分"]
+ },
+ "英语|8|1": {
+  "steps": "1. 听前看选项：全是职业或地点时，先定性——这题考「场所推职业」\n2. 听时专等场所名词和动作信号词：takes orders、serves coffee 出现就标注「咖啡馆」\n3. 把听到的场所和选项里的职业逐个配对（barista 对 coffee shop、clerk 对 office）\n4. 录音没直接说职业时用场所反推，不凭选项眼熟乱选\n5. 第二遍验证场所词有没有漏听或听错",
+  "need": ["职业与场所配对：barista—coffee shop、waiter—restaurant、clerk—office、nurse—hospital", "场所信号词：take orders、serve customers、menu、meeting"]
+ },
+ "英语|13|1": {
+  "steps": "1. 听前先看清题干问哪个时段（at first 最初），把时段词圈出来\n2. 独白一开始就在纸上画一条时间线\n3. 每听到一个时间词（at first、then、years later、now）就在时间线上分一段，段后立刻记下职业和事件\n4. 答题时按题干问的时段回时间线对号：问最初就取第一段（bank clerk），不拿后来的 shop owner 顶替\n5. 第二遍核对每段的职业有没有记串行",
+  "need": ["时间线标记词：at first、then、years later、now、retire", "职业词：bank clerk（银行职员）、businessman、shop owner", "独白按时间顺序组织信息的特点"]
+ },
+ "英语|14|1": {
+  "steps": "1. 听前看选项：清一色 -ing/-ed 形容词时，先默念分工——形容人用 -ed，形容事用 -ing\n2. 听时先定题干问的对象：是工作的性质，还是人的感受\n3. 听到 feel 就记下它后面的词：feel 后永远跟人的感受词（stressed、tired、proud）\n4. 选前代入验一遍：「工作令人有压力」用 stressful，「他感到有压力」用 stressed\n5. 第二遍专门核对 -ing 和 -ed 有没有选反",
+  "need": ["-ing/-ed 形容词分工：-ed 形容人、-ing 形容事", "成对词：stressed/stressful、bored/boring、interested/interesting、tired/tiring", "feel + 形容词（人的感受词）结构"]
+ },
+ "英语|15|1": {
+  "steps": "1. 听前看清问哪类地名：was born（出生地）还是 lives now（现居地），把题干关键词圈出来\n2. 独白里每出现一个地名，立刻在旁边标身份：生、去过、现住、要去\n3. 地名成串出现时不抢答，等独白放完，再按题干问的身份取对应那个\n4. 立改答案纪律：必须听到确切的新信息才改，凭感觉改往往越改越错\n5. 第二遍专门核对每个地名的身份标注有没有贴错",
+  "need": ["地名身份信号词：was born in、moved to、now lives in、is going to", "听力答题纪律：没有确切新信息不改第一答案"]
+ },
+ "英语|19|1": {
+  "steps": "1. 讲话目的题放最后做：先做细节题，这题必须听完整段再选\n2. 重点听第一句和最后一句：讲话人通常开头交代主题、结尾再呼应一次\n3. 边听边留意反复出现的词：customs、festivals 反复出现，主题词就是 cultures\n4. 选项多是 to do 开头，逐个自问「这句能不能概括全篇」，只能概括某一段的先排除\n5. 最后用排除法收尾：细节型选项划掉，剩下能罩住全篇的才是目的",
+  "need": ["主旨题抓手：开头句与结尾呼应句", "主题词识别：全篇反复出现的关键词（customs、festivals、cultures）", "目的类选项动词：to introduce、to explain、to tell"]
+ },
+ "英语|28|1": {
+  "steps": "1. 先看段落位置定大方向：第一段多半引出话题，最后一段多总结升华，中间段才论证举例\n2. 用一句话说清「这段到底在干什么」：只摆现象、讲引子，就是引出话题\n3. 把选项里的动词逐个译成中文：introduce 引出、prove 证明、show 展示、conclude 总结\n4. 拿第二步的判断去对选项：内容对得上、动词也对得上才选\n5. 这段若没有分析和结论，写「给出建议」「得出结论」的选项直接排除",
+  "need": ["段落功能与位置：首段引出话题、尾段总结、中间段论证举例", "目的类动词辨析：introduce、prove、show、conclude、suggest"]
+ },
+ "英语|29|1": {
+  "steps": "1. 读题干先划定位词（perfect book、为什么受欢迎），带着词回原文扫读定位\n2. 找到依据句就画线，重点盯原因信号：because、for、not...but...\n3. 特别处理 not...but...：not 后面是被否定掉的干扰（pictures），but 后面才是真原因（simple language）\n4. 四个选项逐个回依据句核对：原文没提到的选项，再合理也当场排除\n5. 选完再读一遍依据句，确认所选项和原文是同义替换关系",
+  "need": ["not...but... 结构：前面是否定干扰，后面才是重点", "原因信号词：because、for、thanks to", "细节题铁律：没有依据句的选项不选"]
+ },
+ "英语|33|1": {
+  "steps": "1. 原文出现数量表达（one X for each Y、twice as many as）先停下来，不急着看选项\n2. 把比率换算成一句总量话：「一个居民对应一个游客」等于游客总数约等于当地人口总数\n3. 带着换算出的结论回选项，找同义表达（masses of tourists，大量游客）\n4. 警惕字面陷阱：one car for each family 是「每户一辆」，不是「全村只有一辆」\n5. 数字、比率、百分比类题一律先换算再对选项，不停在字面",
+  "need": ["数量表达：one X for each Y、twice as many as、percent", "masses of + 可数名词复数（大量的）", "把比率换算成总量再判断的读法"]
+ },
+ "英语|34|1": {
+  "steps": "1. 题干带 ruin、except、NOT 字样时先定性：这题要反着找答案\n2. 回原文把否定句全圈出来：don't mind、can allow 后面跟的全是「被豁免项」\n3. 把豁免项归成一堆（pollution、traffic jams），它们全是排除项\n4. 在选项里找没被豁免的那个（rainy days），它才是答案\n5. 特别留意 but：but 后面 hate、ruin 指向的信息权重最高",
+  "need": ["否定豁免表达：don't mind、not care、can allow", "except / NOT / ruin 类题的反推法", "but 后信息权重最高的阅读习惯"]
+ },
+ "英语|44|1": {
+  "steps": "1. 先通读这一段抓主线：nervousness（紧张）最后导致了什么变化\n2. 看空前动词 led to：它后面要接「结果」类名词，先把不像结果的选项降权\n3. 四个名词逐个译中文再辨析：actions 行动、words 话语、plans 计划、ambitions 抱负\n4. 逐个代入原句验逻辑：情绪导致行动最顺，「导致话语」「导致计划」都不搭\n5. 再和后文核对：后文写到他做出的改变，就更加坐实 actions",
+  "need": ["动词搭配：lead to + 结果名词", "近义名词辨析：action、word、plan、ambition 的词义与使用场合"]
+ },
+ "英语|48|1": {
+  "steps": "1. 先读完整句，再读破折号后半句：in fact he had overslept——真相是睡过头了\n2. 回头看空前信号词 just（不过是）：它提示前面的说法是编出来的\n3. 辨析两个易混词：reason 是真实原因（中性），excuse 是为掩盖真相编的借口（贬义）\n4. 语境是迟到道歉、表面说法不等于真相，锁定 excuse\n5. 代入读通整句再定：just an excuse 与 in fact 前后呼应",
+  "need": ["excuse（借口）与 reason（真实原因）的辨析", "固定搭配：make an excuse、an excuse for being late", "语境信号词：just、in fact 提示表里不一"]
+ },
+ "英语|52|1": {
+  "steps": "1. 先看空后成分：for a second 是一小段时间，空里的动词必须能持续这一小会儿\n2. 逐个验结构：knock 必须带对象（knock on the door），后面直接跟 for a second 不成立，先排除\n3. 再看语境：听到消息后「不知说什么」是愣住，对应 stand 的「停着不动」义\n4. 记 stand 的熟词僻义：stood for a second 就是愣了一秒\n5. 代入读完整段，确认动作和当时的情绪（吃惊发愣）一致再定",
+  "need": ["stand 的僻义：停着不动、愣住；stood 是它的过去式", "knock 的用法：knock on/at + 对象，不能单独表示持续动作", "完形动词题先验「动词 + 空后成分」结构再看词义"]
+ },
+ "英语|55|1": {
+  "steps": "1. 先通读抓主线：毕业后他自己决定去当画家——抓住 decided（自己决定）这个词\n2. 看搭配框架：follow one's ___，先想哪些词能跟 follow 搭配表「遵从内心」\n3. 逐个排除：advice 是别人的建议，与「他自己决定」矛盾；personality 不与 follow 搭配\n4. dream 与 interest 二选一：句意强调「热爱什么」选 interest，强调「目标」才选 dream\n5. 代入后文验证：became a painter 是因兴趣当画家，逻辑闭合",
+  "need": ["搭配区别：follow one's interest（遵从兴趣）与 follow one's dream（追逐梦想）", "advice、personality 与 follow 的搭配限制"]
+ },
+ "英语|56|1": {
+  "steps": "1. 先看空格位置和空后结构：空在句首，后面是名词 children 加逗号、再接完整主句，空处要填介词作状语\n2. 判断语义关系：整句是「对孩子们来说」，表对象、表「对于……而言」\n3. 排除 at：at 只用于时间点和地点（at 7 o'clock、at school），at children 不成立\n4. 定形式：句首 For 首字母大写，写出 For\n5. 代入读通自查：For children, ... 对孩子们来说……语义顺，定稿",
+  "need": ["for 表对象：For + 人 + 逗号，「对……来说」", "at 的用法范围：只用于时间点和地点，不表对象", "for 的常见搭配：for example、wait for、be good for"]
+ },
+ "英语|57|1": {
+  "steps": "1. 先看全句有没有谓语：eat 已经是谓语，空处不是第二个谓语，先把谓语形式排除\n2. 问自己一句「吃甜食是为了什么」：能答出目的（减压），就用不定式作目的状语\n3. 定形式：目的状语等于 to + 动词原形，把括号里的 reduce 原形搬进去，写 to reduce\n4. 自查 to 后面站的是谁：必须是动词原形；surprised 这类 -ed 形容词永远不能站在 to 后充当动作\n5. 代入读通：eat something sweet to reduce pressure，顺，定稿",
+  "need": ["不定式作目的状语：to do = in order to do", "to 后必跟动词原形", "-ed 形容词（surprised、tired）与动词原形的区别"]
+ },
+ "英语|59|1": {
+  "steps": "1. 先扫全句找比较信号：than 就在空后不远处，这一空大概率考比较级\n2. 定词：括号给的是 easy（形容词），比较对象是 the food in restaurants，词没跑\n3. 变形式：easy 以「辅音 + y」结尾，变 y 为 i 再加 -er，写出 easier，一个字母不能省\n4. 落笔后默念拼写自查：e-a-s-i-e-r\n5. 代入读通：easier to prepare than ... 顺，定稿",
+  "need": ["比较级触发词 than", "辅音 + y 结尾形容词的比较级变法：y 变 i 加 er（happy 变 happier、busy 变 busier、heavy 变 heavier）"]
+ },
+ "英语|63|1": {
+  "steps": "1. 先看空后词：number one 是「第一名」，全世界只有一个，属于特指\n2. 套规则：序数词、最高级、only、number one 前面必须加 the\n3. 排除 a：a 表示「任意一个」，和「独一无二」矛盾\n4. 写出 the（在句中用小写）\n5. 自查提醒：冠词也会单独设空考，再小的空也要给答案，不能空着",
+  "need": ["定冠词 the 的特指用法：序数词、最高级、the only、the number one 前加 the", "a/an 表「任意一个」与 the 表「特指那个」的区分"]
+ },
+ "英语|64|1": {
+  "steps": "1. 先看空的位置：名词 people 后面、数字 25 to 40 前面，空处缺一个修饰 people 的定语\n2. 再看括号词：age 是动词；名词后缺定语又给动词，先想分词作定语\n3. 判断主动还是被动：人是「被标明年龄」的状态，不是自己发出的动作，用过去分词 aged\n4. 写出 aged 25 to 40，意思就是「年龄在 25 到 40 岁的人」\n5. 代入读通，并和 -ing 对比自查：对象自己正在做动作才用 -ing（如 the sleeping baby）",
+  "need": ["过去分词作后置定语：people aged 25 to 40", "分词主动/被动判断：-ing 表主动进行、-ed 表被动或状态", "同类结构：the girl dressed in red、the boy named Tom"]
+ },
+ "英语|66|1": {
+  "steps": "1. 先看中文提示和英文半句：with great ___，great 是形容词，它后面只能接名词\n2. 先定词性再定词：这一空要名词，把词性这一步做掉再想具体词\n3. 做词形转换：confident 是形容词，换尾巴变名词 confidence，记 -ent 变 -ence 的规律\n4. 核对搭配：with great confidence（自信地）、have confidence in（对……有信心）都是固定搭配\n5. 拼写自查：con-fi-dence 分三段默念一遍再落笔",
+  "need": ["搭配：have confidence in、with great confidence", "词性转换规律：形容词 -ent 变名词 -ence（confident 变 confidence、different 变 difference）", "位置判断法：形容词后面接名词"]
+ },
+ "英语|67|1": {
+  "steps": "1. 先圈中文提示的核心：「令人困惑」——带「令人……」字样，先想到 -ing 形式\n2. 看英文半句空的修饰对象：was so ___ 修饰的是 maths problem，是物不是人\n3. 套分工口诀：物用 -ing、人用 -ed，锁定 confusing\n4. 反向自查：若修饰的是 students 的感受才用 confused，本题不要选反\n5. 代入读通：The problem was so confusing that ... 顺，定稿",
+  "need": ["-ing/-ed 形容词分工：confusing（令人困惑，修饰物）、confused（感到困惑，修饰人）", "so ... that ... 句型里表语形容词的选用"]
+ },
+ "英语|68|1": {
+  "steps": "1. 先看空后词：beautiful 是形容词，空处要修饰它，必须用副词\n2. 做词形转换：extreme 是形容词，加 -ly 变副词 extremely\n3. 拼写自查：extreme 加 ly 时末尾的 e 不去掉，直接拼 ex-treme-ly\n4. 与 very 对比强度：extremely 比 very 更强，和「非常美丽」对得上\n5. 代入读通：is extremely beautiful，顺，定稿",
+  "need": ["副词修饰形容词：形容词前面填副词", "形容词变副词加 -ly：extreme 变 extremely（e 不去掉）；例外 true 变 truly 要去 e", "同类转换：careful 变 carefully、quick 变 quickly、real 变 really"]
+ },
+ "英语|69|1": {
+  "steps": "1. 先看空的位置：___ report，空在名词 report 前面，要填形容词作定语\n2. 对中文提示：「官方报告」对应 official report，是固定说法\n3. 这题真正的坎是拼写：把 official 分三段默写——offi-ci-al，注意双 f、中间是 ci 不是 ce\n4. 和 officer 分清：officer 是名词「官员」指人，本题要的是形容词 official\n5. 落笔后逐字母再核对一遍才交卷",
+  "need": ["official 的拼写：o-f-f-i-c-i-a-l（双 f、cial）", "official（形容词，官方的）与 officer（名词，官员）的区分", "词源抓手：official 来自 office + -al"]
+ },
+ "英语|72|1": {
+  "steps": "1. 先圈中文提示的核心短语：「沉迷于」对应 be addicted to，整条短语一起调出来，不逐词现拼\n2. 看英文半句对位：He is ___ ___ computer games——is 已经给出，第一空填形容词 addicted，第二空填介词 to\n3. 两空逐个落实：addicted 注意双 d，to 不能漏\n4. 人称时态自查：主语 He 配 is 已在句中，不用再变\n5. 顺带记 to 的性质：这里的 to 是介词，后接名词或动名词（addicted to playing games），不能接动词原形",
+  "need": ["be addicted to 整条短语（be 动词 + addicted + to）", "addicted 的拼写：双 d", "addicted to 里的 to 是介词，后接名词或动名词"]
+ },
+ "英语|73|1": {
+  "steps": "1. 先圈中文提示：「打扫干净」重点在「干净」这个结果，不只是「打扫」这个动作\n2. 调短语：clean up 整条出现——clean 是动作，up 表示「彻底、收拾干净」的结果\n3. 两空逐个落实：第一空 clean、第二空 up，完成句子按空给分，小品词漏一个就丢一空\n4. 语境自查：宾语 the park 是地点名词，直接跟在短语后面没问题；宾语是代词时要放中间（clean it up）\n5. 交卷前专项检查：这一页所有动词短语的小品词（up、of、on）在不在",
+  "need": ["动词短语整条记忆：clean up、pick up、give up，小品词不能漏", "小品词 up 表「彻底完成」的语感", "短语动词接代词宾语的位置：clean it up"]
+ },
+ "英语|74|1": {
+  "steps": "1. 先圈中文提示：「接管」对应 take control of，三个词一起调出来\n2. 数空对位：英文半句正好三个空，依次是 took、control、of；of 最容易漏，先把它填上\n3. 定时态：句中有 last year，动作发生在过去，take 用过去式 took\n4. 人称自查：过去时动词不随人称变化，不用再加 s\n5. 交卷三查：短语完整吗（of 在不在）、时态对吗（去年对应过去式）、拼写对吗（took 是双 o）",
+  "need": ["take control of 三词短语（最后的 of 不能漏）", "不规则动词过去式：take 变 took", "时间标志词定时态：last year、ago 用过去时；every day 用一般现在时", "control 前不加冠词"]
+ },
+ "英语|75|1": {
+  "steps": "1. 先看英文半句的语境：does nothing 是整句否定，「除了学习什么都不做」\n2. 定短语选型：否定语境（nothing、nobody、no）加「除了」，主场短语是 other than\n3. 写出 other than，它后面接动词原形 study，与前面的 does 保持对应\n4. 和 except for 分工自查：except for 用于「整体肯定、只挑一个小例外」，本句整句否定，不用它\n5. 代入读通：does nothing other than study，顺，定稿",
+  "need": ["other than 在否定语境表「除了」", "except for 与 other than 的分工", "apart from 表「除了」的同义替换"]
+ },
+ "英语|作文|1": {
+  "steps": "1. 动笔前先定三段结构：开头点问题加表担心、中间摆危害加给建议、结尾鼓励收尾\n2. 每段先列要点词再写句子：危害段 harm、eyes、health；建议段 had better、why not、spend time\n3. 开头套老师改好的范文句式：You have become addicted to computer games recently. 先点沉迷，再表担心\n4. 写作时至少用上一句 because、一句 if，把短句连成复合句，不全篇短句堆砌\n5. 写完专项自查三件事：be addicted to 的 to 后面接对没有、全文时态统一没有、搭配有没有中式直译（对……有害要写 do harm to）",
+  "need": ["劝诫信三段结构：点问题、摆危害给建议、鼓励收尾", "核心搭配：be addicted to、do harm to、be harmful to、had better do、spend time (in) doing", "复合句工具：because、if 引导的状语从句"]
+ }
+}

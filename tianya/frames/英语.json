@@ -1,0 +1,114 @@
+{
+ "英语|56|1": {
+  "points": [
+   "本空1.5分，一次性给分：填对 For 得满分，填 at 或其他介词得0分，没有半分",
+   "句首位置必须大写：写成小写 for 按拼写错误处理，本空同样不得分",
+   "空着不写=0分：冠词、介词这类小词空和大空同分，不能跳过"
+  ],
+  "frame": "先看空后结构：名词children+逗号+完整主句，空处是状语不是主干 → 再定语义：句意是\"对……来说\"表评价对象 → 排除法：at只配时间点和地点（at 7 o'clock/at school），at children不成立 → 落笔写For，先默念搭配for example、be good for对表对象有手感 → 写完回看一眼句首大写"
+ },
+ "英语|57|1": {
+  "points": [
+   "本空1.5分，两部分缺一不可：to和动词原形reduce都对才得分",
+   "只写reduce、漏掉to=0分：不定式符号丢了，整个结构就错了",
+   "to后面跟非原形=0分：写成to surprised（形容词）、to reducing、to reduced都不得分"
+  ],
+  "frame": "先找句子已有谓语eat，确认空处不是第二个谓语 → 再问一句\"吃甜食是为了什么\"，能答出目的就锁定不定式to do作目的状语 → 定形：to+所给词原形，surprised这类-ed形容词永远不能站在to后当动作 → 落笔to reduce → 代回原句读一遍：\"吃点甜的来减压\"，通顺即定"
+ },
+ "英语|59|1": {
+  "points": [
+   "本空1.5分：easier完整拼出才得分，拼错一字母（如easer、easyer）按错处理，0分",
+   "只写原形easy或只起个头（如她只写了e）=未完成作答，0分：这类题不给\"意思分\"",
+   "写成more easy=0分：easy是短形容词，用-er型比较级，不用more"
+  ],
+  "frame": "先扫全句找标志词：看到than立刻定方向——前面形容词用比较级 → 再变形：easy以\"辅音+y\"结尾，变y为i加er，得easier（同组happy→happier一起记） → 一次写全，别写一半停笔 → 交卷前专项检查：凡空后或句中有than的空，回去确认都写成了比较级"
+ },
+ "英语|63|1": {
+  "points": [
+   "本空1.5分：填the得满分，填a/an或空着都0分，没有半分",
+   "这个空虽小，分值和词形大空完全一样：漏写一空就是实打实丢1.5分"
+  ],
+  "frame": "先认空后词：number one是\"第一名\"，属于序数/唯一类表达 → 套口诀\"序数最高级，唯一和特指，见面先给the\"：全世界只有一个第一，用特指the → 排除a：a表示\"任意一个\"，与\"第一\"矛盾 → 落笔the → 全卷自查：凡first、best、only、same前的空，都回头补the"
+ },
+ "英语|64|1": {
+  "points": [
+   "本空1.5分：aged写对得满分；写age（原形）、aging（-ing）、ages都不得分",
+   "本题没有备选形式可蒙：分词作定语是整个考点，形式选错即全错"
+  ],
+  "frame": "先看位置：空在名词people之后、数字25 to 40之前，是给people加定语 → 再判关系：年龄是\"被标明\"的状态、不是people主动发出的动作，用过去分词-ed → 写aged（age作动词，aged 25 to 40=年龄在25到40岁） → 自查同类标本：the girl dressed in red、the boy named Tom，脑子里有标本才敢落笔"
+ },
+ "英语|66|1": {
+  "points": [
+   "本空1分：confidence（名词）写对才得分",
+   "写confident（形容词）词性错=0分：空处在great之后、句子末尾，只能放名词",
+   "拼写错（如confidance、confidense）=0分，完成句子拼写与词形同等计分"
+  ],
+  "frame": "先圈中文核心\"自信（地）\" → 再看空格位置定性：with great ___，great是形容词，后面必须接名词，先把词性定死 → 调词形规则：confident是形容词，名词换尾巴-ent→-ence得confidence → 落笔后拼写自查：con-fi-dence分三段默念 → 顺带记搭配with great confidence、have confidence in，写作能直接用"
+ },
+ "英语|67|1": {
+  "points": [
+   "本空1分：confusing写对得分",
+   "写confused=0分：方向反了——confused只能修饰人（感到困惑的），本题修饰maths problem（物）",
+   "拼写错=0分"
+  ],
+  "frame": "先圈中文\"令人困惑\"里的\"令人\"二字，这是-ing的信号 → 定修饰对象：空在was so ___ that结构里形容problem，是物不是人 → 套口诀\"物用-ing，人用-ed\"选confusing → 落笔后对照标本自查：the news is exciting / I am excited，一物一人别再反"
+ },
+ "英语|68|1": {
+  "points": [
+   "本空1分：extremely写对得分",
+   "只写extreme（形容词原形、没加ly）=0分：修饰形容词的位置不收形容词",
+   "拼写错（如extremly漏e）=0分：extreme加ly时词尾e保留，写错即丢"
+  ],
+  "frame": "先圈中文\"非常\" → 看空后词：beautiful是形容词，修饰形容词只能用副词，先定词性 → 做词形转换：extreme直接加-ly得extremely（e不脱落，和true→truly的例外分开记） → 落笔后拼写自查：extreme-ly两段拼合读一遍"
+ },
+ "英语|69|1": {
+  "points": [
+   "本空1分：official拼写全对才得分",
+   "意思选对但拼写错（offical少一个f、oficial把ci写成ce等）=0分：本题考的就是拼写，没有\"意思分\"",
+   "写officer=0分：那是\"官员\"指人，不能修饰report"
+  ],
+  "frame": "先圈中文\"官方（报告）\"，确认空处修饰report需形容词 → 调词条先想来源：office（办公室）+-al，\"办公室发布的\"就是\"官方的\" → 分段拼写落笔：offi-ci-al，双f和ci两处逐段默念着写 → 写完专项自查：f是不是两个、中间是ci不是ce，这两点是本题全部得分所在"
+ },
+ "英语|72|1": {
+  "points": [
+   "共2空、每空1分：addicted（双d、形容词-ed结尾）写对得1分，to写对得1分",
+   "少写to，第二空0分：addicted alone不成短语，必须整条be addicted to才算掌握",
+   "addicted拼错（少一个d、写成addict/addicting）该空0分"
+  ],
+  "frame": "先圈中文核心\"沉迷于\"，整条调出目标短语be addicted to，不许逐词现凑 → 落笔前查三项：be动词在不在（句中已有is）、addicted双d没、to后接名词或动名词（computer games是名词，直接跟） → 整条写出He is addicted to computer games → 自查拼写：ad-dict-ed分段默念"
+ },
+ "英语|73|1": {
+  "points": [
+   "共2空、每空1分：clean得1分，up得1分",
+   "她实际得分1/2：只写对clean、漏了up，第二空0分——这就是本题丢分点：短语记一半，分数拿一半",
+   "写成clean up以外的搭配（如clean down）第二空同样0分"
+  ],
+  "frame": "先圈中文\"打扫干净\"，注意\"干净\"是结果不是动作 → 整条调短语：clean up（动词+小品词，缺一不可），先在心里把两词绑成一条再落笔 → 逐空写：第一空clean、第二空up → 交卷前数一遍：中文\"打扫干净\"对应两个空，空数对上了没有；同类短语pick up、give up都按\"整条背、整条写\"处理"
+ },
+ "英语|74|1": {
+  "points": [
+   "共3空、每空1分：took得1分、control得1分、of得1分",
+   "她实际得分1/3：时态took对了1空，其余丢分——of漏写该空0分，短语不完整不给\"接近分\"",
+   "写take（原形）第一空0分：句中有last year，时态错整空错；写take the control多加冠词，该空按错处理"
+  ],
+  "frame": "先圈中文\"接管\" → 第一步先定时态：扫到last year立刻锁定过去时，take→took，先把第一空定死 → 第二步整条调短语：take control of三词一个不能少，尤其句尾的of → 第三步落笔后三查：①短语完整吗（of在不在）②时态对吗（和last year对上没）③有没有多加冠词（control前不加the） → 三查过了再下一题"
+ },
+ "英语|75|1": {
+  "points": [
+   "共2空、每空1分：other得1分、than得1分，整条other than写全得2分",
+   "写except for不得分：except for后只能接名词作例外补充，本句空后是动词原形study，结构不合",
+   "只写except或than alone，各空按错处理"
+  ],
+  "frame": "先圈中文\"除了\" → 看语境选短语：句首有does nothing是否定语境，且空后接动词原形，\"除了……没别的\"用other than（except for留给\"整体肯定只挑一个例外\"且后接名词） → 整条落笔other than → 自查：空前后读通\"He does nothing all day other than study\"，通顺即定"
+ },
+ "英语|作文|1": {
+  "points": [
+   "内容要点（约占一半权重）：劝诫信要点须齐——①点明Wang Peng沉迷游戏的现状 ②表达担心 ③摆危害（伤眼、影响学习/休息） ④给出2-3条具体建议 ⑤结尾鼓励并表态。漏一条要点就下调一档；她的开头没有点明问题和表态，第一要点先丢",
+   "语言准确（她丢分第一位）：搭配写错一处影响一档——be addicted to、spend time (in) doing、be harmful to/do harm to这类红线搭配是阅卷先看的；她多处搭配随手造，11分里最大一块丢在这里",
+   "句式多样（她丢分第二位）：通篇简单短句堆砌，分数封顶在中档；至少出现1个because/if状语从句、1个非谓语或建议句式（had better/why not）才能抬档，她基本没做到",
+   "衔接连贯：段与段、句与句之间要有连接词（First、Besides、What's worse、Therefore、In a word）；没有连接词，内容再对也显得散，要点分打折",
+   "字数与卷面：字数不足是硬扣分项（先数够词再谈质量）；涂改多、字迹潦草拉低印象分，同等语言水平下卷面整洁的能高1-2分"
+  ],
+  "frame": "三段结构落笔：\n第一段【点题表态，2-3句】开门见山点现状——套范文句式\"You have become addicted to computer games recently.\"，再一句表达担心\"I'm really worried about you.\"收尾过渡。\n第二段【危害+建议，主体段】先摆危害：伤眼伤学习各一句（It does harm to your eyes and study.）；再转建议2-3条，每条一句建议+一句理由，句式轮换：had better + 动词原形提第一条，Why not...?提第二条，spend less time on...提第三条，理由用because/if从句接上；段内连接词First、Besides、Therefore别省。\n第三段【鼓励收尾，1-2句】表信任收束：\"I'm sure you can give it up if you try.\"再一句Looking forward to your reply.落款。\n写后专项自查（按丢分顺序查）：①红线搭配逐条核对be addicted to、be harmful to、spend time (in) doing ②时态以一般现在时为主，有没有混入莫名过去时 ③每个句子主谓齐不齐 ④字数够不够、卷面涂改多不多"
+ }
+}

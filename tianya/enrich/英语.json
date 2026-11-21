@@ -1,0 +1,236 @@
+{
+ "英语|13|1": {
+  "check_a": "Bank clerk（银行职员）。at first 标记最初阶段，后面的 shop owner 是后来，问「最初」就选前者。",
+  "check_q": "听力小练：\"At first he was a bank clerk. Ten years later, he opened his own shop.\" 他最初的工作是什么？",
+  "teach": "独白讲人物经历要按时间线切分：at first 起初，then 后来，years later 多年后，now 现在，每个标记对应一个阶段，题目只问其中一段。这题问最初的工作（bank clerk，银行职员），她混了段。方法：听独白时在纸上画一条线，听到时间词就分段记职业和事件，答题按题干问的时段对号。场景词：bank clerk 银行职员，businessman 商人，retire 退休，career 职业生涯。独白没对话提示、语速快，时间词是唯一路标。练习：听完按「过去—后来—现在」复述三句。",
+  "type": "concept",
+  "why": "独白里几个阶段的工作混在一起，没用时间词切分，问哪段答错段。"
+ },
+ "英语|14|1": {
+  "check_a": "stressful 形容工作（令人有压力的），stressed 形容人（感到有压力的）。",
+  "check_q": "听力小练：\"The job was so stressful that he felt stressed every day.\" 哪个词形容工作，哪个词形容人？",
+  "teach": "问感受、态度的题，答案是形容词，且要分清 -ing 和 -ed：事情「令人有压力」用 stressful，人「感到有压力」用 stressed。她选的正是 stressful 方向的选项，掉进这对词的坑。听时听到 feel 就记下后面的词——feel 后跟的永远是人的感受词（stressed、tired、proud）。几对词成对背熟：stressed/stressful、bored/boring、interested/interesting、tired/tiring。一句话：-ed 形容人，-ing 形容事。",
+  "type": "concept",
+  "why": "stressed 和 stressful 没分清，感受类形容词的人/物分工不明确。"
+ },
+ "英语|15|1": {
+  "check_a": "San Francisco。now lives 标记现居地，Chicago 是出生地、New York 是中途站，都是干扰。",
+  "check_q": "听力小练：\"He was born in Chicago. He moved to New York at 20 and now lives in San Francisco.\" 他现在住在哪儿？",
+  "teach": "这题是最典型的教训：她先选 A（Chicago），又改成 B（San Francisco），两个都不对。独白里地名成串出现——出生地、去过的地方、现居地、要去的地方，问题只问其中一个身份，听到一个就选必错。方法：听前看清问哪类（was he born / does he live now），听时给每个地名标身份（生、去、住、往）。再立纪律：改答案必须有「听到了确切新信息」，凭感觉改，第一答案往往才对。她这次是地名身份没分清，又凭感觉改错。",
+  "type": "concept",
+  "why": "几个地名的身份没区分，又凭感觉改了答案，两头落空。"
+ },
+ "英语|19|1": {
+  "check_a": "介绍不同文化（to introduce different cultures）。反复出现的 customs、festivals 就是主题词，结尾句也在呼应。",
+  "check_q": "听力小练：一段独白反复讲各国节日、食物和习俗，结尾说 \"I hope you can learn more about the world.\" 这段讲话的目的是什么？",
+  "teach": "独白常考最后一问：讲话的目的是什么（正确方向 to introduce different cultures，介绍不同文化）。她错在拿某个细节当了目的。抓法：听开头第一句和结尾句，讲话人通常开门见山交代主题、结尾再呼应；中间反复出现的关键词就是主题词——customs、festivals 反复出现，主题就是 cultures。顺序也要改：细节题可边听边选，主旨题必须听完再选。选项多是 to do 开头，选前先问「这句能不能概括全篇」，只能概括一段的排除。",
+  "type": "concept",
+  "why": "用局部细节代替全篇目的，主旨题没有听完、没抓反复出现的主题词。"
+ },
+ "英语|28|1": {
+  "check_a": "引出话题（to introduce the topic）。只摆现象、未分析未下结论，就是引出。",
+  "check_q": "小练：文章第一段讲「越来越多学生用手机查单词」这一现象，第二段才开始分析原因。第一段的写作目的是什么？",
+  "teach": "这题问段落的写作目的，正确是 C（引出话题）。判断分两步：先看位置——第一段通常引出话题，最后一段多是总结升华，中间段才论证举例；再看内容——这一段若主要在摆现象、讲引子，选项写「给出建议」「得出结论」的就多半不对。她选 D，是把铺垫当成了目的。落笔前先把选项动词译出来：introduce 引出，prove 证明，show 展示，conclude 总结——目的题一半败在这些动词的细微差别上。先用一句话说清「这段在干什么」，再对选项。",
+  "type": "concept",
+  "why": "没先判断段落功能，被选项里眼熟的内容带走，把铺垫当成了目的。"
+ },
+ "英语|29|1": {
+  "check_a": "语言简单（its simple language）。not...but... 后面才是真原因，前面的 pictures 是被否定掉的干扰。",
+  "check_q": "小练：原文说 \"The book is popular not for its pictures, but for its simple language.\" 这本书受欢迎的原因是什么？",
+  "teach": "细节题铁律：答案必须在原文有依据句，没依据的选项再「合理」也不能选。这题问为什么说这本书好，正确是 B（写作风格）；她选的 C（插图色彩丰富）是常识型陷阱——听着顺，原文没说。三步：1）拿题干关键词（perfect book）回原文扫读定位；2）圈出定位句里的原因（信号 because、for、its...）；3）选项逐个回原文核对，没提到的当场排除。她七选五全对，衔接感不差，缺的就是这个「定位—核对」硬动作。以后每道细节题强制画出依据句再选。",
+  "type": "concept",
+  "why": "用生活常识和眼熟词选了答案，没有回原文找依据句核对。"
+ },
+ "英语|2|1": {
+  "check_a": "Grey（灰色）。but 之后妈妈的意见被采纳，so 后面是最终结果；blue 是干扰项。",
+  "check_q": "听力小练：录音说 \"I first chose the blue curtains, but my mother thought the grey ones looked better, so we took the grey ones.\" 他们最后选了什么颜色？",
+  "teach": "颜色细节题有固定套路：录音里往往不止一个颜色——先想要的、别人建议的、最后定下的，问题问最终结果。她选 B、正确是 C（dark green），多半把中间提到的颜色当了答案。抓题要诀：听到 but、in the end、let's take... 这类「拍板信号」才锁定，信号后的颜色才是真答案。场景词先认熟：paint 刷漆，decorate 装修，dark/light green 深绿/浅绿，prefer 更喜欢，curtain 窗帘。做题时在每个颜色旁记「谁说的、是不是最后定的」。",
+  "type": "concept",
+  "why": "把录音中间提到的颜色当成最终答案，没等转折后的拍板信息。"
+ },
+ "英语|33|1": {
+  "check_a": "平均每户有一辆车（汽车总量约等于家庭户数），不是「全村只有一辆车」。",
+  "check_q": "小练：\"The village has one car for each family.\" 这句话是什么意思？",
+  "teach": "这题考「one tourist for each person」：游客数和当地人数 1:1，平均每个居民对应一个游客，总量非常大，所以正确 C（大量游客到访西班牙）。她选 D，是没把比率换算成总量。方法：遇到 one X for each Y、twice as many as 这类数量表达，先换算成一句话——「游客总数≈当地人口总数」，结论立刻清楚：人山人海。顺带记 masses of＝大量的，后接可数名词复数。数字、比率、百分比题都先换算再对选项，别停在字面。",
+  "type": "concept",
+  "why": "\"一个居民对应一个游客」的比率没换算成总量，短语的字面含义没读懂。"
+ },
+ "英语|34|1": {
+  "check_a": "雨天（rainy days）。cold 被 don't mind 豁免，but 后面的 hate 指向的才是真答案。",
+  "check_q": "小练：原文说 \"Visitors don't mind the cold, but they hate rainy days.\" 什么会让游客扫兴？",
+  "teach": "这题要用「否定信息反推」。原文说游客 don't mind pollution（不介意污染）、can allow traffic jams（能容忍堵车），言下之意这些不会让人扫兴；问什么会毁兴致，就选没被「豁免」的那个：A 阴雨天。她选 D，是正着找「文中提到的坏事」，正中出题人的坑。固定方法：遇到 ruin、except、NOT 类题，先分两堆——被 don't mind、not care 豁免的放一堆（全是排除项），没被豁免的才是答案。步骤：圈否定词→标豁免项→反推。but 后面的信息权重最高。",
+  "type": "concept",
+  "why": "正着找答案，没注意到原文用 don't mind 把污染、堵车都豁免了，需要反推。"
+ },
+ "英语|3|1": {
+  "check_a": "Swimming（游泳）。答句的动词短语 goes swimming 就是答案，keep fit 是问句里的背景词，别被带偏。",
+  "check_q": "听力小练：\"—How does your father keep fit? —He goes swimming twice a week.\" 父亲靠什么锻炼？",
+  "teach": "短对话问「某人靠什么锻炼」时，答案藏在答句的动词短语里。这题问母亲的锻炼方式，正确 B（by jogging outdoors，户外慢跑）。对话常设干扰：先提别人做什么、或以前做什么，最后才说问的那个人现在做什么，听到第一个动词就选必中坑。步骤：听前把选项动词（jogging、swimming、cycling、doing yoga）的发音在脑子里过一遍；听时只盯问的那个人的动词。场景词背熟：jog 慢跑，go cycling 骑行，do yoga 做瑜伽，take a walk 散步，keep fit 保持健康。",
+  "type": "concept",
+  "why": "没盯住答句里的动词短语，被对话中提到的其他活动带偏了。"
+ },
+ "英语|44|1": {
+  "check_a": "A（success）。led to 接努力带来的结果，success 和 practice 的因果最顺，其余三项都不是「结果」。",
+  "check_q": "小检验：Years of practice finally led to his ___ in the competition. A. success B. word C. plan D. ambition",
+  "stem": "完形填空：This nervousness finally led to ___. A. actions B. words C. plans D. ambitions",
+  "teach": "先看搭配：led to「导致、通向」，后接名词作结果。再辨析四词：actions 行动，words 话语，plans 计划，ambitions 抱负。紧张（nervousness）是情绪，它导向的应是外在行动——情绪推动人做行动，逻辑最顺；words 是说出口的话，紧张不会「导致话语」成本句结果；plans、ambitions 是长期打算，与 finally「终于转变」的语气不搭。所以选 A。完形名词题三步：看空前动词要什么宾语；四词逐个译中文；代入读整句验逻辑。别凭眼熟选。",
+  "type": "redo",
+  "why": "led to 后面四个名词没逐个辨析，凭眼熟选了 words，没验证逻辑是否成立。"
+ },
+ "英语|48|1": {
+  "check_a": "B（excuses）。make excuses 是固定搭配「找借口」，且语境是认错道歉，不是讲真实原因。",
+  "check_q": "小检验：Don't make ___ for your mistakes; just say sorry. A. reasons B. excuses C. adventures D. chances",
+  "stem": "完形填空：He was late again, but it was just an ___ — in fact, he had overslept. A. reason B. adventure C. excuse D. chance",
+  "teach": "辨析 excuse 和 reason：excuse 是「借口、托词」，为掩盖真相编出的说法，带贬义；reason 是「原因、理由」，中性，是真实原因。本句两个信号：just（不过是）和破折号后的 in fact he had overslept（其实睡过头了）——前面的说法是编的，所以选 excuse（C）。搭配：make an excuse 找借口，an excuse for being late。看到 just、in fact 出现，就警惕「表面说法≠真相」，多半选 excuse。她错在把借口和原因当一回事。",
+  "type": "redo",
+  "why": "excuse（借口）和 reason（真实原因）没分清，漏看了 just 和 in fact 的提示。"
+ },
+ "英语|52|1": {
+  "check_a": "B（stood）。at the door + for a minute 表示在门口停留一分钟，stand 合适；knock 后面要接 on/at 且不能持续一分钟。",
+  "check_q": "小检验：She ___ at the door for a minute before going in. A. knocked B. stood C. slept D. hit",
+  "stem": "完形填空：Hearing the news, I ___ for a second and didn't know what to say. A. sat B. slept C. knocked D. stood",
+  "teach": "stood 是 stand 的过去式。stand 除「站立」外还有「停着不动、愣住」意：stand for a second 就是愣了一秒。判断两步：一看空后搭配——for a second 是一小段时间，需要能持续一小会儿的动作，stand 合适；knocked「敲、撞」必须有对象（knock on the door），直接跟 for a second 不成立。二看语境——听到消息后「不知说什么」是愣住，不是 sat（坐下）更不是 slept（睡着）。选 D。完形动词题先验「动词+空后成分」结构，再看词义。",
+  "type": "redo",
+  "why": "不知道 stand 有「愣住、停着不动」的用法，被 knocked 的眼熟带偏了。"
+ },
+ "英语|55|1": {
+  "check_a": "B（interest）。truly love 指向兴趣；advice 是别人的建议，personality 不与 follow 搭配。",
+  "check_q": "小检验：You should follow your ___ and choose what you truly love to do. A. personality B. interest C. advice D. excuse",
+  "stem": "完形填空：After graduation, he decided to follow his ___ and became a painter. A. advice B. dream C. interest D. personality",
+  "teach": "follow one's interest「遵从自己的兴趣」，是讲职业选择时的常用搭配。后半 became a painter 是结果——因兴趣在画画才去当画家，选 C（interest）。逐个排除：advice 建议，follow advice 是听从别人建议，与 he decided（他自己决定）矛盾；dream 梦想，follow one's dream 也成立，但强调「目标」，本句强调「热爱什么」；personality 性格，不与 follow 搭配。抓手：先看搭配，再看上下文指向热爱、目标还是别人的意见。",
+  "type": "redo",
+  "why": "follow 和四个抽象名词的搭配没辨清，interest（兴趣）这个点没抓住。"
+ },
+ "英语|56|1": {
+  "check_a": "For。「对我来说」句首引出评价对象，用 For，后接人加逗号。",
+  "check_q": "小检验：___ me, the best part of the trip was the food.（填一个介词）",
+  "stem": "语法填空（填一个介词）：___ children, eating comfort food is not only about taste; it also brings back warm memories.",
+  "teach": "答案是 For。for 放句首、后接人加逗号，意为「对于……来说」：For children, ... = 对孩子们来说。判断三步：一，空后是名词加逗号，后面是完整主句，空处填介词构成状语；二，排除 at——at children 不成立，at 只用于时间点和地点（at 7 o'clock，at school）；三，句意「对孩子而言」正是 for 表对象。搭配记牢：for example 例如，wait for 等待，be good for 对……有好处。她错在把 at 当万能介词。",
+  "type": "redo",
+  "why": "句首表对象「对……来说」要用 For，她误用了 at，没先判断空后结构。"
+ },
+ "英语|57|1": {
+  "check_a": "to catch。早起的目的是赶车，不定式作目的状语，to 后接动词原形。",
+  "check_q": "小检验：He got up early ___ (catch) the first bus.（用所给词的适当形式填空）",
+  "stem": "语法填空：When people feel stressed, they often eat something sweet ___ (reduce) pressure.（用所给词的适当形式填空）",
+  "teach": "答案 to reduce，考不定式作目的状语：吃甜食是为了减压，目的 = in order to do，所以用 to + 动词原形。判断三步：第一，句子已有谓语 eat，空处不是第二个谓语；第二，问「吃是为了什么」——能答出目的就用 to do；第三，to 后必须跟动词原形，这是铁律。她写 to surprised 错了两层：surprised 是形容词「感到惊讶的」，不是动词；就算用 surprise 也必须是原形。记住：-ed 结尾的形容词（surprised、tired）永远不能站在 to 后充当动作。",
+  "type": "redo",
+  "why": "把 to 当成普通介词，后面填了形容词 surprised，没意识到表目的要用 to + 动词原形。"
+ },
+ "英语|59|1": {
+  "check_a": "heavier。than 提示比较级，heavy 和 easy 同类：变 y 为 i 再加 er。",
+  "check_q": "小检验：This box is ___ (heavy) than that one.（用所给词的适当形式填空）",
+  "stem": "语法填空：People like comfort food because it is ___ (easy) to prepare than the food in restaurants.（用所给词的适当形式填空）",
+  "teach": "答案 easier。触发词是 than：句中有 than，前面的形容词多半用比较级，这是送分信号。再看变法：easy 以「辅音+y」结尾，变比较级把 y 改 i 再加 -er → easier；同类背一组：happy→happier，busy→busier，heavy→heavier。她只写了个开头 e，规则知道大概但没落实到笔头。做题动作固定：一扫 than / more 定比较级；二写变化 y→i 加 er；三检查没漏写。比较级不难，丢分全在手上不规范。",
+  "type": "redo",
+  "why": "看到了比较语境却没写出完整比较级形式，y 变 i 加 er 的规则没落实。"
+ },
+ "英语|5|1": {
+  "check_a": "刷牙的时间/频率（when to brush teeth）。整段围绕时间展开，牙膏、牙医都只是背景。",
+  "check_q": "听力小练：对话「—When should I brush my teeth? —The dentist says twice a day, in the morning and before bed.」这段对话的主题是什么？",
+  "teach": "这题问整段对话在谈什么（正确 A：什么时候刷牙），不是某个细节。她选 B，多半抓住一个听到的细节词就下手——话题题里，选项中出现的原文词最危险，往往只是细节不是主题。方法：短对话听完先用一句中文概括「他们在聊什么」，再对选项；若选项里只有一个是概括性的、其余都是具体小事，优先考虑概括的。场景词认熟：brush one's teeth 刷牙，twice a day 一天两次，before breakfast 早餐前，after meals 饭后，dentist 牙医。练习：每段听完先复述主题再看题。",
+  "type": "concept",
+  "why": "把对话里出现的细节当成了主题，话题类题没有先概括整段内容。"
+ },
+ "英语|63|1": {
+  "check_a": "the。first 是序数词，特指「第一个」，前面加 the。",
+  "check_q": "小检验：He was ___ first student to finish the exam.（填冠词）",
+  "stem": "语法填空（填冠词）：For many people, pizza is ___ number one comfort food in the world.",
+  "teach": "答案 the。定冠词有个高频考点：序数词和「第一、唯一」类表达前必须加 the——the first，the number one，the best（最高级），the only。number one 是排名第一，全世界只有一个，是特指，用 the，绝不能用 a（a 表示任意一个）。判断两步：空后若是 first、second、best、only、same，先想 the；再自问「是不是独一无二的那一个」，是就坐实。她这空空着，是没想到冠词也单独设空考。口诀：序数最高级，唯一和特指，见面先给 the。",
+  "type": "redo",
+  "why": "number one 前需要定冠词特指，她没意识到冠词也是考点，空着没写。"
+ },
+ "英语|64|1": {
+  "check_a": "dressed。女孩是「被穿着」红衣，状态作定语用过去分词 dressed，和 aged 同理。",
+  "check_q": "小检验：The girl ___ (dress) in red is my sister.（用所给词的适当形式填空）",
+  "stem": "语法填空：The survey found that people ___ (age) 25 to 40 are most likely to eat comfort food when stressed.（用所给词的适当形式填空）",
+  "teach": "答案 aged，考过去分词作后置定语：people aged 25 to 40 = 年龄在 25 到 40 岁的人。age 作动词时 aged 表示「年龄为……岁」。判断两步：一，名词 people 后缺定语、括号给动词，优先考虑分词；二，看关系——人是「被标明年龄」的，属状态、被动，用 -ed；若是名词自己的动作正在进行，用 -ing（the sleeping baby）。同类：the girl dressed in red，the boy named Tom。她没得分是「分词作定语」没启动。",
+  "type": "redo",
+  "why": "不知道 aged 可以作后置定语表示「年龄在……岁」，分词作定语的用法没掌握。"
+ },
+ "英语|66|1": {
+  "check_a": "confidence。has great 后接名词，且 have confidence in 是固定搭配。",
+  "check_q": "小检验：She has great ___ in her own ability.（confident 的适当形式）",
+  "stem": "完成句子：他非常自信地回答了所有问题。He answered all the questions with great ___.",
+  "teach": "答案 confidence（名词，自信），她填的 confident 是形容词，词性对不上。词形题先看位置：with great ___ 里 great 是形容词，后面必须接名词。搭配记牢：with (great) confidence 自信地，have confidence in sb./sth. 对……有信心。抓手：形容词 -ent 结尾（confident），名词换 -ence（confidence），同 different → difference。括号给形容词、空处要名词时，先想「换尾巴」。",
+  "type": "redo",
+  "why": "空处需要名词，她填了形容词 confident，词性判断这一步没做。"
+ },
+ "英语|67|1": {
+  "check_a": "confused。修饰人 students 的感受，用 -ed 形式；题面令人困惑才用 confusing。",
+  "check_q": "小检验：The students looked ___ when they saw the strange question.（confuse 的适当形式）",
+  "stem": "完成句子：这道数学题太令人困惑了，全班都做不出来。The maths problem was so ___ that nobody in the class could work it out.",
+  "teach": "答案 confusing。-ing / -ed 形容词分工是高频考点：confusing「令人困惑的」修饰物或事，confused「感到困惑的」修饰人。口诀：物用 -ing，人用 -ed。对比记：the news is exciting（消息令人兴奋），I am excited（我感到兴奋）。本题修饰 problem（物），用 confusing。判断两步：先看修饰人还是物，再选形式。她 0 分就是规则没分清。so...that... 里形容词作表语跟在 was 后，选对形式即得分。",
+  "type": "redo",
+  "why": "confusing 和 confused 的人/物分工没分清，修饰题目（物）误用了方向。"
+ },
+ "英语|68|1": {
+  "check_a": "extremely。hot 是形容词，前面要用副词 extremely 修饰。",
+  "check_q": "小检验：It is ___ hot today; you'd better stay inside.（extreme 的适当形式）",
+  "stem": "完成句子：春天的这座花园非常美丽。The garden is ___ beautiful in spring.",
+  "teach": "答案 extremely（副词，极其、非常）。空在形容词 beautiful 前面，修饰形容词必须用副词，不能用形容词 extreme。extreme 加 -ly 变副词，拼写直接加 ly（e 不去掉）：extremely，强度比 very 还强。判断记死：空后是形容词或副词，填副词；空后是名词，才填形容词。同类记一组：careful → carefully，quick → quickly，real → really；但 true → truly 要去 e，是例外。她这题是没做词形转换，把原词直接搬上去了。",
+  "type": "redo",
+  "why": "修饰形容词需要副词，她没做词形转换，extreme 和 extremely 分不清。"
+ },
+ "英语|69|1": {
+  "check_a": "official。修饰 website 用形容词 official，注意拼写 offi-ci-al。",
+  "check_q": "小检验：Please check the ___ website of the school for the news.（官方的）",
+  "stem": "完成句子：官方报告称，事故中没有人受伤。The ___ report said that nobody was hurt in the accident.",
+  "teach": "答案 official（形容词，官方的）：official report 官方报告，official news 官方消息。真正的考点是拼写：o-f-f-i-c-i-a-l，双 f，中间是 ci 不是 ce。抓手：official 来自 office（办公室）+ -al，「办公室发布的」就是「官方的」；但拼写时 ce 变 ci，把词拆三段默念——offi-ci-al。再和 officer（官员，指人）分开。她的问题是「背过但写不出」，这类词光看没用，必须动笔分段默写两遍。",
+  "type": "redo",
+  "why": "official 的拼写没落实，双 f 和 cial 的写法写不出来。"
+ },
+ "英语|72|1": {
+  "check_a": "to。be addicted to 是固定搭配，to 是介词，后面接名词 chocolate。",
+  "check_q": "小检验：She is addicted ___ chocolate and eats it every day.（填一个词）",
+  "stem": "完成句子：他沉迷于电脑游戏，根本停不下来。He is ___ ___ computer games and simply can't stop.",
+  "teach": "答案 addicted to：be addicted to「沉迷于、对……上瘾」，是本单元核心短语——写作劝诫信里老师改的范文开头用的就是它。三点记牢：一，addicted 是形容词，前面要有 be 动词；二，to 是介词，后接名词或动名词——addicted to playing games，不能写 to play；三，拼写双 d。抓手：add 是「加上」，addict 是「瘾君子」，加上就戒不掉的状态就是 addicted。她两空全错，是整条短语没默写过，只能整条背、整条写。",
+  "type": "redo",
+  "why": "be addicted to 整条短语没背下来，两空都写不出。"
+ },
+ "英语|73|1": {
+  "check_a": "clean up。表示把房间收拾干净，动词和小品词两个词都要写全。",
+  "check_q": "小检验：Please ___ ___ your bedroom before your friends come.（打扫干净）",
+  "stem": "完成句子：周末我们应该把公园打扫干净。We should ___ ___ the park on weekends.",
+  "teach": "答案 clean up（打扫、清理干净）。她只对一半，丢分在小品词 up——只写 clean 是「清洁」这个动作，clean up 才强调「彻底收拾干净」的结果。完成句子按空给分，少一个词少一分。立规矩：动词短语必须整条背、整条默写，clean up、pick up（捡起）、give up（放弃）这类「动词+小品词」不能拆着记。再记一个细节：clean up 接地点名词可直接跟（clean up the park）；宾语是代词要放中间（clean it up）。她第 70、71 题短语全对，说明就是这类短语背得不全。",
+  "type": "redo",
+  "why": "clean up 只写对一半，小品词 up 漏写，短语没整条落实。"
+ },
+ "英语|74|1": {
+  "check_a": "took。left 是过去时，接管的动作同样发生在过去，用 took。",
+  "check_q": "小检验：When the teacher left, the monitor ___ control of the class.（take 的适当形式）",
+  "stem": "完成句子：去年他接管了这家小公司。He ___ ___ ___ the small company last year.",
+  "teach": "答案 took control of（接管、掌管），三个空两个坑，她只对一空。短语 take control of 三词一个不能少，最后的 of 最易漏。时态是第二坑：句中有 last year，动作在过去，take 用过去式 took。交卷前三步检查：一，短语完整吗——of、up、on 在不在；二，时态对吗——last year、ago 用过去式，every day 用一般现在时；三，人称单复数对吗。另注意 control 前不加冠词，别写 take the control。她就是完整性和时态都没查。",
+  "type": "redo",
+  "why": "take control of 没整条记住，又漏看了 last year 的过去时标志，took 没变出来。"
+ },
+ "英语|75|1": {
+  "check_a": "other than。no friend 是否定语境，「除了汤姆没有别的朋友」用 other than。",
+  "check_q": "小检验：I have no friend in this city ___ Tom.（除了）",
+  "stem": "完成句子：他整天除了学习什么都不做。He does nothing all day ___ study.",
+  "teach": "答案 other than（除了）。它与 except 意思相近，最爱出现在否定语境：nothing、nobody、no 后跟 other than，表示「除了……没有别的」。本句有 does nothing，正是主场，后接动词原形 study。与 except for 分工：except for 用于「整体肯定、只挑一个例外」（如房间挺好 except for 有点吵），后接名词。她整条写不出，是短语没背过。对策：other than、except for、apart from 对比背，各配一例句。",
+  "type": "redo",
+  "why": "other than 这个「除了」没背过，否定语境该用哪个短语完全没概念。"
+ },
+ "英语|7|1": {
+  "check_a": "7:40。meet 的时间 7:20 是干扰项，问题问 starts，就抓 starts at 后面的数字。",
+  "check_q": "听力小练：\"The film starts at 7:40. Let's meet at the cinema at 7:20.\" 电影几点开始？",
+  "teach": "长对话信息密集，靠脑记必漏，这题错在电影场景的时间、停车等细节没抓住（她选 C，正确 A）。方法只有一个：边听边记。听前几秒扫选项，心里分成「时间、价格、地点、人物」几类；听到数字立刻写在对应选项旁，听到地点词打钩。数字题防双数字陷阱：7:30 和 8:00 可能一个是开场、一个是出发，问题问哪个就抓哪个动词后面的数。场景词必熟：cinema 电影院，start at 几点开场，ticket 票，seat 座位，car park 停车场，traffic jam 堵车。练习：精听专练「听到数字就落笔」，一周三次。",
+  "type": "concept",
+  "why": "长对话细节全靠脑记，数字和地点一多就混了，没做边听边记。"
+ },
+ "英语|8|1": {
+  "check_a": "咖啡馆（coffee shop / cafe）。orders 和 coffee 是场所信号词，由场所推出职业场合。",
+  "check_q": "听力小练：\"She takes orders and serves coffee to customers all day.\" 她在哪儿工作？",
+  "teach": "长对话问某人在哪工作，答案多藏在场所词里。听到 serve customers、menu、order，多半在餐厅；听到 office、manager、meeting，多半是公司职员。她选 C 错、正确 A，没把场所词和职业对上号。方法：听前看选项，全是职业或地点时，专等场所名词（cafe、office、shop、hospital），听到一个标一个。配对背熟：clerk—office，barista—coffee shop，waiter—restaurant，nurse—hospital。考的就是「场所→职业」这步推断。",
+  "type": "concept",
+  "why": "没听出工作场所的信号词，职业推断这一步没做出来。"
+ },
+ "英语|作文|1": {
+  "check_a": "Being addicted to the phone is harmful to your eyes.（也可用 ...does harm to your eyes.）两个搭配 be addicted to、be harmful to 都要写对。",
+  "check_q": "小检验：把这句译成英文——「沉迷于手机对你的眼睛有害。」",
+  "teach": "劝诫信得 11/20，病在表达：句式单一、搭配随手造。老师改好的开头就是范本：\"You have become addicted to computer games recently.\" 先点沉迷，再表担心。结构三段：开头点问题；中间摆危害（do harm to your eyes），再给建议（had better、why not）；结尾鼓励。红线搭配：be addicted to 后接名词或 doing，spend time (in) doing，be harmful to。句式至少一句 because、一句 if。",
+  "type": "concept",
+  "why": "句式单一、搭配不规范，开头没有点明问题和表态，整篇表达停留在短句堆砌。"
+ }
+}
