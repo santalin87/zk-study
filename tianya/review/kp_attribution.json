@@ -1,0 +1,1800 @@
+[
+  {
+    "id": 40,
+    "subject": "地理",
+    "question_no": "5",
+    "full_score": 2.0,
+    "got_score": 0.0,
+    "error_type": "待题干",
+    "knowledge_points": [],
+    "status": "pending",
+    "note": "无题干：仅有学生答案与标准答案选项字母；需原卷题干复盘"
+  },
+  {
+    "id": 41,
+    "subject": "地理",
+    "question_no": "6",
+    "full_score": 2.0,
+    "got_score": 0.0,
+    "error_type": "待题干",
+    "knowledge_points": [],
+    "status": "pending",
+    "note": "无题干：仅有学生答案与标准答案选项字母；需原卷题干复盘"
+  },
+  {
+    "id": 45,
+    "subject": "地理",
+    "question_no": "10",
+    "full_score": 2.0,
+    "got_score": 0.0,
+    "error_type": "待题干",
+    "knowledge_points": [],
+    "status": "pending",
+    "note": "无题干：仅有学生答案与标准答案选项字母；需原卷题干复盘"
+  },
+  {
+    "id": 46,
+    "subject": "地理",
+    "question_no": "11",
+    "full_score": 2.0,
+    "got_score": 0.0,
+    "error_type": "待题干",
+    "knowledge_points": [],
+    "status": "pending",
+    "note": "无题干：仅有学生答案与标准答案选项字母；11-14连错疑似同一材料题组，需原卷题干复盘"
+  },
+  {
+    "id": 47,
+    "subject": "地理",
+    "question_no": "12",
+    "full_score": 2.0,
+    "got_score": 0.0,
+    "error_type": "待题干",
+    "knowledge_points": [],
+    "status": "pending",
+    "note": "无题干：仅有学生答案与标准答案选项字母；11-14连错疑似同一材料题组，需原卷题干复盘"
+  },
+  {
+    "id": 48,
+    "subject": "地理",
+    "question_no": "13",
+    "full_score": 2.0,
+    "got_score": 0.0,
+    "error_type": "待题干",
+    "knowledge_points": [],
+    "status": "pending",
+    "note": "无题干：仅有学生答案与标准答案选项字母；11-14连错疑似同一材料题组，需原卷题干复盘"
+  },
+  {
+    "id": 49,
+    "subject": "地理",
+    "question_no": "14",
+    "full_score": 2.0,
+    "got_score": 0.0,
+    "error_type": "待题干",
+    "knowledge_points": [],
+    "status": "pending",
+    "note": "无题干：仅有学生答案与标准答案选项字母；11-14连错疑似同一材料题组，需原卷题干复盘"
+  },
+  {
+    "id": 51,
+    "subject": "地理",
+    "question_no": "16",
+    "full_score": 2.0,
+    "got_score": 0.0,
+    "error_type": "待题干",
+    "knowledge_points": [],
+    "status": "pending",
+    "note": "无题干：仅有学生答案与标准答案选项字母；需原卷题干复盘"
+  },
+  {
+    "id": 59,
+    "subject": "地理",
+    "question_no": "24",
+    "full_score": 2.0,
+    "got_score": 0.0,
+    "error_type": "待题干",
+    "knowledge_points": [],
+    "status": "pending",
+    "note": "无题干：仅有学生答案与标准答案选项字母；需原卷题干复盘"
+  },
+  {
+    "id": 60,
+    "subject": "地理",
+    "question_no": "25",
+    "full_score": 2.0,
+    "got_score": 0.0,
+    "error_type": "待题干",
+    "knowledge_points": [],
+    "status": "pending",
+    "note": "无题干：仅有学生答案与标准答案选项字母；需原卷题干复盘"
+  },
+  {
+    "id": 61,
+    "subject": "地理",
+    "question_no": "26(1)",
+    "full_score": 6.0,
+    "got_score": 3.0,
+    "error_type": "知识盲区",
+    "knowledge_points": [
+      "地震波与地球内部圈层(据答案反推)"
+    ],
+    "status": "known",
+    "note": "4000!=2900;软流层位置不清;变慢、B对"
+  },
+  {
+    "id": 62,
+    "subject": "地理",
+    "question_no": "26(2)",
+    "full_score": 3.0,
+    "got_score": 1.0,
+    "error_type": "概念混淆",
+    "knowledge_points": [
+      "地质年代(据答案反推)"
+    ],
+    "status": "known",
+    "note": "古生!=中生;新生!=第四;爬行对"
+  },
+  {
+    "id": 64,
+    "subject": "地理",
+    "question_no": "26(4)",
+    "full_score": 5.0,
+    "got_score": 2.0,
+    "error_type": "知识盲区/表述不规范",
+    "knowledge_points": [
+      "对流层气温垂直变化(据答案反推)"
+    ],
+    "status": "known",
+    "note": "升高!=降低;解释答非所问"
+  },
+  {
+    "id": 65,
+    "subject": "地理",
+    "question_no": "27(1)",
+    "full_score": 4.0,
+    "got_score": 0.0,
+    "error_type": "知识盲区",
+    "knowledge_points": [
+      "辐射观测仪器读图(据答案反推)"
+    ],
+    "status": "known",
+    "note": "d,b,a,c!=b,d,c,a;首空据总览图辨认存疑"
+  },
+  {
+    "id": 66,
+    "subject": "地理",
+    "question_no": "27(2)",
+    "full_score": 6.0,
+    "got_score": 1.0,
+    "error_type": "概念混淆/表述不规范",
+    "knowledge_points": [
+      "大气的受热过程(据答案反推)"
+    ],
+    "status": "known",
+    "note": "大气逆辐射写成反射;夜间保温机制未答"
+  },
+  {
+    "id": 67,
+    "subject": "地理",
+    "question_no": "27(3)",
+    "full_score": 4.0,
+    "got_score": 0.0,
+    "error_type": "知识盲区",
+    "knowledge_points": [
+      "大气的受热过程(据答案反推)"
+    ],
+    "status": "known",
+    "note": "碎片化单字填写"
+  },
+  {
+    "id": 69,
+    "subject": "地理",
+    "question_no": "28(1)",
+    "full_score": 8.0,
+    "got_score": 6.0,
+    "error_type": "概念混淆/审题偏差",
+    "knowledge_points": [
+      "我国太阳辐射分布规律(据答案反推)"
+    ],
+    "status": "known",
+    "note": "东西差异主因天气状况误答海拔高度"
+  },
+  {
+    "id": 70,
+    "subject": "地理",
+    "question_no": "28(2)",
+    "full_score": 6.0,
+    "got_score": 0.0,
+    "error_type": "概念混淆/逻辑错误",
+    "knowledge_points": [
+      "青藏高原辐射与气温(据答案反推)"
+    ],
+    "status": "known",
+    "note": "削弱vs保温混淆;'成反比'结论错误"
+  },
+  {
+    "id": 73,
+    "subject": "历史",
+    "question_no": "3",
+    "full_score": 3.0,
+    "got_score": 0.0,
+    "error_type": "审题偏差",
+    "knowledge_points": [
+      "商王巡行与内外服制度：B'政治认同'是干扰项，题眼在'宣示商王统治权力'（据答案解析反推）"
+    ],
+    "status": "known",
+    "note": "学生选B，标准D"
+  },
+  {
+    "id": 76,
+    "subject": "历史",
+    "question_no": "6",
+    "full_score": 3.0,
+    "got_score": 0.0,
+    "error_type": "知识盲区",
+    "knowledge_points": [
+      "春秋已能生产铁器（甘肃灵台铁剑）；A'商朝青铜农具广泛使用'表述有误（据答案解析反推）"
+    ],
+    "status": "known",
+    "note": "学生选A，标准B"
+  },
+  {
+    "id": 78,
+    "subject": "历史",
+    "question_no": "8",
+    "full_score": 3.0,
+    "got_score": 0.0,
+    "error_type": "概念混淆",
+    "knowledge_points": [
+      "二重证据法：传世文献与出土文献互证；B'单独评价某类文献可靠性'偏题（据答案解析反推）"
+    ],
+    "status": "known",
+    "note": "学生选B，标准C"
+  },
+  {
+    "id": 81,
+    "subject": "历史",
+    "question_no": "11",
+    "full_score": 3.0,
+    "got_score": 0.0,
+    "error_type": "知识盲区",
+    "knowledge_points": [
+      "汉代中朝崛起：决策权由外朝丞相转向以皇帝为首的中朝，皇权集中（据答案解析反推）"
+    ],
+    "status": "known",
+    "note": "学生选A，标准D"
+  },
+  {
+    "id": 85,
+    "subject": "历史",
+    "question_no": "15",
+    "full_score": 3.0,
+    "got_score": 0.0,
+    "error_type": "审题偏差",
+    "knowledge_points": [
+      "隋末统治危机：'吏皆惧法，莫肯赈救'恰说明法令有效，C'法令废弛'与材料矛盾（据答案解析反推）"
+    ],
+    "status": "known",
+    "note": "学生选C，标准D"
+  },
+  {
+    "id": 89,
+    "subject": "历史",
+    "question_no": "19",
+    "full_score": 3.0,
+    "got_score": 0.0,
+    "error_type": "知识盲区（题干待补）",
+    "knowledge_points": [],
+    "status": "pending",
+    "note": "待题干：经核查papers/stems.json/历史_analysis.md均无题干，只有标准答案选项A"
+  },
+  {
+    "id": 90,
+    "subject": "历史",
+    "question_no": "20",
+    "full_score": 3.0,
+    "got_score": 0.0,
+    "error_type": "知识盲区（题干待补）",
+    "knowledge_points": [
+      "三省六部制（中书省草拟诏令、门下省审核封驳、尚书省执行）"
+    ],
+    "status": "resolved_from_stem",
+    "note": "学生选D，标准A；据papers/历史.md第20题题干与解析归因"
+  },
+  {
+    "id": 92,
+    "subject": "历史",
+    "question_no": "21(2)",
+    "full_score": 8.0,
+    "got_score": 3.0,
+    "error_type": "表述不规范/知识盲区",
+    "knowledge_points": [
+      "郡县制推行的背景",
+      "郡县制推行的意义"
+    ],
+    "status": "known",
+    "note": "背景只写'战国变法'太笼统，未点商鞅变法推行县制/秦统一/法家思想；意义答出集权但'为秦统一奠定基础'因果倒置"
+  },
+  {
+    "id": 93,
+    "subject": "历史",
+    "question_no": "22(1)",
+    "full_score": 6.0,
+    "got_score": 2.0,
+    "error_type": "表述不规范",
+    "knowledge_points": [
+      "江南农业发展的表现"
+    ],
+    "status": "known",
+    "note": "未用关键词（圩田/灌溉体系/开田万顷/岁增粟帛），表述混乱"
+  },
+  {
+    "id": 94,
+    "subject": "历史",
+    "question_no": "22(2)",
+    "full_score": 6.0,
+    "got_score": 2.0,
+    "error_type": "知识盲区/表述不规范",
+    "knowledge_points": [
+      "江南农业发展的主要因素"
+    ],
+    "status": "known",
+    "note": "自编'气候适宜'非得分点；'北民南迁/朝廷重视'方向对但缺关键词（曲辕犁/土断/漕运）"
+  },
+  {
+    "id": 96,
+    "subject": "历史",
+    "question_no": "23",
+    "full_score": 12.0,
+    "got_score": 6.0,
+    "error_type": "审题偏差/表述不规范",
+    "knowledge_points": [
+      "百家争鸣的背景",
+      "百家争鸣学派主张",
+      "百家争鸣的历史影响"
+    ],
+    "status": "known",
+    "note": "三段结构完整；第三部分写'秦统一终结百家争鸣'偏离'对后世文化与治理的实践价值'得分方向；主题句潦草难辨"
+  },
+  {
+    "id": 105,
+    "subject": "政治",
+    "question_no": "9",
+    "full_score": 3.0,
+    "got_score": 0.0,
+    "error_type": "知识盲区（题干待补）",
+    "knowledge_points": [],
+    "status": "pending",
+    "note": "待题干：经核查papers/stems.json/政治_analysis.md均无题干，只有标准答案选项C"
+  },
+  {
+    "id": 106,
+    "subject": "政治",
+    "question_no": "10",
+    "full_score": 3.0,
+    "got_score": 0.0,
+    "error_type": "知识盲区（题干待补）",
+    "knowledge_points": [
+      "五四运动与新旧民主主义革命的划分（旧民主主义革命属于资产阶级革命范畴）"
+    ],
+    "status": "resolved_from_stem",
+    "note": "学生选B，标准D；据papers/政治.md存疑节第10题及老师批注反推；题干细节不清"
+  },
+  {
+    "id": 111,
+    "subject": "政治",
+    "question_no": "15",
+    "full_score": 3.0,
+    "got_score": 0.0,
+    "error_type": "知识盲区（题干待补）",
+    "knowledge_points": [
+      "改革开放进程中的标志性事件及其年份"
+    ],
+    "status": "resolved_from_stem",
+    "note": "学生选B，标准D；据papers/政治.md第15题题干与解析归因"
+  },
+  {
+    "id": 113,
+    "subject": "政治",
+    "question_no": "17",
+    "full_score": 3.0,
+    "got_score": 0.0,
+    "error_type": "知识盲区（题干待补）",
+    "knowledge_points": [
+      "科学社会主义的真理性与生命力"
+    ],
+    "status": "resolved_from_stem",
+    "note": "学生选A，标准C；据papers/政治.md第17题题干与解析归因"
+  },
+  {
+    "id": 116,
+    "subject": "政治",
+    "question_no": "20",
+    "full_score": 3.0,
+    "got_score": 0.0,
+    "error_type": "知识盲区（题干待补）",
+    "knowledge_points": [
+      "十一届三中全会的意义（工作中心战略转移、伟大转折）"
+    ],
+    "status": "resolved_from_stem",
+    "note": "学生选D，标准B；据papers/政治.md存疑节第20题及答案反推；最终答案辨认不清"
+  },
+  {
+    "id": 117,
+    "subject": "政治",
+    "question_no": "21",
+    "full_score": 10.0,
+    "got_score": 4.0,
+    "error_type": "表述不规范/知识盲区",
+    "knowledge_points": [
+      "奴隶社会代替原始社会的进步性",
+      "生产关系适应生产力规律"
+    ],
+    "status": "known",
+    "note": "答出'历史进步'+'生产力被束缚/相适应'零散表述；缺'金属工具/城市出现/脑体分工'等具体史实得分点"
+  },
+  {
+    "id": 118,
+    "subject": "政治",
+    "question_no": "22",
+    "full_score": 8.0,
+    "got_score": 2.0,
+    "error_type": "知识盲区/表述不规范",
+    "knowledge_points": [
+      "新中国成立的意义"
+    ],
+    "status": "known",
+    "note": "未用关键词（四个彻底结束/半殖民地半封建/人民民主/过渡前提/东方战线），表述空泛"
+  },
+  {
+    "id": 119,
+    "subject": "政治",
+    "question_no": "23",
+    "full_score": 10.0,
+    "got_score": 5.0,
+    "error_type": "知识盲区（部分）",
+    "knowledge_points": [
+      "改革开放的意义"
+    ],
+    "status": "known",
+    "note": "答出'四个面貌/三个飞跃'和'活力之源'；缺'必由之路/关键一招'表述"
+  },
+  {
+    "id": 120,
+    "subject": "政治",
+    "question_no": "24",
+    "full_score": 12.0,
+    "got_score": 3.0,
+    "error_type": "知识盲区/表述不规范",
+    "knowledge_points": [
+      "只有社会主义能救中国（四段论证）"
+    ],
+    "status": "known",
+    "note": "只有'资本主义走不通'+'一化三改/社会主义改造'+总结句碎片；缺'党的诞生与新民主主义革命胜利''新中国成立改变发展方向'两大得分块"
+  },
+  {
+    "id": 125,
+    "subject": "物理",
+    "question_no": "5",
+    "full_score": 6.0,
+    "got_score": 3.0,
+    "error_type": "概念混淆",
+    "knowledge_points": [
+      "速度与加速度关系：a是速度变化快慢，与v大小无关；a增大v可能减小（反向时）"
+    ],
+    "status": "known",
+    "note": "卡面3分；按印刷评分规则含错误选项应0分，待向老师确认"
+  },
+  {
+    "id": 128,
+    "subject": "物理",
+    "question_no": "8",
+    "full_score": 6.0,
+    "got_score": 3.0,
+    "error_type": "知识盲区",
+    "knowledge_points": [
+      "等分位移比例推论",
+      "中间时刻速度"
+    ],
+    "status": "known",
+    "note": "卡面3分；按印刷评分规则含错误选项应0分，待向老师确认"
+  },
+  {
+    "id": 129,
+    "subject": "物理",
+    "question_no": "9空1",
+    "full_score": 2.0,
+    "got_score": 0.0,
+    "error_type": "概念混淆",
+    "knowledge_points": [
+      "前\"一半路程\"的平均速度≠算术平均，v=2v₁v₂/(v₁+v₂)=7.2"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 132,
+    "subject": "物理",
+    "question_no": "10空2",
+    "full_score": 2.0,
+    "got_score": 0.0,
+    "error_type": "概念混淆",
+    "knowledge_points": [
+      "坐标变化量Δx=x末−x初=0−3=−3（含符号）"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 134,
+    "subject": "物理",
+    "question_no": "10空4",
+    "full_score": 2.0,
+    "got_score": 0.0,
+    "error_type": "知识盲区",
+    "knowledge_points": [
+      "x-t图像斜率=速度：第4s内3→0，v=−3m/s"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 138,
+    "subject": "物理",
+    "question_no": "11空3",
+    "full_score": 2.0,
+    "got_score": 0.0,
+    "error_type": "计算失误",
+    "knowledge_points": [
+      "a=Δv/Δt，时间Δt代入错误"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 140,
+    "subject": "物理",
+    "question_no": "12(2)a",
+    "full_score": 2.0,
+    "got_score": 0.0,
+    "error_type": "审题偏差",
+    "knowledge_points": [
+      "漏看\"相邻计数点间还有四个计时点未标出\"，T=0.1s误作0.02s（0.81×5=4.05）"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 141,
+    "subject": "物理",
+    "question_no": "12(2)b",
+    "full_score": 2.0,
+    "got_score": 0.0,
+    "error_type": "知识盲区",
+    "knowledge_points": [
+      "逐差法求加速度未掌握"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 142,
+    "subject": "物理",
+    "question_no": "13(1)",
+    "full_score": 4.0,
+    "got_score": 0.0,
+    "error_type": "概念混淆",
+    "knowledge_points": [
+      "速度变化量的矢量性：反向踢回，Δv=8−(−10)=18m/s"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 145,
+    "subject": "物理",
+    "question_no": "14(2)",
+    "full_score": 6.0,
+    "got_score": 4.0,
+    "error_type": "计算失误",
+    "knowledge_points": [
+      "v-t面积=位移=1500m正确，但1500/75=20算成2"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 146,
+    "subject": "物理",
+    "question_no": "15(1)",
+    "full_score": 4.0,
+    "got_score": 1.0,
+    "error_type": "表述不规范",
+    "knowledge_points": [
+      "v=v₀+at公式分（2分）丢了，只拿结果分"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 147,
+    "subject": "物理",
+    "question_no": "15(2)",
+    "full_score": 5.0,
+    "got_score": 0.0,
+    "error_type": "知识盲区",
+    "knowledge_points": [
+      "匀减速位移公式 x=v₀t−½at² 不会用，拼凑答案"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 148,
+    "subject": "物理",
+    "question_no": "15(3)",
+    "full_score": 7.0,
+    "got_score": 0.0,
+    "error_type": "审题偏差/知识盲区",
+    "knowledge_points": [
+      "**刹车陷阱**：未先算停止时间t₀=v₀/a=3s，直接代t=4s"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 149,
+    "subject": "生物",
+    "question_no": "1",
+    "full_score": 2.0,
+    "got_score": 0.0,
+    "error_type": "待定（无题干，需复盘）",
+    "knowledge_points": [
+      "细胞学说的内容与意义"
+    ],
+    "status": "resolved_from_stem",
+    "note": "据papers/生物.md第1题题干与解析归因"
+  },
+  {
+    "id": 151,
+    "subject": "生物",
+    "question_no": "3",
+    "full_score": 2.0,
+    "got_score": 0.0,
+    "error_type": "待定（无题干，需复盘）",
+    "knowledge_points": [
+      "检测生物组织中的糖类、脂肪和蛋白质（显色反应）"
+    ],
+    "status": "resolved_from_stem",
+    "note": "据papers/生物.md第3题题干与解析归因"
+  },
+  {
+    "id": 154,
+    "subject": "生物",
+    "question_no": "6",
+    "full_score": 2.0,
+    "got_score": 0.0,
+    "error_type": "待定（无题干，需复盘）",
+    "knowledge_points": [
+      "细胞是生命活动的基本单位"
+    ],
+    "status": "resolved_from_stem",
+    "note": "据papers/生物.md第6题题干与解析归因"
+  },
+  {
+    "id": 160,
+    "subject": "生物",
+    "question_no": "12",
+    "full_score": 2.0,
+    "got_score": 0.0,
+    "error_type": "待定（无题干，需复盘）",
+    "knowledge_points": [
+      "病毒无细胞结构",
+      "病毒不属于原核生物"
+    ],
+    "status": "resolved_from_stem",
+    "note": "据papers/生物.md第12题存疑节答案方向反推；题干照片不清"
+  },
+  {
+    "id": 165,
+    "subject": "生物",
+    "question_no": "17",
+    "full_score": 4.0,
+    "got_score": 0.0,
+    "error_type": "待定（无题干，需复盘）",
+    "knowledge_points": [
+      "还原糖的检测（斐林试剂的使用与实验设计）"
+    ],
+    "status": "resolved_from_stem",
+    "note": "据papers/生物.md第17题题干与解析归因"
+  },
+  {
+    "id": 166,
+    "subject": "生物",
+    "question_no": "18",
+    "full_score": 4.0,
+    "got_score": 0.0,
+    "error_type": "待定（无题干，需复盘）",
+    "knowledge_points": [
+      "蛋白质变性（空间结构破坏、肽键不断裂）"
+    ],
+    "status": "resolved_from_stem",
+    "note": "据papers/生物.md第18题存疑节推断的错误项归因"
+  },
+  {
+    "id": 168,
+    "subject": "生物",
+    "question_no": "20",
+    "full_score": 4.0,
+    "got_score": 0.0,
+    "error_type": "待定（无题干，需复盘）",
+    "knowledge_points": [
+      "脱水缩合",
+      "氨基酸种类与个数",
+      "肽键数"
+    ],
+    "status": "resolved_from_stem",
+    "note": "据papers/生物.md第20题题干与解析归因；原知识点为蛋白质的结构"
+  },
+  {
+    "id": 169,
+    "subject": "生物",
+    "question_no": "21-(1)",
+    "full_score": 2.0,
+    "got_score": 0.0,
+    "error_type": "概念混淆",
+    "knowledge_points": [
+      "病毒无细胞结构 vs 蓝藻等细胞生物有细胞结构（据答案反推）"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 171,
+    "subject": "生物",
+    "question_no": "21-(2)-②",
+    "full_score": 2.0,
+    "got_score": 0.0,
+    "error_type": "粗心多选",
+    "knowledge_points": [
+      "原核生物举例，多选了D（据答案反推）"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 174,
+    "subject": "生物",
+    "question_no": "21-(3)-②",
+    "full_score": 2.0,
+    "got_score": 0.0,
+    "error_type": "知识盲区",
+    "knowledge_points": [
+      "蓝藻含藻蓝素和叶绿素，无叶绿体（典型易错点）"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 175,
+    "subject": "生物",
+    "question_no": "22-(1)-①",
+    "full_score": 2.0,
+    "got_score": 0.0,
+    "error_type": "审题偏差/知识盲区",
+    "knowledge_points": [
+      "种子晒干失去的主要是水（据答案反推）"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 178,
+    "subject": "生物",
+    "question_no": "22-(2)-②",
+    "full_score": 2.0,
+    "got_score": 0.0,
+    "error_type": "概念混淆",
+    "knowledge_points": [
+      "无机物包括水和无机盐，此处应为无机盐"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 180,
+    "subject": "生物",
+    "question_no": "22-(4)",
+    "full_score": 2.0,
+    "got_score": 0.0,
+    "error_type": "知识盲区",
+    "knowledge_points": [
+      "自由水的功能：良好溶剂、参与反应、运输"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 181,
+    "subject": "生物",
+    "question_no": "23-(1)",
+    "full_score": 3.0,
+    "got_score": 0.0,
+    "error_type": "审题偏差/表述不规范",
+    "knowledge_points": [
+      "氨基酸的结构通式（要求画图，给文字描述得0分）"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 184,
+    "subject": "生物",
+    "question_no": "23-(3)-②",
+    "full_score": 1.0,
+    "got_score": 0.0,
+    "error_type": "计算失误/概念不清",
+    "knowledge_points": [
+      "脱水数=氨基酸数-肽链数（51-2=49，她直接写了氨基酸总数）"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 185,
+    "subject": "生物",
+    "question_no": "23-(3)-③",
+    "full_score": 2.0,
+    "got_score": 0.0,
+    "error_type": "计算失误",
+    "knowledge_points": [
+      "蛋白质相对分子质量计算，有漏项（据答案反推）"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 187,
+    "subject": "生物",
+    "question_no": "23-(4)-②",
+    "full_score": 2.0,
+    "got_score": 0.0,
+    "error_type": "知识盲区",
+    "knowledge_points": [
+      "氨基酸分类（据答案反推）"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 191,
+    "subject": "生物",
+    "question_no": "24-(1)-③",
+    "full_score": 1.0,
+    "got_score": 0.0,
+    "error_type": "表述不规范",
+    "knowledge_points": [
+      "\"水浴\"是关键限定词，直接加热不行"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 192,
+    "subject": "生物",
+    "question_no": "24-(2)-①",
+    "full_score": 2.0,
+    "got_score": 0.0,
+    "error_type": "知识盲区/审题偏差",
+    "knowledge_points": [
+      "实验变量分析（据答案反推：海藻糖低温保护细胞实验）"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 194,
+    "subject": "生物",
+    "question_no": "24-(2)-③",
+    "full_score": 2.0,
+    "got_score": 0.0,
+    "error_type": "表述不规范",
+    "knowledge_points": [
+      "对照条件缺关键限定词\"低温\""
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 197,
+    "subject": "化学",
+    "question_no": "1",
+    "full_score": 4.0,
+    "got_score": 0.0,
+    "error_type": "待定（无题干，需复盘）",
+    "knowledge_points": [
+      "化学实验安全规范（金属钠的保存与处理）"
+    ],
+    "status": "resolved_from_stem",
+    "note": "papers/化学.md有题干要点（实验室要求题，据选项推断答案）；知识点据此归因"
+  },
+  {
+    "id": 200,
+    "subject": "化学",
+    "question_no": "4",
+    "full_score": 4.0,
+    "got_score": 0.0,
+    "error_type": "待定（无题干，需复盘）",
+    "knowledge_points": [
+      "钠与盐溶液的反应（钠先与水反应生成NaOH，再与MgCl2反应生成白色沉淀并放出气体）"
+    ],
+    "status": "resolved_from_stem",
+    "note": "题干不完整，据papers/化学.md存疑节答案解析反推"
+  },
+  {
+    "id": 203,
+    "subject": "化学",
+    "question_no": "7",
+    "full_score": 4.0,
+    "got_score": 0.0,
+    "error_type": "待定（无题干，需复盘）",
+    "knowledge_points": [
+      "氯气与氯水的性质"
+    ],
+    "status": "resolved_from_stem",
+    "note": "据papers/化学.md第7题题干与解析归因；D项后半文字不清"
+  },
+  {
+    "id": 204,
+    "subject": "化学",
+    "question_no": "8",
+    "full_score": 4.0,
+    "got_score": 0.0,
+    "error_type": "待定（无题干，需复盘）",
+    "knowledge_points": [
+      "物质的量（微粒数与分子内原子数的换算）"
+    ],
+    "status": "resolved_from_stem",
+    "note": "据papers/化学.md第8题题干与解析归因"
+  },
+  {
+    "id": 205,
+    "subject": "化学",
+    "question_no": "9",
+    "full_score": 4.0,
+    "got_score": 0.0,
+    "error_type": "待定（无题干，需复盘）",
+    "knowledge_points": [
+      "阿伏加德罗定律与气体摩尔体积"
+    ],
+    "status": "resolved_from_stem",
+    "note": "据papers/化学.md第9题题干与解析归因"
+  },
+  {
+    "id": 206,
+    "subject": "化学",
+    "question_no": "10",
+    "full_score": 4.0,
+    "got_score": 0.0,
+    "error_type": "待定（无题干，需复盘）",
+    "knowledge_points": [
+      "气体除杂与干燥",
+      "钠的燃烧实验",
+      "浓硫酸稀释"
+    ],
+    "status": "resolved_from_stem",
+    "note": "据papers/化学.md第10题题干与解析归因；原知识点为化学实验装置与基本操作"
+  },
+  {
+    "id": 207,
+    "subject": "化学",
+    "question_no": "11-(1)",
+    "full_score": 2.0,
+    "got_score": 0.0,
+    "error_type": "产物错误",
+    "knowledge_points": [
+      "钠与氧气反应：条件决定产物（常温Na2O/加热Na2O2），据答案反推"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 208,
+    "subject": "化学",
+    "question_no": "11-(2)",
+    "full_score": 2.0,
+    "got_score": 0.0,
+    "error_type": "知识盲区",
+    "knowledge_points": [
+      "氢气在氯气中燃烧"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 209,
+    "subject": "化学",
+    "question_no": "11-(3)",
+    "full_score": 2.0,
+    "got_score": 0.0,
+    "error_type": "概念混淆",
+    "knowledge_points": [
+      "Fe与Cl2生成FeCl3",
+      "Fe与盐酸生成FeCl2+H2↑"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 210,
+    "subject": "化学",
+    "question_no": "11-(4)",
+    "full_score": 2.0,
+    "got_score": 0.0,
+    "error_type": "知识盲区",
+    "knowledge_points": [
+      "次氯酸见光分解"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 211,
+    "subject": "化学",
+    "question_no": "11-(5)",
+    "full_score": 2.0,
+    "got_score": 0.0,
+    "error_type": "配平错误+产物记忆错误",
+    "knowledge_points": [
+      "漂白粉的制取"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 212,
+    "subject": "化学",
+    "question_no": "11-(6)",
+    "full_score": 2.0,
+    "got_score": 0.0,
+    "error_type": "方程式不完整",
+    "knowledge_points": [
+      "复分解反应：产物有蓝色Cu(OH)2沉淀"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 213,
+    "subject": "化学",
+    "question_no": "13-(1)",
+    "full_score": 2.0,
+    "got_score": 0.0,
+    "error_type": "漏写气体产物+未配平",
+    "knowledge_points": [
+      "钠与水的反应"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 214,
+    "subject": "化学",
+    "question_no": "13-(2)-方程1",
+    "full_score": 2.0,
+    "got_score": 1.0,
+    "error_type": "配平错误（按规则扣1分）",
+    "knowledge_points": [
+      "过氧化钠与二氧化碳反应"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 218,
+    "subject": "化学",
+    "question_no": "13-(5)",
+    "full_score": 2.0,
+    "got_score": 0.0,
+    "error_type": "未知（据总分反推0分，不确定）",
+    "knowledge_points": [
+      "钠与硫酸铜溶液反应（钠与水反应、氢氧化钠与硫酸铜反应生成蓝色沉淀）"
+    ],
+    "status": "resolved_from_stem",
+    "note": "stems.json化学13题干第(5)小问：将钠投入CuSO4溶液观察现象（填序号）"
+  },
+  {
+    "id": 219,
+    "subject": "化学",
+    "question_no": "14-(1)-方程",
+    "full_score": 4.0,
+    "got_score": 2.0,
+    "error_type": "配平错误+条件缺失（按规则各扣1分）",
+    "knowledge_points": [
+      "氯气的实验室制法"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 220,
+    "subject": "化学",
+    "question_no": "14-(1)-BDC",
+    "full_score": 2.0,
+    "got_score": 0.0,
+    "error_type": "未知（据总分反推0分，不确定）",
+    "knowledge_points": [
+      "氯气的实验室制法（装置部分）"
+    ],
+    "status": "resolved_from_stem",
+    "note": "stems.json化学14题干为氯气制取装置题；BDC小问具体对应关系未完全确认，按14题干归入氯气实验室制法"
+  },
+  {
+    "id": 221,
+    "subject": "化学",
+    "question_no": "14-(3)",
+    "full_score": 4.0,
+    "got_score": 0.0,
+    "error_type": "产物错误",
+    "knowledge_points": [
+      "氯气与NaOH反应（尾气吸收）；注意产物是NaClO不是HClO"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 225,
+    "subject": "化学",
+    "question_no": "14-(5)",
+    "full_score": 6.0,
+    "got_score": 0.0,
+    "error_type": "概念混淆+未知（标准缺失，据总分反推合计0分，不确定）",
+    "knowledge_points": [
+      "漂白粉：有效成分Ca(ClO)2",
+      "漂白粉：混合物CaCl2·Ca(ClO)2"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 226,
+    "subject": "语文",
+    "question_no": "1",
+    "full_score": 3.0,
+    "got_score": 0.0,
+    "error_type": "审题偏差",
+    "knowledge_points": [
+      "论述类：张冠李戴——把本文作者的观点（\"写诗的人\"机械写诗缺诗意）安到江湜头上；江湜诗只是论据"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 229,
+    "subject": "语文",
+    "question_no": "4",
+    "full_score": 6.0,
+    "got_score": 2.0,
+    "error_type": "表述不规范",
+    "knowledge_points": [
+      "信息筛选整合：四点只答出约两点，且语言口语化、未扣住\"高段位/诗境/诗心\"术语"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 233,
+    "subject": "语文",
+    "question_no": "8",
+    "full_score": 6.0,
+    "got_score": 3.0,
+    "error_type": "表述不规范",
+    "knowledge_points": [
+      "\"渡口\"多重象征只答出一半，\"奉献\"\"过渡\"等义项缺失"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 234,
+    "subject": "语文",
+    "question_no": "9",
+    "full_score": 3.0,
+    "got_score": 0.0,
+    "error_type": "知识盲区",
+    "knowledge_points": [
+      "文言断句：\"天下将乱\"后断、\"也\"句末断、\"其\"句首表揣测"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 237,
+    "subject": "语文",
+    "question_no": "12(1)",
+    "full_score": 4.0,
+    "got_score": 0.0,
+    "error_type": "知识盲区",
+    "knowledge_points": [
+      "\"得无…乎\"（莫非…吗）译反，\"被（穿着）\"\"钓于渭滨（状后）\"全丢"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 238,
+    "subject": "语文",
+    "question_no": "12(2)",
+    "full_score": 4.0,
+    "got_score": 2.0,
+    "error_type": "知识盲区（部分）",
+    "knowledge_points": [
+      "\"由（从）/偏短（缺点）/庸（难道）\"只落实部分"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 239,
+    "subject": "语文",
+    "question_no": "13",
+    "full_score": 3.0,
+    "got_score": 2.0,
+    "error_type": "表述不规范",
+    "knowledge_points": [
+      "曹操\"山不厌高，海不厌深\"求贤若渴，材料三要点或表述有缺"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 243,
+    "subject": "语文",
+    "question_no": "17",
+    "full_score": 3.0,
+    "got_score": 0.0,
+    "error_type": "知识盲区",
+    "knowledge_points": [
+      "字音：B揳入(xiē)/C忸怩(ní)/D皱褶(zhě)包扎(zā)着恼(zháo)"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 244,
+    "subject": "语文",
+    "question_no": "18",
+    "full_score": 3.0,
+    "got_score": 0.0,
+    "error_type": "知识盲区",
+    "knowledge_points": [
+      "文言实词：C项\"到中流击水（击水：游泳）\"说法错误"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 245,
+    "subject": "语文",
+    "question_no": "19",
+    "full_score": 3.0,
+    "got_score": 0.0,
+    "error_type": "知识盲区",
+    "knowledge_points": [
+      "虚词\"之\"：C项两\"之\"均为助词\"的\"，A项介词/连词不同"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 246,
+    "subject": "语文",
+    "question_no": "20",
+    "full_score": 3.0,
+    "got_score": 0.0,
+    "error_type": "知识盲区",
+    "knowledge_points": [
+      "古今异义：②④⑨古今义相同（憔悴/一生/门庭冷落），其余不同"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 249,
+    "subject": "语文",
+    "question_no": "23",
+    "full_score": 3.0,
+    "got_score": 0.0,
+    "error_type": "知识盲区",
+    "knowledge_points": [
+      "修辞：例句借代；B\"唯有杜康\"借代，A为互文"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 251,
+    "subject": "语文",
+    "question_no": "25",
+    "full_score": 60.0,
+    "got_score": 45.0,
+    "error_type": "论证深度不足",
+    "knowledge_points": [
+      "议论文写作：论证深度（例后议）"
+    ],
+    "status": "resolved_from_stem",
+    "note": "据reports/语文_analysis.md作文专项评估归因"
+  },
+  {
+    "id": 253,
+    "subject": "英语",
+    "question_no": "2",
+    "full_score": 1.5,
+    "got_score": 0.0,
+    "error_type": "词汇量不足/听辨弱",
+    "knowledge_points": [
+      "短对话：house颜色，漏听关键信息"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 254,
+    "subject": "英语",
+    "question_no": "3",
+    "full_score": 1.5,
+    "got_score": 0.0,
+    "error_type": "听辨弱",
+    "knowledge_points": [
+      "短对话：mother jogging outdoors"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 256,
+    "subject": "英语",
+    "question_no": "5",
+    "full_score": 1.5,
+    "got_score": 0.0,
+    "error_type": "粗心/听辨弱",
+    "knowledge_points": [
+      "短对话：brush teeth时间"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 258,
+    "subject": "英语",
+    "question_no": "7",
+    "full_score": 1.5,
+    "got_score": 0.0,
+    "error_type": "听辨弱",
+    "knowledge_points": [
+      "长对话：cinema，细节（时间/停车）抓不住"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 259,
+    "subject": "英语",
+    "question_no": "8",
+    "full_score": 1.5,
+    "got_score": 0.0,
+    "error_type": "听辨弱",
+    "knowledge_points": [
+      "长对话：工作单位/咖啡馆"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 264,
+    "subject": "英语",
+    "question_no": "13",
+    "full_score": 1.5,
+    "got_score": 0.0,
+    "error_type": "听辨弱",
+    "knowledge_points": [
+      "独白细节"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 265,
+    "subject": "英语",
+    "question_no": "14",
+    "full_score": 1.5,
+    "got_score": 0.0,
+    "error_type": "听辨弱",
+    "knowledge_points": [
+      "独白细节"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 266,
+    "subject": "英语",
+    "question_no": "15",
+    "full_score": 1.5,
+    "got_score": 0.0,
+    "error_type": "听辨弱",
+    "knowledge_points": [
+      "独白细节"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 270,
+    "subject": "英语",
+    "question_no": "19",
+    "full_score": 1.5,
+    "got_score": 0.0,
+    "error_type": "听辨弱",
+    "knowledge_points": [
+      "独白细节"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 279,
+    "subject": "英语",
+    "question_no": "28",
+    "full_score": 2.5,
+    "got_score": 0.0,
+    "error_type": "审题偏差",
+    "knowledge_points": [
+      "阅读：细节/推理题，关键句定位错"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 280,
+    "subject": "英语",
+    "question_no": "29",
+    "full_score": 2.5,
+    "got_score": 0.0,
+    "error_type": "审题偏差",
+    "knowledge_points": [
+      "阅读：同上"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 284,
+    "subject": "英语",
+    "question_no": "33",
+    "full_score": 2.5,
+    "got_score": 0.0,
+    "error_type": "词汇量不足",
+    "knowledge_points": [
+      "阅读：词义/推理题"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 285,
+    "subject": "英语",
+    "question_no": "34",
+    "full_score": 2.5,
+    "got_score": 0.0,
+    "error_type": "审题偏差",
+    "knowledge_points": [
+      "阅读"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 295,
+    "subject": "英语",
+    "question_no": "44",
+    "full_score": 1.0,
+    "got_score": 0.0,
+    "error_type": "词汇辨析",
+    "knowledge_points": [
+      "完形：近义词/语境辨析不清"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 299,
+    "subject": "英语",
+    "question_no": "48",
+    "full_score": 1.0,
+    "got_score": 0.0,
+    "error_type": "词汇辨析",
+    "knowledge_points": [
+      "完形：逻辑连词/语境"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 303,
+    "subject": "英语",
+    "question_no": "52",
+    "full_score": 1.0,
+    "got_score": 0.0,
+    "error_type": "词汇辨析",
+    "knowledge_points": [
+      "完形"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 306,
+    "subject": "英语",
+    "question_no": "55",
+    "full_score": 1.0,
+    "got_score": 0.0,
+    "error_type": "词汇辨析",
+    "knowledge_points": [
+      "完形"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 307,
+    "subject": "英语",
+    "question_no": "56",
+    "full_score": 1.5,
+    "got_score": 0.0,
+    "error_type": "知识盲区",
+    "knowledge_points": [
+      "介词：句首\"For children…\"表对象，误用at"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 308,
+    "subject": "英语",
+    "question_no": "57",
+    "full_score": 1.5,
+    "got_score": 0.0,
+    "error_type": "知识盲区",
+    "knowledge_points": [
+      "不定式作目的状语",
+      "surprised词义"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 310,
+    "subject": "英语",
+    "question_no": "59",
+    "full_score": 1.5,
+    "got_score": 0.0,
+    "error_type": "知识盲区/时间不够",
+    "knowledge_points": [
+      "比较级：未写出完整形式"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 314,
+    "subject": "英语",
+    "question_no": "63",
+    "full_score": 1.5,
+    "got_score": 0.0,
+    "error_type": "知识盲区",
+    "knowledge_points": [
+      "冠词：特指the，空着或写错"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 315,
+    "subject": "英语",
+    "question_no": "64",
+    "full_score": 1.5,
+    "got_score": 0.0,
+    "error_type": "知识盲区",
+    "knowledge_points": [
+      "过去分词作定语（aged children）"
+    ],
+    "status": "known",
+    "note": ""
+  },
+  {
+    "id": 328,
+    "subject": "英语",
+    "question_no": "作文",
+    "full_score": 20.0,
+    "got_score": 11.0,
+    "error_type": "表述不规范",
+    "knowledge_points": [
+      "英语书面表达（建议信）",
+      "基础语法：although与but不连用、主谓一致、动词形式"
+    ],
+    "status": "resolved_from_stem",
+    "note": "据reports/英语_analysis.md作文专项评估归因"
+  },
+  {
+    "id": 332,
+    "subject": "数学",
+    "question_no": "4",
+    "full_score": 5.0,
+    "got_score": 0.0,
+    "error_type": "",
+    "knowledge_points": [
+      "分式不等式的解法（分母不为零、零点取舍）"
+    ],
+    "status": "resolved_from_stem",
+    "note": "答题卡逐题判读2026-10-21；据papers/数学.md第4题题干与解析归因；stems.json有本题干，已核对一致"
+  },
+  {
+    "id": 333,
+    "subject": "数学",
+    "question_no": "5",
+    "full_score": 5.0,
+    "got_score": 0.0,
+    "error_type": "",
+    "knowledge_points": [],
+    "status": "pending",
+    "note": "待题干：等用户补试卷照片后再归因"
+  },
+  {
+    "id": 334,
+    "subject": "数学",
+    "question_no": "6",
+    "full_score": 5.0,
+    "got_score": 0.0,
+    "error_type": "",
+    "knowledge_points": [
+      "充分条件与必要条件的判断（小范围推出大范围）"
+    ],
+    "status": "resolved_from_stem",
+    "note": "答题卡逐题判读2026-10-21；据papers/数学.md第6题题干与解析归因；stems.json有本题干，已核对一致"
+  },
+  {
+    "id": 335,
+    "subject": "数学",
+    "question_no": "7",
+    "full_score": 5.0,
+    "got_score": 0.0,
+    "error_type": "",
+    "knowledge_points": [],
+    "status": "pending",
+    "note": "待题干：等用户补试卷照片后再归因"
+  },
+  {
+    "id": 336,
+    "subject": "数学",
+    "question_no": "8",
+    "full_score": 5.0,
+    "got_score": 0.0,
+    "error_type": "",
+    "knowledge_points": [],
+    "status": "pending",
+    "note": "待题干：等用户补试卷照片后再归因"
+  },
+  {
+    "id": 337,
+    "subject": "数学",
+    "question_no": "9",
+    "full_score": 6.0,
+    "got_score": 0.0,
+    "error_type": "",
+    "knowledge_points": [
+      "集合元素的互异性（分类讨论后必须回代检验）"
+    ],
+    "status": "resolved_from_stem",
+    "note": "答题卡逐题判读2026-10-21；据papers/数学.md第9题题干与解析归因；stems.json有本题干，已核对一致"
+  },
+  {
+    "id": 338,
+    "subject": "数学",
+    "question_no": "10",
+    "full_score": 6.0,
+    "got_score": 2.0,
+    "error_type": "",
+    "knowledge_points": [
+      "不等式性质",
+      "作差比较法",
+      "糖水不等式"
+    ],
+    "status": "resolved_from_stem",
+    "note": "答题卡逐题判读2026-10-21；据papers/数学.md第10题题干与解析归因；stems.json有本题干，已核对一致"
+  },
+  {
+    "id": 339,
+    "subject": "数学",
+    "question_no": "11",
+    "full_score": 6.0,
+    "got_score": 2.0,
+    "error_type": "",
+    "knowledge_points": [
+      "基本不等式",
+      "消元法求最值（二次函数配方）"
+    ],
+    "status": "resolved_from_stem",
+    "note": "答题卡逐题判读2026-10-21；据papers/数学.md第11题题干与解析归因；stems.json有本题干，已核对一致"
+  },
+  {
+    "id": 341,
+    "subject": "数学",
+    "question_no": "13",
+    "full_score": 5.0,
+    "got_score": 0.0,
+    "error_type": "",
+    "knowledge_points": [],
+    "status": "pending",
+    "note": "待题干：等用户补试卷照片后再归因"
+  },
+  {
+    "id": 342,
+    "subject": "数学",
+    "question_no": "14",
+    "full_score": 5.0,
+    "got_score": 0.0,
+    "error_type": "",
+    "knowledge_points": [
+      "函数值域与定义域",
+      "集合相等与包含的区分"
+    ],
+    "status": "resolved_from_stem",
+    "note": "答题卡逐题判读2026-10-21；据papers/数学.md第14题题干与解析归因；stems.json有本题干，已核对一致"
+  },
+  {
+    "id": 343,
+    "subject": "数学",
+    "question_no": "15",
+    "full_score": 13.0,
+    "got_score": 8.0,
+    "error_type": "",
+    "knowledge_points": [],
+    "status": "pending",
+    "note": "待题干：等用户补试卷照片后再归因"
+  },
+  {
+    "id": 345,
+    "subject": "数学",
+    "question_no": "17",
+    "full_score": 15.0,
+    "got_score": 8.0,
+    "error_type": "",
+    "knowledge_points": [],
+    "status": "pending",
+    "note": "待题干：等用户补试卷照片后再归因"
+  },
+  {
+    "id": 346,
+    "subject": "数学",
+    "question_no": "18",
+    "full_score": 17.0,
+    "got_score": 4.0,
+    "error_type": "",
+    "knowledge_points": [],
+    "status": "pending",
+    "note": "待题干：等用户补试卷照片后再归因"
+  },
+  {
+    "id": 347,
+    "subject": "数学",
+    "question_no": "19",
+    "full_score": 17.0,
+    "got_score": 0.0,
+    "error_type": "",
+    "knowledge_points": [],
+    "status": "pending",
+    "note": "待题干：等用户补试卷照片后再归因"
+  }
+]

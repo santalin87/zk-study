@@ -1,0 +1,5767 @@
+{
+  "usable_videos": [
+    {
+      "id": 9,
+      "subject": "英语",
+      "chapter": "必修一 Welcome Unit+Unit 1",
+      "lesson": "Welcome Unit",
+      "kpoint": "",
+      "title": "",
+      "up": "",
+      "bvid": "BV1KG4y1W7R3",
+      "part": "",
+      "duration_s": null,
+      "subtitle": "未知",
+      "status": "已上线"
+    },
+    {
+      "id": 10,
+      "subject": "英语",
+      "chapter": "必修一 Welcome Unit+Unit 1",
+      "lesson": "Unit 1 Teenage Life",
+      "kpoint": "",
+      "title": "",
+      "up": "",
+      "bvid": "BV1gY4y1T73a",
+      "part": "",
+      "duration_s": null,
+      "subtitle": "未知",
+      "status": "已上线"
+    },
+    {
+      "id": 11,
+      "subject": "数学",
+      "chapter": "第一章 集合与常用逻辑用语",
+      "lesson": "集合的概念",
+      "kpoint": "集合、元素、列举法、描述法",
+      "title": "1.1.1 集合及其表示方法【高中数学】",
+      "up": "宋浩老师官方",
+      "bvid": "BV1Ek4y1w7ma",
+      "part": "",
+      "duration_s": 2582,
+      "subtitle": "官方字幕表面完整；站点字幕用 Groq 转录（已逐段验）",
+      "status": "已上线"
+    },
+    {
+      "id": 12,
+      "subject": "数学",
+      "chapter": "第一章 集合与常用逻辑用语",
+      "lesson": "集合的关系与运算",
+      "kpoint": "子集、真子集、空集、集合相等",
+      "title": "1.1.2 集合的基本关系",
+      "up": "宋浩老师官方",
+      "bvid": "BV1TP411h7U2",
+      "part": "",
+      "duration_s": 1268,
+      "subtitle": "官方字幕串线（混入旅游视频），已弃用；Groq 转录",
+      "status": "已上线"
+    },
+    {
+      "id": 13,
+      "subject": "数学",
+      "chapter": "第一章 集合与常用逻辑用语",
+      "lesson": "集合的关系与运算",
+      "kpoint": "交集、并集、补集",
+      "title": "1.1.3 集合的基本运算（交集并集补集）",
+      "up": "宋浩老师官方",
+      "bvid": "BV1434y1K72m",
+      "part": "",
+      "duration_s": 1461,
+      "subtitle": "官方字幕表面完整；站点字幕用 Groq 转录",
+      "status": "已上线"
+    },
+    {
+      "id": 15,
+      "subject": "数学",
+      "chapter": "第一章 集合与常用逻辑用语",
+      "lesson": "充分条件与必要条件",
+      "kpoint": "充分条件、必要条件、充要条件",
+      "title": "1.2.3 充分条件必要条件【高中数学】",
+      "up": "宋浩老师官方",
+      "bvid": "BV11p4y1F78j",
+      "part": "",
+      "duration_s": 1084,
+      "subtitle": "官方字幕串线（混入评测视频），已弃用；Groq 转录",
+      "status": "已上线"
+    },
+    {
+      "id": 16,
+      "subject": "数学",
+      "chapter": "第一章 集合与常用逻辑用语",
+      "lesson": "全称量词与存在量词",
+      "kpoint": "量词定义、命题真假判断",
+      "title": "1.2.1 命题与量词",
+      "up": "宋浩老师官方",
+      "bvid": "BV1KF411S7aq",
+      "part": "",
+      "duration_s": 965,
+      "subtitle": "官方字幕串线（做菜视频）且仅覆盖 19%，已弃用；Groq 转录",
+      "status": "已上线"
+    },
+    {
+      "id": 17,
+      "subject": "数学",
+      "chapter": "第一章 集合与常用逻辑用语",
+      "lesson": "全称量词与存在量词",
+      "kpoint": "全称/存在量词命题的否定",
+      "title": "1.2.2 全称和存在量词命题的否定",
+      "up": "宋浩老师官方",
+      "bvid": "BV18V411w7CK",
+      "part": "",
+      "duration_s": 846,
+      "subtitle": "官方字幕串线且仅覆盖 30%，已弃用；Groq 转录",
+      "status": "已上线"
+    },
+    {
+      "id": 25,
+      "subject": "物理",
+      "chapter": "第一章 运动的描述",
+      "lesson": "时间、位移与速度",
+      "kpoint": "时刻/时间、位移/路程、速度/速率、平均速度",
+      "title": "【预科】1.4+1.5+2.1+2.2 四集组合",
+      "up": "锤姐物理（张佳铭）",
+      "bvid": "BV1V341147SL",
+      "part": "合集分P",
+      "duration_s": 3220,
+      "subtitle": "未知，取片时验",
+      "status": "已上线"
+    },
+    {
+      "id": 26,
+      "subject": "物理",
+      "chapter": "第一章 运动的描述",
+      "lesson": "加速度",
+      "kpoint": "速度变化量、加速度",
+      "title": "【预科】2.5 速度变化量与加速度",
+      "up": "锤姐物理（张佳铭）",
+      "bvid": "BV1V341147SL",
+      "part": "合集分P",
+      "duration_s": 1568,
+      "subtitle": "未知，取片时验",
+      "status": "已上线"
+    },
+    {
+      "id": 27,
+      "subject": "物理",
+      "chapter": "第一章 运动的描述",
+      "lesson": "运动图像：x-t与v-t",
+      "kpoint": "x-t图像性质、v-t图像性质",
+      "title": "【预科】3.1 x-t图像性质 + 3.3 v-t图像性质",
+      "up": "锤姐物理（张佳铭）",
+      "bvid": "BV1V341147SL",
+      "part": "合集分P",
+      "duration_s": 2487,
+      "subtitle": "未知，取片时验",
+      "status": "已上线"
+    },
+    {
+      "id": 29,
+      "subject": "物理",
+      "chapter": "必修一第一章",
+      "lesson": "第1课 运动、质点与参考系",
+      "kpoint": "",
+      "title": "高中物理必修一基础与解法全集（1.1质点+1.2参考系）",
+      "up": "一物儿",
+      "bvid": "BV1f4xtzZE8F",
+      "part": "P3+P4",
+      "duration_s": 1513,
+      "subtitle": "官方字幕未验，站点用Groq自转",
+      "status": "已上线"
+    },
+    {
+      "id": 30,
+      "subject": "化学",
+      "chapter": "必修一第一章",
+      "lesson": "第1课 走进化学科学",
+      "kpoint": "",
+      "title": "鲁科版 高中化学必修一 第一章 第1节 走进化学科学",
+      "up": "吃葡萄不吐葡萄皮的化学僧",
+      "bvid": "BV11S4y1b7eE",
+      "part": "P1",
+      "duration_s": 921,
+      "subtitle": "未验（B站嵌入播放）",
+      "status": "已上线"
+    },
+    {
+      "id": 31,
+      "subject": "历史",
+      "chapter": "纲要上第二单元",
+      "lesson": "第7课 隋唐制度的变化与创新",
+      "kpoint": "",
+      "title": "高中历史纲要上｜第7课《隋唐制度的变化与创新》",
+      "up": "小马历史课堂",
+      "bvid": "BV1J9tHesEYa",
+      "part": "P1",
+      "duration_s": 1906,
+      "subtitle": "未验（B站嵌入播放）",
+      "status": "已上线"
+    },
+    {
+      "id": 32,
+      "subject": "地理",
+      "chapter": "必修一第一、二章",
+      "lesson": "第1-4、6、7课（6课）",
+      "kpoint": "",
+      "title": "高中地理必修一基础与考点大合集",
+      "up": "一地er",
+      "bvid": "BV1VCxQedEVW",
+      "part": "P4/P6/P8/P9/P10/P12",
+      "duration_s": 0,
+      "subtitle": "未验（B站嵌入播放）",
+      "status": "已上线"
+    },
+    {
+      "id": 33,
+      "subject": "物理",
+      "chapter": "第二章",
+      "lesson": "实验基础：误差与有效数字",
+      "kpoint": "误差与有效数字",
+      "title": "1、【实验基础】：误差与有效数字",
+      "up": "J大菠萝",
+      "bvid": "BV1d8dAYLEuf",
+      "part": "",
+      "duration_s": 999,
+      "subtitle": "未抓",
+      "status": "已自托管"
+    },
+    {
+      "id": 35,
+      "subject": "地理",
+      "chapter": "第一章",
+      "lesson": "问题研究：火星基地应该是什么样子",
+      "kpoint": "火星基地",
+      "title": "高中高一地理必修一第一章问题研究火星基地应该是什么样子",
+      "up": "会打快板的地理老师",
+      "bvid": "BV1uG4y1R7eR",
+      "part": "",
+      "duration_s": 567,
+      "subtitle": "未抓",
+      "status": "已自托管"
+    },
+    {
+      "id": 37,
+      "subject": "地理",
+      "chapter": "第二章",
+      "lesson": "问题研究：何时蓝天常在",
+      "kpoint": "大气污染与蓝天保卫战",
+      "title": "高中高一地理必修一第二章问题研究 何时\"蓝天\"常在",
+      "up": "会打快板的地理老师",
+      "bvid": "BV1eW4y1g79r",
+      "part": "",
+      "duration_s": 1119,
+      "subtitle": "未抓",
+      "status": "已自托管"
+    },
+    {
+      "id": 39,
+      "subject": "数学",
+      "chapter": "",
+      "lesson": "等式性质与不等式性质",
+      "kpoint": "",
+      "title": "2.2.1 不等式及其性质【高中数学】宋浩老师",
+      "up": "宋浩",
+      "bvid": "BV1A34y1P7as",
+      "part": "1",
+      "duration_s": 1350,
+      "subtitle": "",
+      "status": "已自托管"
+    },
+    {
+      "id": 40,
+      "subject": "数学",
+      "chapter": "",
+      "lesson": "等式性质与不等式性质",
+      "kpoint": "",
+      "title": "2.2.2 不等式的解【高中数学】宋浩老师",
+      "up": "宋浩",
+      "bvid": "BV1Wu4y147aj",
+      "part": "1",
+      "duration_s": 1652,
+      "subtitle": "",
+      "status": "已自托管"
+    },
+    {
+      "id": 41,
+      "subject": "数学",
+      "chapter": "",
+      "lesson": "基本不等式",
+      "kpoint": "",
+      "title": "2.2.4 均值不等式及其应用【高中数学】宋浩老师",
+      "up": "宋浩",
+      "bvid": "BV1B94y1h71g",
+      "part": "1",
+      "duration_s": 2446,
+      "subtitle": "",
+      "status": "已自托管"
+    },
+    {
+      "id": 42,
+      "subject": "数学",
+      "chapter": "",
+      "lesson": "二次函数与一元二次方程、不等式",
+      "kpoint": "",
+      "title": "2.1.2 一元二次方程的解集根与系数的关系【高中数学】宋浩老师",
+      "up": "宋浩",
+      "bvid": "BV1Fz4y157pb",
+      "part": "1",
+      "duration_s": 2134,
+      "subtitle": "",
+      "status": "已自托管"
+    },
+    {
+      "id": 43,
+      "subject": "数学",
+      "chapter": "",
+      "lesson": "二次函数与一元二次方程、不等式",
+      "kpoint": "",
+      "title": "2.2.3一元二次不等式的解法【高中数学】宋浩老师",
+      "up": "宋浩",
+      "bvid": "BV1LN4y1f7g1",
+      "part": "1",
+      "duration_s": 1107,
+      "subtitle": "",
+      "status": "已自托管"
+    },
+    {
+      "id": 44,
+      "subject": "数学",
+      "chapter": "",
+      "lesson": "二次函数与一元二次方程、不等式",
+      "kpoint": "",
+      "title": "2.2.3 含参数不等式【高中数学】宋浩老师",
+      "up": "宋浩",
+      "bvid": "BV1Ww41117Jc",
+      "part": "1",
+      "duration_s": 1876,
+      "subtitle": "",
+      "status": "已自托管"
+    },
+    {
+      "id": 45,
+      "subject": "数学",
+      "chapter": "",
+      "lesson": "函数的概念及其表示",
+      "kpoint": "",
+      "title": "3.1.1  函数及其表示方法【高中数学】宋浩老师",
+      "up": "宋浩",
+      "bvid": "BV1KH4y1Z7Ax",
+      "part": "1",
+      "duration_s": 2336,
+      "subtitle": "",
+      "status": "已自托管"
+    },
+    {
+      "id": 46,
+      "subject": "数学",
+      "chapter": "",
+      "lesson": "函数的基本性质",
+      "kpoint": "",
+      "title": "3.1.2 函数的单调性【高中数学】宋浩老师",
+      "up": "宋浩",
+      "bvid": "BV1jw411e7cV",
+      "part": "1",
+      "duration_s": 2394,
+      "subtitle": "",
+      "status": "已自托管"
+    },
+    {
+      "id": 47,
+      "subject": "数学",
+      "chapter": "",
+      "lesson": "函数的基本性质",
+      "kpoint": "",
+      "title": "3.1.3 函数的奇偶性【高中数学】宋浩老师",
+      "up": "宋浩",
+      "bvid": "BV1yH4y1Z7K3",
+      "part": "1",
+      "duration_s": 1902,
+      "subtitle": "",
+      "status": "已自托管"
+    },
+    {
+      "id": 48,
+      "subject": "数学",
+      "chapter": "",
+      "lesson": "函数的基本性质",
+      "kpoint": "",
+      "title": "3.1.3 函数的对称【高中数学】宋浩老师",
+      "up": "宋浩",
+      "bvid": "BV1wu4y1x7Jd",
+      "part": "1",
+      "duration_s": 1702,
+      "subtitle": "",
+      "status": "已自托管"
+    },
+    {
+      "id": 49,
+      "subject": "数学",
+      "chapter": "",
+      "lesson": "幂函数",
+      "kpoint": "",
+      "title": "39【第三章】【概念强化】幂函数",
+      "up": "李尚泽",
+      "bvid": "BV1ct4y1t7pv",
+      "part": "41",
+      "duration_s": 1290,
+      "subtitle": "",
+      "status": "已自托管"
+    },
+    {
+      "id": 50,
+      "subject": "数学",
+      "chapter": "",
+      "lesson": "函数的应用（一）",
+      "kpoint": "",
+      "title": "高中数学教材通讲 3.4函数的应用 必修第一册",
+      "up": "数亿有道",
+      "bvid": "BV1Ze5Wz7EYa",
+      "part": "1",
+      "duration_s": 1835,
+      "subtitle": "",
+      "status": "已自托管"
+    }
+  ],
+  "subtitle_keyword_timestamps": {
+    "BV11p4y1F78j": {
+      "充分条件": null,
+      "必要条件": null,
+      "充要条件": null
+    },
+    "BV1434y1K72m": {
+      "交集": 16.92,
+      "并集": 16.92,
+      "补集": 16.92
+    },
+    "BV18V411w7CK": {
+      "全称/存在量词命题的否定": null
+    },
+    "BV1Ek4y1w7ma": {
+      "集合": 60.02,
+      "元素": 147.43,
+      "列举法": 1179.98,
+      "描述法": 1454.92
+    },
+    "BV1KF411S7aq": {
+      "量词定义": null,
+      "命题真假判断": null
+    },
+    "BV1TP411h7U2": {
+      "子集": null,
+      "真子集": null,
+      "空集": null,
+      "集合相等": null
+    }
+  },
+  "selfhosted_lessons": [
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_1",
+      "lesson": "细胞是生命活动的基本单位",
+      "chapter": "第一章走近细胞",
+      "video_title": "细胞是生命活动的基本单位",
+      "bvid": "BV1p54y177e6",
+      "part": 1,
+      "duration": "55:24",
+      "duration_s": 3324,
+      "up": "锦城大同教育·杨波生物",
+      "video_url": "/video/bio1.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/bio1.mp4",
+      "vtt_url": "/video/bio1.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：为什么说细胞是生命活动的基本单位"
+        },
+        {
+          "start_s": 58,
+          "title": "细胞学说：施莱登、施旺与魏尔肖的补充"
+        },
+        {
+          "start_s": 300,
+          "title": "生命活动离不开细胞：从单细胞生物看起"
+        },
+        {
+          "start_s": 856,
+          "title": "病毒：没有细胞结构的特例"
+        },
+        {
+          "start_s": 1200,
+          "title": "病毒的结构与寄生生活"
+        },
+        {
+          "start_s": 1489,
+          "title": "细胞是基本的生命系统"
+        },
+        {
+          "start_s": 1966,
+          "title": "生命系统的结构层次（一）：细胞到个体"
+        },
+        {
+          "start_s": 2298,
+          "title": "结构层次（二）：种群、群落、生态系统、生物圈"
+        },
+        {
+          "start_s": 2640,
+          "title": "例题：系统是统一整体的辨析"
+        },
+        {
+          "start_s": 2880,
+          "title": "例题：种群概念的判断"
+        },
+        {
+          "start_s": 3120,
+          "title": "收尾：多细胞生物依赖分化细胞协作"
+        }
+      ],
+      "source": "github/path-bio.js (SELF_VIDEO_PACKS, R2 key video/bio1.mp4)"
+    },
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_2",
+      "lesson": "细胞的多样性和统一性",
+      "chapter": "第一章走近细胞",
+      "video_title": "细胞的多样性和统一性",
+      "bvid": "BV1p54y177e6",
+      "part": 3,
+      "duration": "91:22",
+      "duration_s": 5482,
+      "up": "锦城大同教育·杨波生物",
+      "video_url": "/video/bio2.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/bio2.mp4",
+      "vtt_url": "/video/bio2.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：细胞的多样性和统一性"
+        },
+        {
+          "start_s": 396,
+          "title": "用高倍显微镜观察细胞：先认结构"
+        },
+        {
+          "start_s": 660,
+          "title": "目镜、物镜、准焦螺旋各管什么"
+        },
+        {
+          "start_s": 1080,
+          "title": "使用步骤（一）：对光与低倍镜观察"
+        },
+        {
+          "start_s": 1500,
+          "title": "使用步骤（二）：换高倍镜与调焦"
+        },
+        {
+          "start_s": 2100,
+          "title": "注意事项：视野亮度与玻片保护"
+        },
+        {
+          "start_s": 2700,
+          "title": "观察几种细胞：临时装片的制作"
+        },
+        {
+          "start_s": 3097,
+          "title": "第二讲：真核细胞与原核细胞的划分"
+        },
+        {
+          "start_s": 3430,
+          "title": "原核生物的类群：细菌与蓝细菌"
+        },
+        {
+          "start_s": 3900,
+          "title": "细菌的结构：拟核与核糖体"
+        },
+        {
+          "start_s": 4500,
+          "title": "原核细胞与真核细胞的比较"
+        },
+        {
+          "start_s": 5017,
+          "title": "真核细胞的多样性"
+        },
+        {
+          "start_s": 5401,
+          "title": "收尾：细胞的统一性体现在哪里"
+        }
+      ],
+      "source": "github/path-bio.js (SELF_VIDEO_PACKS, R2 key video/bio2.mp4)"
+    },
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_3",
+      "lesson": "细胞中的元素和化合物",
+      "chapter": "第二章组成细胞的分子",
+      "video_title": "细胞中的元素和化合物",
+      "bvid": "BV1p54y177e6",
+      "part": 7,
+      "duration": "72:32",
+      "duration_s": 4352,
+      "up": "锦城大同教育·杨波生物",
+      "video_url": "/video/bio3.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/bio3.mp4",
+      "vtt_url": "/video/bio3.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：细胞中的元素和化合物"
+        },
+        {
+          "start_s": 300,
+          "title": "生物界与非生物界：统一性和差异性"
+        },
+        {
+          "start_s": 362,
+          "title": "大量元素与微量元素"
+        },
+        {
+          "start_s": 582,
+          "title": "干重与鲜重：元素含量排序"
+        },
+        {
+          "start_s": 900,
+          "title": "微量元素的功能举例"
+        },
+        {
+          "start_s": 1140,
+          "title": "细胞中的化合物：无机物与有机物"
+        },
+        {
+          "start_s": 1646,
+          "title": "检测实验（一）：还原糖与斐林试剂"
+        },
+        {
+          "start_s": 1903,
+          "title": "斐林试剂的配制与水浴加热"
+        },
+        {
+          "start_s": 2100,
+          "title": "检测实验（二）：脂肪与苏丹III"
+        },
+        {
+          "start_s": 2580,
+          "title": "检测实验（三）：蛋白质与双缩脲试剂"
+        },
+        {
+          "start_s": 3023,
+          "title": "补充精讲（金晶生物）：鉴定实验再巩固"
+        },
+        {
+          "start_s": 3600,
+          "title": "例题：鉴定实验的判断与纠错"
+        },
+        {
+          "start_s": 4200,
+          "title": "收尾：元素与化合物易错点"
+        }
+      ],
+      "source": "github/path-bio.js (SELF_VIDEO_PACKS, R2 key video/bio3.mp4)"
+    },
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_4",
+      "lesson": "细胞中的无机物",
+      "chapter": "第二章组成细胞的分子",
+      "video_title": "细胞中的无机物",
+      "bvid": "BV1p54y177e6",
+      "part": 9,
+      "duration": "45:56",
+      "duration_s": 2756,
+      "up": "锦城大同教育·杨波生物",
+      "video_url": "/video/bio4.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/bio4.mp4",
+      "vtt_url": "/video/bio4.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：细胞中的无机物"
+        },
+        {
+          "start_s": 240,
+          "title": "水：细胞中含量最多的化合物"
+        },
+        {
+          "start_s": 448,
+          "title": "自由水与结合水的划分"
+        },
+        {
+          "start_s": 570,
+          "title": "自由水的功能：溶剂、运输与代谢"
+        },
+        {
+          "start_s": 960,
+          "title": "结合水与氢键：细胞的结构物质"
+        },
+        {
+          "start_s": 1203,
+          "title": "结合水比例与植物的抗逆性"
+        },
+        {
+          "start_s": 1357,
+          "title": "例题：晒干与烘烤，种子里失去的水"
+        },
+        {
+          "start_s": 1680,
+          "title": "自由水与结合水的相互转化"
+        },
+        {
+          "start_s": 1836,
+          "title": "无机盐：存在形式与渗透压"
+        },
+        {
+          "start_s": 1920,
+          "title": "无机盐功能（一）：构成复杂化合物"
+        },
+        {
+          "start_s": 2132,
+          "title": "无机盐功能（二）：维持生命活动"
+        },
+        {
+          "start_s": 2400,
+          "title": "无机盐功能（三）：酸碱平衡与例题收尾"
+        }
+      ],
+      "source": "github/path-bio.js (SELF_VIDEO_PACKS, R2 key video/bio4.mp4)"
+    },
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_5",
+      "lesson": "细胞中的糖类和脂质",
+      "chapter": "第二章组成细胞的分子",
+      "video_title": "细胞中的糖类和脂质",
+      "bvid": "BV1p54y177e6",
+      "part": 11,
+      "duration": "62:47",
+      "duration_s": 3767,
+      "up": "锦城大同教育·杨波生物",
+      "video_url": "/video/bio5.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/bio5.mp4",
+      "vtt_url": "/video/bio5.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：细胞培养为什么要加葡萄糖"
+        },
+        {
+          "start_s": 300,
+          "title": "糖类的元素组成与分类标准"
+        },
+        {
+          "start_s": 371,
+          "title": "单糖：葡萄糖、核糖与脱氧核糖"
+        },
+        {
+          "start_s": 532,
+          "title": "葡萄糖的分布与功能"
+        },
+        {
+          "start_s": 896,
+          "title": "二糖与多糖：淀粉、糖原、纤维素、几丁质"
+        },
+        {
+          "start_s": 1200,
+          "title": "多糖的水解产物与储能辨析"
+        },
+        {
+          "start_s": 1500,
+          "title": "例题：糖类分布与功能的判断"
+        },
+        {
+          "start_s": 2100,
+          "title": "脂质（一）：脂肪的组成与结构"
+        },
+        {
+          "start_s": 2400,
+          "title": "脂肪酸：饱和与不饱和"
+        },
+        {
+          "start_s": 2844,
+          "title": "固醇：胆固醇、性激素、维生素 D"
+        },
+        {
+          "start_s": 3000,
+          "title": "脂肪的功能：储能、保温与缓冲"
+        },
+        {
+          "start_s": 3300,
+          "title": "收尾例题：糖类与脂质综合判断"
+        }
+      ],
+      "source": "github/path-bio.js (SELF_VIDEO_PACKS, R2 key video/bio5.mp4)"
+    },
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_6",
+      "lesson": "蛋白质是生命活动的主要承担者",
+      "chapter": "第二章组成细胞的分子",
+      "video_title": "蛋白质是生命活动的主要承担者",
+      "bvid": "BV1p54y177e6",
+      "part": 13,
+      "duration": "105:30",
+      "duration_s": 6330,
+      "up": "锦城大同教育·杨波生物",
+      "video_url": "/video/bio6.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/bio6.mp4",
+      "vtt_url": "/video/bio6.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：蛋白质是生命活动的主要承担者"
+        },
+        {
+          "start_s": 205,
+          "title": "蛋白质的功能：五大功能与“狗催运面条”口诀"
+        },
+        {
+          "start_s": 901,
+          "title": "必需氨基酸：八种要记牢"
+        },
+        {
+          "start_s": 1201,
+          "title": "氨基酸的结构：中心碳原子与氨基、羧基"
+        },
+        {
+          "start_s": 1480,
+          "title": "组成元素：C、H、O、N"
+        },
+        {
+          "start_s": 1758,
+          "title": "脱水缩合：羧基与氨基脱水成肽键"
+        },
+        {
+          "start_s": 2451,
+          "title": "蛋白质的空间结构：一级到四级"
+        },
+        {
+          "start_s": 2757,
+          "title": "变性：加热、酒精与消毒原理"
+        },
+        {
+          "start_s": 3360,
+          "title": "易错提醒：两个肽键的不叫二肽"
+        },
+        {
+          "start_s": 3923,
+          "title": "第二讲：蛋白质相关计算——相对分子质量"
+        },
+        {
+          "start_s": 4201,
+          "title": "氧原子数与氮原子数公式"
+        },
+        {
+          "start_s": 4500,
+          "title": "例题：M 条肽链 n 个氨基酸至少含氧原子数"
+        },
+        {
+          "start_s": 5400,
+          "title": "例题：多肽分子式反推氨基酸数"
+        },
+        {
+          "start_s": 6000,
+          "title": "环状肽：首尾相连，氨基酸数等于水分子数"
+        }
+      ],
+      "source": "github/path-bio.js (SELF_VIDEO_PACKS, R2 key video/bio6.mp4)"
+    },
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_7",
+      "lesson": "核酸是遗传信息的携带者",
+      "chapter": "第二章组成细胞的分子",
+      "video_title": "核酸是遗传信息的携带者",
+      "bvid": "BV1p54y177e6",
+      "part": 17,
+      "duration": "64:14",
+      "duration_s": 3854,
+      "up": "锦城大同教育·杨波生物",
+      "video_url": "/video/bio7.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/bio7.mp4",
+      "vtt_url": "/video/bio7.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：核酸是遗传信息的携带者"
+        },
+        {
+          "start_s": 111,
+          "title": "核酸的种类：DNA 与 RNA"
+        },
+        {
+          "start_s": 191,
+          "title": "DNA 的分布：主要在细胞核"
+        },
+        {
+          "start_s": 280,
+          "title": "RNA 的分布：主要在细胞质"
+        },
+        {
+          "start_s": 600,
+          "title": "核酸在不同生物中的分布：真核、原核、病毒"
+        },
+        {
+          "start_s": 888,
+          "title": "核苷酸的结构：磷酸、五碳糖、含氮碱基"
+        },
+        {
+          "start_s": 1200,
+          "title": "基本单位的叫法：核苷酸、脱氧核苷酸、核糖核苷酸"
+        },
+        {
+          "start_s": 1500,
+          "title": "核苷酸的连接：脱水缩合形成核酸长链"
+        },
+        {
+          "start_s": 2100,
+          "title": "DNA 与 RNA 的基本单位各四种"
+        },
+        {
+          "start_s": 2208,
+          "title": "DNA 的双螺旋结构"
+        },
+        {
+          "start_s": 2301,
+          "title": "核酸的功能：遗传信息就是核苷酸的排列顺序"
+        },
+        {
+          "start_s": 2700,
+          "title": "例题：细胞生物与病毒的核苷酸、碱基种类"
+        },
+        {
+          "start_s": 3300,
+          "title": "生物大分子：多糖、蛋白质、核酸"
+        },
+        {
+          "start_s": 3600,
+          "title": "例题：豌豆叶肉细胞的碱基种类"
+        }
+      ],
+      "source": "github/path-bio.js (SELF_VIDEO_PACKS, R2 key video/bio7.mp4)"
+    },
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_8",
+      "lesson": "细胞膜的结构和功能",
+      "chapter": "第三章细胞的基本结构",
+      "video_title": "细胞膜的结构和功能",
+      "bvid": "BV1p54y177e6",
+      "part": 19,
+      "duration": "65:00",
+      "duration_s": 3900,
+      "up": "锦城大同教育·杨波生物",
+      "video_url": "/video/bio8.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/bio8.mp4",
+      "vtt_url": "/video/bio8.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：细胞的基本结构——细胞膜"
+        },
+        {
+          "start_s": 211,
+          "title": "选择透过性：活细胞的细胞膜"
+        },
+        {
+          "start_s": 300,
+          "title": "细胞膜的功能：三点要背下来"
+        },
+        {
+          "start_s": 795,
+          "title": "糖蛋白与信息交流的三种方式"
+        },
+        {
+          "start_s": 1376,
+          "title": "探索历程：欧文顿的实验"
+        },
+        {
+          "start_s": 1407,
+          "title": "制备细胞膜：为什么选哺乳动物红细胞"
+        },
+        {
+          "start_s": 1801,
+          "title": "细胞膜的成分：脂质约占 50%"
+        },
+        {
+          "start_s": 2101,
+          "title": "电镜下的暗-亮-暗三层结构"
+        },
+        {
+          "start_s": 2237,
+          "title": "流动性：细胞膜不是静止的"
+        },
+        {
+          "start_s": 2400,
+          "title": "罗伯特森的三层结构模型"
+        },
+        {
+          "start_s": 2700,
+          "title": "蛋白质的三种位置：贯穿、嵌入、表面"
+        },
+        {
+          "start_s": 2791,
+          "title": "流动镶嵌模型"
+        },
+        {
+          "start_s": 3300,
+          "title": "例题：脂质体与药物运载"
+        },
+        {
+          "start_s": 3600,
+          "title": "例题：流动性与控制作用"
+        }
+      ],
+      "source": "github/path-bio.js (SELF_VIDEO_PACKS, R2 key video/bio8.mp4)"
+    },
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_9",
+      "lesson": "细胞器之间的分工合作",
+      "chapter": "第三章细胞的基本结构",
+      "video_title": "细胞器之间的分工合作",
+      "bvid": "BV1p54y177e6",
+      "part": 21,
+      "duration": "116:18",
+      "duration_s": 6978,
+      "up": "锦城大同教育·杨波生物",
+      "video_url": "/video/bio9.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/bio9.mp4",
+      "vtt_url": "/video/bio9.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：C919类比——细胞里也有分工合作的\"部门\""
+        },
+        {
+          "start_s": 279,
+          "title": "差速离心法：怎样把细胞器分离开"
+        },
+        {
+          "start_s": 605,
+          "title": "线粒体：有氧呼吸的主要场所，细胞的动力车间"
+        },
+        {
+          "start_s": 708,
+          "title": "核糖体：生产蛋白质的机器"
+        },
+        {
+          "start_s": 888,
+          "title": "内质网：蛋白质的合成加工场所和运输通道"
+        },
+        {
+          "start_s": 1194,
+          "title": "高尔基体：加工、分类、包装车间"
+        },
+        {
+          "start_s": 1486,
+          "title": "液泡：储存营养物质，维持渗透压"
+        },
+        {
+          "start_s": 1797,
+          "title": "叶绿体：光合作用的场所"
+        },
+        {
+          "start_s": 2073,
+          "title": "溶酶体、中心体与细胞器十一点归纳"
+        },
+        {
+          "start_s": 2441,
+          "title": "细胞骨架与实验：观察叶绿体和细胞质流动"
+        },
+        {
+          "start_s": 3049,
+          "title": "实验步骤与问题探究"
+        },
+        {
+          "start_s": 3990,
+          "title": "第二讲：分泌蛋白与胞内蛋白"
+        },
+        {
+          "start_s": 4321,
+          "title": "同位素标记法：怎样追踪分泌蛋白的行踪"
+        },
+        {
+          "start_s": 4768,
+          "title": "分泌蛋白全过程与细胞的生物膜系统"
+        }
+      ],
+      "source": "github/path-bio.js (SELF_VIDEO_PACKS, R2 key video/bio9.mp4)"
+    },
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_10",
+      "lesson": "细胞核的结构和功能",
+      "chapter": "第三章细胞的基本结构",
+      "video_title": "细胞核的结构和功能",
+      "bvid": "BV1p54y177e6",
+      "part": 25,
+      "duration": "60:40",
+      "duration_s": 3640,
+      "up": "锦城大同教育·杨波生物",
+      "video_url": "/video/bio10.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/bio10.mp4",
+      "vtt_url": "/video/bio10.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：克隆牛——性状由细胞核决定"
+        },
+        {
+          "start_s": 160,
+          "title": "没有细胞核的真核细胞：红细胞与筛管细胞"
+        },
+        {
+          "start_s": 469,
+          "title": "实验一：美西螈核移植实验"
+        },
+        {
+          "start_s": 690,
+          "title": "实验二：蝾螈受精卵横缢实验"
+        },
+        {
+          "start_s": 857,
+          "title": "实验三：变形虫切割与核移植"
+        },
+        {
+          "start_s": 1275,
+          "title": "实验四：伞藻嫁接与核移植"
+        },
+        {
+          "start_s": 1473,
+          "title": "功能总结：遗传信息库与控制中心"
+        },
+        {
+          "start_s": 1740,
+          "title": "细胞核的结构：核膜"
+        },
+        {
+          "start_s": 1900,
+          "title": "染色质：由DNA和蛋白质构成"
+        },
+        {
+          "start_s": 2105,
+          "title": "核孔：大分子进出细胞核的通道"
+        },
+        {
+          "start_s": 2560,
+          "title": "染色质与染色体：同种物质的两种形态"
+        },
+        {
+          "start_s": 2900,
+          "title": "模型建构：概念模型与数学模型"
+        },
+        {
+          "start_s": 3140,
+          "title": "练习巩固与本课小结"
+        }
+      ],
+      "source": "github/path-bio.js (SELF_VIDEO_PACKS, R2 key video/bio10.mp4)"
+    },
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_11",
+      "lesson": "被动运输",
+      "chapter": "第四章细胞的物质输入和输出",
+      "video_title": "被动运输",
+      "bvid": "BV1p54y177e6",
+      "part": 27,
+      "duration": "96:52",
+      "duration_s": 5812,
+      "up": "锦城大同教育·杨波生物",
+      "video_url": "/video/bio11.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/bio11.mp4",
+      "vtt_url": "/video/bio11.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：渗透装置问题探究——漏斗里的液面为什么升高"
+        },
+        {
+          "start_s": 238,
+          "title": "渗透作用：概念与发生的两个条件"
+        },
+        {
+          "start_s": 1306,
+          "title": "水进出动物细胞：细胞膜就是半透膜"
+        },
+        {
+          "start_s": 1752,
+          "title": "水进出植物细胞：原生质层与质壁分离"
+        },
+        {
+          "start_s": 2537,
+          "title": "实验：植物细胞的吸水和失水"
+        },
+        {
+          "start_s": 3507,
+          "title": "质壁分离的自动复原"
+        },
+        {
+          "start_s": 3984,
+          "title": "被动运输：顺浓度梯度，不耗能"
+        },
+        {
+          "start_s": 4106,
+          "title": "自由扩散：穿过磷脂分子间隙"
+        },
+        {
+          "start_s": 4204,
+          "title": "协助扩散：需要转运蛋白帮忙"
+        },
+        {
+          "start_s": 4469,
+          "title": "载体蛋白与通道蛋白的区别"
+        },
+        {
+          "start_s": 5112,
+          "title": "影响被动运输的因素与三幅坐标图"
+        },
+        {
+          "start_s": 5283,
+          "title": "易错提醒与练习题"
+        }
+      ],
+      "source": "github/path-bio.js (SELF_VIDEO_PACKS, R2 key video/bio11.mp4)"
+    },
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_12",
+      "lesson": "主动运输与胞吞、胞吐",
+      "chapter": "第四章细胞的物质输入和输出",
+      "video_title": "主动运输与胞吞、胞吐",
+      "bvid": "BV1p54y177e6",
+      "part": 31,
+      "duration": "43:44",
+      "duration_s": 2624,
+      "up": "锦城大同教育·杨波生物",
+      "video_url": "/video/bio12.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/bio12.mp4",
+      "vtt_url": "/video/bio12.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：甲状腺吸收碘，是不是被动运输？"
+        },
+        {
+          "start_s": 130,
+          "title": "主动运输的概念、特点与过程"
+        },
+        {
+          "start_s": 300,
+          "title": "主动运输的实例：离子与小肠、肾小管吸收葡萄糖"
+        },
+        {
+          "start_s": 450,
+          "title": "主动运输的意义"
+        },
+        {
+          "start_s": 500,
+          "title": "易错提醒：小分子不一定自由扩散"
+        },
+        {
+          "start_s": 600,
+          "title": "胞吞：大分子怎么进细胞"
+        },
+        {
+          "start_s": 870,
+          "title": "胞吐与胞吞胞吐的四个特点"
+        },
+        {
+          "start_s": 1200,
+          "title": "问题探究：游离核糖体与附着核糖体"
+        },
+        {
+          "start_s": 1470,
+          "title": "易错提醒：囊泡来源与膜成分更新"
+        },
+        {
+          "start_s": 1530,
+          "title": "影响因素：物质浓度曲线"
+        },
+        {
+          "start_s": 1650,
+          "title": "影响因素：氧气浓度曲线"
+        },
+        {
+          "start_s": 1890,
+          "title": "温度的影响"
+        },
+        {
+          "start_s": 1980,
+          "title": "总结：四种运输方式对比表"
+        },
+        {
+          "start_s": 2190,
+          "title": "教材练习题精讲"
+        }
+      ],
+      "source": "github/path-bio.js (SELF_VIDEO_PACKS, R2 key video/bio12.mp4)"
+    },
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_13",
+      "lesson": "降低化学反应活化能的酶（上）：酶的作用和本质",
+      "chapter": "第五章细胞的能量供应和利用",
+      "video_title": "降低化学反应活化能的酶（上）：酶的作用和本质",
+      "bvid": "BV1p54y177e6",
+      "part": 33,
+      "duration": "50:36",
+      "duration_s": 3036,
+      "up": "锦城大同教育·杨波生物",
+      "video_url": "/video/bio13.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/bio13.mp4",
+      "vtt_url": "/video/bio13.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：斯帕兰扎尼实验与三个讨论"
+        },
+        {
+          "start_s": 180,
+          "title": "细胞代谢的概念与意义"
+        },
+        {
+          "start_s": 330,
+          "title": "实验：比较过氧化氢在不同条件下的分解"
+        },
+        {
+          "start_s": 600,
+          "title": "实验结论与衡量指标"
+        },
+        {
+          "start_s": 900,
+          "title": "实验变量：自变量、因变量、无关变量"
+        },
+        {
+          "start_s": 1200,
+          "title": "对照实验与单一变量原则、等量性原则"
+        },
+        {
+          "start_s": 1500,
+          "title": "对照实验的四种类型"
+        },
+        {
+          "start_s": 1620,
+          "title": "酶的作用原理：活化能"
+        },
+        {
+          "start_s": 1800,
+          "title": "曲线分析：三条曲线与酶降低的活化能"
+        },
+        {
+          "start_s": 2100,
+          "title": "酶不被消耗、不提供物质能量、不改变方向和生成物量"
+        },
+        {
+          "start_s": 2280,
+          "title": "加热与催化剂加快反应原理的区别"
+        },
+        {
+          "start_s": 2400,
+          "title": "易错提醒四则"
+        },
+        {
+          "start_s": 2580,
+          "title": "酶的本质：探索历程"
+        },
+        {
+          "start_s": 2760,
+          "title": "易错提醒五则与教材练习题"
+        }
+      ],
+      "source": "github/path-bio.js (SELF_VIDEO_PACKS, R2 key video/bio13.mp4)"
+    },
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_14",
+      "lesson": "降低化学反应活化能的酶（下）：酶的特性",
+      "chapter": "第五章细胞的能量供应和利用",
+      "video_title": "降低化学反应活化能的酶（二）",
+      "bvid": "BV1p54y177e6",
+      "part": 35,
+      "duration": "71:25",
+      "duration_s": 4285,
+      "up": "锦城大同教育·杨波生物",
+      "video_url": "/video/bio14.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/bio14.mp4",
+      "vtt_url": "/video/bio14.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场回顾：酶的概念与化学本质"
+        },
+        {
+          "start_s": 89,
+          "title": "酶的特性一：高效性"
+        },
+        {
+          "start_s": 195,
+          "title": "酶的特性二：专一性"
+        },
+        {
+          "start_s": 277,
+          "title": "酶的特性三：作用条件较温和与低温保存"
+        },
+        {
+          "start_s": 456,
+          "title": "最适温度、温度曲线与不同生物"
+        },
+        {
+          "start_s": 950,
+          "title": "最适pH与胃蛋白酶特例"
+        },
+        {
+          "start_s": 1208,
+          "title": "酶的分布与判断题练习"
+        },
+        {
+          "start_s": 1441,
+          "title": "实验设计思路：高效性与专一性"
+        },
+        {
+          "start_s": 1715,
+          "title": "专一性实验：淀粉酶与蔗糖酶"
+        },
+        {
+          "start_s": 1970,
+          "title": "探究温度对酶活性的影响实验"
+        },
+        {
+          "start_s": 2656,
+          "title": "探究pH对酶活性的影响实验"
+        },
+        {
+          "start_s": 3163,
+          "title": "曲线分析：平衡点、底物浓度与酶浓度"
+        },
+        {
+          "start_s": 3634,
+          "title": "易错提醒四则"
+        },
+        {
+          "start_s": 3759,
+          "title": "教材练习题讲解与本课总结"
+        }
+      ],
+      "source": "github/path-bio.js (SELF_VIDEO_PACKS, R2 key video/bio14.mp4)"
+    },
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_15",
+      "lesson": "细胞的能量“货币”ATP",
+      "chapter": "第五章细胞的能量供应和利用",
+      "video_title": "细胞的能量“货币”ATP",
+      "bvid": "BV1p54y177e6",
+      "part": 37,
+      "duration": "48:56",
+      "duration_s": 2936,
+      "up": "锦城大同教育·杨波生物",
+      "video_url": "/video/bio15.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/bio15.mp4",
+      "vtt_url": "/video/bio15.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：萤火虫发光与 ATP"
+        },
+        {
+          "start_s": 120,
+          "title": "ATP 的功能：细胞的直接能源物质"
+        },
+        {
+          "start_s": 300,
+          "title": "ATP 的结构：腺苷与三个磷酸基团"
+        },
+        {
+          "start_s": 600,
+          "title": "结构简式与口诀“123”"
+        },
+        {
+          "start_s": 900,
+          "title": "ATP 的特点与易错提醒"
+        },
+        {
+          "start_s": 1140,
+          "title": "能源物质复习：主要、储能、直接、最终来源"
+        },
+        {
+          "start_s": 1260,
+          "title": "ATP 与 ADP 的相互转化"
+        },
+        {
+          "start_s": 1620,
+          "title": "相互转化不是可逆反应"
+        },
+        {
+          "start_s": 1800,
+          "title": "相互转化的特点与 ATP 的利用"
+        },
+        {
+          "start_s": 2040,
+          "title": "ATP 为主动运输供能：钙泵与钠钾泵"
+        },
+        {
+          "start_s": 2340,
+          "title": "ATP 是流通的能量“货币”与易错提醒"
+        },
+        {
+          "start_s": 2580,
+          "title": "萤火虫发光原理与教材练习题"
+        },
+        {
+          "start_s": 2820,
+          "title": "总结与作业"
+        }
+      ],
+      "source": "github/path-bio.js (SELF_VIDEO_PACKS, R2 key video/bio15.mp4)"
+    },
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_16",
+      "lesson": "细胞呼吸的原理和应用",
+      "chapter": "第五章细胞的能量供应和利用",
+      "video_title": "细胞呼吸的原理和应用",
+      "bvid": "BV1p54y177e6",
+      "part": 39,
+      "duration": "126:45",
+      "duration_s": 7605,
+      "up": "锦城大同教育·杨波生物",
+      "video_url": "/video/bio16.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/bio16.mp4",
+      "vtt_url": "/video/bio16.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：酵母菌实验三个问题"
+        },
+        {
+          "start_s": 150,
+          "title": "呼吸与呼吸作用不是一回事"
+        },
+        {
+          "start_s": 315,
+          "title": "检测二氧化碳：澄清石灰水与溴麝香草酚蓝"
+        },
+        {
+          "start_s": 580,
+          "title": "检测酒精：酸性重铬酸钾橙变灰绿"
+        },
+        {
+          "start_s": 900,
+          "title": "实验装置：单一变量是有无氧气"
+        },
+        {
+          "start_s": 1460,
+          "title": "实验结论、对比实验与易错提醒"
+        },
+        {
+          "start_s": 1900,
+          "title": "线粒体：内膜折叠成嵴增大膜面积"
+        },
+        {
+          "start_s": 2150,
+          "title": "有氧呼吸底物主要是葡萄糖"
+        },
+        {
+          "start_s": 2250,
+          "title": "有氧呼吸三阶段：第一阶段糖酵解"
+        },
+        {
+          "start_s": 2950,
+          "title": "能量计算：2870 kJ、32 mol ATP、约 34%"
+        },
+        {
+          "start_s": 3905,
+          "title": "第二集：无氧呼吸全程在细胞质基质"
+        },
+        {
+          "start_s": 4230,
+          "title": "无氧呼吸两种类型与产物归属"
+        },
+        {
+          "start_s": 5253,
+          "title": "应用与影响因素：透气纱布到低氧储存"
+        },
+        {
+          "start_s": 6592,
+          "title": "有氧无氧比较、三看法与练习题"
+        }
+      ],
+      "source": "github/path-bio.js (SELF_VIDEO_PACKS, R2 key video/bio16.mp4)"
+    },
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_17",
+      "lesson": "光合作用与能量转化（上）：捕获光能的色素和结构",
+      "chapter": "第五章细胞的能量供应和利用",
+      "video_title": "光合作用与能量转化（一）",
+      "bvid": "BV1p54y177e6",
+      "part": 43,
+      "duration": "58:25",
+      "duration_s": 3505,
+      "up": "锦城大同教育·杨波生物",
+      "video_url": "/video/bio17.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/bio17.mp4",
+      "vtt_url": "/video/bio17.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：白化苗与光合色素"
+        },
+        {
+          "start_s": 108,
+          "title": "提取实验：原理与实验用品"
+        },
+        {
+          "start_s": 405,
+          "title": "提取步骤：取材、研磨与过滤"
+        },
+        {
+          "start_s": 711,
+          "title": "分离原理：纸层析法"
+        },
+        {
+          "start_s": 895,
+          "title": "滤纸条：剪两角、画线与滤液细线"
+        },
+        {
+          "start_s": 1258,
+          "title": "层析液分离与注意事项"
+        },
+        {
+          "start_s": 1543,
+          "title": "四条色素带：胡黄AB"
+        },
+        {
+          "start_s": 1811,
+          "title": "秋天叶片变黄与色素的功能"
+        },
+        {
+          "start_s": 1877,
+          "title": "叶绿素分子结构与碳酸钙的作用"
+        },
+        {
+          "start_s": 2064,
+          "title": "影响叶绿素合成的因素与异常现象分析"
+        },
+        {
+          "start_s": 2363,
+          "title": "吸收光谱与易错提醒"
+        },
+        {
+          "start_s": 2704,
+          "title": "叶绿体的结构：双层膜与基粒"
+        },
+        {
+          "start_s": 3054,
+          "title": "恩格尔曼的两个实验"
+        },
+        {
+          "start_s": 3326,
+          "title": "教材练习题与本课总结"
+        }
+      ],
+      "source": "github/path-bio.js (SELF_VIDEO_PACKS, R2 key video/bio17.mp4)"
+    },
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_18",
+      "lesson": "光合作用与能量转化（下）：光合作用的原理和应用",
+      "chapter": "第五章细胞的能量供应和利用",
+      "video_title": "光合作用与能量转化（二）",
+      "bvid": "BV1p54y177e6",
+      "part": 45,
+      "duration": "122:15",
+      "duration_s": 7335,
+      "up": "锦城大同教育·杨波生物",
+      "video_url": "/video/bio18.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/bio18.mp4",
+      "vtt_url": "/video/bio18.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：光合作用的概念与反应式"
+        },
+        {
+          "start_s": 378,
+          "title": "探索光合作用原理的实验"
+        },
+        {
+          "start_s": 844,
+          "title": "光反应阶段：水的光解与 ATP、NADPH"
+        },
+        {
+          "start_s": 1470,
+          "title": "暗反应阶段：卡尔文循环"
+        },
+        {
+          "start_s": 2090,
+          "title": "光暗反应相互制约、易错提醒与含量变化题型"
+        },
+        {
+          "start_s": 2963,
+          "title": "教材练习题与第一集总结"
+        },
+        {
+          "start_s": 3427,
+          "title": "第二集开场：光合作用强度"
+        },
+        {
+          "start_s": 3840,
+          "title": "黑暗条件下测呼吸速率与净光合速率"
+        },
+        {
+          "start_s": 4444,
+          "title": "实验：圆叶片法探究光照强度的影响"
+        },
+        {
+          "start_s": 4766,
+          "title": "化能合成作用与自养生物"
+        },
+        {
+          "start_s": 5218,
+          "title": "光照强度：光补偿点与光饱和点"
+        },
+        {
+          "start_s": 6115,
+          "title": "二氧化碳浓度：补偿点与饱和点"
+        },
+        {
+          "start_s": 6479,
+          "title": "温度与水分：酶活性与气孔开闭"
+        },
+        {
+          "start_s": 6890,
+          "title": "一日变化曲线、光质与总结"
+        }
+      ],
+      "source": "github/path-bio.js (SELF_VIDEO_PACKS, R2 key video/bio18.mp4)"
+    },
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_19",
+      "lesson": "细胞的增殖",
+      "chapter": "第六章细胞的生命历程",
+      "video_title": "细胞的增殖",
+      "bvid": "BV1p54y177e6",
+      "part": 51,
+      "duration": "124:51",
+      "duration_s": 7491,
+      "up": "锦城大同教育·杨波生物",
+      "video_url": "/video/bio19.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/bio19.mp4",
+      "vtt_url": "/video/bio19.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：象与鼠的细胞大小一样吗"
+        },
+        {
+          "start_s": 336,
+          "title": "细胞增殖的概念与细胞周期"
+        },
+        {
+          "start_s": 909,
+          "title": "分裂间期：物质准备在两次分裂之间"
+        },
+        {
+          "start_s": 1807,
+          "title": "前期：染色质螺旋成染色体，纺锤体出现"
+        },
+        {
+          "start_s": 2590,
+          "title": "中期：着丝点排在赤道板上"
+        },
+        {
+          "start_s": 2908,
+          "title": "后期：着丝点分裂，染色单体消失"
+        },
+        {
+          "start_s": 3200,
+          "title": "末期：核膜核仁重现，出现细胞板"
+        },
+        {
+          "start_s": 3570,
+          "title": "间期细分：G1、S、G2 各干什么"
+        },
+        {
+          "start_s": 3859,
+          "title": "动物细胞有丝分裂：三个不同点"
+        },
+        {
+          "start_s": 4192,
+          "title": "有丝分裂的意义与无丝分裂"
+        },
+        {
+          "start_s": 4703,
+          "title": "第二讲：细胞为什么不能无限长大"
+        },
+        {
+          "start_s": 5096,
+          "title": "表面积与体积之比：细胞越小运输越快"
+        },
+        {
+          "start_s": 5539,
+          "title": "实验：观察根尖分生区细胞的有丝分裂"
+        },
+        {
+          "start_s": 6300,
+          "title": "三条曲线与教材习题"
+        }
+      ],
+      "source": "github/path-bio.js (SELF_VIDEO_PACKS, R2 key video/bio19.mp4)"
+    },
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_20",
+      "lesson": "细胞的分化",
+      "chapter": "第六章细胞的生命历程",
+      "video_title": "细胞的分化",
+      "bvid": "BV1p54y177e6",
+      "part": 55,
+      "duration": "49:17",
+      "duration_s": 2957,
+      "up": "锦城大同教育·杨波生物",
+      "video_url": "/video/bio20.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/bio20.mp4",
+      "vtt_url": "/video/bio20.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：血细胞寿命与骨髓移植"
+        },
+        {
+          "start_s": 183,
+          "title": "细胞分化的概念"
+        },
+        {
+          "start_s": 310,
+          "title": "分化的过程与实质：基因的选择性表达"
+        },
+        {
+          "start_s": 536,
+          "title": "分化的特点：普遍性、持久性、不可逆性"
+        },
+        {
+          "start_s": 854,
+          "title": "分化的结果与意义"
+        },
+        {
+          "start_s": 1021,
+          "title": "分化的变与不变与易错提醒"
+        },
+        {
+          "start_s": 1297,
+          "title": "细胞的全能性"
+        },
+        {
+          "start_s": 1394,
+          "title": "植物组织培养：脱分化与再分化"
+        },
+        {
+          "start_s": 1608,
+          "title": "动物细胞核的全能性与核移植"
+        },
+        {
+          "start_s": 1857,
+          "title": "干细胞的分类与自我更新"
+        },
+        {
+          "start_s": 2196,
+          "title": "植物细胞全能性的实现条件"
+        },
+        {
+          "start_s": 2325,
+          "title": "分化程度、全能性与分裂能力的关系"
+        },
+        {
+          "start_s": 2453,
+          "title": "易错提醒与教材习题"
+        },
+        {
+          "start_s": 2904,
+          "title": "课堂小结与作业"
+        }
+      ],
+      "source": "github/path-bio.js (SELF_VIDEO_PACKS, R2 key video/bio20.mp4)"
+    },
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_21",
+      "lesson": "细胞的衰老和死亡",
+      "chapter": "第六章细胞的生命历程",
+      "video_title": "细胞的衰老和死亡",
+      "bvid": "BV1p54y177e6",
+      "part": 57,
+      "duration": "35:13",
+      "duration_s": 2113,
+      "up": "锦城大同教育·杨波生物",
+      "video_url": "/video/bio21.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/bio21.mp4",
+      "vtt_url": "/video/bio21.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：白头发与细胞衰老"
+        },
+        {
+          "start_s": 90,
+          "title": "衰老特征：细胞膜与细胞核"
+        },
+        {
+          "start_s": 150,
+          "title": "衰老特征：水分、酶与色素"
+        },
+        {
+          "start_s": 340,
+          "title": "白头发的成因：酪氨酸酶"
+        },
+        {
+          "start_s": 400,
+          "title": "口诀“一大一小一多三低”与易错提醒"
+        },
+        {
+          "start_s": 520,
+          "title": "衰老原因：自由基学说"
+        },
+        {
+          "start_s": 611,
+          "title": "端粒学说与分裂次数上限"
+        },
+        {
+          "start_s": 726,
+          "title": "细胞衰老与个体衰老的关系"
+        },
+        {
+          "start_s": 926,
+          "title": "易错提醒：端粒与自由基"
+        },
+        {
+          "start_s": 1051,
+          "title": "细胞死亡：凋亡的概念与三种类型"
+        },
+        {
+          "start_s": 1329,
+          "title": "细胞坏死与凋亡的区别"
+        },
+        {
+          "start_s": 1499,
+          "title": "细胞自噬：概念与作用"
+        },
+        {
+          "start_s": 1693,
+          "title": "易错提醒与教材练习题"
+        },
+        {
+          "start_s": 2054,
+          "title": "总结与作业"
+        }
+      ],
+      "source": "github/path-bio.js (SELF_VIDEO_PACKS, R2 key video/bio21.mp4)"
+    },
+    {
+      "subject": "政治",
+      "unit_id": "u_pol_1",
+      "lesson": "社会主义从空想到科学、从理论到实践的发展",
+      "chapter": "第一课社会主义从空想到科学、从理论到实践的发展",
+      "video_title": "社会主义从空想到科学、从理论到实践的发展",
+      "bvid": "BV15M4m127aY",
+      "part": 1,
+      "duration": "91:24",
+      "duration_s": 5484,
+      "up": "政治老师爱政治",
+      "video_url": "/video/pol1.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/pol1.mp4",
+      "vtt_url": "/video/pol1.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：全书主题与第一课"
+        },
+        {
+          "start_s": 260,
+          "title": "原始社会：生产力低下、氏族制度与解体"
+        },
+        {
+          "start_s": 790,
+          "title": "奴隶社会：生产关系、主要矛盾与历史评价"
+        },
+        {
+          "start_s": 1402,
+          "title": "第二幕：封建社会的产生与生产关系"
+        },
+        {
+          "start_s": 1641,
+          "title": "封建社会生产力的发展：铁器时代"
+        },
+        {
+          "start_s": 2080,
+          "title": "资本主义萌芽：雇佣关系与剩余价值"
+        },
+        {
+          "start_s": 2425,
+          "title": "资产阶级革命与资本主义制度的确立"
+        },
+        {
+          "start_s": 2682,
+          "title": "经济危机：相对过剩与周期性"
+        },
+        {
+          "start_s": 2977,
+          "title": "资本主义基本矛盾与必然趋势"
+        },
+        {
+          "start_s": 3482,
+          "title": "第二框：空想社会主义的产生与发展"
+        },
+        {
+          "start_s": 4045,
+          "title": "工人运动：三种斗争形式与欧洲三大工人运动"
+        },
+        {
+          "start_s": 4282,
+          "title": "理论基石：唯物史观与剩余价值学说"
+        },
+        {
+          "start_s": 4794,
+          "title": "共产党宣言：内容与历史意义"
+        },
+        {
+          "start_s": 5118,
+          "title": "实践部分：社会主义从一国到多国"
+        }
+      ],
+      "source": "github/path-pol.js (SELF_VIDEO_PACKS, R2 key video/pol1.mp4)"
+    },
+    {
+      "subject": "政治",
+      "unit_id": "u_pol_2",
+      "lesson": "只有社会主义才能救中国",
+      "chapter": "第二课只有社会主义才能救中国",
+      "video_title": "只有社会主义才能救中国",
+      "bvid": "BV1Cr421T75t",
+      "part": 1,
+      "duration": "47:16",
+      "duration_s": 2836,
+      "up": "政治老师爱政治",
+      "video_url": "/video/pol2.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/pol2.mp4",
+      "vtt_url": "/video/pol2.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：只有社会主义才能救中国"
+        },
+        {
+          "start_s": 108,
+          "title": "近代中国沦为半殖民地半封建社会"
+        },
+        {
+          "start_s": 213,
+          "title": "半殖民地半封建的含义与成因"
+        },
+        {
+          "start_s": 348,
+          "title": "两大历史任务与探索复兴之路"
+        },
+        {
+          "start_s": 455,
+          "title": "资本主义道路为什么在中国行不通"
+        },
+        {
+          "start_s": 702,
+          "title": "十月革命送来马克思列宁主义"
+        },
+        {
+          "start_s": 760,
+          "title": "五四运动：新民主主义革命的开端"
+        },
+        {
+          "start_s": 895,
+          "title": "中国共产党成立与三大法宝"
+        },
+        {
+          "start_s": 1024,
+          "title": "新民主主义革命的性质与“新”在哪里"
+        },
+        {
+          "start_s": 1154,
+          "title": "新中国成立的意义与毛泽东思想"
+        },
+        {
+          "start_s": 1428,
+          "title": "第二集开始：社会主义制度在中国的确立"
+        },
+        {
+          "start_s": 1608,
+          "title": "过渡时期总路线总任务：一化三改"
+        },
+        {
+          "start_s": 1948,
+          "title": "社会主义改造完成的意义"
+        },
+        {
+          "start_s": 2161,
+          "title": "社会主义建设时期：中共八大、成就与曲折"
+        }
+      ],
+      "source": "github/path-pol.js (SELF_VIDEO_PACKS, R2 key video/pol2.mp4)"
+    },
+    {
+      "subject": "政治",
+      "unit_id": "u_pol_3",
+      "lesson": "只有中国特色社会主义才能发展中国",
+      "chapter": "第三课只有中国特色社会主义才能发展中国",
+      "video_title": "只有中国特色社会主义才能发展中国",
+      "bvid": "BV18T421k7Qr",
+      "part": 1,
+      "duration": "51:24",
+      "duration_s": 3084,
+      "up": "政治老师爱政治",
+      "video_url": "/video/pol3.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/pol3.mp4",
+      "vtt_url": "/video/pol3.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：文革后国家到了何去何从的关头"
+        },
+        {
+          "start_s": 152,
+          "title": "十一届三中全会：1978年12月与伟大转折"
+        },
+        {
+          "start_s": 252,
+          "title": "什么是改革开放：对内改革与对外开放"
+        },
+        {
+          "start_s": 340,
+          "title": "起步阶段：农村改革与对外开放格局"
+        },
+        {
+          "start_s": 595,
+          "title": "新阶段：南方谈话与社会主义市场经济体制"
+        },
+        {
+          "start_s": 749,
+          "title": "全面深化阶段：十八大以来深化改革扩大开放"
+        },
+        {
+          "start_s": 850,
+          "title": "三中全会为什么重要与两道练习题"
+        },
+        {
+          "start_s": 1101,
+          "title": "改革开放的意义：四个面貌与三个飞跃"
+        },
+        {
+          "start_s": 1458,
+          "title": "改革开放永无止境与第一框小结"
+        },
+        {
+          "start_s": 1567,
+          "title": "第二集：十二大与党的全部理论和实践的主题"
+        },
+        {
+          "start_s": 1698,
+          "title": "邓小平理论：什么是社会主义、怎样建设社会主义"
+        },
+        {
+          "start_s": 1924,
+          "title": "“三个代表”重要思想与科学发展观"
+        },
+        {
+          "start_s": 2120,
+          "title": "习近平新时代中国特色社会主义思想"
+        },
+        {
+          "start_s": 2401,
+          "title": "四个自信：道路、理论、制度、文化"
+        }
+      ],
+      "source": "github/path-pol.js (SELF_VIDEO_PACKS, R2 key video/pol3.mp4)"
+    },
+    {
+      "subject": "政治",
+      "unit_id": "u_pol_4",
+      "lesson": "只有坚持和发展中国特色社会主义才能实现中华民族伟大复兴",
+      "chapter": "第四课只有坚持和发展中国特色社会主义才能实现中华民族伟大复兴",
+      "video_title": "只有坚持和发展中国特色社会主义才能实现中华民族伟大复兴",
+      "bvid": "BV1YE421A7Qj",
+      "part": 1,
+      "duration": "83:10",
+      "duration_s": 4990,
+      "up": "政治老师爱政治",
+      "video_url": "/video/pol4.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/pol4.mp4",
+      "vtt_url": "/video/pol4.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：第四课讲 2012 年进入新时代之后"
+        },
+        {
+          "start_s": 218,
+          "title": "新时代的科学内涵：五个方面"
+        },
+        {
+          "start_s": 467,
+          "title": "主要矛盾的三次判断与新时代主要矛盾"
+        },
+        {
+          "start_s": 767,
+          "title": "如何解决主要矛盾：变与不变"
+        },
+        {
+          "start_s": 967,
+          "title": "一以贯之：坚持和发展中国特色社会主义"
+        },
+        {
+          "start_s": 1230,
+          "title": "第二框：中国梦的提出（2012 年 11 月 29 日）"
+        },
+        {
+          "start_s": 1577,
+          "title": "如何实现中国梦：与人民、与中华儿女、与世界梦"
+        },
+        {
+          "start_s": 1970,
+          "title": "初心使命与四个伟大"
+        },
+        {
+          "start_s": 2402,
+          "title": "两步走：2020—2035—本世纪中叶"
+        },
+        {
+          "start_s": 2828,
+          "title": "第三框：习近平新时代中国特色社会主义思想"
+        },
+        {
+          "start_s": 3161,
+          "title": "国内背景：四个方面"
+        },
+        {
+          "start_s": 3550,
+          "title": "下集：主要内容——十个明确"
+        },
+        {
+          "start_s": 3933,
+          "title": "十四个坚持：基本方略与路线图"
+        },
+        {
+          "start_s": 4432,
+          "title": "地位和作用：长期坚持的指导思想"
+        }
+      ],
+      "source": "github/path-pol.js (SELF_VIDEO_PACKS, R2 key video/pol4.mp4)"
+    },
+    {
+      "subject": "政治",
+      "unit_id": "u_pol_5",
+      "lesson": "综合探究",
+      "chapter": "综合探究回看走过的路，比较别人的路，远眺前行的路；方向决定道路，道路决定命运",
+      "video_title": "综合探究",
+      "bvid": "BV1gt4y1h7H6",
+      "part": 1,
+      "duration": "38:31",
+      "duration_s": 2311,
+      "up": "教政治的月亮姐姐",
+      "video_url": "/video/pol5.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/pol5.mp4",
+      "vtt_url": "/video/pol5.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：总议题与三个探究题目"
+        },
+        {
+          "start_s": 128,
+          "title": "议题一：人类社会发展的一般进程"
+        },
+        {
+          "start_s": 253,
+          "title": "五种社会形态对比：生产力与生产关系"
+        },
+        {
+          "start_s": 392,
+          "title": "生产力、生产关系、经济基础与上层建筑"
+        },
+        {
+          "start_s": 491,
+          "title": "两对基本矛盾：决定与反作用"
+        },
+        {
+          "start_s": 633,
+          "title": "议题二：英美政体是怎样形成的"
+        },
+        {
+          "start_s": 920,
+          "title": "中国资本主义道路为什么走不通"
+        },
+        {
+          "start_s": 1014,
+          "title": "议题三：利顺德饭店里的中国道路"
+        },
+        {
+          "start_s": 1262,
+          "title": "探究一小结：三个结论"
+        },
+        {
+          "start_s": 1330,
+          "title": "第二集：综合探究二·方向决定道路"
+        },
+        {
+          "start_s": 1585,
+          "title": "为什么如今能实现：党的领导"
+        },
+        {
+          "start_s": 1715,
+          "title": "点赞中国道路：批判“历史终结论”"
+        },
+        {
+          "start_s": 1941,
+          "title": "贡献中国智慧、中国方案"
+        },
+        {
+          "start_s": 2024,
+          "title": "坚定自信，实现中国梦"
+        }
+      ],
+      "source": "github/path-pol.js (SELF_VIDEO_PACKS, R2 key video/pol5.mp4)"
+    },
+    {
+      "subject": "语文",
+      "unit_id": "u_chn_1",
+      "lesson": "沁园春·长沙",
+      "chapter": "第一单元青春激扬",
+      "video_title": "沁园春·长沙",
+      "bvid": "BV1JB4y1G7kF",
+      "part": 1,
+      "duration": "26:47",
+      "duration_s": 1607,
+      "up": "名师课堂",
+      "video_url": "/video/chn1.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/chn1.mp4",
+      "vtt_url": "/video/chn1.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：青年毛泽东的两首诗"
+        },
+        {
+          "start_s": 85,
+          "title": "写作背景：1925年秋重游橘子洲头"
+        },
+        {
+          "start_s": 122,
+          "title": "赏词三法：内容、手法、情感"
+        },
+        {
+          "start_s": 150,
+          "title": "上片首句：独立寒秋与倒装"
+        },
+        {
+          "start_s": 266,
+          "title": "意象：湘江秋景图总说"
+        },
+        {
+          "start_s": 315,
+          "title": "万山红遍与层林尽染"
+        },
+        {
+          "start_s": 419,
+          "title": "漫江碧透与红碧映衬"
+        },
+        {
+          "start_s": 488,
+          "title": "百舸争流与鹰击长空"
+        },
+        {
+          "start_s": 568,
+          "title": "鱼翔浅底与万类霜天竞自由"
+        },
+        {
+          "start_s": 769,
+          "title": "怅寥廓：问苍茫大地谁主沉浮"
+        },
+        {
+          "start_s": 845,
+          "title": "下片过片：携来百侣曾游"
+        },
+        {
+          "start_s": 966,
+          "title": "同学少年与指点江山"
+        },
+        {
+          "start_s": 1082,
+          "title": "中流击水与谁主沉浮的回答"
+        },
+        {
+          "start_s": 1218,
+          "title": "全词总结与课后练习"
+        }
+      ],
+      "source": "github/path-chn.js (SELF_VIDEO_PACKS, R2 key video/chn1.mp4)"
+    },
+    {
+      "subject": "语文",
+      "unit_id": "u_chn_2",
+      "lesson": "诗歌四首",
+      "chapter": "第一单元青春激扬",
+      "video_title": "诗歌四首",
+      "bvid": "BV1JB4y1G7kF",
+      "part": 2,
+      "duration": "25:40",
+      "duration_s": 1540,
+      "up": "名师课堂",
+      "video_url": "/video/chn2.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/chn2.mp4",
+      "vtt_url": "/video/chn2.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：本课学两首现代诗"
+        },
+        {
+          "start_s": 30,
+          "title": "郭沫若与五四文学革命背景"
+        },
+        {
+          "start_s": 217,
+          "title": "第一首赏析：新奇主观化的意象"
+        },
+        {
+          "start_s": 257,
+          "title": "狂飙突进的精神：一种力"
+        },
+        {
+          "start_s": 326,
+          "title": "自由的语言形式"
+        },
+        {
+          "start_s": 486,
+          "title": "小结第一首，引入第二首"
+        },
+        {
+          "start_s": 526,
+          "title": "昌耀与峨日朵雪峰之侧"
+        },
+        {
+          "start_s": 585,
+          "title": "张力是什么"
+        },
+        {
+          "start_s": 749,
+          "title": "词语的张力与意象对比"
+        },
+        {
+          "start_s": 918,
+          "title": "意象叠加与减少"
+        },
+        {
+          "start_s": 1051,
+          "title": "比喻的暗示意义：雄鹰与蜘蛛"
+        },
+        {
+          "start_s": 1261,
+          "title": "情感变化与抒情的节制"
+        },
+        {
+          "start_s": 1412,
+          "title": "课堂反馈与课后作业"
+        }
+      ],
+      "source": "github/path-chn.js (SELF_VIDEO_PACKS, R2 key video/chn2.mp4)"
+    },
+    {
+      "subject": "语文",
+      "unit_id": "u_chn_3",
+      "lesson": "小说两篇",
+      "chapter": "第一单元青春激扬",
+      "video_title": "小说两篇（百合花/哦，香雪）",
+      "bvid": "BV1JB4y1G7kF",
+      "part": 4,
+      "duration": "26:14",
+      "duration_s": 1574,
+      "up": "名师课堂",
+      "video_url": "/video/chn3.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/chn3.mp4",
+      "vtt_url": "/video/chn3.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：战争印象与《百合花》的别样角度"
+        },
+        {
+          "start_s": 27,
+          "title": "作者茹志娟与茅盾的评价"
+        },
+        {
+          "start_s": 102,
+          "title": "写作背景：1946年中秋与前线包扎所"
+        },
+        {
+          "start_s": 150,
+          "title": "战争题材两类与小说三要素"
+        },
+        {
+          "start_s": 214,
+          "title": "梳理情节：三个人物与四段情节"
+        },
+        {
+          "start_s": 271,
+          "title": "细节描写：衣服上的破洞四次"
+        },
+        {
+          "start_s": 448,
+          "title": "人物描写手法与性格特征"
+        },
+        {
+          "start_s": 612,
+          "title": "担架员侧面描写与刻画方法总结"
+        },
+        {
+          "start_s": 704,
+          "title": "语言特色：清新优美与句子赏析"
+        },
+        {
+          "start_s": 812,
+          "title": "对比手法：枪筒插花与两种态度"
+        },
+        {
+          "start_s": 908,
+          "title": "叙述方式五种与顺序、线索"
+        },
+        {
+          "start_s": 1011,
+          "title": "主题：百合花被子的象征意义"
+        },
+        {
+          "start_s": 1229,
+          "title": "总结：以小见大与青春赞歌"
+        },
+        {
+          "start_s": 1326,
+          "title": "反馈练习：馒头细节与课后作业"
+        }
+      ],
+      "source": "github/path-chn.js (SELF_VIDEO_PACKS, R2 key video/chn3.mp4)"
+    },
+    {
+      "subject": "语文",
+      "unit_id": "u_chn_4",
+      "lesson": "新闻三篇",
+      "chapter": "第二单元劳动光荣",
+      "video_title": "新闻三篇（喜看稻菽千重浪）",
+      "bvid": "BV1JB4y1G7kF",
+      "part": 7,
+      "duration": "27:10",
+      "duration_s": 1630,
+      "up": "名师课堂",
+      "video_url": "/video/chn4.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/chn4.mp4",
+      "vtt_url": "/video/chn4.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：科技日报人物通讯《喜看稻菽千重浪》"
+        },
+        {
+          "start_s": 17,
+          "title": "学习目标：读人物通讯、分析报道角度"
+        },
+        {
+          "start_s": 111,
+          "title": "人物通讯的概念：以人物新近行动为新闻"
+        },
+        {
+          "start_s": 134,
+          "title": "从题目入手：毛泽东诗句与副标题"
+        },
+        {
+          "start_s": 228,
+          "title": "全文四部分与四个小标题"
+        },
+        {
+          "start_s": 257,
+          "title": "第一部分：曾记否，到中流击水"
+        },
+        {
+          "start_s": 468,
+          "title": "纵观全文：袁隆平的时间线与精神品质"
+        },
+        {
+          "start_s": 559,
+          "title": "写法一：抓住吸引人的故事"
+        },
+        {
+          "start_s": 637,
+          "title": "写法二：打造动人的细节"
+        },
+        {
+          "start_s": 691,
+          "title": "细节赏析：眯起双眼与泥腿子院士"
+        },
+        {
+          "start_s": 927,
+          "title": "写法三：体现个性化的语言"
+        },
+        {
+          "start_s": 1015,
+          "title": "人物通讯的两条线：过程线与思想线"
+        },
+        {
+          "start_s": 1209,
+          "title": "回顾方法与学以致用：自读钟扬与张秉贵"
+        },
+        {
+          "start_s": 1415,
+          "title": "德媒报道朗读与感动中国颁奖词收束"
+        }
+      ],
+      "source": "github/path-chn.js (SELF_VIDEO_PACKS, R2 key video/chn4.mp4)"
+    },
+    {
+      "subject": "语文",
+      "unit_id": "u_chn_5",
+      "lesson": "以工匠精神雕琢时代品质",
+      "chapter": "第二单元劳动光荣",
+      "video_title": "以工匠精神雕琢时代品质",
+      "bvid": "BV1JB4y1G7kF",
+      "part": 8,
+      "duration": "26:47",
+      "duration_s": 1607,
+      "up": "名师课堂",
+      "video_url": "/video/chn5.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/chn5.mp4",
+      "vtt_url": "/video/chn5.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：工匠精神与本课学习目标"
+        },
+        {
+          "start_s": 124,
+          "title": "知识点：新闻评论的定义与特点"
+        },
+        {
+          "start_s": 252,
+          "title": "写作背景与作者李斌"
+        },
+        {
+          "start_s": 384,
+          "title": "导入材料：故宫钟表修复师王津"
+        },
+        {
+          "start_s": 527,
+          "title": "钟表修复流程与王津的成就"
+        },
+        {
+          "start_s": 652,
+          "title": "精读第四自然段：工匠精神的内涵"
+        },
+        {
+          "start_s": 754,
+          "title": "理清思路：文章的三部分结构"
+        },
+        {
+          "start_s": 851,
+          "title": "论证方法：引证、对比、类比、假设"
+        },
+        {
+          "start_s": 962,
+          "title": "语言特色：整散结合、生动形象"
+        },
+        {
+          "start_s": 1029,
+          "title": "拓展：高凤林为火箭焊接心脏"
+        },
+        {
+          "start_s": 1136,
+          "title": "拓展：顾秋亮与宁允展"
+        },
+        {
+          "start_s": 1326,
+          "title": "拓展：80后造船工匠张东伟"
+        },
+        {
+          "start_s": 1407,
+          "title": "践行工匠精神：学习、态度与坚持"
+        },
+        {
+          "start_s": 1494,
+          "title": "总结全文与课后作业"
+        }
+      ],
+      "source": "github/path-chn.js (SELF_VIDEO_PACKS, R2 key video/chn5.mp4)"
+    },
+    {
+      "subject": "语文",
+      "unit_id": "u_chn_6",
+      "lesson": "诗经两首",
+      "chapter": "第二单元劳动光荣",
+      "video_title": "诗经两首（芣苢/插秧歌）",
+      "bvid": "BV1JB4y1G7kF",
+      "part": 9,
+      "duration": "26:15",
+      "duration_s": 1575,
+      "up": "名师课堂",
+      "video_url": "/video/chn6.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/chn6.mp4",
+      "vtt_url": "/video/chn6.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：劳动主题与两首诗导入"
+        },
+        {
+          "start_s": 58,
+          "title": "诗经常识：第一部诗歌总集与风雅颂"
+        },
+        {
+          "start_s": 173,
+          "title": "《芣苢》出自《周南》：背景与朗读"
+        },
+        {
+          "start_s": 243,
+          "title": "注释：六个动词采有掇捋袺襭"
+        },
+        {
+          "start_s": 402,
+          "title": "动词分三组：劳动过程层层推进"
+        },
+        {
+          "start_s": 486,
+          "title": "采集芣苢的习俗：车前草与求子"
+        },
+        {
+          "start_s": 553,
+          "title": "转入南宋：杨万里与诚斋体"
+        },
+        {
+          "start_s": 646,
+          "title": "《插秧歌》朗读"
+        },
+        {
+          "start_s": 755,
+          "title": "一二句：全家总动员抛接拔插"
+        },
+        {
+          "start_s": 793,
+          "title": "三四句：兜鍪蓑甲与雨中抢插"
+        },
+        {
+          "start_s": 862,
+          "title": "五六句七八句：唤与不答"
+        },
+        {
+          "start_s": 948,
+          "title": "鉴赏路径：捕捉刹那间的意趣之美"
+        },
+        {
+          "start_s": 1061,
+          "title": "两首诗对比：劳动者特写与表现形式"
+        },
+        {
+          "start_s": 1245,
+          "title": "课堂反馈：芣苢辨误、《无衣》与课后作业"
+        }
+      ],
+      "source": "github/path-chn.js (SELF_VIDEO_PACKS, R2 key video/chn6.mp4)"
+    },
+    {
+      "subject": "语文",
+      "unit_id": "u_chn_7",
+      "lesson": "短歌行·归园田居",
+      "chapter": "第三单元生命的诗意",
+      "video_title": "短歌行·归园田居",
+      "bvid": "BV1JB4y1G7kF",
+      "part": 11,
+      "duration": "25:48",
+      "duration_s": 1548,
+      "up": "名师课堂",
+      "video_url": "/video/chn7.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/chn7.mp4",
+      "vtt_url": "/video/chn7.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：曹操与《短歌行》"
+        },
+        {
+          "start_s": 33,
+          "title": "赏诗方法：知人论世"
+        },
+        {
+          "start_s": 81,
+          "title": "曹操其人：政治家、军事家、文学家"
+        },
+        {
+          "start_s": 133,
+          "title": "曹操的诗：乐府古题与建安风骨"
+        },
+        {
+          "start_s": 199,
+          "title": "写作背景：赤壁大战前夕之说存疑"
+        },
+        {
+          "start_s": 275,
+          "title": "全诗结构：八章与诗眼“忧”"
+        },
+        {
+          "start_s": 291,
+          "title": "第一二章：对酒当歌、人生几何"
+        },
+        {
+          "start_s": 434,
+          "title": "慨当以慷、唯有杜康与借代"
+        },
+        {
+          "start_s": 626,
+          "title": "第三四章：青青子衿与求贤若渴"
+        },
+        {
+          "start_s": 818,
+          "title": "第五六章：明明如月与求贤不得"
+        },
+        {
+          "start_s": 1082,
+          "title": "第七八章：月明星稀与周公吐哺"
+        },
+        {
+          "start_s": 1371,
+          "title": "总结：曹操三忧及内在联系"
+        },
+        {
+          "start_s": 1403,
+          "title": "艺术特色：用典与比喻"
+        },
+        {
+          "start_s": 1485,
+          "title": "反馈练习：三道思考题"
+        }
+      ],
+      "source": "github/path-chn.js (SELF_VIDEO_PACKS, R2 key video/chn7.mp4)"
+    },
+    {
+      "subject": "语文",
+      "unit_id": "u_chn_8",
+      "lesson": "李杜白三篇",
+      "chapter": "第三单元生命的诗意",
+      "video_title": "李杜白三篇",
+      "bvid": "BV1JB4y1G7kF",
+      "part": 13,
+      "duration": "25:23",
+      "duration_s": 1523,
+      "up": "名师课堂",
+      "video_url": "/video/chn8.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/chn8.mp4",
+      "vtt_url": "/video/chn8.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：诗仙李白与本课目标"
+        },
+        {
+          "start_s": 69,
+          "title": "解题：吟、留别与古体诗"
+        },
+        {
+          "start_s": 130,
+          "title": "读音落实与特殊句式"
+        },
+        {
+          "start_s": 175,
+          "title": "全诗脉络：梦前、梦中、梦后"
+        },
+        {
+          "start_s": 256,
+          "title": "写作背景：长安一年多的遭遇"
+        },
+        {
+          "start_s": 400,
+          "title": "李白诗歌的浪漫主义手法"
+        },
+        {
+          "start_s": 559,
+          "title": "整体阅读：抓住梦游主线"
+        },
+        {
+          "start_s": 586,
+          "title": "梦前：瀛洲衬托天姥之高"
+        },
+        {
+          "start_s": 709,
+          "title": "梦中：月夜渡湖与谢公屐"
+        },
+        {
+          "start_s": 833,
+          "title": "梦中山景：所见所闻"
+        },
+        {
+          "start_s": 908,
+          "title": "梦境高潮：仙人盛会"
+        },
+        {
+          "start_s": 1171,
+          "title": "梦后：安能摧眉折腰事权贵"
+        },
+        {
+          "start_s": 1451,
+          "title": "课堂小结与诵读作业"
+        }
+      ],
+      "source": "github/path-chn.js (SELF_VIDEO_PACKS, R2 key video/chn8.mp4)"
+    },
+    {
+      "subject": "语文",
+      "unit_id": "u_chn_9",
+      "lesson": "宋词三首",
+      "chapter": "第三单元生命的诗意",
+      "video_title": "宋词三首",
+      "bvid": "BV1JB4y1G7kF",
+      "part": 15,
+      "duration": "57:12",
+      "duration_s": 3432,
+      "up": "名师课堂",
+      "video_url": "/video/chn9.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/chn9.mp4",
+      "vtt_url": "/video/chn9.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：两首豪放怀古词"
+        },
+        {
+          "start_s": 81,
+          "title": "苏轼生平与念奴娇写作背景"
+        },
+        {
+          "start_s": 190,
+          "title": "念奴娇：豪放特征与周瑜形象"
+        },
+        {
+          "start_s": 516,
+          "title": "豪放特征三方面总结"
+        },
+        {
+          "start_s": 657,
+          "title": "永遇乐：辛弃疾生平与背景"
+        },
+        {
+          "start_s": 765,
+          "title": "五个典故逐个讲"
+        },
+        {
+          "start_s": 1110,
+          "title": "对比鉴赏：两首词的用典之别"
+        },
+        {
+          "start_s": 1320,
+          "title": "对比鉴赏：借景抒情与词风之别"
+        },
+        {
+          "start_s": 1502,
+          "title": "回顾：念奴娇写景咏史抒情合一"
+        },
+        {
+          "start_s": 1569,
+          "title": "声声慢：开篇七组叠字"
+        },
+        {
+          "start_s": 1702,
+          "title": "乍暖还寒是什么时节"
+        },
+        {
+          "start_s": 2239,
+          "title": "字面讲完：内容与技巧两个重点"
+        },
+        {
+          "start_s": 2280,
+          "title": "愁从何来：李清照的人生经历"
+        },
+        {
+          "start_s": 2862,
+          "title": "创作技巧：十四个叠字的声调"
+        }
+      ],
+      "source": "github/path-chn.js (SELF_VIDEO_PACKS, R2 key video/chn9.mp4)"
+    },
+    {
+      "subject": "语文",
+      "unit_id": "u_chn_10",
+      "lesson": "家乡文化生活",
+      "chapter": "第四单元家乡文化生活",
+      "video_title": "家乡文化生活",
+      "bvid": "BV1JB4y1G7kF",
+      "part": 17,
+      "duration": "26:30",
+      "duration_s": 1590,
+      "up": "名师课堂",
+      "video_url": "/video/chn10.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/chn10.mp4",
+      "vtt_url": "/video/chn10.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：家乡文化与单元目标"
+        },
+        {
+          "start_s": 101,
+          "title": "三个学习活动各有侧重"
+        },
+        {
+          "start_s": 200,
+          "title": "活动一：记录家乡的人和物"
+        },
+        {
+          "start_s": 242,
+          "title": "访谈的一般流程"
+        },
+        {
+          "start_s": 316,
+          "title": "访谈问题的设计与技巧"
+        },
+        {
+          "start_s": 380,
+          "title": "活动二：家乡文化生活现状调查"
+        },
+        {
+          "start_s": 404,
+          "title": "调查题目举例"
+        },
+        {
+          "start_s": 443,
+          "title": "问题意识与调研计划"
+        },
+        {
+          "start_s": 626,
+          "title": "调查报告：汇报与一般要素"
+        },
+        {
+          "start_s": 691,
+          "title": "活动三：参与家乡文化建设"
+        },
+        {
+          "start_s": 721,
+          "title": "建议书的格式"
+        },
+        {
+          "start_s": 894,
+          "title": "活动举例：写家乡风物志"
+        },
+        {
+          "start_s": 1101,
+          "title": "风物志访谈设计与实施"
+        },
+        {
+          "start_s": 1386,
+          "title": "交流展示与活动方向参考"
+        }
+      ],
+      "source": "github/path-chn.js (SELF_VIDEO_PACKS, R2 key video/chn10.mp4)"
+    },
+    {
+      "subject": "语文",
+      "unit_id": "u_chn_11",
+      "lesson": "乡土中国（整本书阅读）",
+      "chapter": "第五单元乡土的中国",
+      "video_title": "乡土中国（整本书阅读）",
+      "bvid": "BV1JB4y1G7kF",
+      "part": 18,
+      "duration": "26:13",
+      "duration_s": 1573,
+      "up": "名师课堂",
+      "video_url": "/video/chn11.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/chn11.mp4",
+      "vtt_url": "/video/chn11.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：费孝通与《乡土中国》"
+        },
+        {
+          "start_s": 26,
+          "title": "作者费孝通其人"
+        },
+        {
+          "start_s": 80,
+          "title": "阅读建议一：先粗后细"
+        },
+        {
+          "start_s": 100,
+          "title": "粗读第一点：读序言后记"
+        },
+        {
+          "start_s": 168,
+          "title": "粗读第二点：浏览目录"
+        },
+        {
+          "start_s": 283,
+          "title": "粗读第三点：浏览正文跳读"
+        },
+        {
+          "start_s": 349,
+          "title": "细读：以差序格局为例"
+        },
+        {
+          "start_s": 517,
+          "title": "阅读建议二：抓住核心概念"
+        },
+        {
+          "start_s": 600,
+          "title": "怎样抓住核心概念"
+        },
+        {
+          "start_s": 740,
+          "title": "理解概念之间的联系"
+        },
+        {
+          "start_s": 852,
+          "title": "阅读建议三：思维导图"
+        },
+        {
+          "start_s": 960,
+          "title": "例子：文字下乡两篇"
+        },
+        {
+          "start_s": 1213,
+          "title": "阅读建议四：品读写作特色"
+        },
+        {
+          "start_s": 1486,
+          "title": "两个练习与参考答案"
+        }
+      ],
+      "source": "github/path-chn.js (SELF_VIDEO_PACKS, R2 key video/chn11.mp4)"
+    },
+    {
+      "subject": "语文",
+      "unit_id": "u_chn_12",
+      "lesson": "劝学·师说",
+      "chapter": "第六单元学习之道",
+      "video_title": "劝学·师说",
+      "bvid": "BV1JB4y1G7kF",
+      "part": 19,
+      "duration": "69:13",
+      "duration_s": 4153,
+      "up": "名师课堂",
+      "video_url": "/video/chn12.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/chn12.mp4",
+      "vtt_url": "/video/chn12.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：荀子与《劝学》"
+        },
+        {
+          "start_s": 138,
+          "title": "重点文言知识总结"
+        },
+        {
+          "start_s": 203,
+          "title": "实词与通假字"
+        },
+        {
+          "start_s": 411,
+          "title": "特殊句式"
+        },
+        {
+          "start_s": 487,
+          "title": "走进劝学：品读第一段"
+        },
+        {
+          "start_s": 563,
+          "title": "第三段：四个比喻"
+        },
+        {
+          "start_s": 642,
+          "title": "第四段：积累、坚持、专一"
+        },
+        {
+          "start_s": 736,
+          "title": "中心论点与全文总结"
+        },
+        {
+          "start_s": 1507,
+          "title": "师说：韩愈与写作背景"
+        },
+        {
+          "start_s": 1817,
+          "title": "第一段：师者所以传道受业解惑也"
+        },
+        {
+          "start_s": 2128,
+          "title": "耻学于师与通假字"
+        },
+        {
+          "start_s": 2811,
+          "title": "中心论点与三段论证"
+        },
+        {
+          "start_s": 3051,
+          "title": "知识点总结"
+        },
+        {
+          "start_s": 3780,
+          "title": "特殊句式与全文收束"
+        }
+      ],
+      "source": "github/path-chn.js (SELF_VIDEO_PACKS, R2 key video/chn12.mp4)"
+    },
+    {
+      "subject": "语文",
+      "unit_id": "u_chn_13",
+      "lesson": "反对党八股（节选）",
+      "chapter": "第六单元学习之道",
+      "video_title": "反对党八股（节选）",
+      "bvid": "BV1Lu411H7GG",
+      "part": 1,
+      "duration": "26:00",
+      "duration_s": 1560,
+      "up": "小熊图书",
+      "video_url": "/video/chn13.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/chn13.mp4",
+      "vtt_url": "/video/chn13.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：第十一课反对党八股"
+        },
+        {
+          "start_s": 138,
+          "title": "八股文：没有内容只讲形式"
+        },
+        {
+          "start_s": 173,
+          "title": "学习目标：论证方法与语言风格"
+        },
+        {
+          "start_s": 272,
+          "title": "作者毛泽东与党八股的定义"
+        },
+        {
+          "start_s": 383,
+          "title": "写作背景：1942年延安整风"
+        },
+        {
+          "start_s": 437,
+          "title": "全文五个部分"
+        },
+        {
+          "start_s": 492,
+          "title": "本课选讲：第三部分八大罪状"
+        },
+        {
+          "start_s": 600,
+          "title": "选文三部分：概括、逐条、总结"
+        },
+        {
+          "start_s": 932,
+          "title": "第一罪状：空话连篇"
+        },
+        {
+          "start_s": 1115,
+          "title": "第二罪状：装腔作势借以吓人"
+        },
+        {
+          "start_s": 1303,
+          "title": "第二罪状：先摆罪状再析原因危害"
+        },
+        {
+          "start_s": 1412,
+          "title": "第三罪状：无的放矢不看对象"
+        },
+        {
+          "start_s": 1531,
+          "title": "小结：只讲了前三条罪状"
+        }
+      ],
+      "source": "github/path-chn.js (SELF_VIDEO_PACKS, R2 key video/chn13.mp4)"
+    },
+    {
+      "subject": "语文",
+      "unit_id": "u_chn_14",
+      "lesson": "拿来主义",
+      "chapter": "第六单元学习之道",
+      "video_title": "拿来主义",
+      "bvid": "BV1JB4y1G7kF",
+      "part": 20,
+      "duration": "27:19",
+      "duration_s": 1639,
+      "up": "名师课堂",
+      "video_url": "/video/chn14.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/chn14.mp4",
+      "vtt_url": "/video/chn14.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：鲁迅《拿来主义》"
+        },
+        {
+          "start_s": 34,
+          "title": "作者介绍"
+        },
+        {
+          "start_s": 194,
+          "title": "写作背景"
+        },
+        {
+          "start_s": 292,
+          "title": "第一部分：破除闭关主义与送去主义"
+        },
+        {
+          "start_s": 349,
+          "title": "第一段：闭关主义"
+        },
+        {
+          "start_s": 399,
+          "title": "送去主义"
+        },
+        {
+          "start_s": 480,
+          "title": "第二段：提出拿来的主张"
+        },
+        {
+          "start_s": 546,
+          "title": "四五六段：送去与送来的关系"
+        },
+        {
+          "start_s": 767,
+          "title": "第七段：拿来主义的宗旨"
+        },
+        {
+          "start_s": 901,
+          "title": "中心论点：运用脑髓，放出眼光，自己来拿"
+        },
+        {
+          "start_s": 940,
+          "title": "第二部分：大宅子比喻"
+        },
+        {
+          "start_s": 1030,
+          "title": "第九段：鱼翅、鸦片、烟枪烟灯"
+        },
+        {
+          "start_s": 1226,
+          "title": "拿来主义的三重内涵"
+        },
+        {
+          "start_s": 1576,
+          "title": "总结"
+        }
+      ],
+      "source": "github/path-chn.js (SELF_VIDEO_PACKS, R2 key video/chn14.mp4)"
+    },
+    {
+      "subject": "语文",
+      "unit_id": "u_chn_15",
+      "lesson": "读书两篇",
+      "chapter": "第六单元学习之道",
+      "video_title": "读书两篇",
+      "bvid": "BV1H14y1H7aA",
+      "part": 1,
+      "duration": "47:53",
+      "duration_s": 2873,
+      "up": "项仁军名师工作室",
+      "video_url": "/video/chn15.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/chn15.mp4",
+      "vtt_url": "/video/chn15.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：本课学《上图书馆》"
+        },
+        {
+          "start_s": 121,
+          "title": "作者王佐良"
+        },
+        {
+          "start_s": 274,
+          "title": "字音落实"
+        },
+        {
+          "start_s": 397,
+          "title": "第一段：引用名言引出上图书馆之乐"
+        },
+        {
+          "start_s": 444,
+          "title": "中学阶段：文华中学图书馆"
+        },
+        {
+          "start_s": 483,
+          "title": "清华、牛津、大英博物馆图书馆"
+        },
+        {
+          "start_s": 538,
+          "title": "第十自然段：点出上图书馆之乐"
+        },
+        {
+          "start_s": 1329,
+          "title": "不同阶段的读书选择与感受"
+        },
+        {
+          "start_s": 1679,
+          "title": "上图书馆之乐分写：四种乐"
+        },
+        {
+          "start_s": 1868,
+          "title": "研读：观点与论证方法"
+        },
+        {
+          "start_s": 2137,
+          "title": "比较阅读：两篇文章的异同"
+        },
+        {
+          "start_s": 2310,
+          "title": "课堂延伸：红房子两层意思"
+        },
+        {
+          "start_s": 2602,
+          "title": "观念性阅读与健康的阅读观"
+        },
+        {
+          "start_s": 2821,
+          "title": "随笔的特点与课堂收束"
+        }
+      ],
+      "source": "github/path-chn.js (SELF_VIDEO_PACKS, R2 key video/chn15.mp4)"
+    },
+    {
+      "subject": "语文",
+      "unit_id": "u_chn_16",
+      "lesson": "故都的秋·荷塘月色",
+      "chapter": "第七单元自然情怀",
+      "video_title": "故都的秋·荷塘月色",
+      "bvid": "BV1JB4y1G7kF",
+      "part": 22,
+      "duration": "26:52",
+      "duration_s": 1612,
+      "up": "名师课堂",
+      "video_url": "/video/chn16.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/chn16.mp4",
+      "vtt_url": "/video/chn16.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：必修上册第24课故都的秋"
+        },
+        {
+          "start_s": 47,
+          "title": "作者郁达夫简介"
+        },
+        {
+          "start_s": 104,
+          "title": "写作背景与题目"
+        },
+        {
+          "start_s": 143,
+          "title": "结构：开头结尾南北之秋对比"
+        },
+        {
+          "start_s": 185,
+          "title": "开头：秋的总体感觉"
+        },
+        {
+          "start_s": 209,
+          "title": "到哪里寻觅故都最有代表性的秋景"
+        },
+        {
+          "start_s": 257,
+          "title": "五幅秋景：破屋晨光与落蕊"
+        },
+        {
+          "start_s": 302,
+          "title": "秋蝉、秋雨、秋果"
+        },
+        {
+          "start_s": 381,
+          "title": "清静悲凉：郁达夫的审美体验"
+        },
+        {
+          "start_s": 427,
+          "title": "最后三段：议论与抒情"
+        },
+        {
+          "start_s": 585,
+          "title": "语言功力：整齐语句与音韵之美"
+        },
+        {
+          "start_s": 660,
+          "title": "大雅与大俗融为一体"
+        },
+        {
+          "start_s": 881,
+          "title": "孤独之美"
+        },
+        {
+          "start_s": 1524,
+          "title": "秋果图与全文基调是否相悖"
+        }
+      ],
+      "source": "github/path-chn.js (SELF_VIDEO_PACKS, R2 key video/chn16.mp4)"
+    },
+    {
+      "subject": "语文",
+      "unit_id": "u_chn_17",
+      "lesson": "我与地坛（节选）",
+      "chapter": "第七单元自然情怀",
+      "video_title": "我与地坛（节选）",
+      "bvid": "BV1JB4y1G7kF",
+      "part": 24,
+      "duration": "27:14",
+      "duration_s": 1634,
+      "up": "名师课堂",
+      "video_url": "/video/chn17.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/chn17.mp4",
+      "vtt_url": "/video/chn17.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：沿着轮椅的痕迹走进地坛"
+        },
+        {
+          "start_s": 43,
+          "title": "走近作者史铁生"
+        },
+        {
+          "start_s": 144,
+          "title": "写作与生命同构"
+        },
+        {
+          "start_s": 179,
+          "title": "《我与地坛》写于1989年"
+        },
+        {
+          "start_s": 250,
+          "title": "地坛与作者的缘分"
+        },
+        {
+          "start_s": 331,
+          "title": "21岁残疾与人生急转直下"
+        },
+        {
+          "start_s": 429,
+          "title": "三处景物描写"
+        },
+        {
+          "start_s": 809,
+          "title": "与自己对话：关于死"
+        },
+        {
+          "start_s": 940,
+          "title": "从逃避者到思想者"
+        },
+        {
+          "start_s": 963,
+          "title": "另一个重要人物：母亲"
+        },
+        {
+          "start_s": 1020,
+          "title": "母亲的塑造：动作描写"
+        },
+        {
+          "start_s": 1212,
+          "title": "知道与不知道"
+        },
+        {
+          "start_s": 1437,
+          "title": "车辙与脚印：地坛与母亲合二为一"
+        },
+        {
+          "start_s": 1531,
+          "title": "收束：自传意味与感恩"
+        }
+      ],
+      "source": "github/path-chn.js (SELF_VIDEO_PACKS, R2 key video/chn17.mp4)"
+    },
+    {
+      "subject": "语文",
+      "unit_id": "u_chn_18",
+      "lesson": "赤壁赋·登泰山记",
+      "chapter": "第七单元自然情怀",
+      "video_title": "赤壁赋·登泰山记",
+      "bvid": "BV1JB4y1G7kF",
+      "part": 25,
+      "duration": "24:41",
+      "duration_s": 1481,
+      "up": "名师课堂",
+      "video_url": "/video/chn18.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/chn18.mp4",
+      "vtt_url": "/video/chn18.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：黄州赤壁因苏东坡闻名"
+        },
+        {
+          "start_s": 69,
+          "title": "学习目标"
+        },
+        {
+          "start_s": 197,
+          "title": "全文五段大意"
+        },
+        {
+          "start_s": 261,
+          "title": "第一段：夜游赤壁"
+        },
+        {
+          "start_s": 319,
+          "title": "月出之景与望美人兮天一方"
+        },
+        {
+          "start_s": 491,
+          "title": "洞箫之声如怨如慕"
+        },
+        {
+          "start_s": 605,
+          "title": "苏子问客：何为其然也"
+        },
+        {
+          "start_s": 653,
+          "title": "客曰：赤壁的历史与人生短促"
+        },
+        {
+          "start_s": 742,
+          "title": "第三段转折：由自然景物到历史古迹"
+        },
+        {
+          "start_s": 891,
+          "title": "第四段：苏子的回答"
+        },
+        {
+          "start_s": 937,
+          "title": "万物各有主、清风明月"
+        },
+        {
+          "start_s": 1085,
+          "title": "第五段：客喜而笑、与开头照应"
+        },
+        {
+          "start_s": 1162,
+          "title": "写景抒情说理完美融合"
+        },
+        {
+          "start_s": 1417,
+          "title": "收束：从庄子哲学中寻找人生之路"
+        }
+      ],
+      "source": "github/path-chn.js (SELF_VIDEO_PACKS, R2 key video/chn18.mp4)"
+    },
+    {
+      "subject": "语文",
+      "unit_id": "u_chn_19",
+      "lesson": "词语积累与词语解释",
+      "chapter": "第八单元语言家园",
+      "video_title": "词语积累与词语解释",
+      "bvid": "BV1JB4y1G7kF",
+      "part": 28,
+      "duration": "80:01",
+      "duration_s": 4801,
+      "up": "名师课堂",
+      "video_url": "/video/chn19.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/chn19.mp4",
+      "vtt_url": "/video/chn19.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：丰富词语积累"
+        },
+        {
+          "start_s": 40,
+          "title": "学习目标四条"
+        },
+        {
+          "start_s": 101,
+          "title": "语义场与词语家族"
+        },
+        {
+          "start_s": 261,
+          "title": "俗语家族"
+        },
+        {
+          "start_s": 966,
+          "title": "新词语"
+        },
+        {
+          "start_s": 1295,
+          "title": "新词语的特点：新颖性"
+        },
+        {
+          "start_s": 1511,
+          "title": "辩证看待新词语"
+        },
+        {
+          "start_s": 1557,
+          "title": "第二讲：一词多义与语境"
+        },
+        {
+          "start_s": 1698,
+          "title": "词义引申的两种方式"
+        },
+        {
+          "start_s": 2242,
+          "title": "成语中的古今词义"
+        },
+        {
+          "start_s": 2844,
+          "title": "词义的转移、引申与缩小扩大"
+        },
+        {
+          "start_s": 3357,
+          "title": "作家作品中的词语锤炼"
+        },
+        {
+          "start_s": 3635,
+          "title": "在具体语境中使用词语"
+        },
+        {
+          "start_s": 4333,
+          "title": "语体色彩：溜索与普通人家"
+        }
+      ],
+      "source": "github/path-chn.js (SELF_VIDEO_PACKS, R2 key video/chn19.mp4)"
+    },
+    {
+      "subject": "语文",
+      "unit_id": "u_chn_20",
+      "lesson": "古诗词诵读四首",
+      "chapter": "古诗词诵读古诗词诵读",
+      "video_title": "古诗词诵读四首",
+      "bvid": "BV1mCqkYPEYr",
+      "part": 1,
+      "duration": "57:49",
+      "duration_s": 3469,
+      "up": "王老师",
+      "video_url": "/video/chn20.mp4",
+      "video_full_url": "https://tianya-study.santalin87.workers.dev/video/chn20.mp4",
+      "vtt_url": "/video/chn20.vtt",
+      "segments": [
+        {
+          "start_s": 0,
+          "title": "开场：南唐后主李煜"
+        },
+        {
+          "start_s": 43,
+          "title": "李煜生平与词风分期"
+        },
+        {
+          "start_s": 359,
+          "title": "写作背景：975年南唐亡国"
+        },
+        {
+          "start_s": 719,
+          "title": "赏词：李煜的绝笔之作虞美人"
+        },
+        {
+          "start_s": 758,
+          "title": "春花秋月何时了，往事知多少"
+        },
+        {
+          "start_s": 940,
+          "title": "小楼昨夜又东风"
+        },
+        {
+          "start_s": 988,
+          "title": "故国不堪回首月明中"
+        },
+        {
+          "start_s": 1159,
+          "title": "雕栏玉砌应犹在，只是朱颜改"
+        },
+        {
+          "start_s": 1285,
+          "title": "艺术手法：对比与想象"
+        },
+        {
+          "start_s": 1337,
+          "title": "问君能有几多愁，恰似一江春水向东流"
+        },
+        {
+          "start_s": 1694,
+          "title": "第二首：涉江采芙蓉与古诗十九首"
+        },
+        {
+          "start_s": 2017,
+          "title": "逐句赏析：涉江采芙蓉"
+        },
+        {
+          "start_s": 2316,
+          "title": "为什么要采芙蓉"
+        },
+        {
+          "start_s": 2646,
+          "title": "同心而离居，忧伤以终老"
+        }
+      ],
+      "source": "github/path-chn.js (SELF_VIDEO_PACKS, R2 key video/chn20.mp4)"
+    }
+  ],
+  "lesson_video_map": [
+    {
+      "subject": "数学",
+      "unit_id": "u_cnm_h001",
+      "lesson": "集合的概念",
+      "chapter": "第一章集合与常用逻辑用语",
+      "video_title": "集合的概念",
+      "bvid": "BV1Ek4y1w7ma",
+      "part": 1,
+      "duration": "",
+      "duration_s": null,
+      "up": "宋浩老师·高中数学",
+      "selfhosted_src": "/video/m1.mp4",
+      "selfhosted_vtt": "/video/m1.vtt",
+      "has_segments": true,
+      "source": "github/path.js + github/index.html 内嵌 SELF_VIDEOS"
+    },
+    {
+      "subject": "数学",
+      "unit_id": "u_cnm_h005",
+      "lesson": "集合的关系与运算",
+      "chapter": "第一章集合与常用逻辑用语",
+      "video_title": "集合间的基本关系与运算",
+      "bvid": "BV1TP411h7U2",
+      "part": 1,
+      "duration": "",
+      "duration_s": null,
+      "up": "宋浩老师·高中数学",
+      "selfhosted_src": "/video/m2.mp4",
+      "selfhosted_vtt": "/video/m2.vtt",
+      "has_segments": true,
+      "source": "github/path.js + github/index.html 内嵌 SELF_VIDEOS"
+    },
+    {
+      "subject": "数学",
+      "unit_id": "u_cnm_h012",
+      "lesson": "充分条件与必要条件",
+      "chapter": "第一章集合与常用逻辑用语",
+      "video_title": "充分条件与必要条件",
+      "bvid": "BV11p4y1F78j",
+      "part": 1,
+      "duration": "",
+      "duration_s": null,
+      "up": "宋浩老师·高中数学",
+      "selfhosted_src": "/video/m3.mp4",
+      "selfhosted_vtt": "/video/m3.vtt",
+      "has_segments": true,
+      "source": "github/path.js + github/index.html 内嵌 SELF_VIDEOS"
+    },
+    {
+      "subject": "数学",
+      "unit_id": "u_cnm_h014",
+      "lesson": "全称量词与存在量词",
+      "chapter": "第一章集合与常用逻辑用语",
+      "video_title": "全称量词与存在量词",
+      "bvid": "BV1KF411S7aq",
+      "part": 1,
+      "duration": "",
+      "duration_s": null,
+      "up": "宋浩老师·高中数学",
+      "selfhosted_src": "/video/m4.mp4",
+      "selfhosted_vtt": "/video/m4.vtt",
+      "has_segments": true,
+      "source": "github/path.js + github/index.html 内嵌 SELF_VIDEOS"
+    },
+    {
+      "subject": "数学",
+      "unit_id": "u_cnm_h016",
+      "lesson": "等式性质与不等式性质",
+      "chapter": "第二章一元二次函数、方程和不等式",
+      "video_title": "等式性质与不等式性质",
+      "bvid": "BV1A34y1P7as",
+      "part": 1,
+      "duration": "50:00",
+      "duration_s": 3000,
+      "up": "宋浩",
+      "selfhosted_src": "/video/m5.mp4",
+      "selfhosted_vtt": "/video/m5.vtt",
+      "has_segments": true,
+      "source": "github/path.js"
+    },
+    {
+      "subject": "数学",
+      "unit_id": "u_cnm_h021",
+      "lesson": "基本不等式",
+      "chapter": "第二章一元二次函数、方程和不等式",
+      "video_title": "基本不等式",
+      "bvid": "BV1B94y1h71g",
+      "part": 1,
+      "duration": "40:46",
+      "duration_s": 2446,
+      "up": "宋浩",
+      "selfhosted_src": "/video/m6.mp4",
+      "selfhosted_vtt": "/video/m6.vtt",
+      "has_segments": true,
+      "source": "github/path.js"
+    },
+    {
+      "subject": "数学",
+      "unit_id": "u_cnm_h023",
+      "lesson": "二次函数与一元二次方程、不等式",
+      "chapter": "第二章一元二次函数、方程和不等式",
+      "video_title": "二次函数与一元二次方程、不等式",
+      "bvid": "BV1Fz4y157pb",
+      "part": 1,
+      "duration": "85:15",
+      "duration_s": 5115,
+      "up": "宋浩",
+      "selfhosted_src": "/video/m7.mp4",
+      "selfhosted_vtt": "/video/m7.vtt",
+      "has_segments": true,
+      "source": "github/path.js"
+    },
+    {
+      "subject": "数学",
+      "unit_id": "u_cnm_h027",
+      "lesson": "函数的概念及其表示",
+      "chapter": "第三章函数的概念与性质",
+      "video_title": "函数的概念及其表示",
+      "bvid": "BV1KH4y1Z7Ax",
+      "part": 1,
+      "duration": "38:56",
+      "duration_s": 2336,
+      "up": "宋浩",
+      "selfhosted_src": "/video/m8.mp4",
+      "selfhosted_vtt": "/video/m8.vtt",
+      "has_segments": true,
+      "source": "github/path.js"
+    },
+    {
+      "subject": "数学",
+      "unit_id": "u_cnm_h032",
+      "lesson": "函数的基本性质",
+      "chapter": "第三章函数的概念与性质",
+      "video_title": "函数的基本性质",
+      "bvid": "BV1jw411e7cV",
+      "part": 1,
+      "duration": "99:56",
+      "duration_s": 5996,
+      "up": "宋浩",
+      "selfhosted_src": "/video/m9.mp4",
+      "selfhosted_vtt": "/video/m9.vtt",
+      "has_segments": true,
+      "source": "github/path.js"
+    },
+    {
+      "subject": "数学",
+      "unit_id": "u_cnm_h037",
+      "lesson": "幂函数",
+      "chapter": "第三章函数的概念与性质",
+      "video_title": "幂函数",
+      "bvid": "BV1ct4y1t7pv",
+      "part": 41,
+      "duration": "21:29",
+      "duration_s": 1289,
+      "up": "李尚泽",
+      "selfhosted_src": "/video/m10.mp4",
+      "selfhosted_vtt": "/video/m10.vtt",
+      "has_segments": true,
+      "source": "github/path.js"
+    },
+    {
+      "subject": "数学",
+      "unit_id": "u_cnm_h038",
+      "lesson": "函数的应用（一）",
+      "chapter": "第三章函数的概念与性质",
+      "video_title": "函数的应用（一）",
+      "bvid": "BV1Ze5Wz7EYa",
+      "part": 1,
+      "duration": "30:35",
+      "duration_s": 1835,
+      "up": "数亿有道",
+      "selfhosted_src": "/video/m16.mp4",
+      "selfhosted_vtt": "/video/m16.vtt",
+      "has_segments": true,
+      "source": "github/path.js"
+    },
+    {
+      "subject": "数学",
+      "unit_id": "u_cnm_h039",
+      "lesson": "指数",
+      "chapter": "第四章指数函数与对数函数",
+      "video_title": "指数",
+      "bvid": "BV1ct4y1t7pv",
+      "part": 45,
+      "duration": "27:23",
+      "duration_s": 1643,
+      "up": "李尚泽",
+      "selfhosted_src": "/video/m11.mp4",
+      "selfhosted_vtt": "/video/m11.vtt",
+      "has_segments": true,
+      "source": "github/path.js"
+    },
+    {
+      "subject": "数学",
+      "unit_id": "u_cnm_h041",
+      "lesson": "指数函数",
+      "chapter": "第四章指数函数与对数函数",
+      "video_title": "指数函数",
+      "bvid": "BV1ct4y1t7pv",
+      "part": 46,
+      "duration": "31:49",
+      "duration_s": 1909,
+      "up": "李尚泽",
+      "selfhosted_src": "/video/m12.mp4",
+      "selfhosted_vtt": "/video/m12.vtt",
+      "has_segments": true,
+      "source": "github/path.js"
+    },
+    {
+      "subject": "数学",
+      "unit_id": "u_cnm_h043",
+      "lesson": "对数",
+      "chapter": "第四章指数函数与对数函数",
+      "video_title": "对数",
+      "bvid": "BV1ct4y1t7pv",
+      "part": 49,
+      "duration": "55:41",
+      "duration_s": 3341,
+      "up": "李尚泽",
+      "selfhosted_src": "/video/m13.mp4",
+      "selfhosted_vtt": "/video/m13.vtt",
+      "has_segments": true,
+      "source": "github/path.js"
+    },
+    {
+      "subject": "数学",
+      "unit_id": "u_cnm_h046",
+      "lesson": "对数函数",
+      "chapter": "第四章指数函数与对数函数",
+      "video_title": "对数函数",
+      "bvid": "BV1ct4y1t7pv",
+      "part": 50,
+      "duration": "50:31",
+      "duration_s": 3031,
+      "up": "李尚泽",
+      "selfhosted_src": "/video/m14.mp4",
+      "selfhosted_vtt": "/video/m14.vtt",
+      "has_segments": true,
+      "source": "github/path.js"
+    },
+    {
+      "subject": "数学",
+      "unit_id": "u_cnm_h049",
+      "lesson": "函数的应用（二）",
+      "chapter": "第四章指数函数与对数函数",
+      "video_title": "函数的应用（二）",
+      "bvid": "BV1ct4y1t7pv",
+      "part": 55,
+      "duration": "58:34",
+      "duration_s": 3514,
+      "up": "李尚泽",
+      "selfhosted_src": "/video/m15.mp4",
+      "selfhosted_vtt": "/video/m15.vtt",
+      "has_segments": true,
+      "source": "github/path.js"
+    },
+    {
+      "subject": "数学",
+      "unit_id": "u_cnm_h055",
+      "lesson": "任意角和弧度制",
+      "chapter": "第五章三角函数",
+      "video_title": "任意角和弧度制",
+      "bvid": "BV1ct4y1t7pv",
+      "part": 58,
+      "duration": "51:58",
+      "duration_s": 3118,
+      "up": "李尚泽",
+      "selfhosted_src": "/video/m17.mp4",
+      "selfhosted_vtt": "/video/m17.vtt",
+      "has_segments": true,
+      "source": "github/path.js"
+    },
+    {
+      "subject": "数学",
+      "unit_id": "u_cnm_h060",
+      "lesson": "三角函数的概念",
+      "chapter": "第五章三角函数",
+      "video_title": "三角函数的概念",
+      "bvid": "BV1ct4y1t7pv",
+      "part": 59,
+      "duration": "78:34",
+      "duration_s": 4714,
+      "up": "李尚泽",
+      "selfhosted_src": "/video/m18.mp4",
+      "selfhosted_vtt": "/video/m18.vtt",
+      "has_segments": true,
+      "source": "github/path.js"
+    },
+    {
+      "subject": "数学",
+      "unit_id": "u_cnm_h064",
+      "lesson": "诱导公式",
+      "chapter": "第五章三角函数",
+      "video_title": "诱导公式",
+      "bvid": "BV1ct4y1t7pv",
+      "part": 63,
+      "duration": "55:37",
+      "duration_s": 3337,
+      "up": "李尚泽",
+      "selfhosted_src": "/video/m19.mp4",
+      "selfhosted_vtt": "/video/m19.vtt",
+      "has_segments": true,
+      "source": "github/path.js"
+    },
+    {
+      "subject": "数学",
+      "unit_id": "u_cnm_h066",
+      "lesson": "三角函数的图象与性质",
+      "chapter": "第五章三角函数",
+      "video_title": "三角函数的图象与性质",
+      "bvid": "BV1ct4y1t7pv",
+      "part": 64,
+      "duration": "82:48",
+      "duration_s": 4968,
+      "up": "李尚泽",
+      "selfhosted_src": "/video/m20.mp4",
+      "selfhosted_vtt": "/video/m20.vtt",
+      "has_segments": true,
+      "source": "github/path.js"
+    },
+    {
+      "subject": "数学",
+      "unit_id": "u_cnm_h070",
+      "lesson": "三角恒等变换",
+      "chapter": "第五章三角函数",
+      "video_title": "三角恒等变换",
+      "bvid": "BV1ct4y1t7pv",
+      "part": 68,
+      "duration": "115:28",
+      "duration_s": 6928,
+      "up": "李尚泽",
+      "selfhosted_src": "/video/m21.mp4",
+      "selfhosted_vtt": "/video/m21.vtt",
+      "has_segments": true,
+      "source": "github/path.js"
+    },
+    {
+      "subject": "数学",
+      "unit_id": "u_cnm_h075",
+      "lesson": "函数 y=Asin(ωx+φ)",
+      "chapter": "第五章三角函数",
+      "video_title": "函数 y=Asin(ωx+φ)",
+      "bvid": "BV1ct4y1t7pv",
+      "part": 78,
+      "duration": "33:22",
+      "duration_s": 2002,
+      "up": "李尚泽",
+      "selfhosted_src": "/video/m22.mp4",
+      "selfhosted_vtt": "/video/m22.vtt",
+      "has_segments": true,
+      "source": "github/path.js"
+    },
+    {
+      "subject": "数学",
+      "unit_id": "u_cnm_h078",
+      "lesson": "三角函数的应用",
+      "chapter": "第五章三角函数",
+      "video_title": "三角函数的应用",
+      "bvid": "BV1ct4y1t7pv",
+      "part": 74,
+      "duration": "15:40",
+      "duration_s": 940,
+      "up": "李尚泽",
+      "selfhosted_src": "/video/m23.mp4",
+      "selfhosted_vtt": "/video/m23.vtt",
+      "has_segments": true,
+      "source": "github/path.js"
+    },
+    {
+      "subject": "物理",
+      "unit_id": "u_phy_h01",
+      "lesson": "运动、质点与参考系",
+      "chapter": "第一章运动的描述",
+      "video_title": "质点、参考系",
+      "bvid": "BV1f4xtzZE8F",
+      "part": 1,
+      "duration": "",
+      "duration_s": null,
+      "up": "一物儿·必修一基础与解法全集",
+      "selfhosted_src": "/video/phy1.mp4",
+      "selfhosted_vtt": "/video/phy1.vtt",
+      "has_segments": true,
+      "source": "github/path-phy.js"
+    },
+    {
+      "subject": "物理",
+      "unit_id": "u_phy_h02",
+      "lesson": "时间、位移与速度",
+      "chapter": "第一章运动的描述",
+      "video_title": "时间与时刻、位移与路程、速度与平均速度",
+      "bvid": "BV1V341147SL",
+      "part": 2,
+      "duration": "",
+      "duration_s": null,
+      "up": "锤姐物理·必修一合集",
+      "selfhosted_src": "/video/phy2.mp4",
+      "selfhosted_vtt": "/video/phy2.vtt",
+      "has_segments": true,
+      "source": "github/path-phy.js"
+    },
+    {
+      "subject": "物理",
+      "unit_id": "u_phy_h03",
+      "lesson": "加速度",
+      "chapter": "第一章运动的描述",
+      "video_title": "速度变化量与加速度",
+      "bvid": "BV1V341147SL",
+      "part": 3,
+      "duration": "",
+      "duration_s": null,
+      "up": "锤姐物理·必修一合集",
+      "selfhosted_src": "/video/phy3.mp4",
+      "selfhosted_vtt": "/video/phy3.vtt",
+      "has_segments": true,
+      "source": "github/path-phy.js"
+    },
+    {
+      "subject": "物理",
+      "unit_id": "u_phy_h04",
+      "lesson": "运动图像：x-t 与 v-t",
+      "chapter": "第一章运动的描述",
+      "video_title": "x-t 图像、v-t 图像",
+      "bvid": "BV1V341147SL",
+      "part": 4,
+      "duration": "",
+      "duration_s": null,
+      "up": "锤姐物理·必修一合集",
+      "selfhosted_src": "/video/phy4.mp4",
+      "selfhosted_vtt": "/video/phy4.vtt",
+      "has_segments": true,
+      "source": "github/path-phy.js"
+    },
+    {
+      "subject": "物理",
+      "unit_id": "u_phy2_1",
+      "lesson": "匀变速直线运动的规律",
+      "chapter": "第二章匀变速直线运动",
+      "video_title": "匀变速直线运动的公式",
+      "bvid": "BV18E411q7SW",
+      "part": 5,
+      "duration": "",
+      "duration_s": null,
+      "up": "锦城大同教育·必修一同步课",
+      "selfhosted_src": null,
+      "selfhosted_vtt": null,
+      "has_segments": false,
+      "source": "github/path-phy.js"
+    },
+    {
+      "subject": "物理",
+      "unit_id": "u_phy2_2",
+      "lesson": "实验基础：误差与有效数字",
+      "chapter": "第二章匀变速直线运动",
+      "video_title": "实验基础：误差与有效数字",
+      "bvid": "BV1d8dAYLEuf",
+      "part": 1,
+      "duration": "16:38",
+      "duration_s": 998,
+      "up": "J大菠萝",
+      "selfhosted_src": "/video/phy5.mp4",
+      "selfhosted_vtt": "/video/phy5.vtt",
+      "has_segments": true,
+      "source": "github/path-phy.js"
+    },
+    {
+      "subject": "物理",
+      "unit_id": "u_phy2_3",
+      "lesson": "科学测量：打点计时器测速度",
+      "chapter": "第二章匀变速直线运动",
+      "video_title": "用打点计时器测速度和加速度",
+      "bvid": "BV18E411q7SW",
+      "part": 7,
+      "duration": "",
+      "duration_s": null,
+      "up": "锦城大同教育·必修一同步课",
+      "selfhosted_src": null,
+      "selfhosted_vtt": null,
+      "has_segments": false,
+      "source": "github/path-phy.js"
+    },
+    {
+      "subject": "物理",
+      "unit_id": "u_phy2_4",
+      "lesson": "自由落体运动",
+      "chapter": "第二章匀变速直线运动",
+      "video_title": "自由落体运动",
+      "bvid": "BV18E411q7SW",
+      "part": 6,
+      "duration": "",
+      "duration_s": null,
+      "up": "锦城大同教育·必修一同步课",
+      "selfhosted_src": null,
+      "selfhosted_vtt": null,
+      "has_segments": false,
+      "source": "github/path-phy.js"
+    },
+    {
+      "subject": "化学",
+      "unit_id": "u_chem_1",
+      "lesson": "走进化学科学",
+      "chapter": "1认识化学科学",
+      "video_title": "走进化学科学",
+      "bvid": "BV11S4y1b7eE",
+      "part": 1,
+      "duration": "15:21",
+      "duration_s": 921,
+      "up": "化学僧",
+      "selfhosted_src": "/video/chem1.mp4",
+      "selfhosted_vtt": "/video/chem1.vtt",
+      "has_segments": true,
+      "source": "github/path-chem.js"
+    },
+    {
+      "subject": "化学",
+      "unit_id": "u_chem_2",
+      "lesson": "研究物质性质的方法和程序",
+      "chapter": "1认识化学科学",
+      "video_title": "研究物质性质的方法和程序（一）",
+      "bvid": "BV1zK411674L",
+      "part": 1,
+      "duration": "20:47",
+      "duration_s": 1247,
+      "up": 0,
+      "selfhosted_src": null,
+      "selfhosted_vtt": null,
+      "has_segments": false,
+      "source": "github/path-chem.js"
+    },
+    {
+      "subject": "化学",
+      "unit_id": "u_chem_3",
+      "lesson": "氯气的性质",
+      "chapter": "1认识化学科学",
+      "video_title": "研究物质性质的方法和程序（二）",
+      "bvid": "BV1zK411674L",
+      "part": 2,
+      "duration": "21:27",
+      "duration_s": 1287,
+      "up": 0,
+      "selfhosted_src": null,
+      "selfhosted_vtt": null,
+      "has_segments": false,
+      "source": "github/path-chem.js"
+    },
+    {
+      "subject": "化学",
+      "unit_id": "u_chem_4",
+      "lesson": "物质的量与摩尔质量",
+      "chapter": "1认识化学科学",
+      "video_title": "化学中常用的物理量——物质的量（一）",
+      "bvid": "BV1zK411674L",
+      "part": 3,
+      "duration": "24:12",
+      "duration_s": 1452,
+      "up": 0,
+      "selfhosted_src": null,
+      "selfhosted_vtt": null,
+      "has_segments": false,
+      "source": "github/path-chem.js"
+    },
+    {
+      "subject": "化学",
+      "unit_id": "u_chem_5",
+      "lesson": "气体摩尔体积",
+      "chapter": "1认识化学科学",
+      "video_title": "化学中常用的物理量——物质的量（二）",
+      "bvid": "BV1zK411674L",
+      "part": 4,
+      "duration": "20:22",
+      "duration_s": 1222,
+      "up": 0,
+      "selfhosted_src": null,
+      "selfhosted_vtt": null,
+      "has_segments": false,
+      "source": "github/path-chem.js"
+    },
+    {
+      "subject": "化学",
+      "unit_id": "u_chem_6",
+      "lesson": "物质的量浓度与配制",
+      "chapter": "1认识化学科学",
+      "video_title": "化学中常用的物理量——物质的量（三）",
+      "bvid": "BV1zK411674L",
+      "part": 5,
+      "duration": "23:37",
+      "duration_s": 1417,
+      "up": 0,
+      "selfhosted_src": null,
+      "selfhosted_vtt": null,
+      "has_segments": false,
+      "source": "github/path-chem.js"
+    },
+    {
+      "subject": "化学",
+      "unit_id": "u_chem_7",
+      "lesson": "微项目：探秘膨松剂",
+      "chapter": "1认识化学科学",
+      "video_title": "微项目：探秘膨松剂",
+      "bvid": "BV1zK411674L",
+      "part": 6,
+      "duration": "21:02",
+      "duration_s": 1262,
+      "up": 0,
+      "selfhosted_src": null,
+      "selfhosted_vtt": null,
+      "has_segments": false,
+      "source": "github/path-chem.js"
+    },
+    {
+      "subject": "化学",
+      "unit_id": "u_chem_8",
+      "lesson": "元素与物质分类",
+      "chapter": "2元素与物质世界",
+      "video_title": "元素与物质分类(1)",
+      "bvid": "BV1zK411674L",
+      "part": 8,
+      "duration": "20:27",
+      "duration_s": 1227,
+      "up": 0,
+      "selfhosted_src": null,
+      "selfhosted_vtt": null,
+      "has_segments": false,
+      "source": "github/path-chem.js"
+    },
+    {
+      "subject": "化学",
+      "unit_id": "u_chem_9",
+      "lesson": "分散系与胶体",
+      "chapter": "2元素与物质世界",
+      "video_title": "元素与物质分类(3)",
+      "bvid": "BV1zK411674L",
+      "part": 10,
+      "duration": "20:02",
+      "duration_s": 1202,
+      "up": 0,
+      "selfhosted_src": null,
+      "selfhosted_vtt": null,
+      "has_segments": false,
+      "source": "github/path-chem.js"
+    },
+    {
+      "subject": "化学",
+      "unit_id": "u_chem_10",
+      "lesson": "电解质与电离",
+      "chapter": "2元素与物质世界",
+      "video_title": "电解质的电离 离子反应(1)",
+      "bvid": "BV1zK411674L",
+      "part": 11,
+      "duration": "20:17",
+      "duration_s": 1217,
+      "up": 0,
+      "selfhosted_src": null,
+      "selfhosted_vtt": null,
+      "has_segments": false,
+      "source": "github/path-chem.js"
+    },
+    {
+      "subject": "化学",
+      "unit_id": "u_chem_11",
+      "lesson": "离子反应与离子方程式",
+      "chapter": "2元素与物质世界",
+      "video_title": "电解质的电离 离子反应(2)",
+      "bvid": "BV1zK411674L",
+      "part": 12,
+      "duration": "20:28",
+      "duration_s": 1228,
+      "up": 0,
+      "selfhosted_src": null,
+      "selfhosted_vtt": null,
+      "has_segments": false,
+      "source": "github/path-chem.js"
+    },
+    {
+      "subject": "化学",
+      "unit_id": "u_chem_12",
+      "lesson": "氧化还原反应的基本概念",
+      "chapter": "2元素与物质世界",
+      "video_title": "氧化还原反应(1)",
+      "bvid": "BV1zK411674L",
+      "part": 14,
+      "duration": "23:17",
+      "duration_s": 1397,
+      "up": 0,
+      "selfhosted_src": null,
+      "selfhosted_vtt": null,
+      "has_segments": false,
+      "source": "github/path-chem.js"
+    },
+    {
+      "subject": "化学",
+      "unit_id": "u_chem_13",
+      "lesson": "氧化还原反应的规律",
+      "chapter": "2元素与物质世界",
+      "video_title": "氧化还原反应(2)",
+      "bvid": "BV1zK411674L",
+      "part": 15,
+      "duration": "22:32",
+      "duration_s": 1352,
+      "up": 0,
+      "selfhosted_src": null,
+      "selfhosted_vtt": null,
+      "has_segments": false,
+      "source": "github/path-chem.js"
+    },
+    {
+      "subject": "化学",
+      "unit_id": "u_chem_14",
+      "lesson": "微项目：科学使用含氯消毒剂",
+      "chapter": "2元素与物质世界",
+      "video_title": "微项目：科学使用含氯消毒剂",
+      "bvid": "BV1zK411674L",
+      "part": 16,
+      "duration": "20:27",
+      "duration_s": 1227,
+      "up": 0,
+      "selfhosted_src": null,
+      "selfhosted_vtt": null,
+      "has_segments": false,
+      "source": "github/path-chem.js"
+    },
+    {
+      "subject": "历史",
+      "unit_id": "u_hist_1",
+      "lesson": "中华文明的起源与早期国家",
+      "chapter": "第一单元从中华文明起源到秦汉统一多民族封建国家的建立与巩固",
+      "video_title": "第1课：中华文明的起源与早期国家（源史社会）",
+      "bvid": "BV1Uz4y1p752",
+      "part": 1,
+      "duration": "40:14",
+      "duration_s": 2414,
+      "up": 0,
+      "selfhosted_src": null,
+      "selfhosted_vtt": null,
+      "has_segments": false,
+      "source": "github/path-hist.js"
+    },
+    {
+      "subject": "历史",
+      "unit_id": "u_hist_2",
+      "lesson": "诸侯纷争与变法运动",
+      "chapter": "第一单元从中华文明起源到秦汉统一多民族封建国家的建立与巩固",
+      "video_title": "第2课：诸侯纷争与变法运动（源史社会）",
+      "bvid": "BV1Dp4y1375Q",
+      "part": 1,
+      "duration": "55:07",
+      "duration_s": 3307,
+      "up": 0,
+      "selfhosted_src": null,
+      "selfhosted_vtt": null,
+      "has_segments": false,
+      "source": "github/path-hist.js"
+    },
+    {
+      "subject": "历史",
+      "unit_id": "u_hist_3",
+      "lesson": "秦统一多民族封建国家的建立",
+      "chapter": "第一单元从中华文明起源到秦汉统一多民族封建国家的建立与巩固",
+      "video_title": "第3课：秦统一多民族封建国家的建立（源史社会）",
+      "bvid": "BV1F94y1k7k4",
+      "part": 1,
+      "duration": "49:42",
+      "duration_s": 2982,
+      "up": 0,
+      "selfhosted_src": null,
+      "selfhosted_vtt": null,
+      "has_segments": false,
+      "source": "github/path-hist.js"
+    },
+    {
+      "subject": "历史",
+      "unit_id": "u_hist_4",
+      "lesson": "西汉与东汉——统一多民族封建国家的巩固",
+      "chapter": "第一单元从中华文明起源到秦汉统一多民族封建国家的建立与巩固",
+      "video_title": "第4课：西汉与东汉——统一多民族封建国家的巩固（源史社会）",
+      "bvid": "BV1gu41177pa",
+      "part": 1,
+      "duration": "2:28:14",
+      "duration_s": 8894,
+      "up": 0,
+      "selfhosted_src": null,
+      "selfhosted_vtt": null,
+      "has_segments": false,
+      "source": "github/path-hist.js"
+    },
+    {
+      "subject": "历史",
+      "unit_id": "u_hist_5",
+      "lesson": "三国两晋南北朝的政权更迭与民族交融",
+      "chapter": "第二单元三国两晋南北朝的民族交融与隋唐统一多民族封建国家的发展",
+      "video_title": "第5课：三国两晋南北朝的政权更迭与民族交融（源史社会）",
+      "bvid": "BV1kh4y1T7Sm",
+      "part": 1,
+      "duration": "1:08:42",
+      "duration_s": 4122,
+      "up": 0,
+      "selfhosted_src": null,
+      "selfhosted_vtt": null,
+      "has_segments": false,
+      "source": "github/path-hist.js"
+    },
+    {
+      "subject": "历史",
+      "unit_id": "u_hist_6",
+      "lesson": "从隋唐盛世到五代十国",
+      "chapter": "第二单元三国两晋南北朝的民族交融与隋唐统一多民族封建国家的发展",
+      "video_title": "第6课：从隋唐盛世到五代十国（源史社会）",
+      "bvid": "BV1C8411y7ZB",
+      "part": 1,
+      "duration": "58:31",
+      "duration_s": 3511,
+      "up": 0,
+      "selfhosted_src": null,
+      "selfhosted_vtt": null,
+      "has_segments": false,
+      "source": "github/path-hist.js"
+    },
+    {
+      "subject": "历史",
+      "unit_id": "u_hist_7",
+      "lesson": "隋唐制度的变化与创新",
+      "chapter": "第二单元三国两晋南北朝的民族交融与隋唐统一多民族封建国家的发展",
+      "video_title": "第7课：隋唐制度的变化与创新",
+      "bvid": "BV1J9tHesEYa",
+      "part": 1,
+      "duration": "31:46",
+      "duration_s": 1906,
+      "up": "小马历史课堂",
+      "selfhosted_src": "/video/hist7.mp4",
+      "selfhosted_vtt": "/video/hist7.vtt",
+      "has_segments": true,
+      "source": "github/path-hist.js"
+    },
+    {
+      "subject": "历史",
+      "unit_id": "u_hist_8",
+      "lesson": "三国至隋唐的文化",
+      "chapter": "第二单元三国两晋南北朝的民族交融与隋唐统一多民族封建国家的发展",
+      "video_title": "第8课：三国至隋唐的文化（源史社会）",
+      "bvid": "BV1nV411w71C",
+      "part": 1,
+      "duration": "34:42",
+      "duration_s": 2082,
+      "up": 0,
+      "selfhosted_src": null,
+      "selfhosted_vtt": null,
+      "has_segments": false,
+      "source": "github/path-hist.js"
+    },
+    {
+      "subject": "地理",
+      "unit_id": "u_geo_1",
+      "lesson": "地球的宇宙环境",
+      "chapter": "第一章宇宙中的地球",
+      "video_title": "1-1【辞典】地球的宇宙环境",
+      "bvid": "BV1VCxQedEVW",
+      "part": 4,
+      "duration": "38:34",
+      "duration_s": 2314,
+      "up": "一地er",
+      "selfhosted_src": "/video/geo1.mp4",
+      "selfhosted_vtt": "/video/geo1.vtt",
+      "has_segments": true,
+      "source": "github/path-geo.js"
+    },
+    {
+      "subject": "地理",
+      "unit_id": "u_geo_2",
+      "lesson": "太阳对地球的影响",
+      "chapter": "第一章宇宙中的地球",
+      "video_title": "1-2【辞典】太阳对地球的影响",
+      "bvid": "BV1VCxQedEVW",
+      "part": 6,
+      "duration": "29:04",
+      "duration_s": 1744,
+      "up": "一地er",
+      "selfhosted_src": "/video/geo2.mp4",
+      "selfhosted_vtt": "/video/geo2.vtt",
+      "has_segments": true,
+      "source": "github/path-geo.js"
+    },
+    {
+      "subject": "地理",
+      "unit_id": "u_geo_3",
+      "lesson": "地球的历史",
+      "chapter": "第一章宇宙中的地球",
+      "video_title": "1-3【辞典】地球的历史",
+      "bvid": "BV1VCxQedEVW",
+      "part": 8,
+      "duration": "36:15",
+      "duration_s": 2175,
+      "up": "一地er",
+      "selfhosted_src": "/video/geo3.mp4",
+      "selfhosted_vtt": "/video/geo3.vtt",
+      "has_segments": true,
+      "source": "github/path-geo.js"
+    },
+    {
+      "subject": "地理",
+      "unit_id": "u_geo_4",
+      "lesson": "地球的圈层结构",
+      "chapter": "第一章宇宙中的地球",
+      "video_title": "1-4【辞典】地球的圈层结构",
+      "bvid": "BV1VCxQedEVW",
+      "part": 9,
+      "duration": "27:57",
+      "duration_s": 1677,
+      "up": "一地er",
+      "selfhosted_src": "/video/geo4.mp4",
+      "selfhosted_vtt": "/video/geo4.vtt",
+      "has_segments": true,
+      "source": "github/path-geo.js"
+    },
+    {
+      "subject": "地理",
+      "unit_id": "u_geo_5",
+      "lesson": "问题研究：火星基地应该是什么样子",
+      "chapter": "第一章宇宙中的地球",
+      "video_title": "问题研究：火星基地应该是什么样子",
+      "bvid": "BV1uG4y1R7eR",
+      "part": 1,
+      "duration": "9:26",
+      "duration_s": 566,
+      "up": "会打快板的地理老师",
+      "selfhosted_src": "/video/geo5.mp4",
+      "selfhosted_vtt": "/video/geo5.vtt",
+      "has_segments": true,
+      "source": "github/path-geo.js"
+    },
+    {
+      "subject": "地理",
+      "unit_id": "u_geo_6",
+      "lesson": "大气的组成和垂直分层",
+      "chapter": "第二章地球上的大气",
+      "video_title": "2-1【辞典】大气的组成和垂直分层",
+      "bvid": "BV1VCxQedEVW",
+      "part": 10,
+      "duration": "53:02",
+      "duration_s": 3182,
+      "up": "一地er",
+      "selfhosted_src": "/video/geo6.mp4",
+      "selfhosted_vtt": "/video/geo6.vtt",
+      "has_segments": true,
+      "source": "github/path-geo.js"
+    },
+    {
+      "subject": "地理",
+      "unit_id": "u_geo_7",
+      "lesson": "大气受热过程和大气运动",
+      "chapter": "第二章地球上的大气",
+      "video_title": "2-2【辞典】大气的受热过程",
+      "bvid": "BV1VCxQedEVW",
+      "part": 12,
+      "duration": "79:04",
+      "duration_s": 4744,
+      "up": "一地er",
+      "selfhosted_src": "/video/geo7.mp4",
+      "selfhosted_vtt": "/video/geo7.vtt",
+      "has_segments": true,
+      "source": "github/path-geo.js"
+    },
+    {
+      "subject": "地理",
+      "unit_id": "u_geo_8",
+      "lesson": "问题研究：何时蓝天常在",
+      "chapter": "第二章地球上的大气",
+      "video_title": "问题研究：何时蓝天常在",
+      "bvid": "BV1eW4y1g79r",
+      "part": 1,
+      "duration": "18:38",
+      "duration_s": 1118,
+      "up": "会打快板的地理老师",
+      "selfhosted_src": "/video/geo8.mp4",
+      "selfhosted_vtt": "/video/geo8.vtt",
+      "has_segments": true,
+      "source": "github/path-geo.js"
+    },
+    {
+      "subject": "英语",
+      "unit_id": "u_eng_1",
+      "lesson": "Welcome Unit：走进高中英语",
+      "chapter": "Welcome + Unit 1Welcome Unit 与 Teenage Life",
+      "video_title": "必修一 Welcome Unit 课文讲解",
+      "bvid": "BV1Vd4y1G7Cm",
+      "part": 1,
+      "duration": "17:34",
+      "duration_s": 1054,
+      "up": 0,
+      "selfhosted_src": null,
+      "selfhosted_vtt": null,
+      "has_segments": false,
+      "source": "github/path-eng.js"
+    },
+    {
+      "subject": "英语",
+      "unit_id": "u_eng_2",
+      "lesson": "Unit 1 Teenage Life",
+      "chapter": "Welcome + Unit 1Welcome Unit 与 Teenage Life",
+      "video_title": "必修一 Unit 1 课文讲解",
+      "bvid": "BV1gY4y1T73a",
+      "part": 1,
+      "duration": "31:30",
+      "duration_s": 1890,
+      "up": 0,
+      "selfhosted_src": null,
+      "selfhosted_vtt": null,
+      "has_segments": false,
+      "source": "github/path-eng.js"
+    },
+    {
+      "subject": "英语",
+      "unit_id": "u_eng_3",
+      "lesson": "Unit 2 Travelling Around",
+      "chapter": "Unit 2Travelling Around",
+      "video_title": "必修一 Unit 2 课文讲解",
+      "bvid": "BV1KG4y1W7R3",
+      "part": 1,
+      "duration": "39:09",
+      "duration_s": 2349,
+      "up": 0,
+      "selfhosted_src": null,
+      "selfhosted_vtt": null,
+      "has_segments": false,
+      "source": "github/path-eng.js"
+    },
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_1",
+      "lesson": "细胞是生命活动的基本单位",
+      "chapter": "第一章走近细胞",
+      "video_title": "细胞是生命活动的基本单位",
+      "bvid": "BV1p54y177e6",
+      "part": 1,
+      "duration": "55:24",
+      "duration_s": 3324,
+      "up": "锦城大同教育·杨波生物",
+      "selfhosted_src": "/video/bio1.mp4",
+      "selfhosted_vtt": "/video/bio1.vtt",
+      "has_segments": true,
+      "source": "github/path-bio.js"
+    },
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_2",
+      "lesson": "细胞的多样性和统一性",
+      "chapter": "第一章走近细胞",
+      "video_title": "细胞的多样性和统一性",
+      "bvid": "BV1p54y177e6",
+      "part": 3,
+      "duration": "91:22",
+      "duration_s": 5482,
+      "up": "锦城大同教育·杨波生物",
+      "selfhosted_src": "/video/bio2.mp4",
+      "selfhosted_vtt": "/video/bio2.vtt",
+      "has_segments": true,
+      "source": "github/path-bio.js"
+    },
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_3",
+      "lesson": "细胞中的元素和化合物",
+      "chapter": "第二章组成细胞的分子",
+      "video_title": "细胞中的元素和化合物",
+      "bvid": "BV1p54y177e6",
+      "part": 7,
+      "duration": "72:32",
+      "duration_s": 4352,
+      "up": "锦城大同教育·杨波生物",
+      "selfhosted_src": "/video/bio3.mp4",
+      "selfhosted_vtt": "/video/bio3.vtt",
+      "has_segments": true,
+      "source": "github/path-bio.js"
+    },
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_4",
+      "lesson": "细胞中的无机物",
+      "chapter": "第二章组成细胞的分子",
+      "video_title": "细胞中的无机物",
+      "bvid": "BV1p54y177e6",
+      "part": 9,
+      "duration": "45:56",
+      "duration_s": 2756,
+      "up": "锦城大同教育·杨波生物",
+      "selfhosted_src": "/video/bio4.mp4",
+      "selfhosted_vtt": "/video/bio4.vtt",
+      "has_segments": true,
+      "source": "github/path-bio.js"
+    },
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_5",
+      "lesson": "细胞中的糖类和脂质",
+      "chapter": "第二章组成细胞的分子",
+      "video_title": "细胞中的糖类和脂质",
+      "bvid": "BV1p54y177e6",
+      "part": 11,
+      "duration": "62:47",
+      "duration_s": 3767,
+      "up": "锦城大同教育·杨波生物",
+      "selfhosted_src": "/video/bio5.mp4",
+      "selfhosted_vtt": "/video/bio5.vtt",
+      "has_segments": true,
+      "source": "github/path-bio.js"
+    },
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_6",
+      "lesson": "蛋白质是生命活动的主要承担者",
+      "chapter": "第二章组成细胞的分子",
+      "video_title": "蛋白质是生命活动的主要承担者",
+      "bvid": "BV1p54y177e6",
+      "part": 13,
+      "duration": "105:30",
+      "duration_s": 6330,
+      "up": "锦城大同教育·杨波生物",
+      "selfhosted_src": "/video/bio6.mp4",
+      "selfhosted_vtt": "/video/bio6.vtt",
+      "has_segments": true,
+      "source": "github/path-bio.js"
+    },
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_7",
+      "lesson": "核酸是遗传信息的携带者",
+      "chapter": "第二章组成细胞的分子",
+      "video_title": "核酸是遗传信息的携带者",
+      "bvid": "BV1p54y177e6",
+      "part": 17,
+      "duration": "64:14",
+      "duration_s": 3854,
+      "up": "锦城大同教育·杨波生物",
+      "selfhosted_src": "/video/bio7.mp4",
+      "selfhosted_vtt": "/video/bio7.vtt",
+      "has_segments": true,
+      "source": "github/path-bio.js"
+    },
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_8",
+      "lesson": "细胞膜的结构和功能",
+      "chapter": "第三章细胞的基本结构",
+      "video_title": "细胞膜的结构和功能",
+      "bvid": "BV1p54y177e6",
+      "part": 19,
+      "duration": "65:00",
+      "duration_s": 3900,
+      "up": "锦城大同教育·杨波生物",
+      "selfhosted_src": "/video/bio8.mp4",
+      "selfhosted_vtt": "/video/bio8.vtt",
+      "has_segments": true,
+      "source": "github/path-bio.js"
+    },
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_9",
+      "lesson": "细胞器之间的分工合作",
+      "chapter": "第三章细胞的基本结构",
+      "video_title": "细胞器之间的分工合作",
+      "bvid": "BV1p54y177e6",
+      "part": 21,
+      "duration": "116:18",
+      "duration_s": 6978,
+      "up": "锦城大同教育·杨波生物",
+      "selfhosted_src": "/video/bio9.mp4",
+      "selfhosted_vtt": "/video/bio9.vtt",
+      "has_segments": true,
+      "source": "github/path-bio.js"
+    },
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_10",
+      "lesson": "细胞核的结构和功能",
+      "chapter": "第三章细胞的基本结构",
+      "video_title": "细胞核的结构和功能",
+      "bvid": "BV1p54y177e6",
+      "part": 25,
+      "duration": "60:40",
+      "duration_s": 3640,
+      "up": "锦城大同教育·杨波生物",
+      "selfhosted_src": "/video/bio10.mp4",
+      "selfhosted_vtt": "/video/bio10.vtt",
+      "has_segments": true,
+      "source": "github/path-bio.js"
+    },
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_11",
+      "lesson": "被动运输",
+      "chapter": "第四章细胞的物质输入和输出",
+      "video_title": "被动运输",
+      "bvid": "BV1p54y177e6",
+      "part": 27,
+      "duration": "96:52",
+      "duration_s": 5812,
+      "up": "锦城大同教育·杨波生物",
+      "selfhosted_src": "/video/bio11.mp4",
+      "selfhosted_vtt": "/video/bio11.vtt",
+      "has_segments": true,
+      "source": "github/path-bio.js"
+    },
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_12",
+      "lesson": "主动运输与胞吞、胞吐",
+      "chapter": "第四章细胞的物质输入和输出",
+      "video_title": "主动运输与胞吞、胞吐",
+      "bvid": "BV1p54y177e6",
+      "part": 31,
+      "duration": "43:44",
+      "duration_s": 2624,
+      "up": "锦城大同教育·杨波生物",
+      "selfhosted_src": "/video/bio12.mp4",
+      "selfhosted_vtt": "/video/bio12.vtt",
+      "has_segments": true,
+      "source": "github/path-bio.js"
+    },
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_13",
+      "lesson": "降低化学反应活化能的酶（上）：酶的作用和本质",
+      "chapter": "第五章细胞的能量供应和利用",
+      "video_title": "降低化学反应活化能的酶（上）：酶的作用和本质",
+      "bvid": "BV1p54y177e6",
+      "part": 33,
+      "duration": "50:36",
+      "duration_s": 3036,
+      "up": "锦城大同教育·杨波生物",
+      "selfhosted_src": "/video/bio13.mp4",
+      "selfhosted_vtt": "/video/bio13.vtt",
+      "has_segments": true,
+      "source": "github/path-bio.js"
+    },
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_14",
+      "lesson": "降低化学反应活化能的酶（下）：酶的特性",
+      "chapter": "第五章细胞的能量供应和利用",
+      "video_title": "降低化学反应活化能的酶（二）",
+      "bvid": "BV1p54y177e6",
+      "part": 35,
+      "duration": "71:25",
+      "duration_s": 4285,
+      "up": "锦城大同教育·杨波生物",
+      "selfhosted_src": "/video/bio14.mp4",
+      "selfhosted_vtt": "/video/bio14.vtt",
+      "has_segments": true,
+      "source": "github/path-bio.js"
+    },
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_15",
+      "lesson": "细胞的能量“货币”ATP",
+      "chapter": "第五章细胞的能量供应和利用",
+      "video_title": "细胞的能量“货币”ATP",
+      "bvid": "BV1p54y177e6",
+      "part": 37,
+      "duration": "48:56",
+      "duration_s": 2936,
+      "up": "锦城大同教育·杨波生物",
+      "selfhosted_src": "/video/bio15.mp4",
+      "selfhosted_vtt": "/video/bio15.vtt",
+      "has_segments": true,
+      "source": "github/path-bio.js"
+    },
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_16",
+      "lesson": "细胞呼吸的原理和应用",
+      "chapter": "第五章细胞的能量供应和利用",
+      "video_title": "细胞呼吸的原理和应用",
+      "bvid": "BV1p54y177e6",
+      "part": 39,
+      "duration": "126:45",
+      "duration_s": 7605,
+      "up": "锦城大同教育·杨波生物",
+      "selfhosted_src": "/video/bio16.mp4",
+      "selfhosted_vtt": "/video/bio16.vtt",
+      "has_segments": true,
+      "source": "github/path-bio.js"
+    },
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_17",
+      "lesson": "光合作用与能量转化（上）：捕获光能的色素和结构",
+      "chapter": "第五章细胞的能量供应和利用",
+      "video_title": "光合作用与能量转化（一）",
+      "bvid": "BV1p54y177e6",
+      "part": 43,
+      "duration": "58:25",
+      "duration_s": 3505,
+      "up": "锦城大同教育·杨波生物",
+      "selfhosted_src": "/video/bio17.mp4",
+      "selfhosted_vtt": "/video/bio17.vtt",
+      "has_segments": true,
+      "source": "github/path-bio.js"
+    },
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_18",
+      "lesson": "光合作用与能量转化（下）：光合作用的原理和应用",
+      "chapter": "第五章细胞的能量供应和利用",
+      "video_title": "光合作用与能量转化（二）",
+      "bvid": "BV1p54y177e6",
+      "part": 45,
+      "duration": "122:15",
+      "duration_s": 7335,
+      "up": "锦城大同教育·杨波生物",
+      "selfhosted_src": "/video/bio18.mp4",
+      "selfhosted_vtt": "/video/bio18.vtt",
+      "has_segments": true,
+      "source": "github/path-bio.js"
+    },
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_19",
+      "lesson": "细胞的增殖",
+      "chapter": "第六章细胞的生命历程",
+      "video_title": "细胞的增殖",
+      "bvid": "BV1p54y177e6",
+      "part": 51,
+      "duration": "124:51",
+      "duration_s": 7491,
+      "up": "锦城大同教育·杨波生物",
+      "selfhosted_src": "/video/bio19.mp4",
+      "selfhosted_vtt": "/video/bio19.vtt",
+      "has_segments": true,
+      "source": "github/path-bio.js"
+    },
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_20",
+      "lesson": "细胞的分化",
+      "chapter": "第六章细胞的生命历程",
+      "video_title": "细胞的分化",
+      "bvid": "BV1p54y177e6",
+      "part": 55,
+      "duration": "49:17",
+      "duration_s": 2957,
+      "up": "锦城大同教育·杨波生物",
+      "selfhosted_src": "/video/bio20.mp4",
+      "selfhosted_vtt": "/video/bio20.vtt",
+      "has_segments": true,
+      "source": "github/path-bio.js"
+    },
+    {
+      "subject": "生物",
+      "unit_id": "u_bio_21",
+      "lesson": "细胞的衰老和死亡",
+      "chapter": "第六章细胞的生命历程",
+      "video_title": "细胞的衰老和死亡",
+      "bvid": "BV1p54y177e6",
+      "part": 57,
+      "duration": "35:13",
+      "duration_s": 2113,
+      "up": "锦城大同教育·杨波生物",
+      "selfhosted_src": "/video/bio21.mp4",
+      "selfhosted_vtt": "/video/bio21.vtt",
+      "has_segments": true,
+      "source": "github/path-bio.js"
+    },
+    {
+      "subject": "政治",
+      "unit_id": "u_pol_1",
+      "lesson": "社会主义从空想到科学、从理论到实践的发展",
+      "chapter": "第一课社会主义从空想到科学、从理论到实践的发展",
+      "video_title": "社会主义从空想到科学、从理论到实践的发展",
+      "bvid": "BV15M4m127aY",
+      "part": 1,
+      "duration": "91:24",
+      "duration_s": 5484,
+      "up": "政治老师爱政治",
+      "selfhosted_src": "/video/pol1.mp4",
+      "selfhosted_vtt": "/video/pol1.vtt",
+      "has_segments": true,
+      "source": "github/path-pol.js"
+    },
+    {
+      "subject": "政治",
+      "unit_id": "u_pol_2",
+      "lesson": "只有社会主义才能救中国",
+      "chapter": "第二课只有社会主义才能救中国",
+      "video_title": "只有社会主义才能救中国",
+      "bvid": "BV1Cr421T75t",
+      "part": 1,
+      "duration": "47:16",
+      "duration_s": 2836,
+      "up": "政治老师爱政治",
+      "selfhosted_src": "/video/pol2.mp4",
+      "selfhosted_vtt": "/video/pol2.vtt",
+      "has_segments": true,
+      "source": "github/path-pol.js"
+    },
+    {
+      "subject": "政治",
+      "unit_id": "u_pol_3",
+      "lesson": "只有中国特色社会主义才能发展中国",
+      "chapter": "第三课只有中国特色社会主义才能发展中国",
+      "video_title": "只有中国特色社会主义才能发展中国",
+      "bvid": "BV18T421k7Qr",
+      "part": 1,
+      "duration": "51:24",
+      "duration_s": 3084,
+      "up": "政治老师爱政治",
+      "selfhosted_src": "/video/pol3.mp4",
+      "selfhosted_vtt": "/video/pol3.vtt",
+      "has_segments": true,
+      "source": "github/path-pol.js"
+    },
+    {
+      "subject": "政治",
+      "unit_id": "u_pol_4",
+      "lesson": "只有坚持和发展中国特色社会主义才能实现中华民族伟大复兴",
+      "chapter": "第四课只有坚持和发展中国特色社会主义才能实现中华民族伟大复兴",
+      "video_title": "只有坚持和发展中国特色社会主义才能实现中华民族伟大复兴",
+      "bvid": "BV1YE421A7Qj",
+      "part": 1,
+      "duration": "83:10",
+      "duration_s": 4990,
+      "up": "政治老师爱政治",
+      "selfhosted_src": "/video/pol4.mp4",
+      "selfhosted_vtt": "/video/pol4.vtt",
+      "has_segments": true,
+      "source": "github/path-pol.js"
+    },
+    {
+      "subject": "政治",
+      "unit_id": "u_pol_5",
+      "lesson": "综合探究",
+      "chapter": "综合探究回看走过的路，比较别人的路，远眺前行的路；方向决定道路，道路决定命运",
+      "video_title": "综合探究",
+      "bvid": "BV1gt4y1h7H6",
+      "part": 1,
+      "duration": "38:31",
+      "duration_s": 2311,
+      "up": "教政治的月亮姐姐",
+      "selfhosted_src": "/video/pol5.mp4",
+      "selfhosted_vtt": "/video/pol5.vtt",
+      "has_segments": true,
+      "source": "github/path-pol.js"
+    },
+    {
+      "subject": "语文",
+      "unit_id": "u_chn_1",
+      "lesson": "沁园春·长沙",
+      "chapter": "第一单元青春激扬",
+      "video_title": "沁园春·长沙",
+      "bvid": "BV1JB4y1G7kF",
+      "part": 1,
+      "duration": "26:47",
+      "duration_s": 1607,
+      "up": "名师课堂",
+      "selfhosted_src": "/video/chn1.mp4",
+      "selfhosted_vtt": "/video/chn1.vtt",
+      "has_segments": true,
+      "source": "github/path-chn.js"
+    },
+    {
+      "subject": "语文",
+      "unit_id": "u_chn_2",
+      "lesson": "诗歌四首",
+      "chapter": "第一单元青春激扬",
+      "video_title": "诗歌四首",
+      "bvid": "BV1JB4y1G7kF",
+      "part": 2,
+      "duration": "25:40",
+      "duration_s": 1540,
+      "up": "名师课堂",
+      "selfhosted_src": "/video/chn2.mp4",
+      "selfhosted_vtt": "/video/chn2.vtt",
+      "has_segments": true,
+      "source": "github/path-chn.js"
+    },
+    {
+      "subject": "语文",
+      "unit_id": "u_chn_3",
+      "lesson": "小说两篇",
+      "chapter": "第一单元青春激扬",
+      "video_title": "小说两篇（百合花/哦，香雪）",
+      "bvid": "BV1JB4y1G7kF",
+      "part": 4,
+      "duration": "26:14",
+      "duration_s": 1574,
+      "up": "名师课堂",
+      "selfhosted_src": "/video/chn3.mp4",
+      "selfhosted_vtt": "/video/chn3.vtt",
+      "has_segments": true,
+      "source": "github/path-chn.js"
+    },
+    {
+      "subject": "语文",
+      "unit_id": "u_chn_4",
+      "lesson": "新闻三篇",
+      "chapter": "第二单元劳动光荣",
+      "video_title": "新闻三篇（喜看稻菽千重浪）",
+      "bvid": "BV1JB4y1G7kF",
+      "part": 7,
+      "duration": "27:10",
+      "duration_s": 1630,
+      "up": "名师课堂",
+      "selfhosted_src": "/video/chn4.mp4",
+      "selfhosted_vtt": "/video/chn4.vtt",
+      "has_segments": true,
+      "source": "github/path-chn.js"
+    },
+    {
+      "subject": "语文",
+      "unit_id": "u_chn_5",
+      "lesson": "以工匠精神雕琢时代品质",
+      "chapter": "第二单元劳动光荣",
+      "video_title": "以工匠精神雕琢时代品质",
+      "bvid": "BV1JB4y1G7kF",
+      "part": 8,
+      "duration": "26:47",
+      "duration_s": 1607,
+      "up": "名师课堂",
+      "selfhosted_src": "/video/chn5.mp4",
+      "selfhosted_vtt": "/video/chn5.vtt",
+      "has_segments": true,
+      "source": "github/path-chn.js"
+    },
+    {
+      "subject": "语文",
+      "unit_id": "u_chn_6",
+      "lesson": "诗经两首",
+      "chapter": "第二单元劳动光荣",
+      "video_title": "诗经两首（芣苢/插秧歌）",
+      "bvid": "BV1JB4y1G7kF",
+      "part": 9,
+      "duration": "26:15",
+      "duration_s": 1575,
+      "up": "名师课堂",
+      "selfhosted_src": "/video/chn6.mp4",
+      "selfhosted_vtt": "/video/chn6.vtt",
+      "has_segments": true,
+      "source": "github/path-chn.js"
+    },
+    {
+      "subject": "语文",
+      "unit_id": "u_chn_7",
+      "lesson": "短歌行·归园田居",
+      "chapter": "第三单元生命的诗意",
+      "video_title": "短歌行·归园田居",
+      "bvid": "BV1JB4y1G7kF",
+      "part": 11,
+      "duration": "25:48",
+      "duration_s": 1548,
+      "up": "名师课堂",
+      "selfhosted_src": "/video/chn7.mp4",
+      "selfhosted_vtt": "/video/chn7.vtt",
+      "has_segments": true,
+      "source": "github/path-chn.js"
+    },
+    {
+      "subject": "语文",
+      "unit_id": "u_chn_8",
+      "lesson": "李杜白三篇",
+      "chapter": "第三单元生命的诗意",
+      "video_title": "李杜白三篇",
+      "bvid": "BV1JB4y1G7kF",
+      "part": 13,
+      "duration": "25:23",
+      "duration_s": 1523,
+      "up": "名师课堂",
+      "selfhosted_src": "/video/chn8.mp4",
+      "selfhosted_vtt": "/video/chn8.vtt",
+      "has_segments": true,
+      "source": "github/path-chn.js"
+    },
+    {
+      "subject": "语文",
+      "unit_id": "u_chn_9",
+      "lesson": "宋词三首",
+      "chapter": "第三单元生命的诗意",
+      "video_title": "宋词三首",
+      "bvid": "BV1JB4y1G7kF",
+      "part": 15,
+      "duration": "57:12",
+      "duration_s": 3432,
+      "up": "名师课堂",
+      "selfhosted_src": "/video/chn9.mp4",
+      "selfhosted_vtt": "/video/chn9.vtt",
+      "has_segments": true,
+      "source": "github/path-chn.js"
+    },
+    {
+      "subject": "语文",
+      "unit_id": "u_chn_10",
+      "lesson": "家乡文化生活",
+      "chapter": "第四单元家乡文化生活",
+      "video_title": "家乡文化生活",
+      "bvid": "BV1JB4y1G7kF",
+      "part": 17,
+      "duration": "26:30",
+      "duration_s": 1590,
+      "up": "名师课堂",
+      "selfhosted_src": "/video/chn10.mp4",
+      "selfhosted_vtt": "/video/chn10.vtt",
+      "has_segments": true,
+      "source": "github/path-chn.js"
+    },
+    {
+      "subject": "语文",
+      "unit_id": "u_chn_11",
+      "lesson": "乡土中国（整本书阅读）",
+      "chapter": "第五单元乡土的中国",
+      "video_title": "乡土中国（整本书阅读）",
+      "bvid": "BV1JB4y1G7kF",
+      "part": 18,
+      "duration": "26:13",
+      "duration_s": 1573,
+      "up": "名师课堂",
+      "selfhosted_src": "/video/chn11.mp4",
+      "selfhosted_vtt": "/video/chn11.vtt",
+      "has_segments": true,
+      "source": "github/path-chn.js"
+    },
+    {
+      "subject": "语文",
+      "unit_id": "u_chn_12",
+      "lesson": "劝学·师说",
+      "chapter": "第六单元学习之道",
+      "video_title": "劝学·师说",
+      "bvid": "BV1JB4y1G7kF",
+      "part": 19,
+      "duration": "69:13",
+      "duration_s": 4153,
+      "up": "名师课堂",
+      "selfhosted_src": "/video/chn12.mp4",
+      "selfhosted_vtt": "/video/chn12.vtt",
+      "has_segments": true,
+      "source": "github/path-chn.js"
+    },
+    {
+      "subject": "语文",
+      "unit_id": "u_chn_13",
+      "lesson": "反对党八股（节选）",
+      "chapter": "第六单元学习之道",
+      "video_title": "反对党八股（节选）",
+      "bvid": "BV1Lu411H7GG",
+      "part": 1,
+      "duration": "26:00",
+      "duration_s": 1560,
+      "up": "小熊图书",
+      "selfhosted_src": "/video/chn13.mp4",
+      "selfhosted_vtt": "/video/chn13.vtt",
+      "has_segments": true,
+      "source": "github/path-chn.js"
+    },
+    {
+      "subject": "语文",
+      "unit_id": "u_chn_14",
+      "lesson": "拿来主义",
+      "chapter": "第六单元学习之道",
+      "video_title": "拿来主义",
+      "bvid": "BV1JB4y1G7kF",
+      "part": 20,
+      "duration": "27:19",
+      "duration_s": 1639,
+      "up": "名师课堂",
+      "selfhosted_src": "/video/chn14.mp4",
+      "selfhosted_vtt": "/video/chn14.vtt",
+      "has_segments": true,
+      "source": "github/path-chn.js"
+    },
+    {
+      "subject": "语文",
+      "unit_id": "u_chn_15",
+      "lesson": "读书两篇",
+      "chapter": "第六单元学习之道",
+      "video_title": "读书两篇",
+      "bvid": "BV1H14y1H7aA",
+      "part": 1,
+      "duration": "47:53",
+      "duration_s": 2873,
+      "up": "项仁军名师工作室",
+      "selfhosted_src": "/video/chn15.mp4",
+      "selfhosted_vtt": "/video/chn15.vtt",
+      "has_segments": true,
+      "source": "github/path-chn.js"
+    },
+    {
+      "subject": "语文",
+      "unit_id": "u_chn_16",
+      "lesson": "故都的秋·荷塘月色",
+      "chapter": "第七单元自然情怀",
+      "video_title": "故都的秋·荷塘月色",
+      "bvid": "BV1JB4y1G7kF",
+      "part": 22,
+      "duration": "26:52",
+      "duration_s": 1612,
+      "up": "名师课堂",
+      "selfhosted_src": "/video/chn16.mp4",
+      "selfhosted_vtt": "/video/chn16.vtt",
+      "has_segments": true,
+      "source": "github/path-chn.js"
+    },
+    {
+      "subject": "语文",
+      "unit_id": "u_chn_17",
+      "lesson": "我与地坛（节选）",
+      "chapter": "第七单元自然情怀",
+      "video_title": "我与地坛（节选）",
+      "bvid": "BV1JB4y1G7kF",
+      "part": 24,
+      "duration": "27:14",
+      "duration_s": 1634,
+      "up": "名师课堂",
+      "selfhosted_src": "/video/chn17.mp4",
+      "selfhosted_vtt": "/video/chn17.vtt",
+      "has_segments": true,
+      "source": "github/path-chn.js"
+    },
+    {
+      "subject": "语文",
+      "unit_id": "u_chn_18",
+      "lesson": "赤壁赋·登泰山记",
+      "chapter": "第七单元自然情怀",
+      "video_title": "赤壁赋·登泰山记",
+      "bvid": "BV1JB4y1G7kF",
+      "part": 25,
+      "duration": "24:41",
+      "duration_s": 1481,
+      "up": "名师课堂",
+      "selfhosted_src": "/video/chn18.mp4",
+      "selfhosted_vtt": "/video/chn18.vtt",
+      "has_segments": true,
+      "source": "github/path-chn.js"
+    },
+    {
+      "subject": "语文",
+      "unit_id": "u_chn_19",
+      "lesson": "词语积累与词语解释",
+      "chapter": "第八单元语言家园",
+      "video_title": "词语积累与词语解释",
+      "bvid": "BV1JB4y1G7kF",
+      "part": 28,
+      "duration": "80:01",
+      "duration_s": 4801,
+      "up": "名师课堂",
+      "selfhosted_src": "/video/chn19.mp4",
+      "selfhosted_vtt": "/video/chn19.vtt",
+      "has_segments": true,
+      "source": "github/path-chn.js"
+    },
+    {
+      "subject": "语文",
+      "unit_id": "u_chn_20",
+      "lesson": "古诗词诵读四首",
+      "chapter": "古诗词诵读古诗词诵读",
+      "video_title": "古诗词诵读四首",
+      "bvid": "BV1mCqkYPEYr",
+      "part": 1,
+      "duration": "57:49",
+      "duration_s": 3469,
+      "up": "王老师",
+      "selfhosted_src": "/video/chn20.mp4",
+      "selfhosted_vtt": "/video/chn20.vtt",
+      "has_segments": true,
+      "source": "github/path-chn.js"
+    },
+    {
+      "subject": "英语",
+      "unit_id": null,
+      "lesson": "Welcome Unit",
+      "chapter": "必修一 Welcome Unit+Unit 1",
+      "video_title": "",
+      "bvid": "BV1KG4y1W7R3",
+      "part": "",
+      "duration": "",
+      "duration_s": null,
+      "up": "",
+      "selfhosted_src": null,
+      "selfhosted_vtt": null,
+      "has_segments": false,
+      "source": "video-library/videos.csv only（未见于 github/path-*.js 课表：多为同一课的第2/3段拼课视频，或 part 写为“合集分P/P3+P4/P4/P6/…”无法按单P匹配）"
+    },
+    {
+      "subject": "数学",
+      "unit_id": "u_cnm_h005",
+      "lesson": "集合的关系与运算",
+      "chapter": "第一章 集合与常用逻辑用语",
+      "video_title": "1.1.3 集合的基本运算（交集并集补集）",
+      "bvid": "BV1434y1K72m",
+      "part": "",
+      "duration": "",
+      "duration_s": 1461,
+      "up": "宋浩老师官方",
+      "selfhosted_src": null,
+      "selfhosted_vtt": null,
+      "has_segments": false,
+      "source": "video-library/videos.csv only（未见于 github/path-*.js 课表：多为同一课的第2/3段拼课视频，或 part 写为“合集分P/P3+P4/P4/P6/…”无法按单P匹配）"
+    },
+    {
+      "subject": "数学",
+      "unit_id": "u_cnm_h014",
+      "lesson": "全称量词与存在量词",
+      "chapter": "第一章 集合与常用逻辑用语",
+      "video_title": "1.2.2 全称和存在量词命题的否定",
+      "bvid": "BV18V411w7CK",
+      "part": "",
+      "duration": "",
+      "duration_s": 846,
+      "up": "宋浩老师官方",
+      "selfhosted_src": null,
+      "selfhosted_vtt": null,
+      "has_segments": false,
+      "source": "video-library/videos.csv only（未见于 github/path-*.js 课表：多为同一课的第2/3段拼课视频，或 part 写为“合集分P/P3+P4/P4/P6/…”无法按单P匹配）"
+    },
+    {
+      "subject": "物理",
+      "unit_id": "u_phy_h02",
+      "lesson": "时间、位移与速度",
+      "chapter": "第一章 运动的描述",
+      "video_title": "【预科】1.4+1.5+2.1+2.2 四集组合",
+      "bvid": "BV1V341147SL",
+      "part": "合集分P",
+      "duration": "",
+      "duration_s": 3220,
+      "up": "锤姐物理（张佳铭）",
+      "selfhosted_src": null,
+      "selfhosted_vtt": null,
+      "has_segments": false,
+      "source": "video-library/videos.csv only（未见于 github/path-*.js 课表：多为同一课的第2/3段拼课视频，或 part 写为“合集分P/P3+P4/P4/P6/…”无法按单P匹配）"
+    },
+    {
+      "subject": "物理",
+      "unit_id": "u_phy_h03",
+      "lesson": "加速度",
+      "chapter": "第一章 运动的描述",
+      "video_title": "【预科】2.5 速度变化量与加速度",
+      "bvid": "BV1V341147SL",
+      "part": "合集分P",
+      "duration": "",
+      "duration_s": 1568,
+      "up": "锤姐物理（张佳铭）",
+      "selfhosted_src": null,
+      "selfhosted_vtt": null,
+      "has_segments": false,
+      "source": "video-library/videos.csv only（未见于 github/path-*.js 课表：多为同一课的第2/3段拼课视频，或 part 写为“合集分P/P3+P4/P4/P6/…”无法按单P匹配）"
+    },
+    {
+      "subject": "物理",
+      "unit_id": null,
+      "lesson": "运动图像：x-t与v-t",
+      "chapter": "第一章 运动的描述",
+      "video_title": "【预科】3.1 x-t图像性质 + 3.3 v-t图像性质",
+      "bvid": "BV1V341147SL",
+      "part": "合集分P",
+      "duration": "",
+      "duration_s": 2487,
+      "up": "锤姐物理（张佳铭）",
+      "selfhosted_src": null,
+      "selfhosted_vtt": null,
+      "has_segments": false,
+      "source": "video-library/videos.csv only（未见于 github/path-*.js 课表：多为同一课的第2/3段拼课视频，或 part 写为“合集分P/P3+P4/P4/P6/…”无法按单P匹配）"
+    },
+    {
+      "subject": "物理",
+      "unit_id": null,
+      "lesson": "第1课 运动、质点与参考系",
+      "chapter": "必修一第一章",
+      "video_title": "高中物理必修一基础与解法全集（1.1质点+1.2参考系）",
+      "bvid": "BV1f4xtzZE8F",
+      "part": "P3+P4",
+      "duration": "",
+      "duration_s": 1513,
+      "up": "一物儿",
+      "selfhosted_src": null,
+      "selfhosted_vtt": null,
+      "has_segments": false,
+      "source": "video-library/videos.csv only（未见于 github/path-*.js 课表：多为同一课的第2/3段拼课视频，或 part 写为“合集分P/P3+P4/P4/P6/…”无法按单P匹配）"
+    },
+    {
+      "subject": "地理",
+      "unit_id": null,
+      "lesson": "第1-4、6、7课（6课）",
+      "chapter": "必修一第一、二章",
+      "video_title": "高中地理必修一基础与考点大合集",
+      "bvid": "BV1VCxQedEVW",
+      "part": "P4/P6/P8/P9/P10/P12",
+      "duration": "",
+      "duration_s": 0,
+      "up": "一地er",
+      "selfhosted_src": null,
+      "selfhosted_vtt": null,
+      "has_segments": false,
+      "source": "video-library/videos.csv only（未见于 github/path-*.js 课表：多为同一课的第2/3段拼课视频，或 part 写为“合集分P/P3+P4/P4/P6/…”无法按单P匹配）"
+    },
+    {
+      "subject": "数学",
+      "unit_id": "u_cnm_h016",
+      "lesson": "等式性质与不等式性质",
+      "chapter": "",
+      "video_title": "2.2.2 不等式的解【高中数学】宋浩老师",
+      "bvid": "BV1Wu4y147aj",
+      "part": "1",
+      "duration": "",
+      "duration_s": 1652,
+      "up": "宋浩",
+      "selfhosted_src": null,
+      "selfhosted_vtt": null,
+      "has_segments": false,
+      "source": "video-library/videos.csv only（未见于 github/path-*.js 课表：多为同一课的第2/3段拼课视频，或 part 写为“合集分P/P3+P4/P4/P6/…”无法按单P匹配）"
+    },
+    {
+      "subject": "数学",
+      "unit_id": "u_cnm_h023",
+      "lesson": "二次函数与一元二次方程、不等式",
+      "chapter": "",
+      "video_title": "2.2.3一元二次不等式的解法【高中数学】宋浩老师",
+      "bvid": "BV1LN4y1f7g1",
+      "part": "1",
+      "duration": "",
+      "duration_s": 1107,
+      "up": "宋浩",
+      "selfhosted_src": null,
+      "selfhosted_vtt": null,
+      "has_segments": false,
+      "source": "video-library/videos.csv only（未见于 github/path-*.js 课表：多为同一课的第2/3段拼课视频，或 part 写为“合集分P/P3+P4/P4/P6/…”无法按单P匹配）"
+    },
+    {
+      "subject": "数学",
+      "unit_id": "u_cnm_h023",
+      "lesson": "二次函数与一元二次方程、不等式",
+      "chapter": "",
+      "video_title": "2.2.3 含参数不等式【高中数学】宋浩老师",
+      "bvid": "BV1Ww41117Jc",
+      "part": "1",
+      "duration": "",
+      "duration_s": 1876,
+      "up": "宋浩",
+      "selfhosted_src": null,
+      "selfhosted_vtt": null,
+      "has_segments": false,
+      "source": "video-library/videos.csv only（未见于 github/path-*.js 课表：多为同一课的第2/3段拼课视频，或 part 写为“合集分P/P3+P4/P4/P6/…”无法按单P匹配）"
+    },
+    {
+      "subject": "数学",
+      "unit_id": "u_cnm_h032",
+      "lesson": "函数的基本性质",
+      "chapter": "",
+      "video_title": "3.1.3 函数的奇偶性【高中数学】宋浩老师",
+      "bvid": "BV1yH4y1Z7K3",
+      "part": "1",
+      "duration": "",
+      "duration_s": 1902,
+      "up": "宋浩",
+      "selfhosted_src": null,
+      "selfhosted_vtt": null,
+      "has_segments": false,
+      "source": "video-library/videos.csv only（未见于 github/path-*.js 课表：多为同一课的第2/3段拼课视频，或 part 写为“合集分P/P3+P4/P4/P6/…”无法按单P匹配）"
+    },
+    {
+      "subject": "数学",
+      "unit_id": "u_cnm_h032",
+      "lesson": "函数的基本性质",
+      "chapter": "",
+      "video_title": "3.1.3 函数的对称【高中数学】宋浩老师",
+      "bvid": "BV1wu4y1x7Jd",
+      "part": "1",
+      "duration": "",
+      "duration_s": 1702,
+      "up": "宋浩",
+      "selfhosted_src": null,
+      "selfhosted_vtt": null,
+      "has_segments": false,
+      "source": "video-library/videos.csv only（未见于 github/path-*.js 课表：多为同一课的第2/3段拼课视频，或 part 写为“合集分P/P3+P4/P4/P6/…”无法按单P匹配）"
+    }
+  ]
+}

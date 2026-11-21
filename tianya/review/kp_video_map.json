@@ -1,0 +1,1645 @@
+{
+ "lessons": {
+  "m1": {
+   "unit": "u_cnm_h001",
+   "name": "集合的概念",
+   "type": "self",
+   "bvid": "BV1Ek4y1w7ma",
+   "part": 1,
+   "src": "/video/m1.mp4"
+  },
+  "m2": {
+   "unit": "u_cnm_h002",
+   "name": "集合的关系与运算",
+   "type": "self",
+   "bvid": "BV1TP411h7U2",
+   "part": 1,
+   "src": "/video/m2.mp4"
+  },
+  "m3": {
+   "unit": "u_cnm_h003",
+   "name": "充分条件与必要条件",
+   "type": "self",
+   "bvid": "BV11p4y1F78j",
+   "part": 1,
+   "src": "/video/m3.mp4"
+  },
+  "m5": {
+   "unit": "u_cnm_h005",
+   "name": "等式性质与不等式性质",
+   "type": "self",
+   "bvid": "BV1A34y1P7as",
+   "part": 1,
+   "src": "/video/m5.mp4"
+  },
+  "m6": {
+   "unit": "u_cnm_h006",
+   "name": "基本不等式",
+   "type": "self",
+   "bvid": "BV1B94y1h71g",
+   "part": 1,
+   "src": "/video/m6.mp4"
+  },
+  "m7": {
+   "unit": "u_cnm_h007",
+   "name": "二次函数与一元二次方程、不等式",
+   "type": "self",
+   "bvid": "BV1Fz4y157pb",
+   "part": 1,
+   "src": "/video/m7.mp4"
+  },
+  "m8": {
+   "unit": "u_cnm_h008",
+   "name": "函数的概念及其表示",
+   "type": "self",
+   "bvid": "BV1KH4y1Z7Ax",
+   "part": 1,
+   "src": "/video/m8.mp4"
+  },
+  "phy2": {
+   "unit": "u_phy_h02",
+   "name": "时间、位移与速度",
+   "type": "self",
+   "bvid": "BV1V341147SL",
+   "part": 2,
+   "src": "/video/phy2.mp4"
+  },
+  "phy3": {
+   "unit": "u_phy_h03",
+   "name": "加速度",
+   "type": "self",
+   "bvid": "BV1V341147SL",
+   "part": 3,
+   "src": "/video/phy3.mp4"
+  },
+  "phy4": {
+   "unit": "u_phy_h04",
+   "name": "运动图像：x-t 与 v-t",
+   "type": "self",
+   "bvid": "BV1V341147SL",
+   "part": 4,
+   "src": "/video/phy4.mp4"
+  },
+  "phy2_1": {
+   "unit": "u_phy2_1",
+   "name": "匀变速直线运动的规律",
+   "type": "bili",
+   "bvid": "BV18E411q7SW",
+   "part": 5,
+   "src": null
+  },
+  "phy2_3": {
+   "unit": "u_phy2_3",
+   "name": "科学测量：打点计时器测速度",
+   "type": "bili",
+   "bvid": "BV18E411q7SW",
+   "part": 7,
+   "src": null
+  },
+  "chem2": {
+   "unit": "u_chem_2",
+   "name": "研究物质性质的方法和程序",
+   "type": "bili",
+   "bvid": "BV1zK411674L",
+   "part": 1,
+   "src": null
+  },
+  "chem3": {
+   "unit": "u_chem_3",
+   "name": "氯气的性质",
+   "type": "bili",
+   "bvid": "BV1zK411674L",
+   "part": 2,
+   "src": null
+  },
+  "chem4": {
+   "unit": "u_chem_4",
+   "name": "物质的量与摩尔质量",
+   "type": "bili",
+   "bvid": "BV1zK411674L",
+   "part": 3,
+   "src": null
+  },
+  "chem5": {
+   "unit": "u_chem_5",
+   "name": "气体摩尔体积",
+   "type": "bili",
+   "bvid": "BV1zK411674L",
+   "part": 4,
+   "src": null
+  },
+  "chem11": {
+   "unit": "u_chem_11",
+   "name": "离子反应与离子方程式",
+   "type": "bili",
+   "bvid": "BV1zK411674L",
+   "part": 12,
+   "src": null
+  },
+  "chem14": {
+   "unit": "u_chem_14",
+   "name": "微项目：科学使用含氯消毒剂",
+   "type": "bili",
+   "bvid": "BV1zK411674L",
+   "part": 16,
+   "src": null
+  },
+  "hist1": {
+   "unit": "u_hist_1",
+   "name": "中华文明的起源与早期国家",
+   "type": "bili",
+   "bvid": "BV1Uz4y1p752",
+   "part": 1,
+   "src": null
+  },
+  "hist2": {
+   "unit": "u_hist_2",
+   "name": "诸侯纷争与变法运动",
+   "type": "bili",
+   "bvid": "BV1Dp4y1375Q",
+   "part": 1,
+   "src": null
+  },
+  "hist3": {
+   "unit": "u_hist_3",
+   "name": "秦统一多民族封建国家的建立",
+   "type": "bili",
+   "bvid": "BV1F94y1k7k4",
+   "part": 1,
+   "src": null
+  },
+  "hist4": {
+   "unit": "u_hist_4",
+   "name": "西汉与东汉——统一多民族封建国家的巩固",
+   "type": "bili",
+   "bvid": "BV1gu41177pa",
+   "part": 1,
+   "src": null
+  },
+  "hist5": {
+   "unit": "u_hist_5",
+   "name": "三国两晋南北朝的政权更迭与民族交融",
+   "type": "bili",
+   "bvid": "BV1kh4y1T7Sm",
+   "part": 1,
+   "src": null
+  },
+  "hist6": {
+   "unit": "u_hist_6",
+   "name": "从隋唐盛世到五代十国",
+   "type": "bili",
+   "bvid": "BV1C8411y7ZB",
+   "part": 1,
+   "src": null
+  },
+  "hist7": {
+   "unit": "u_hist_7",
+   "name": "隋唐制度的变化与创新",
+   "type": "self",
+   "bvid": "BV1J9tHesEYa",
+   "part": 1,
+   "src": "/video/hist7.mp4"
+  },
+  "geo2": {
+   "unit": "u_geo_2",
+   "name": "太阳对地球的影响",
+   "type": "self",
+   "bvid": "BV1VCxQedEVW",
+   "part": 6,
+   "src": "/video/geo2.mp4"
+  },
+  "geo3": {
+   "unit": "u_geo_3",
+   "name": "地球的历史",
+   "type": "self",
+   "bvid": "BV1VCxQedEVW",
+   "part": 8,
+   "src": "/video/geo3.mp4"
+  },
+  "geo4": {
+   "unit": "u_geo_4",
+   "name": "地球的圈层结构",
+   "type": "self",
+   "bvid": "BV1VCxQedEVW",
+   "part": 9,
+   "src": "/video/geo4.mp4"
+  },
+  "geo6": {
+   "unit": "u_geo_6",
+   "name": "大气的组成和垂直分层",
+   "type": "self",
+   "bvid": "BV1VCxQedEVW",
+   "part": 10,
+   "src": "/video/geo6.mp4"
+  },
+  "geo7": {
+   "unit": "u_geo_7",
+   "name": "大气受热过程和大气运动",
+   "type": "self",
+   "bvid": "BV1VCxQedEVW",
+   "part": 12,
+   "src": "/video/geo7.mp4"
+  },
+  "bio1": {
+   "unit": "u_bio_1",
+   "name": "细胞是生命活动的基本单位",
+   "type": "self",
+   "bvid": "BV1p54y177e6",
+   "part": 1,
+   "src": "/video/bio1.mp4"
+  },
+  "bio2": {
+   "unit": "u_bio_2",
+   "name": "细胞的多样性和统一性",
+   "type": "self",
+   "bvid": "BV1p54y177e6",
+   "part": 3,
+   "src": "/video/bio2.mp4"
+  },
+  "bio3": {
+   "unit": "u_bio_3",
+   "name": "细胞中的元素和化合物",
+   "type": "self",
+   "bvid": "BV1p54y177e6",
+   "part": 7,
+   "src": "/video/bio3.mp4"
+  },
+  "bio4": {
+   "unit": "u_bio_4",
+   "name": "细胞中的无机物",
+   "type": "self",
+   "bvid": "BV1p54y177e6",
+   "part": 9,
+   "src": "/video/bio4.mp4"
+  },
+  "bio6": {
+   "unit": "u_bio_6",
+   "name": "蛋白质是生命活动的主要承担者",
+   "type": "self",
+   "bvid": "BV1p54y177e6",
+   "part": 13,
+   "src": "/video/bio6.mp4"
+  },
+  "bio13": {
+   "unit": "u_bio_13",
+   "name": "降低化学反应活化能的酶（上）：酶的作用和本质",
+   "type": "self",
+   "bvid": "BV1p54y177e6",
+   "part": 33,
+   "src": "/video/bio13.mp4"
+  },
+  "pol1": {
+   "unit": "u_pol_1",
+   "name": "社会主义从空想到科学、从理论到实践的发展",
+   "type": "self",
+   "bvid": "BV15M4m127aY",
+   "part": 1,
+   "src": "/video/pol1.mp4"
+  },
+  "pol2": {
+   "unit": "u_pol_2",
+   "name": "只有社会主义才能救中国",
+   "type": "self",
+   "bvid": "BV1Cr421T75t",
+   "part": 1,
+   "src": "/video/pol2.mp4"
+  },
+  "pol3": {
+   "unit": "u_pol_3",
+   "name": "只有中国特色社会主义才能发展中国",
+   "type": "self",
+   "bvid": "BV18T421k7Qr",
+   "part": 1,
+   "src": "/video/pol3.mp4"
+  },
+  "chn1": {
+   "unit": "u_chn_1",
+   "name": "沁园春·长沙",
+   "type": "self",
+   "bvid": "BV1JB4y1G7kF",
+   "part": 1,
+   "src": "/video/chn1.mp4"
+  },
+  "chn5": {
+   "unit": "u_chn_5",
+   "name": "以工匠精神雕琢时代品质",
+   "type": "self",
+   "bvid": "BV1JB4y1G7kF",
+   "part": 8,
+   "src": "/video/chn5.mp4"
+  },
+  "chn7": {
+   "unit": "u_chn_7",
+   "name": "短歌行·归园田居",
+   "type": "self",
+   "bvid": "BV1JB4y1G7kF",
+   "part": 11,
+   "src": "/video/chn7.mp4"
+  },
+  "chn12": {
+   "unit": "u_chn_12",
+   "name": "劝学·师说",
+   "type": "self",
+   "bvid": "BV1JB4y1G7kF",
+   "part": 19,
+   "src": "/video/chn12.mp4"
+  },
+  "chn19": {
+   "unit": "u_chn_19",
+   "name": "词语积累与词语解释",
+   "type": "self",
+   "bvid": "BV1JB4y1G7kF",
+   "part": 28,
+   "src": "/video/chn19.mp4"
+  }
+ },
+ "entries": [
+  {
+   "subject": "数学",
+   "question_no": "4",
+   "kp": "分式不等式的解法（分母不为零、零点取舍）",
+   "lesson": "m7",
+   "t": 2620,
+   "kind": "timestamp",
+   "note": "分段“分式不等式：相除变相乘，分母不等于0这条不能丢”"
+  },
+  {
+   "subject": "数学",
+   "question_no": "6",
+   "kp": "充分条件与必要条件的判断（小范围推出大范围）",
+   "lesson": "m3",
+   "t": 327,
+   "kind": "timestamp",
+   "note": "分段“集合法纠直觉：小范围推大范围”"
+  },
+  {
+   "subject": "数学",
+   "question_no": "9",
+   "kp": "集合元素的互异性（分类讨论后必须回代检验）",
+   "lesson": "m1",
+   "t": 1907,
+   "kind": "timestamp",
+   "note": "分段“例题：两集合相等反求参数（互异性砍选项）”；互异性定义在378秒"
+  },
+  {
+   "subject": "数学",
+   "question_no": "10",
+   "kp": "不等式性质",
+   "lesson": "m5",
+   "t": 0,
+   "kind": "timestamp",
+   "note": "分段“回顾初中三条性质”"
+  },
+  {
+   "subject": "数学",
+   "question_no": "10",
+   "kp": "作差比较法",
+   "lesson": "m5",
+   "t": 224,
+   "kind": "timestamp",
+   "note": "分段“传递性与对称性；作差法比较大小”"
+  },
+  {
+   "subject": "数学",
+   "question_no": "10",
+   "kp": "糖水不等式",
+   "lesson": "m5",
+   "t": 1140,
+   "kind": "timestamp",
+   "note": "分段“分式例题：(1+m)/(3+m)与1/3比大小，作差通分”"
+  },
+  {
+   "subject": "数学",
+   "question_no": "11",
+   "kp": "基本不等式",
+   "lesson": "m6",
+   "t": 0,
+   "kind": "timestamp",
+   "note": "分段“基本不等式的证明与取等条件”"
+  },
+  {
+   "subject": "数学",
+   "question_no": "11",
+   "kp": "消元法求最值（二次函数配方）",
+   "lesson": "m6",
+   "t": 1803,
+   "kind": "timestamp",
+   "note": "分段“一题两解：(1+x)(3−x)最大值，二次函数法对基本不等式法”"
+  },
+  {
+   "subject": "数学",
+   "question_no": "14",
+   "kp": "函数定义域",
+   "lesson": "m8",
+   "t": 480,
+   "kind": "timestamp",
+   "note": "分段“求定义域：根号、分母的限制全列出来取交集”；原知识点“函数值域与定义域”拆成两标签"
+  },
+  {
+   "subject": "数学",
+   "question_no": "14",
+   "kp": "函数值域",
+   "lesson": "m8",
+   "t": 1080,
+   "kind": "timestamp",
+   "note": "分段“二次函数求值域：配方看顶点，再结合所给区间端点”"
+  },
+  {
+   "subject": "数学",
+   "question_no": "14",
+   "kp": "集合相等与包含的区分",
+   "lesson": "m2",
+   "t": 649,
+   "kind": "timestamp",
+   "note": "分段“例题：判断两集合相等还是真子集”"
+  },
+  {
+   "subject": "物理",
+   "question_no": "5",
+   "kp": "速度与加速度关系：a是速度变化快慢，与v大小无关；a增大v可能减小（反向时）",
+   "lesson": "phy3",
+   "t": 277,
+   "kind": "timestamp",
+   "note": "分段“三者关系：v、Δv、a两两无关”"
+  },
+  {
+   "subject": "物理",
+   "question_no": "8",
+   "kp": "等分位移比例推论",
+   "lesson": "phy2_1",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "匀变速直线运动推论在本课，B站嵌入无分段，整课重看"
+  },
+  {
+   "subject": "物理",
+   "question_no": "8",
+   "kp": "中间时刻速度",
+   "lesson": "phy2_1",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "同上"
+  },
+  {
+   "subject": "物理",
+   "question_no": "9空1",
+   "kp": "前“一半路程”的平均速度≠算术平均，v=2v₁v₂/(v₁+v₂)=7.2",
+   "lesson": "phy2",
+   "t": 2234,
+   "kind": "timestamp",
+   "note": "分段“龟兔赛跑：平均速度与瞬时速度”"
+  },
+  {
+   "subject": "物理",
+   "question_no": "10空2",
+   "kp": "坐标变化量Δx=x末−x初=0−3=−3（含符号）",
+   "lesson": "phy2",
+   "t": 847,
+   "kind": "timestamp",
+   "note": "分段“位置轴上算位移：末减初”"
+  },
+  {
+   "subject": "物理",
+   "question_no": "10空4",
+   "kp": "x-t图像斜率=速度：第4s内3→0，v=−3m/s",
+   "lesson": "phy4",
+   "t": 323,
+   "kind": "timestamp",
+   "note": "分段“斜率就是速度：越陡越快，曲线看切线”"
+  },
+  {
+   "subject": "物理",
+   "question_no": "11空3",
+   "kp": "a=Δv/Δt，时间Δt代入错误",
+   "lesson": "phy3",
+   "t": 370,
+   "kind": "timestamp",
+   "note": "分段“公式复习：定义式、单位、方向”"
+  },
+  {
+   "subject": "物理",
+   "question_no": "12(2)a",
+   "kp": "漏看“相邻计数点间还有四个计时点未标出”，T=0.1s误作0.02s",
+   "lesson": "phy2_3",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "打点计时器测速度一课，B站嵌入无分段，整课重看"
+  },
+  {
+   "subject": "物理",
+   "question_no": "12(2)b",
+   "kp": "逐差法求加速度未掌握",
+   "lesson": "phy2_3",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "同上"
+  },
+  {
+   "subject": "物理",
+   "question_no": "13(1)",
+   "kp": "速度变化量的矢量性：反向踢回，Δv=8−(−10)=18m/s",
+   "lesson": "phy3",
+   "t": 1345,
+   "kind": "timestamp",
+   "note": "分段“计算规范：先定正方向再代数（反弹例题）”"
+  },
+  {
+   "subject": "物理",
+   "question_no": "14(2)",
+   "kp": "v-t面积=位移=1500m正确，但1500/75=20算成2",
+   "lesson": null,
+   "t": null,
+   "kind": "no_video_needed",
+   "note": "纯计算失误：面积法本身是对的，1500÷75算错，不用看视频"
+  },
+  {
+   "subject": "物理",
+   "question_no": "15(1)",
+   "kp": "v=v₀+at公式分（2分）丢了，只拿结果分",
+   "lesson": "phy2_1",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "匀变速公式在本课，B站嵌入无分段，整课重看"
+  },
+  {
+   "subject": "物理",
+   "question_no": "15(2)",
+   "kp": "匀减速位移公式 x=v₀t−½at² 不会用，拼凑答案",
+   "lesson": "phy2_1",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "同上"
+  },
+  {
+   "subject": "物理",
+   "question_no": "15(3)",
+   "kp": "刹车陷阱：未先算停止时间t₀=v₀/a=3s，直接代t=4s",
+   "lesson": "phy2_1",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "同上"
+  },
+  {
+   "subject": "化学",
+   "question_no": "1",
+   "kp": "化学实验安全规范（金属钠的保存与处理）",
+   "lesson": "chem2",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "钠的性质与保存讲在“研究物质性质的方法和程序”一课，B站嵌入无分段"
+  },
+  {
+   "subject": "化学",
+   "question_no": "4",
+   "kp": "钠与盐溶液的反应（钠先与水反应生成NaOH，再与MgCl2反应生成白色沉淀并放出气体）",
+   "lesson": "chem2",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "同上"
+  },
+  {
+   "subject": "化学",
+   "question_no": "7",
+   "kp": "氯气与氯水的性质",
+   "lesson": "chem3",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "“氯气的性质”一课，B站嵌入无分段"
+  },
+  {
+   "subject": "化学",
+   "question_no": "8",
+   "kp": "物质的量（微粒数与分子内原子数的换算）",
+   "lesson": "chem4",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "“物质的量与摩尔质量”一课，B站嵌入无分段"
+  },
+  {
+   "subject": "化学",
+   "question_no": "9",
+   "kp": "阿伏加德罗定律与气体摩尔体积",
+   "lesson": "chem5",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "“气体摩尔体积”一课，B站嵌入无分段"
+  },
+  {
+   "subject": "化学",
+   "question_no": "10",
+   "kp": "气体除杂与干燥",
+   "lesson": "chem3",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "氯气制取装置的除杂干燥讲在“氯气的性质”一课"
+  },
+  {
+   "subject": "化学",
+   "question_no": "10",
+   "kp": "钠的燃烧实验",
+   "lesson": "chem3",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "钠在氯气中燃烧，讲在“氯气的性质”一课"
+  },
+  {
+   "subject": "化学",
+   "question_no": "10",
+   "kp": "浓硫酸稀释",
+   "lesson": "chem3",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "氯气制法装置用浓硫酸干燥，讲在“氯气的性质”一课"
+  },
+  {
+   "subject": "化学",
+   "question_no": "11-(1)",
+   "kp": "钠与氧气反应：条件决定产物（常温Na2O/加热Na2O2）",
+   "lesson": "chem2",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "钠的性质讲在“研究物质性质的方法和程序”一课"
+  },
+  {
+   "subject": "化学",
+   "question_no": "11-(2)",
+   "kp": "氢气在氯气中燃烧",
+   "lesson": "chem3",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "“氯气的性质”一课"
+  },
+  {
+   "subject": "化学",
+   "question_no": "11-(3)",
+   "kp": "Fe与Cl2生成FeCl3",
+   "lesson": "chem3",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "“氯气的性质”一课"
+  },
+  {
+   "subject": "化学",
+   "question_no": "11-(3)",
+   "kp": "Fe与盐酸生成FeCl2+H2↑",
+   "lesson": "chem3",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "与Fe与Cl2对比讲在“氯气的性质”一课"
+  },
+  {
+   "subject": "化学",
+   "question_no": "11-(4)",
+   "kp": "次氯酸见光分解",
+   "lesson": "chem3",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "“氯气的性质”一课"
+  },
+  {
+   "subject": "化学",
+   "question_no": "11-(5)",
+   "kp": "漂白粉的制取",
+   "lesson": "chem3",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "“氯气的性质”一课"
+  },
+  {
+   "subject": "化学",
+   "question_no": "11-(6)",
+   "kp": "复分解反应：产物有蓝色Cu(OH)2沉淀",
+   "lesson": "chem11",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "“离子反应与离子方程式”一课，B站嵌入无分段"
+  },
+  {
+   "subject": "化学",
+   "question_no": "13-(1)",
+   "kp": "钠与水的反应",
+   "lesson": "chem2",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "“研究物质性质的方法和程序”一课"
+  },
+  {
+   "subject": "化学",
+   "question_no": "13-(2)-方程1",
+   "kp": "过氧化钠与二氧化碳反应",
+   "lesson": "chem2",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "钠的化合物讲在“研究物质性质的方法和程序”一课"
+  },
+  {
+   "subject": "化学",
+   "question_no": "13-(5)",
+   "kp": "钠与硫酸铜溶液反应（钠与水反应、氢氧化钠与硫酸铜反应生成蓝色沉淀）",
+   "lesson": "chem2",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "钠与盐溶液的反应讲在“研究物质性质的方法和程序”一课"
+  },
+  {
+   "subject": "化学",
+   "question_no": "14-(1)-方程",
+   "kp": "氯气的实验室制法",
+   "lesson": "chem3",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "“氯气的性质”一课"
+  },
+  {
+   "subject": "化学",
+   "question_no": "14-(1)-BDC",
+   "kp": "氯气的实验室制法（装置部分）",
+   "lesson": "chem3",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "同上；BDC小问具体对应未完全确认，按14题干归入本课"
+  },
+  {
+   "subject": "化学",
+   "question_no": "14-(3)",
+   "kp": "氯气与NaOH反应（尾气吸收）；注意产物是NaClO不是HClO",
+   "lesson": "chem3",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "“氯气的性质”一课"
+  },
+  {
+   "subject": "化学",
+   "question_no": "14-(5)",
+   "kp": "漂白粉：有效成分Ca(ClO)2",
+   "lesson": "chem14",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "“微项目：科学使用含氯消毒剂”一课，B站嵌入无分段"
+  },
+  {
+   "subject": "化学",
+   "question_no": "14-(5)",
+   "kp": "漂白粉：混合物CaCl2·Ca(ClO)2",
+   "lesson": "chem14",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "同上"
+  },
+  {
+   "subject": "历史",
+   "question_no": "3",
+   "kp": "商王巡行与内外服制度",
+   "lesson": "hist1",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "“中华文明的起源与早期国家”一课，B站嵌入无分段，整课重看"
+  },
+  {
+   "subject": "历史",
+   "question_no": "6",
+   "kp": "春秋已能生产铁器（甘肃灵台铁剑）",
+   "lesson": "hist2",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "“诸侯纷争与变法运动”一课，B站嵌入无分段"
+  },
+  {
+   "subject": "历史",
+   "question_no": "8",
+   "kp": "二重证据法：传世文献与出土文献互证",
+   "lesson": "hist1",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "“中华文明的起源与早期国家”一课，B站嵌入无分段"
+  },
+  {
+   "subject": "历史",
+   "question_no": "11",
+   "kp": "汉代中朝崛起：决策权由外朝丞相转向以皇帝为首的中朝，皇权集中",
+   "lesson": "hist4",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "“西汉与东汉”一课，B站嵌入无分段"
+  },
+  {
+   "subject": "历史",
+   "question_no": "15",
+   "kp": "隋末统治危机",
+   "lesson": "hist6",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "“从隋唐盛世到五代十国”一课，B站嵌入无分段"
+  },
+  {
+   "subject": "历史",
+   "question_no": "20",
+   "kp": "三省六部制（中书省草拟诏令、门下省审核封驳、尚书省执行）",
+   "lesson": "hist7",
+   "t": 987,
+   "kind": "timestamp",
+   "note": "分段“三省六部流程：中书起草、门下审核、尚书执行”"
+  },
+  {
+   "subject": "历史",
+   "question_no": "21(2)",
+   "kp": "郡县制推行的背景",
+   "lesson": "hist3",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "“秦统一多民族封建国家的建立”一课，B站嵌入无分段"
+  },
+  {
+   "subject": "历史",
+   "question_no": "21(2)",
+   "kp": "郡县制推行的意义",
+   "lesson": "hist3",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "同上"
+  },
+  {
+   "subject": "历史",
+   "question_no": "22(1)",
+   "kp": "江南农业发展的表现",
+   "lesson": "hist5",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "“三国两晋南北朝的政权更迭与民族交融”一课，B站嵌入无分段"
+  },
+  {
+   "subject": "历史",
+   "question_no": "22(2)",
+   "kp": "江南农业发展的主要因素",
+   "lesson": "hist5",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "同上"
+  },
+  {
+   "subject": "历史",
+   "question_no": "23",
+   "kp": "百家争鸣的背景",
+   "lesson": "hist2",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "“诸侯纷争与变法运动”一课，B站嵌入无分段"
+  },
+  {
+   "subject": "历史",
+   "question_no": "23",
+   "kp": "百家争鸣学派主张",
+   "lesson": "hist2",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "同上"
+  },
+  {
+   "subject": "历史",
+   "question_no": "23",
+   "kp": "百家争鸣的历史影响",
+   "lesson": "hist2",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "同上"
+  },
+  {
+   "subject": "地理",
+   "question_no": "26(1)",
+   "kp": "地震波与地球内部圈层",
+   "lesson": "geo4",
+   "t": 370,
+   "kind": "timestamp",
+   "note": "分段“不连续面：莫霍面与古登堡面”（2900km）；软流层在748秒"
+  },
+  {
+   "subject": "地理",
+   "question_no": "26(2)",
+   "kp": "地质年代",
+   "lesson": "geo3",
+   "t": 600,
+   "kind": "timestamp",
+   "note": "分段“地质年代表：宙、代、纪怎么编年”"
+  },
+  {
+   "subject": "地理",
+   "question_no": "26(4)",
+   "kp": "对流层气温垂直变化",
+   "lesson": "geo6",
+   "t": 1524,
+   "kind": "timestamp",
+   "note": "分段“对流层：气温随高度降低、对流运动”"
+  },
+  {
+   "subject": "地理",
+   "question_no": "27(1)",
+   "kp": "辐射观测仪器读图",
+   "lesson": "geo7",
+   "t": 1298,
+   "kind": "timestamp",
+   "note": "分段“受热过程图判读五步法”；仪器读数本身无单独段，取最接近的读图方法段"
+  },
+  {
+   "subject": "地理",
+   "question_no": "27(2)",
+   "kp": "大气的受热过程",
+   "lesson": "geo7",
+   "t": 1162,
+   "kind": "timestamp",
+   "note": "分段“大气逆辐射：大气把热量还给地面”（错把逆辐射写成反射，对症）"
+  },
+  {
+   "subject": "地理",
+   "question_no": "27(3)",
+   "kp": "大气的受热过程",
+   "lesson": "geo7",
+   "t": 465,
+   "kind": "timestamp",
+   "note": "分段“受热过程全图：从太阳辐射出发”"
+  },
+  {
+   "subject": "地理",
+   "question_no": "28(1)",
+   "kp": "我国太阳辐射分布规律",
+   "lesson": "geo2",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "“太阳对地球的影响”一课；东西差异主因天气状况无单独段，整课重看"
+  },
+  {
+   "subject": "地理",
+   "question_no": "28(2)",
+   "kp": "青藏高原辐射与气温",
+   "lesson": "geo7",
+   "t": 2817,
+   "kind": "timestamp",
+   "note": "分段“大题模板：青藏高原太阳辐射强的原因”；保温作用在3785秒"
+  },
+  {
+   "subject": "生物",
+   "question_no": "1",
+   "kp": "细胞学说的内容与意义",
+   "lesson": "bio1",
+   "t": 58,
+   "kind": "timestamp",
+   "note": "分段“细胞学说：施莱登、施旺与魏尔肖的补充”"
+  },
+  {
+   "subject": "生物",
+   "question_no": "3",
+   "kp": "检测生物组织中的糖类、脂肪和蛋白质（显色反应）",
+   "lesson": "bio3",
+   "t": 1646,
+   "kind": "timestamp",
+   "note": "分段“检测实验（一）：还原糖与斐林试剂”，三项检测从1646秒起连续讲"
+  },
+  {
+   "subject": "生物",
+   "question_no": "6",
+   "kp": "细胞是生命活动的基本单位",
+   "lesson": "bio1",
+   "t": 300,
+   "kind": "timestamp",
+   "note": "分段“生命活动离不开细胞：从单细胞生物看起”"
+  },
+  {
+   "subject": "生物",
+   "question_no": "12",
+   "kp": "病毒无细胞结构",
+   "lesson": "bio1",
+   "t": 856,
+   "kind": "timestamp",
+   "note": "分段“病毒：没有细胞结构的特例”"
+  },
+  {
+   "subject": "生物",
+   "question_no": "12",
+   "kp": "病毒不属于原核生物",
+   "lesson": "bio1",
+   "t": 856,
+   "kind": "timestamp",
+   "note": "同上"
+  },
+  {
+   "subject": "生物",
+   "question_no": "17",
+   "kp": "还原糖的检测（斐林试剂的使用与实验设计）",
+   "lesson": "bio3",
+   "t": 1646,
+   "kind": "timestamp",
+   "note": "分段“检测实验（一）：还原糖与斐林试剂”；水浴加热在1903秒"
+  },
+  {
+   "subject": "生物",
+   "question_no": "18",
+   "kp": "蛋白质变性（空间结构破坏、肽键不断裂）",
+   "lesson": "bio6",
+   "t": 2757,
+   "kind": "timestamp",
+   "note": "分段“变性：加热、酒精与消毒原理”"
+  },
+  {
+   "subject": "生物",
+   "question_no": "20",
+   "kp": "脱水缩合",
+   "lesson": "bio6",
+   "t": 1758,
+   "kind": "timestamp",
+   "note": "分段“脱水缩合：羧基与氨基脱水成肽键”"
+  },
+  {
+   "subject": "生物",
+   "question_no": "20",
+   "kp": "氨基酸种类与个数",
+   "lesson": "bio6",
+   "t": 901,
+   "kind": "timestamp",
+   "note": "分段“必需氨基酸：八种要记牢”"
+  },
+  {
+   "subject": "生物",
+   "question_no": "20",
+   "kp": "肽键数",
+   "lesson": "bio6",
+   "t": 1758,
+   "kind": "timestamp",
+   "note": "分段“脱水缩合：羧基与氨基脱水成肽键”（肽键数=氨基酸数−肽链数）"
+  },
+  {
+   "subject": "生物",
+   "question_no": "21-(1)",
+   "kp": "病毒无细胞结构 vs 蓝藻等细胞生物有细胞结构",
+   "lesson": "bio1",
+   "t": 856,
+   "kind": "timestamp",
+   "note": "分段“病毒：没有细胞结构的特例”"
+  },
+  {
+   "subject": "生物",
+   "question_no": "21-(2)-②",
+   "kp": "原核生物举例",
+   "lesson": "bio2",
+   "t": 3430,
+   "kind": "timestamp",
+   "note": "分段“原核生物的类群：细菌与蓝细菌”"
+  },
+  {
+   "subject": "生物",
+   "question_no": "21-(3)-②",
+   "kp": "蓝藻含藻蓝素和叶绿素，无叶绿体",
+   "lesson": "bio2",
+   "t": 3430,
+   "kind": "timestamp",
+   "note": "分段“原核生物的类群：细菌与蓝细菌”"
+  },
+  {
+   "subject": "生物",
+   "question_no": "22-(1)-①",
+   "kp": "种子晒干失去的主要是水",
+   "lesson": "bio4",
+   "t": 1357,
+   "kind": "timestamp",
+   "note": "分段“例题：晒干与烘烤，种子里失去的水”"
+  },
+  {
+   "subject": "生物",
+   "question_no": "22-(2)-②",
+   "kp": "无机物包括水和无机盐，此处应为无机盐",
+   "lesson": "bio4",
+   "t": 1836,
+   "kind": "timestamp",
+   "note": "分段“无机盐：存在形式与渗透压”"
+  },
+  {
+   "subject": "生物",
+   "question_no": "22-(4)",
+   "kp": "自由水的功能：良好溶剂、参与反应、运输",
+   "lesson": "bio4",
+   "t": 570,
+   "kind": "timestamp",
+   "note": "分段“自由水的功能：溶剂、运输与代谢”"
+  },
+  {
+   "subject": "生物",
+   "question_no": "23-(1)",
+   "kp": "氨基酸的结构通式（要求画图，给文字描述得0分）",
+   "lesson": "bio6",
+   "t": 1201,
+   "kind": "timestamp",
+   "note": "分段“氨基酸的结构：中心碳原子与氨基、羧基”"
+  },
+  {
+   "subject": "生物",
+   "question_no": "23-(3)-②",
+   "kp": "脱水数=氨基酸数-肽链数（51-2=49）",
+   "lesson": "bio6",
+   "t": 1758,
+   "kind": "timestamp",
+   "note": "分段“脱水缩合：羧基与氨基脱水成肽键”"
+  },
+  {
+   "subject": "生物",
+   "question_no": "23-(3)-③",
+   "kp": "蛋白质相对分子质量计算，有漏项",
+   "lesson": "bio6",
+   "t": 3923,
+   "kind": "timestamp",
+   "note": "分段“第二讲：蛋白质相关计算——相对分子质量”"
+  },
+  {
+   "subject": "生物",
+   "question_no": "23-(4)-②",
+   "kp": "氨基酸分类",
+   "lesson": "bio6",
+   "t": 901,
+   "kind": "timestamp",
+   "note": "分段“必需氨基酸：八种要记牢”"
+  },
+  {
+   "subject": "生物",
+   "question_no": "24-(1)-③",
+   "kp": "“水浴”是关键限定词，直接加热不行",
+   "lesson": "bio3",
+   "t": 1903,
+   "kind": "timestamp",
+   "note": "分段“斐林试剂的配制与水浴加热”"
+  },
+  {
+   "subject": "生物",
+   "question_no": "24-(2)-①",
+   "kp": "实验变量分析（海藻糖低温保护细胞实验）",
+   "lesson": "bio13",
+   "t": 900,
+   "kind": "timestamp",
+   "note": "分段“实验变量：自变量、因变量、无关变量”；海藻糖实验本身无单独段，取变量分析方法段"
+  },
+  {
+   "subject": "生物",
+   "question_no": "24-(2)-③",
+   "kp": "对照条件缺关键限定词“低温”",
+   "lesson": "bio13",
+   "t": 1200,
+   "kind": "timestamp",
+   "note": "分段“对照实验与单一变量原则、等量性原则”"
+  },
+  {
+   "subject": "政治",
+   "question_no": "10",
+   "kp": "五四运动与新旧民主主义革命的划分",
+   "lesson": "pol2",
+   "t": 1024,
+   "kind": "timestamp",
+   "note": "分段“新民主主义革命的性质与‘新’在哪里”"
+  },
+  {
+   "subject": "政治",
+   "question_no": "15",
+   "kp": "改革开放进程中的标志性事件及其年份",
+   "lesson": "pol3",
+   "t": 340,
+   "kind": "timestamp",
+   "note": "分段“起步阶段：农村改革与对外开放格局”，标志性事件从340秒起按阶段讲"
+  },
+  {
+   "subject": "政治",
+   "question_no": "17",
+   "kp": "科学社会主义的真理性与生命力",
+   "lesson": "pol1",
+   "t": 4282,
+   "kind": "timestamp",
+   "note": "分段“理论基石：唯物史观与剩余价值学说”"
+  },
+  {
+   "subject": "政治",
+   "question_no": "20",
+   "kp": "十一届三中全会的意义（工作中心战略转移、伟大转折）",
+   "lesson": "pol3",
+   "t": 152,
+   "kind": "timestamp",
+   "note": "分段“十一届三中全会：1978年12月与伟大转折”"
+  },
+  {
+   "subject": "政治",
+   "question_no": "21",
+   "kp": "奴隶社会代替原始社会的进步性",
+   "lesson": "pol1",
+   "t": 790,
+   "kind": "timestamp",
+   "note": "分段“奴隶社会：生产关系、主要矛盾与历史评价”"
+  },
+  {
+   "subject": "政治",
+   "question_no": "21",
+   "kp": "生产关系适应生产力规律",
+   "lesson": "pol1",
+   "t": 790,
+   "kind": "timestamp",
+   "note": "同上"
+  },
+  {
+   "subject": "政治",
+   "question_no": "22",
+   "kp": "新中国成立的意义",
+   "lesson": "pol2",
+   "t": 1154,
+   "kind": "timestamp",
+   "note": "分段“新中国成立的意义与毛泽东思想”"
+  },
+  {
+   "subject": "政治",
+   "question_no": "23",
+   "kp": "改革开放的意义",
+   "lesson": "pol3",
+   "t": 1101,
+   "kind": "timestamp",
+   "note": "分段“改革开放的意义：四个面貌与三个飞跃”"
+  },
+  {
+   "subject": "政治",
+   "question_no": "24",
+   "kp": "只有社会主义能救中国：①资本主义道路走不通",
+   "lesson": "pol2",
+   "t": 455,
+   "kind": "timestamp",
+   "note": "四段论证第①段；本知识点拆成四标签，各跳一段"
+  },
+  {
+   "subject": "政治",
+   "question_no": "24",
+   "kp": "只有社会主义能救中国：②新民主主义革命胜利",
+   "lesson": "pol2",
+   "t": 895,
+   "kind": "timestamp",
+   "note": "四段论证第②段：党成立与新民主主义革命"
+  },
+  {
+   "subject": "政治",
+   "question_no": "24",
+   "kp": "只有社会主义能救中国：③新中国成立改变发展方向",
+   "lesson": "pol2",
+   "t": 1154,
+   "kind": "timestamp",
+   "note": "四段论证第③段"
+  },
+  {
+   "subject": "政治",
+   "question_no": "24",
+   "kp": "只有社会主义能救中国：④社会主义改造完成",
+   "lesson": "pol2",
+   "t": 1608,
+   "kind": "timestamp",
+   "note": "四段论证第④段：一化三改"
+  },
+  {
+   "subject": "语文",
+   "question_no": "1",
+   "kp": "论述类：张冠李戴",
+   "lesson": null,
+   "t": null,
+   "kind": "gap",
+   "note": "站内无论述类阅读方法视频；20门语文课均为课文讲解"
+  },
+  {
+   "subject": "语文",
+   "question_no": "4",
+   "kp": "信息筛选整合",
+   "lesson": null,
+   "t": null,
+   "kind": "gap",
+   "note": "站内无信息筛选类阅读方法视频"
+  },
+  {
+   "subject": "语文",
+   "question_no": "8",
+   "kp": "“渡口”多重象征",
+   "lesson": null,
+   "t": null,
+   "kind": "gap",
+   "note": "《渡口》不在站内20门语文课里"
+  },
+  {
+   "subject": "语文",
+   "question_no": "9",
+   "kp": "文言断句",
+   "lesson": "chn12",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "“劝学·师说”一课讲文言知识（实词/通假字/特殊句式），断句无单独段，整课重看"
+  },
+  {
+   "subject": "语文",
+   "question_no": "12(1)",
+   "kp": "文言实词（被：穿着）",
+   "lesson": "chn12",
+   "t": 203,
+   "kind": "timestamp",
+   "note": "分段“实词与通假字”；“得无…乎”固定句式本课无单独段"
+  },
+  {
+   "subject": "语文",
+   "question_no": "12(1)",
+   "kp": "特殊句式（钓于渭滨：状语后置）",
+   "lesson": "chn12",
+   "t": 411,
+   "kind": "timestamp",
+   "note": "分段“特殊句式”"
+  },
+  {
+   "subject": "语文",
+   "question_no": "12(2)",
+   "kp": "文言实词（由/偏短/庸）",
+   "lesson": "chn12",
+   "t": 203,
+   "kind": "timestamp",
+   "note": "分段“实词与通假字”"
+  },
+  {
+   "subject": "语文",
+   "question_no": "13",
+   "kp": "曹操“山不厌高，海不厌深”求贤若渴",
+   "lesson": "chn7",
+   "t": 626,
+   "kind": "timestamp",
+   "note": "分段“第三四章：青青子衿与求贤若渴”"
+  },
+  {
+   "subject": "语文",
+   "question_no": "17",
+   "kp": "字音",
+   "lesson": null,
+   "t": null,
+   "kind": "gap",
+   "note": "站内无字音专项视频"
+  },
+  {
+   "subject": "语文",
+   "question_no": "18",
+   "kp": "文言实词：到中流击水（击水：游泳）",
+   "lesson": "chn1",
+   "t": 1082,
+   "kind": "timestamp",
+   "note": "分段“中流击水与谁主沉浮的回答”"
+  },
+  {
+   "subject": "语文",
+   "question_no": "19",
+   "kp": "虚词“之”",
+   "lesson": "chn12",
+   "t": null,
+   "kind": "whole_lesson",
+   "note": "“劝学·师说”一课讲文言知识，虚词“之”无单独段，整课重看"
+  },
+  {
+   "subject": "语文",
+   "question_no": "20",
+   "kp": "古今异义",
+   "lesson": "chn19",
+   "t": 2242,
+   "kind": "timestamp",
+   "note": "分段“成语中的古今词义”"
+  },
+  {
+   "subject": "语文",
+   "question_no": "23",
+   "kp": "修辞：借代（唯有杜康）",
+   "lesson": "chn7",
+   "t": 434,
+   "kind": "timestamp",
+   "note": "分段“慨当以慷、唯有杜康与借代”"
+  },
+  {
+   "subject": "语文",
+   "question_no": "25",
+   "kp": "议论文写作：论证深度（例后议）",
+   "lesson": "chn5",
+   "t": 851,
+   "kind": "timestamp",
+   "note": "分段“论证方法：引证、对比、类比、假设”"
+  },
+  {
+   "subject": "英语",
+   "question_no": "2",
+   "kp": "短对话：house颜色，漏听关键信息",
+   "lesson": null,
+   "t": null,
+   "kind": "gap",
+   "note": "站内英语只有3门课文讲解视频（Welcome Unit、Unit 1、Unit 2），无听力/阅读/完形/语法填空/写作专项视频"
+  },
+  {
+   "subject": "英语",
+   "question_no": "3",
+   "kp": "短对话：mother jogging outdoors",
+   "lesson": null,
+   "t": null,
+   "kind": "gap",
+   "note": "站内英语只有3门课文讲解视频（Welcome Unit、Unit 1、Unit 2），无听力/阅读/完形/语法填空/写作专项视频"
+  },
+  {
+   "subject": "英语",
+   "question_no": "5",
+   "kp": "短对话：brush teeth时间",
+   "lesson": null,
+   "t": null,
+   "kind": "gap",
+   "note": "站内英语只有3门课文讲解视频（Welcome Unit、Unit 1、Unit 2），无听力/阅读/完形/语法填空/写作专项视频"
+  },
+  {
+   "subject": "英语",
+   "question_no": "7",
+   "kp": "长对话：cinema，细节（时间/停车）抓不住",
+   "lesson": null,
+   "t": null,
+   "kind": "gap",
+   "note": "站内英语只有3门课文讲解视频（Welcome Unit、Unit 1、Unit 2），无听力/阅读/完形/语法填空/写作专项视频"
+  },
+  {
+   "subject": "英语",
+   "question_no": "8",
+   "kp": "长对话：工作单位/咖啡馆",
+   "lesson": null,
+   "t": null,
+   "kind": "gap",
+   "note": "站内英语只有3门课文讲解视频（Welcome Unit、Unit 1、Unit 2），无听力/阅读/完形/语法填空/写作专项视频"
+  },
+  {
+   "subject": "英语",
+   "question_no": "13",
+   "kp": "独白细节",
+   "lesson": null,
+   "t": null,
+   "kind": "gap",
+   "note": "站内英语只有3门课文讲解视频（Welcome Unit、Unit 1、Unit 2），无听力/阅读/完形/语法填空/写作专项视频"
+  },
+  {
+   "subject": "英语",
+   "question_no": "14",
+   "kp": "独白细节",
+   "lesson": null,
+   "t": null,
+   "kind": "gap",
+   "note": "站内英语只有3门课文讲解视频（Welcome Unit、Unit 1、Unit 2），无听力/阅读/完形/语法填空/写作专项视频"
+  },
+  {
+   "subject": "英语",
+   "question_no": "15",
+   "kp": "独白细节",
+   "lesson": null,
+   "t": null,
+   "kind": "gap",
+   "note": "站内英语只有3门课文讲解视频（Welcome Unit、Unit 1、Unit 2），无听力/阅读/完形/语法填空/写作专项视频"
+  },
+  {
+   "subject": "英语",
+   "question_no": "19",
+   "kp": "独白细节",
+   "lesson": null,
+   "t": null,
+   "kind": "gap",
+   "note": "站内英语只有3门课文讲解视频（Welcome Unit、Unit 1、Unit 2），无听力/阅读/完形/语法填空/写作专项视频"
+  },
+  {
+   "subject": "英语",
+   "question_no": "28",
+   "kp": "阅读：细节/推理题，关键句定位错",
+   "lesson": null,
+   "t": null,
+   "kind": "gap",
+   "note": "站内英语只有3门课文讲解视频（Welcome Unit、Unit 1、Unit 2），无听力/阅读/完形/语法填空/写作专项视频"
+  },
+  {
+   "subject": "英语",
+   "question_no": "29",
+   "kp": "阅读：细节/推理题，关键句定位错",
+   "lesson": null,
+   "t": null,
+   "kind": "gap",
+   "note": "站内英语只有3门课文讲解视频（Welcome Unit、Unit 1、Unit 2），无听力/阅读/完形/语法填空/写作专项视频"
+  },
+  {
+   "subject": "英语",
+   "question_no": "33",
+   "kp": "阅读：词义/推理题",
+   "lesson": null,
+   "t": null,
+   "kind": "gap",
+   "note": "站内英语只有3门课文讲解视频（Welcome Unit、Unit 1、Unit 2），无听力/阅读/完形/语法填空/写作专项视频"
+  },
+  {
+   "subject": "英语",
+   "question_no": "34",
+   "kp": "阅读",
+   "lesson": null,
+   "t": null,
+   "kind": "gap",
+   "note": "站内英语只有3门课文讲解视频（Welcome Unit、Unit 1、Unit 2），无听力/阅读/完形/语法填空/写作专项视频"
+  },
+  {
+   "subject": "英语",
+   "question_no": "44",
+   "kp": "完形：近义词/语境辨析不清",
+   "lesson": null,
+   "t": null,
+   "kind": "gap",
+   "note": "站内英语只有3门课文讲解视频（Welcome Unit、Unit 1、Unit 2），无听力/阅读/完形/语法填空/写作专项视频"
+  },
+  {
+   "subject": "英语",
+   "question_no": "48",
+   "kp": "完形：逻辑连词/语境",
+   "lesson": null,
+   "t": null,
+   "kind": "gap",
+   "note": "站内英语只有3门课文讲解视频（Welcome Unit、Unit 1、Unit 2），无听力/阅读/完形/语法填空/写作专项视频"
+  },
+  {
+   "subject": "英语",
+   "question_no": "52",
+   "kp": "完形",
+   "lesson": null,
+   "t": null,
+   "kind": "gap",
+   "note": "站内英语只有3门课文讲解视频（Welcome Unit、Unit 1、Unit 2），无听力/阅读/完形/语法填空/写作专项视频"
+  },
+  {
+   "subject": "英语",
+   "question_no": "55",
+   "kp": "完形",
+   "lesson": null,
+   "t": null,
+   "kind": "gap",
+   "note": "站内英语只有3门课文讲解视频（Welcome Unit、Unit 1、Unit 2），无听力/阅读/完形/语法填空/写作专项视频"
+  },
+  {
+   "subject": "英语",
+   "question_no": "56",
+   "kp": "介词：句首“For children…”表对象，误用at",
+   "lesson": null,
+   "t": null,
+   "kind": "gap",
+   "note": "站内英语只有3门课文讲解视频（Welcome Unit、Unit 1、Unit 2），无听力/阅读/完形/语法填空/写作专项视频"
+  },
+  {
+   "subject": "英语",
+   "question_no": "57",
+   "kp": "不定式作目的状语",
+   "lesson": null,
+   "t": null,
+   "kind": "gap",
+   "note": "站内英语只有3门课文讲解视频（Welcome Unit、Unit 1、Unit 2），无听力/阅读/完形/语法填空/写作专项视频"
+  },
+  {
+   "subject": "英语",
+   "question_no": "57",
+   "kp": "surprised词义",
+   "lesson": null,
+   "t": null,
+   "kind": "gap",
+   "note": "站内英语只有3门课文讲解视频（Welcome Unit、Unit 1、Unit 2），无听力/阅读/完形/语法填空/写作专项视频"
+  },
+  {
+   "subject": "英语",
+   "question_no": "59",
+   "kp": "比较级：未写出完整形式",
+   "lesson": null,
+   "t": null,
+   "kind": "gap",
+   "note": "站内英语只有3门课文讲解视频（Welcome Unit、Unit 1、Unit 2），无听力/阅读/完形/语法填空/写作专项视频"
+  },
+  {
+   "subject": "英语",
+   "question_no": "63",
+   "kp": "冠词：特指the，空着或写错",
+   "lesson": null,
+   "t": null,
+   "kind": "gap",
+   "note": "站内英语只有3门课文讲解视频（Welcome Unit、Unit 1、Unit 2），无听力/阅读/完形/语法填空/写作专项视频"
+  },
+  {
+   "subject": "英语",
+   "question_no": "64",
+   "kp": "过去分词作定语（aged children）",
+   "lesson": null,
+   "t": null,
+   "kind": "gap",
+   "note": "站内英语只有3门课文讲解视频（Welcome Unit、Unit 1、Unit 2），无听力/阅读/完形/语法填空/写作专项视频"
+  },
+  {
+   "subject": "英语",
+   "question_no": "作文",
+   "kp": "英语书面表达（建议信）",
+   "lesson": null,
+   "t": null,
+   "kind": "gap",
+   "note": "站内英语只有3门课文讲解视频（Welcome Unit、Unit 1、Unit 2），无听力/阅读/完形/语法填空/写作专项视频"
+  },
+  {
+   "subject": "英语",
+   "question_no": "作文",
+   "kp": "基础语法：although与but不连用、主谓一致、动词形式",
+   "lesson": null,
+   "t": null,
+   "kind": "gap",
+   "note": "站内英语只有3门课文讲解视频（Welcome Unit、Unit 1、Unit 2），无听力/阅读/完形/语法填空/写作专项视频"
+  }
+ ]
+}

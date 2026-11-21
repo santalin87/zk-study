@@ -1,0 +1,22 @@
+# tianya-study —— 天娅的学习小站（Cloudflare Worker + D1）
+name = "tianya-study"
+main = "src/worker.js"
+compatibility_date = "2026-10-19"
+account_id = "34b542b32b08f95cd910bf8789fb6e44"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "tianya-study"
+database_id = "d5816ad2-aff0-42b3-bbcd-2b3ac96ae1b0"
+
+[[r2_buckets]]
+binding = "R2"
+bucket_name = "tianya-study-uploads"
+
+[ai]
+binding = "AI"
+
+# 天铄学习站服务绑定（2026-10-23）：/ts/* 子路径转发用
+[[services]]
+binding = "TIANSHUO"
+service = "tianshuo-study"

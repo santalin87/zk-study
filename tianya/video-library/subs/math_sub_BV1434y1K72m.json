@@ -1,0 +1,3492 @@
+{
+  "font_size": 0.4,
+  "font_color": "#FFFFFF",
+  "background_alpha": 0.5,
+  "background_color": "#9C27B0",
+  "Stroke": "none",
+  "type": "AIsubtitle",
+  "lang": "zh",
+  "version": "1.5.0",
+  "body": [
+    {
+      "from": 0.22,
+      "to": 1.78,
+      "sid": 1,
+      "location": 2,
+      "content": "好的各位同学大家好",
+      "music": 0.0
+    },
+    {
+      "from": 1.78,
+      "to": 5.35,
+      "sid": 2,
+      "location": 2,
+      "content": "欢迎大家继续收看高中数学的教学视频",
+      "music": 0.0
+    },
+    {
+      "from": 5.35,
+      "to": 10.82,
+      "sid": 3,
+      "location": 2,
+      "content": "本视频由我和文登南海高级中学啊联合推出",
+      "music": 0.0
+    },
+    {
+      "from": 11.979,
+      "to": 16.6,
+      "sid": 4,
+      "location": 2,
+      "content": "那这部分内容啊还是集合之间的基本运算",
+      "music": 0.0
+    },
+    {
+      "from": 16.919,
+      "to": 20.68,
+      "sid": 5,
+      "location": 2,
+      "content": "交集并集和这个补集",
+      "music": 0.0
+    },
+    {
+      "from": 21.92,
+      "to": 23.71,
+      "sid": 6,
+      "location": 2,
+      "content": "比方说我们先说一个例子",
+      "music": 0.0
+    },
+    {
+      "from": 23.71,
+      "to": 27.1,
+      "sid": 7,
+      "location": 2,
+      "content": "说啊要成立一个科学兴趣小组",
+      "music": 0.0
+    },
+    {
+      "from": 27.1,
+      "to": 31.51,
+      "sid": 8,
+      "location": 2,
+      "content": "说呢啊物理成绩呢不低于80分",
+      "music": 0.0
+    },
+    {
+      "from": 31.51,
+      "to": 34.3,
+      "sid": 9,
+      "location": 2,
+      "content": "数学成绩呢不低于70分",
+      "music": 0.0
+    },
+    {
+      "from": 34.3,
+      "to": 36.919,
+      "sid": 10,
+      "location": 2,
+      "content": "也是这两个要求都得满足",
+      "music": 0.0
+    },
+    {
+      "from": 37.98,
+      "to": 41.24,
+      "sid": 11,
+      "location": 2,
+      "content": "假设满足条件一的集合",
+      "music": 0.0
+    },
+    {
+      "from": 41.24,
+      "to": 45.62,
+      "sid": 12,
+      "location": 2,
+      "content": "基座是一个P满足条件二的集合啊",
+      "music": 0.0
+    },
+    {
+      "from": 45.62,
+      "to": 52.77,
+      "sid": 13,
+      "location": 2,
+      "content": "基座是一个M那么这两个集合的要求都得满足",
+      "music": 0.0
+    },
+    {
+      "from": 52.77,
+      "to": 55.8,
+      "sid": 14,
+      "location": 2,
+      "content": "那我们就记得是一个交集",
+      "music": 0.0
+    },
+    {
+      "from": 55.8,
+      "to": 59.87,
+      "sid": 15,
+      "location": 2,
+      "content": "他两个的交那筛选出来的啊",
+      "music": 0.0
+    },
+    {
+      "from": 59.87,
+      "to": 62.51,
+      "sid": 16,
+      "location": 2,
+      "content": "组成这个幸运小组是一个S",
+      "music": 0.0
+    },
+    {
+      "from": 62.51,
+      "to": 65.12,
+      "sid": 17,
+      "location": 2,
+      "content": "那所以这个就是一个交集",
+      "music": 0.0
+    },
+    {
+      "from": 65.12,
+      "to": 66.72,
+      "sid": 18,
+      "location": 2,
+      "content": "他的一个概念",
+      "music": 0.0
+    },
+    {
+      "from": 68.56,
+      "to": 71.61,
+      "sid": 19,
+      "location": 2,
+      "content": "所以呢交集的定义是这样的哈",
+      "music": 0.0
+    },
+    {
+      "from": 71.61,
+      "to": 72.72,
+      "sid": 20,
+      "location": 2,
+      "content": "就是",
+      "music": 0.0
+    },
+    {
+      "from": 75.98,
+      "to": 77.34,
+      "sid": 21,
+      "location": 2,
+      "content": "属于A",
+      "music": 0.0
+    },
+    {
+      "from": 80.08,
+      "to": 82.86,
+      "sid": 22,
+      "location": 2,
+      "content": "也属于B",
+      "music": 0.0
+    },
+    {
+      "from": 85.4,
+      "to": 88.72,
+      "sid": 23,
+      "location": 2,
+      "content": "的所有元素",
+      "music": 0.0
+    },
+    {
+      "from": 90.54,
+      "to": 93.32,
+      "sid": 24,
+      "location": 2,
+      "content": "组成的集合",
+      "music": 0.0
+    },
+    {
+      "from": 98.08,
+      "to": 99.34,
+      "sid": 25,
+      "location": 2,
+      "content": "基友叫",
+      "music": 0.0
+    },
+    {
+      "from": 101.16,
+      "to": 109.22,
+      "sid": 26,
+      "location": 2,
+      "content": "交集记作是一个A胶笔啊",
+      "music": 0.0
+    },
+    {
+      "from": 109.22,
+      "to": 112.48,
+      "sid": 27,
+      "location": 2,
+      "content": "这是两个集合的交集交集啊",
+      "music": 0.0
+    },
+    {
+      "from": 112.48,
+      "to": 114.07,
+      "sid": 28,
+      "location": 2,
+      "content": "我们通常是这样来画图",
+      "music": 0.0
+    },
+    {
+      "from": 114.07,
+      "to": 120.58,
+      "sid": 29,
+      "location": 2,
+      "content": "假设这个是集合A这个是集合B交集啊",
+      "music": 0.0
+    },
+    {
+      "from": 120.58,
+      "to": 122.94,
+      "sid": 30,
+      "location": 2,
+      "content": "就是他两个的公共部分",
+      "music": 0.0
+    },
+    {
+      "from": 124.16,
+      "to": 125.8,
+      "sid": 31,
+      "location": 2,
+      "content": "他两个的公共部分啊",
+      "music": 0.0
+    },
+    {
+      "from": 125.8,
+      "to": 128.29,
+      "sid": 32,
+      "location": 2,
+      "content": "就是既满足A也满足B的是吧",
+      "music": 0.0
+    },
+    {
+      "from": 128.29,
+      "to": 132.379,
+      "sid": 33,
+      "location": 2,
+      "content": "这个就是交集的概念好",
+      "music": 0.0
+    },
+    {
+      "from": 132.379,
+      "to": 139.3,
+      "sid": 34,
+      "location": 2,
+      "content": "我们举几个例子说呢啊求两个集合它的交集",
+      "music": 0.0
+    },
+    {
+      "from": 139.3,
+      "to": 143.12,
+      "sid": 35,
+      "location": 2,
+      "content": "第一个A交B哈",
+      "music": 0.0
+    },
+    {
+      "from": 144.04,
+      "to": 149.88,
+      "sid": 36,
+      "location": 2,
+      "content": "就是取它两个集合里边的公共部分是吧啊",
+      "music": 0.0
+    },
+    {
+      "from": 149.88,
+      "to": 151.74,
+      "sid": 37,
+      "location": 2,
+      "content": "那么这个一不行啊",
+      "music": 0.0
+    },
+    {
+      "from": 151.74,
+      "to": 154.989,
+      "sid": 38,
+      "location": 2,
+      "content": "他这里边没有一负三是可以的",
+      "music": 0.0
+    },
+    {
+      "from": 154.989,
+      "to": 156.069,
+      "sid": 39,
+      "location": 2,
+      "content": "这里有三",
+      "music": 0.0
+    },
+    {
+      "from": 156.069,
+      "to": 157.269,
+      "sid": 40,
+      "location": 2,
+      "content": "这里有三",
+      "music": 0.0
+    },
+    {
+      "from": 157.269,
+      "to": 158.619,
+      "sid": 41,
+      "location": 2,
+      "content": "这个一也不行",
+      "music": 0.0
+    },
+    {
+      "from": 158.619,
+      "to": 160.059,
+      "sid": 42,
+      "location": 2,
+      "content": "他没有一是吧",
+      "music": 0.0
+    },
+    {
+      "from": 160.059,
+      "to": 166.36,
+      "sid": 43,
+      "location": 2,
+      "content": "所以呢就把三做成是一个交集是吧",
+      "music": 0.0
+    },
+    {
+      "from": 166.36,
+      "to": 168.28,
+      "sid": 44,
+      "location": 2,
+      "content": "公共部分好看",
+      "music": 0.0
+    },
+    {
+      "from": 168.28,
+      "to": 172.639,
+      "sid": 45,
+      "location": 2,
+      "content": "下面啊啊C是个1357",
+      "music": 0.0
+    },
+    {
+      "from": 172.639,
+      "to": 175.309,
+      "sid": 46,
+      "location": 2,
+      "content": "D是D是个2468",
+      "music": 0.0
+    },
+    {
+      "from": 175.309,
+      "to": 177.019,
+      "sid": 47,
+      "location": 2,
+      "content": "1357是奇数",
+      "music": 0.0
+    },
+    {
+      "from": 177.019,
+      "to": 178.35,
+      "sid": 48,
+      "location": 2,
+      "content": "2468是个偶数",
+      "music": 0.0
+    },
+    {
+      "from": 178.35,
+      "to": 180.42,
+      "sid": 49,
+      "location": 2,
+      "content": "他两个交集是没有的对吧",
+      "music": 0.0
+    },
+    {
+      "from": 180.42,
+      "to": 186.84,
+      "sid": 50,
+      "location": 2,
+      "content": "所以呢C浇地呢是一个空集是吧",
+      "music": 0.0
+    },
+    {
+      "from": 187.439,
+      "to": 188.929,
+      "sid": 51,
+      "location": 2,
+      "content": "画图可以这样画",
+      "music": 0.0
+    },
+    {
+      "from": 188.929,
+      "to": 191.179,
+      "sid": 52,
+      "location": 2,
+      "content": "假设这个呢是个C",
+      "music": 0.0
+    },
+    {
+      "from": 191.179,
+      "to": 193.189,
+      "sid": 53,
+      "location": 2,
+      "content": "这个是个D",
+      "music": 0.0
+    },
+    {
+      "from": 193.189,
+      "to": 195.019,
+      "sid": 54,
+      "location": 2,
+      "content": "他两个的公共部分没有啊",
+      "music": 0.0
+    },
+    {
+      "from": 195.019,
+      "to": 195.8,
+      "sid": 55,
+      "location": 2,
+      "content": "对不对",
+      "music": 0.0
+    },
+    {
+      "from": 196.98,
+      "to": 197.54,
+      "sid": 56,
+      "location": 2,
+      "content": "好看",
+      "music": 0.0
+    },
+    {
+      "from": 197.54,
+      "to": 198.36,
+      "sid": 57,
+      "location": 2,
+      "content": "第三个",
+      "music": 0.0
+    },
+    {
+      "from": 201.499,
+      "to": 204.62,
+      "sid": 58,
+      "location": 2,
+      "content": "交F等于",
+      "music": 0.0
+    },
+    {
+      "from": 205.64,
+      "to": 208.06,
+      "sid": 59,
+      "location": 2,
+      "content": "那这个我们就得画图了哈啊",
+      "music": 0.0
+    },
+    {
+      "from": 208.06,
+      "to": 211.15,
+      "sid": 60,
+      "location": 2,
+      "content": "E是从1~3左开右闭",
+      "music": 0.0
+    },
+    {
+      "from": 211.15,
+      "to": 212.3,
+      "sid": 61,
+      "location": 2,
+      "content": "所以呢",
+      "music": 0.0
+    },
+    {
+      "from": 214.779,
+      "to": 221.77,
+      "sid": 62,
+      "location": 2,
+      "content": "-101231~3的话",
+      "music": 0.0
+    },
+    {
+      "from": 221.77,
+      "to": 223.78,
+      "sid": 63,
+      "location": 2,
+      "content": "那不就是这样嘛",
+      "music": 0.0
+    },
+    {
+      "from": 223.78,
+      "to": 225.04,
+      "sid": 64,
+      "location": 2,
+      "content": "对不对啊",
+      "music": 0.0
+    },
+    {
+      "from": 225.04,
+      "to": 225.94,
+      "sid": 65,
+      "location": 2,
+      "content": "1~3",
+      "music": 0.0
+    },
+    {
+      "from": 227.3,
+      "to": 229.42,
+      "sid": 66,
+      "location": 2,
+      "content": "那这个一啊是个空弦的",
+      "music": 0.0
+    },
+    {
+      "from": 229.42,
+      "to": 231.4,
+      "sid": 67,
+      "location": 2,
+      "content": "三啊是一个实心的",
+      "music": 0.0
+    },
+    {
+      "from": 232.66,
+      "to": 234.93,
+      "sid": 68,
+      "location": 2,
+      "content": "F是从-2~2",
+      "music": 0.0
+    },
+    {
+      "from": 234.93,
+      "to": 238.53,
+      "sid": 69,
+      "location": 2,
+      "content": "二的话是个实心的是吧啊",
+      "music": 0.0
+    },
+    {
+      "from": 238.53,
+      "to": 243.629,
+      "sid": 70,
+      "location": 2,
+      "content": "到二这个R啊是一个空心的",
+      "music": 0.0
+    },
+    {
+      "from": 243.629,
+      "to": 245.219,
+      "sid": 71,
+      "location": 2,
+      "content": "所以哪个是实心啊",
+      "music": 0.0
+    },
+    {
+      "from": 245.219,
+      "to": 246.119,
+      "sid": 72,
+      "location": 2,
+      "content": "哪个是空心啊",
+      "music": 0.0
+    },
+    {
+      "from": 246.119,
+      "to": 247.72,
+      "sid": 73,
+      "location": 2,
+      "content": "大一定要画好图哈",
+      "music": 0.0
+    },
+    {
+      "from": 248.06,
+      "to": 251.09,
+      "sid": 74,
+      "location": 2,
+      "content": "它的公共部分是不是就是这个部分啊",
+      "music": 0.0
+    },
+    {
+      "from": 251.09,
+      "to": 251.6,
+      "sid": 75,
+      "location": 2,
+      "content": "对不对",
+      "music": 0.0
+    },
+    {
+      "from": 251.6,
+      "to": 256.54,
+      "sid": 76,
+      "location": 2,
+      "content": "所以呢就是从1~22是吧啊",
+      "music": 0.0
+    },
+    {
+      "from": 256.54,
+      "to": 262.14,
+      "sid": 77,
+      "location": 2,
+      "content": "一跟二啊都是这个空心儿都是开的",
+      "music": 0.0
+    },
+    {
+      "from": 264.66,
+      "to": 266.0,
+      "sid": 78,
+      "location": 2,
+      "content": "这是交集",
+      "music": 0.0
+    },
+    {
+      "from": 267.1,
+      "to": 271.38,
+      "sid": 79,
+      "location": 2,
+      "content": "好比方说假设呢A是菱形",
+      "music": 0.0
+    },
+    {
+      "from": 271.88,
+      "to": 273.47,
+      "sid": 80,
+      "location": 2,
+      "content": "菱形的定义啊",
+      "music": 0.0
+    },
+    {
+      "from": 273.47,
+      "to": 277.1,
+      "sid": 81,
+      "location": 2,
+      "content": "是四边相等的四边形对吧",
+      "music": 0.0
+    },
+    {
+      "from": 278.66,
+      "to": 281.41,
+      "sid": 82,
+      "location": 2,
+      "content": "B啊是矩形长方形",
+      "music": 0.0
+    },
+    {
+      "from": 281.41,
+      "to": 286.14,
+      "sid": 83,
+      "location": 2,
+      "content": "它俩的交集就是第一呢在满足是吧",
+      "music": 0.0
+    },
+    {
+      "from": 286.14,
+      "to": 288.72,
+      "sid": 84,
+      "location": 2,
+      "content": "所有的内角都是直角",
+      "music": 0.0
+    },
+    {
+      "from": 289.08,
+      "to": 290.1,
+      "sid": 85,
+      "location": 2,
+      "content": "菱形的话",
+      "music": 0.0
+    },
+    {
+      "from": 290.1,
+      "to": 292.26,
+      "sid": 86,
+      "location": 2,
+      "content": "满足所有的边是不是都得相等啊",
+      "music": 0.0
+    },
+    {
+      "from": 292.26,
+      "to": 297.14,
+      "sid": 87,
+      "location": 2,
+      "content": "那他俩的交集不就是正方形的是吧",
+      "music": 0.0
+    },
+    {
+      "from": 297.14,
+      "to": 305.06,
+      "sid": 88,
+      "location": 2,
+      "content": "所以它的交集就是XX是正方形啊",
+      "music": 0.0
+    },
+    {
+      "from": 305.06,
+      "to": 307.78,
+      "sid": 89,
+      "location": 2,
+      "content": "大家要注意写成这种集合的形式哈",
+      "music": 0.0
+    },
+    {
+      "from": 310.0,
+      "to": 313.06,
+      "sid": 90,
+      "location": 2,
+      "content": "下一个叫做并集啊",
+      "music": 0.0
+    },
+    {
+      "from": 313.06,
+      "to": 315.46,
+      "sid": 91,
+      "location": 2,
+      "content": "并集并集的定义啊",
+      "music": 0.0
+    },
+    {
+      "from": 315.46,
+      "to": 318.6,
+      "sid": 92,
+      "location": 2,
+      "content": "就是有啊AB",
+      "music": 0.0
+    },
+    {
+      "from": 320.9,
+      "to": 330.12,
+      "sid": 93,
+      "location": 2,
+      "content": "两个集合啊的所有的元素",
+      "music": 0.0
+    },
+    {
+      "from": 332.96,
+      "to": 334.66,
+      "sid": 94,
+      "location": 2,
+      "content": "组成的集合",
+      "music": 0.0
+    },
+    {
+      "from": 338.66,
+      "to": 345.42,
+      "sid": 95,
+      "location": 2,
+      "content": "啊就叫他俩的并集记作是一个A并比",
+      "music": 0.0
+    },
+    {
+      "from": 347.58,
+      "to": 352.3,
+      "sid": 96,
+      "location": 2,
+      "content": "那假设这个是个A这个是个B呀",
+      "music": 0.0
+    },
+    {
+      "from": 352.42,
+      "to": 355.42,
+      "sid": 97,
+      "location": 2,
+      "content": "就是A有的拿过来",
+      "music": 0.0
+    },
+    {
+      "from": 355.42,
+      "to": 357.92,
+      "sid": 98,
+      "location": 2,
+      "content": "B有的也拿过来啊",
+      "music": 0.0
+    },
+    {
+      "from": 357.92,
+      "to": 358.64,
+      "sid": 99,
+      "location": 2,
+      "content": "都算",
+      "music": 0.0
+    },
+    {
+      "from": 358.64,
+      "to": 361.1,
+      "sid": 100,
+      "location": 2,
+      "content": "那作为他的并集呢",
+      "music": 0.0
+    },
+    {
+      "from": 361.1,
+      "to": 363.86,
+      "sid": 101,
+      "location": 2,
+      "content": "其实就是这一部分是吧",
+      "music": 0.0
+    },
+    {
+      "from": 363.86,
+      "to": 364.9,
+      "sid": 102,
+      "location": 2,
+      "content": "就是这部分",
+      "music": 0.0
+    },
+    {
+      "from": 365.54,
+      "to": 367.48,
+      "sid": 103,
+      "location": 2,
+      "content": "那如果这个是个A",
+      "music": 0.0
+    },
+    {
+      "from": 367.78,
+      "to": 369.67,
+      "sid": 104,
+      "location": 2,
+      "content": "这个是个B呀",
+      "music": 0.0
+    },
+    {
+      "from": 369.67,
+      "to": 371.14,
+      "sid": 105,
+      "location": 2,
+      "content": "他两个病就是吧",
+      "music": 0.0
+    },
+    {
+      "from": 371.14,
+      "to": 374.52,
+      "sid": 106,
+      "location": 2,
+      "content": "他两个集合的所有的元素都算是吧",
+      "music": 0.0
+    },
+    {
+      "from": 374.52,
+      "to": 378.18,
+      "sid": 107,
+      "location": 2,
+      "content": "那这个A也算是B也算是吧啊",
+      "music": 0.0
+    },
+    {
+      "from": 378.18,
+      "to": 379.24,
+      "sid": 108,
+      "location": 2,
+      "content": "这是并集",
+      "music": 0.0
+    },
+    {
+      "from": 380.139,
+      "to": 380.879,
+      "sid": 109,
+      "location": 2,
+      "content": "好看下",
+      "music": 0.0
+    },
+    {
+      "from": 380.879,
+      "to": 381.56,
+      "sid": 110,
+      "location": 2,
+      "content": "第三",
+      "music": 0.0
+    },
+    {
+      "from": 383.48,
+      "to": 388.81,
+      "sid": 111,
+      "location": 2,
+      "content": "集合A集合B求他来的BA的话是从-3~1",
+      "music": 0.0
+    },
+    {
+      "from": 388.81,
+      "to": 390.37,
+      "sid": 112,
+      "location": 2,
+      "content": "所以我们先画图",
+      "music": 0.0
+    },
+    {
+      "from": 390.37,
+      "to": 398.68,
+      "sid": 113,
+      "location": 2,
+      "content": "三福娃负101234",
+      "music": 0.0
+    },
+    {
+      "from": 399.819,
+      "to": 401.6,
+      "sid": 114,
+      "location": 2,
+      "content": "-3~1",
+      "music": 0.0
+    },
+    {
+      "from": 402.759,
+      "to": 405.239,
+      "sid": 115,
+      "location": 2,
+      "content": "那不就是这样吗",
+      "music": 0.0
+    },
+    {
+      "from": 405.239,
+      "to": 407.399,
+      "sid": 116,
+      "location": 2,
+      "content": "-3~1是吧",
+      "music": 0.0
+    },
+    {
+      "from": 407.399,
+      "to": 408.94,
+      "sid": 117,
+      "location": 2,
+      "content": "两边都是开的",
+      "music": 0.0
+    },
+    {
+      "from": 409.72,
+      "to": 411.36,
+      "sid": 118,
+      "location": 2,
+      "content": "-2~3",
+      "music": 0.0
+    },
+    {
+      "from": 411.36,
+      "to": 415.99,
+      "sid": 119,
+      "location": 2,
+      "content": "-2~3是吧",
+      "music": 0.0
+    },
+    {
+      "from": 415.99,
+      "to": 417.22,
+      "sid": 120,
+      "location": 2,
+      "content": "-2~3",
+      "music": 0.0
+    },
+    {
+      "from": 419.06,
+      "to": 421.06,
+      "sid": 121,
+      "location": 2,
+      "content": "大家注意他是求他的病",
+      "music": 0.0
+    },
+    {
+      "from": 421.06,
+      "to": 425.129,
+      "sid": 122,
+      "location": 2,
+      "content": "就是他俩所有的地方都拿过来是吧",
+      "music": 0.0
+    },
+    {
+      "from": 425.129,
+      "to": 428.619,
+      "sid": 123,
+      "location": 2,
+      "content": "那么哎那这一部分是算的啊",
+      "music": 0.0
+    },
+    {
+      "from": 428.619,
+      "to": 429.699,
+      "sid": 124,
+      "location": 2,
+      "content": "这部分是吧",
+      "music": 0.0
+    },
+    {
+      "from": 429.699,
+      "to": 431.379,
+      "sid": 125,
+      "location": 2,
+      "content": "包括这一部分他不也算吗",
+      "music": 0.0
+    },
+    {
+      "from": 431.379,
+      "to": 432.189,
+      "sid": 126,
+      "location": 2,
+      "content": "都拿过来",
+      "music": 0.0
+    },
+    {
+      "from": 432.189,
+      "to": 437.66,
+      "sid": 127,
+      "location": 2,
+      "content": "所以呢就是一个三倒三",
+      "music": 0.0
+    },
+    {
+      "from": 437.66,
+      "to": 440.32,
+      "sid": 128,
+      "location": 2,
+      "content": "大家注意三和三啊",
+      "music": 0.0
+    },
+    {
+      "from": 440.32,
+      "to": 441.67,
+      "sid": 129,
+      "location": 2,
+      "content": "原来就是开的",
+      "music": 0.0
+    },
+    {
+      "from": 441.67,
+      "to": 444.179,
+      "sid": 130,
+      "location": 2,
+      "content": "所以-3~3是开的",
+      "music": 0.0
+    },
+    {
+      "from": 444.179,
+      "to": 445.319,
+      "sid": 131,
+      "location": 2,
+      "content": "其实这个地方啊",
+      "music": 0.0
+    },
+    {
+      "from": 445.319,
+      "to": 446.579,
+      "sid": 132,
+      "location": 2,
+      "content": "大家应该稍微想一想",
+      "music": 0.0
+    },
+    {
+      "from": 446.579,
+      "to": 449.189,
+      "sid": 133,
+      "location": 2,
+      "content": "这个二这个点和一这个点啊",
+      "music": 0.0
+    },
+    {
+      "from": 449.189,
+      "to": 451.04,
+      "sid": 134,
+      "location": 2,
+      "content": "就是应不应该有",
+      "music": 0.0
+    },
+    {
+      "from": 452.72,
+      "to": 454.39,
+      "sid": 135,
+      "location": 2,
+      "content": "二这个点啊",
+      "music": 0.0
+    },
+    {
+      "from": 454.39,
+      "to": 456.7,
+      "sid": 136,
+      "location": 2,
+      "content": "就是耶不好意思",
+      "music": 0.0
+    },
+    {
+      "from": 456.7,
+      "to": 457.72,
+      "sid": 137,
+      "location": 2,
+      "content": "我还诶",
+      "music": 0.0
+    },
+    {
+      "from": 458.06,
+      "to": 459.14,
+      "sid": 138,
+      "location": 2,
+      "content": "Sorry sorry",
+      "music": 0.0
+    },
+    {
+      "from": 459.14,
+      "to": 462.02,
+      "sid": 139,
+      "location": 2,
+      "content": "这个是我我我我我我搞错了哈",
+      "music": 0.0
+    },
+    {
+      "from": 462.02,
+      "to": 464.54,
+      "sid": 140,
+      "location": 2,
+      "content": "这个B的话是从-2~3",
+      "music": 0.0
+    },
+    {
+      "from": 464.54,
+      "to": 467.06,
+      "sid": 141,
+      "location": 2,
+      "content": "这个地方是个实心的是吧",
+      "music": 0.0
+    },
+    {
+      "from": 467.28,
+      "to": 469.74,
+      "sid": 142,
+      "location": 2,
+      "content": "这个地方这不是个实心的吗",
+      "music": 0.0
+    },
+    {
+      "from": 469.74,
+      "to": 470.64,
+      "sid": 143,
+      "location": 2,
+      "content": "啊-2~3",
+      "music": 0.0
+    },
+    {
+      "from": 470.64,
+      "to": 472.44,
+      "sid": 144,
+      "location": 2,
+      "content": "所以这俩是实心的",
+      "music": 0.0
+    },
+    {
+      "from": 472.44,
+      "to": 476.62,
+      "sid": 145,
+      "location": 2,
+      "content": "那这样的话这个地方就是中括号呗是吧",
+      "music": 0.0
+    },
+    {
+      "from": 476.62,
+      "to": 478.21,
+      "sid": 146,
+      "location": 2,
+      "content": "嗯就是中括号哈",
+      "music": 0.0
+    },
+    {
+      "from": 478.21,
+      "to": 479.96,
+      "sid": 147,
+      "location": 2,
+      "content": "左边是个小括号",
+      "music": 0.0
+    },
+    {
+      "from": 481.319,
+      "to": 484.639,
+      "sid": 148,
+      "location": 2,
+      "content": "那么刚才说这个二这个点啊肯定得是有的",
+      "music": 0.0
+    },
+    {
+      "from": 484.639,
+      "to": 485.389,
+      "sid": 149,
+      "location": 2,
+      "content": "没有问题",
+      "music": 0.0
+    },
+    {
+      "from": 485.389,
+      "to": 487.419,
+      "sid": 150,
+      "location": 2,
+      "content": "那一这个点应不应该有啊",
+      "music": 0.0
+    },
+    {
+      "from": 487.419,
+      "to": 488.379,
+      "sid": 151,
+      "location": 2,
+      "content": "应该有",
+      "music": 0.0
+    },
+    {
+      "from": 488.379,
+      "to": 491.829,
+      "sid": 152,
+      "location": 2,
+      "content": "因为一啊虽然在A这个集合是不包含一的",
+      "music": 0.0
+    },
+    {
+      "from": 491.829,
+      "to": 494.379,
+      "sid": 153,
+      "location": 2,
+      "content": "但是这个B这个集合是包含一的啊",
+      "music": 0.0
+    },
+    {
+      "from": 494.379,
+      "to": 499.16,
+      "sid": 154,
+      "location": 2,
+      "content": "所以哎所以这种求区间它的交集和并集啊",
+      "music": 0.0
+    },
+    {
+      "from": 499.16,
+      "to": 501.48,
+      "sid": 155,
+      "location": 2,
+      "content": "大一定要就是画图了哈",
+      "music": 0.0
+    },
+    {
+      "from": 502.639,
+      "to": 507.86,
+      "sid": 156,
+      "location": 2,
+      "content": "好看这题以至啊这个也别写区间了",
+      "music": 0.0
+    },
+    {
+      "from": 507.86,
+      "to": 511.1,
+      "sid": 157,
+      "location": 2,
+      "content": "这个地方是一个集合A是吧啊",
+      "music": 0.0
+    },
+    {
+      "from": 511.1,
+      "to": 515.919,
+      "sid": 158,
+      "location": 2,
+      "content": "集合A那集合A啊是这个方程",
+      "music": 0.0
+    },
+    {
+      "from": 515.919,
+      "to": 517.359,
+      "sid": 159,
+      "location": 2,
+      "content": "那这个倒好办",
+      "music": 0.0
+    },
+    {
+      "from": 517.359,
+      "to": 522.27,
+      "sid": 160,
+      "location": 2,
+      "content": "X减一乘上X减二等于零",
+      "music": 0.0
+    },
+    {
+      "from": 522.27,
+      "to": 524.67,
+      "sid": 161,
+      "location": 2,
+      "content": "所以X等于一",
+      "music": 0.0
+    },
+    {
+      "from": 524.67,
+      "to": 527.88,
+      "sid": 162,
+      "location": 2,
+      "content": "或者是X等于二",
+      "music": 0.0
+    },
+    {
+      "from": 527.98,
+      "to": 531.1,
+      "sid": 163,
+      "location": 2,
+      "content": "那这样的话A这个集合呀",
+      "music": 0.0
+    },
+    {
+      "from": 531.1,
+      "to": 535.14,
+      "sid": 164,
+      "location": 2,
+      "content": "就是122个数组成的",
+      "music": 0.0
+    },
+    {
+      "from": 536.9,
+      "to": 543.4,
+      "sid": 165,
+      "location": 2,
+      "content": "他说这个A并B是一个012",
+      "music": 0.0
+    },
+    {
+      "from": 545.88,
+      "to": 547.4,
+      "sid": 166,
+      "location": 2,
+      "content": "那A并B啊是吧",
+      "music": 0.0
+    },
+    {
+      "from": 547.4,
+      "to": 549.55,
+      "sid": 167,
+      "location": 2,
+      "content": "A跟B所有的都拿过来",
+      "music": 0.0
+    },
+    {
+      "from": 549.55,
+      "to": 551.56,
+      "sid": 168,
+      "location": 2,
+      "content": "那A是个一二",
+      "music": 0.0
+    },
+    {
+      "from": 551.56,
+      "to": 553.69,
+      "sid": 169,
+      "location": 2,
+      "content": "它并以后啊是个012",
+      "music": 0.0
+    },
+    {
+      "from": 566.7,
+      "to": 571.43,
+      "sid": 170,
+      "location": 2,
+      "content": "那么其他的一可以有二",
+      "music": 0.0
+    },
+    {
+      "from": 571.43,
+      "to": 574.18,
+      "sid": 171,
+      "location": 2,
+      "content": "可以有一",
+      "music": 0.0
+    },
+    {
+      "from": 574.18,
+      "to": 575.14,
+      "sid": 172,
+      "location": 2,
+      "content": "二都有",
+      "music": 0.0
+    },
+    {
+      "from": 575.14,
+      "to": 576.37,
+      "sid": 173,
+      "location": 2,
+      "content": "这不也行吗",
+      "music": 0.0
+    },
+    {
+      "from": 576.37,
+      "to": 577.9,
+      "sid": 174,
+      "location": 2,
+      "content": "所以B的话",
+      "music": 0.0
+    },
+    {
+      "from": 582.44,
+      "to": 584.74,
+      "sid": 175,
+      "location": 2,
+      "content": "是不是这样的四种可能啊",
+      "music": 0.0
+    },
+    {
+      "from": 584.74,
+      "to": 586.06,
+      "sid": 176,
+      "location": 2,
+      "content": "对不对嗯",
+      "music": 0.0
+    },
+    {
+      "from": 586.06,
+      "to": 587.32,
+      "sid": 177,
+      "location": 2,
+      "content": "所以B是吧",
+      "music": 0.0
+    },
+    {
+      "from": 587.32,
+      "to": 588.28,
+      "sid": 178,
+      "location": 2,
+      "content": "四种可能",
+      "music": 0.0
+    },
+    {
+      "from": 590.38,
+      "to": 598.46,
+      "sid": 179,
+      "location": 2,
+      "content": "好看下一个说啊这个啊区间这个说区间",
+      "music": 0.0
+    },
+    {
+      "from": 598.46,
+      "to": 600.65,
+      "sid": 180,
+      "location": 2,
+      "content": "这题说区间倒还行哈",
+      "music": 0.0
+    },
+    {
+      "from": 600.65,
+      "to": 604.819,
+      "sid": 181,
+      "location": 2,
+      "content": "因为X方是小于等于四",
+      "music": 0.0
+    },
+    {
+      "from": 604.84,
+      "to": 608.59,
+      "sid": 182,
+      "location": 2,
+      "content": "这个X应该是大于等于二",
+      "music": 0.0
+    },
+    {
+      "from": 608.59,
+      "to": 610.859,
+      "sid": 183,
+      "location": 2,
+      "content": "小于等于二是吧",
+      "music": 0.0
+    },
+    {
+      "from": 614.06,
+      "to": 616.06,
+      "sid": 184,
+      "location": 2,
+      "content": "A的话我们来看一下",
+      "music": 0.0
+    },
+    {
+      "from": 616.06,
+      "to": 619.15,
+      "sid": 185,
+      "location": 2,
+      "content": "就是负倒二",
+      "music": 0.0
+    },
+    {
+      "from": 619.15,
+      "to": 622.18,
+      "sid": 186,
+      "location": 2,
+      "content": "那大一小于等于小于等于",
+      "music": 0.0
+    },
+    {
+      "from": 622.18,
+      "to": 623.47,
+      "sid": 187,
+      "location": 2,
+      "content": "这两个点都有等于",
+      "music": 0.0
+    },
+    {
+      "from": 623.47,
+      "to": 627.68,
+      "sid": 188,
+      "location": 2,
+      "content": "所以呢就是这个地方可以有等于是吧",
+      "music": 0.0
+    },
+    {
+      "from": 627.68,
+      "to": 631.459,
+      "sid": 189,
+      "location": 2,
+      "content": "可以有等于是吧啊所以呢就是实心的哈",
+      "music": 0.0
+    },
+    {
+      "from": 632.8,
+      "to": 639.86,
+      "sid": 190,
+      "location": 2,
+      "content": "那么我们看一下集合B那RX小于等于负A",
+      "music": 0.0
+    },
+    {
+      "from": 639.86,
+      "to": 645.719,
+      "sid": 191,
+      "location": 2,
+      "content": "那么X小于等于负的二分之A是吧",
+      "music": 0.0
+    },
+    {
+      "from": 647.26,
+      "to": 650.34,
+      "sid": 192,
+      "location": 2,
+      "content": "那我们就随便先试一下是吧",
+      "music": 0.0
+    },
+    {
+      "from": 650.34,
+      "to": 652.74,
+      "sid": 193,
+      "location": 2,
+      "content": "LXX小于等于负的12呀",
+      "music": 0.0
+    },
+    {
+      "from": 652.74,
+      "to": 655.8,
+      "sid": 194,
+      "location": 2,
+      "content": "如果是这个样子的话啊",
+      "music": 0.0
+    },
+    {
+      "from": 655.8,
+      "to": 657.45,
+      "sid": 195,
+      "location": 2,
+      "content": "这个是集合A是吧",
+      "music": 0.0
+    },
+    {
+      "from": 657.45,
+      "to": 659.67,
+      "sid": 196,
+      "location": 2,
+      "content": "如果这个是集合B呀",
+      "music": 0.0
+    },
+    {
+      "from": 659.67,
+      "to": 662.37,
+      "sid": 197,
+      "location": 2,
+      "content": "说ab的B是个B",
+      "music": 0.0
+    },
+    {
+      "from": 662.37,
+      "to": 665.56,
+      "sid": 198,
+      "location": 2,
+      "content": "这样的话就不喜是吧啊",
+      "music": 0.0
+    },
+    {
+      "from": 665.56,
+      "to": 667.72,
+      "sid": 199,
+      "location": 2,
+      "content": "因为你你你这不是A这一块",
+      "music": 0.0
+    },
+    {
+      "from": 669.31,
+      "to": 671.26,
+      "sid": 200,
+      "location": 2,
+      "content": "那他的病就不是B",
+      "music": 0.0
+    },
+    {
+      "from": 671.38,
+      "to": 673.66,
+      "sid": 201,
+      "location": 2,
+      "content": "那这样的话我们不要清楚的发现",
+      "music": 0.0
+    },
+    {
+      "from": 673.66,
+      "to": 674.56,
+      "sid": 202,
+      "location": 2,
+      "content": "如果这个B啊",
+      "music": 0.0
+    },
+    {
+      "from": 674.56,
+      "to": 676.079,
+      "sid": 203,
+      "location": 2,
+      "content": "如果是这个样子的",
+      "music": 0.0
+    },
+    {
+      "from": 676.82,
+      "to": 678.52,
+      "sid": 204,
+      "location": 2,
+      "content": "那这就没问题是吧",
+      "music": 0.0
+    },
+    {
+      "from": 678.52,
+      "to": 681.69,
+      "sid": 205,
+      "location": 2,
+      "content": "B完全把这个A啊完全包住了",
+      "music": 0.0
+    },
+    {
+      "from": 681.69,
+      "to": 685.77,
+      "sid": 206,
+      "location": 2,
+      "content": "那么ab的B就是B是吧",
+      "music": 0.0
+    },
+    {
+      "from": 685.77,
+      "to": 690.63,
+      "sid": 207,
+      "location": 2,
+      "content": "所以呢就是说这个点你朝右呢当然是没问题",
+      "music": 0.0
+    },
+    {
+      "from": 690.63,
+      "to": 692.22,
+      "sid": 208,
+      "location": 2,
+      "content": "但是朝左的话",
+      "music": 0.0
+    },
+    {
+      "from": 692.22,
+      "to": 696.15,
+      "sid": 209,
+      "location": 2,
+      "content": "你是不是顶多顶多就到这个点啊是吧",
+      "music": 0.0
+    },
+    {
+      "from": 696.15,
+      "to": 699.25,
+      "sid": 210,
+      "location": 2,
+      "content": "所以就是负的二分之A啊",
+      "music": 0.0
+    },
+    {
+      "from": 699.25,
+      "to": 703.359,
+      "sid": 211,
+      "location": 2,
+      "content": "应该是大于等于二",
+      "music": 0.0
+    },
+    {
+      "from": 704.02,
+      "to": 706.22,
+      "sid": 212,
+      "location": 2,
+      "content": "是可以等于二的",
+      "music": 0.0
+    },
+    {
+      "from": 706.22,
+      "to": 707.93,
+      "sid": 213,
+      "location": 2,
+      "content": "那可以等于二的哈",
+      "music": 0.0
+    },
+    {
+      "from": 707.93,
+      "to": 709.52,
+      "sid": 214,
+      "location": 2,
+      "content": "就是二这个点是可以有的",
+      "music": 0.0
+    },
+    {
+      "from": 709.52,
+      "to": 711.98,
+      "sid": 215,
+      "location": 2,
+      "content": "因为如果这个二这个点有的话",
+      "music": 0.0
+    },
+    {
+      "from": 711.98,
+      "to": 714.77,
+      "sid": 216,
+      "location": 2,
+      "content": "就是X小于等于二",
+      "music": 0.0
+    },
+    {
+      "from": 714.77,
+      "to": 718.04,
+      "sid": 217,
+      "location": 2,
+      "content": "那这个地方是个X小于等于R大于等于二",
+      "music": 0.0
+    },
+    {
+      "from": 718.04,
+      "to": 719.48,
+      "sid": 218,
+      "location": 2,
+      "content": "也是满足的",
+      "music": 0.0
+    },
+    {
+      "from": 719.48,
+      "to": 721.88,
+      "sid": 219,
+      "location": 2,
+      "content": "所以呢就是这个端点这个地方啊",
+      "music": 0.0
+    },
+    {
+      "from": 721.88,
+      "to": 725.39,
+      "sid": 220,
+      "location": 2,
+      "content": "其实是一个大家需要认真考虑的事啊",
+      "music": 0.0
+    },
+    {
+      "from": 725.39,
+      "to": 727.69,
+      "sid": 221,
+      "location": 2,
+      "content": "需要特别啊仔细哈",
+      "music": 0.0
+    },
+    {
+      "from": 727.69,
+      "to": 728.86,
+      "sid": 222,
+      "location": 2,
+      "content": "那这样的话",
+      "music": 0.0
+    },
+    {
+      "from": 728.86,
+      "to": 732.43,
+      "sid": 223,
+      "location": 2,
+      "content": "这个就是那就变成了",
+      "music": 0.0
+    },
+    {
+      "from": 732.43,
+      "to": 738.05,
+      "sid": 224,
+      "location": 2,
+      "content": "二分之A小于等于二是吧",
+      "music": 0.0
+    },
+    {
+      "from": 738.05,
+      "to": 742.52,
+      "sid": 225,
+      "location": 2,
+      "content": "所以A就小于等于四就可以了",
+      "music": 0.0
+    },
+    {
+      "from": 742.66,
+      "to": 744.94,
+      "sid": 226,
+      "location": 2,
+      "content": "他具体问A的取值范围",
+      "music": 0.0
+    },
+    {
+      "from": 744.94,
+      "to": 748.09,
+      "sid": 227,
+      "location": 2,
+      "content": "那你就写A小于等于四",
+      "music": 0.0
+    },
+    {
+      "from": 748.09,
+      "to": 749.08,
+      "sid": 228,
+      "location": 2,
+      "content": "是不是就可以啊",
+      "music": 0.0
+    },
+    {
+      "from": 749.08,
+      "to": 750.24,
+      "sid": 229,
+      "location": 2,
+      "content": "对不对嗯",
+      "music": 0.0
+    },
+    {
+      "from": 751.9,
+      "to": 753.319,
+      "sid": 230,
+      "location": 2,
+      "content": "啊这是这个题",
+      "music": 0.0
+    },
+    {
+      "from": 755.9,
+      "to": 757.0,
+      "sid": 231,
+      "location": 2,
+      "content": "好我们啊",
+      "music": 0.0
+    },
+    {
+      "from": 757.0,
+      "to": 759.34,
+      "sid": 232,
+      "location": 2,
+      "content": "下一个概念是个补集啊",
+      "music": 0.0
+    },
+    {
+      "from": 759.34,
+      "to": 760.359,
+      "sid": 233,
+      "location": 2,
+      "content": "是个补集",
+      "music": 0.0
+    },
+    {
+      "from": 760.56,
+      "to": 761.91,
+      "sid": 234,
+      "location": 2,
+      "content": "补集的概念",
+      "music": 0.0
+    },
+    {
+      "from": 761.91,
+      "to": 767.42,
+      "sid": 235,
+      "location": 2,
+      "content": "先有一个概念叫做全集啊",
+      "music": 0.0
+    },
+    {
+      "from": 767.42,
+      "to": 769.42,
+      "sid": 236,
+      "location": 2,
+      "content": "叫做全集",
+      "music": 0.0
+    },
+    {
+      "from": 772.12,
+      "to": 778.569,
+      "sid": 237,
+      "location": 2,
+      "content": "全集呀就是我们研究的对象的全体啊",
+      "music": 0.0
+    },
+    {
+      "from": 778.569,
+      "to": 780.819,
+      "sid": 238,
+      "location": 2,
+      "content": "它叫一个全集是吧",
+      "music": 0.0
+    },
+    {
+      "from": 780.819,
+      "to": 783.839,
+      "sid": 239,
+      "location": 2,
+      "content": "或者说给定的一个集合",
+      "music": 0.0
+    },
+    {
+      "from": 789.12,
+      "to": 790.5,
+      "sid": 240,
+      "location": 2,
+      "content": "啊叫做全体",
+      "music": 0.0
+    },
+    {
+      "from": 791.28,
+      "to": 794.27,
+      "sid": 241,
+      "location": 2,
+      "content": "那老师我怎么知道什么是全集呢",
+      "music": 0.0
+    },
+    {
+      "from": 794.27,
+      "to": 796.46,
+      "sid": 242,
+      "location": 2,
+      "content": "这个全集啊不用你知道啊",
+      "music": 0.0
+    },
+    {
+      "from": 796.46,
+      "to": 799.359,
+      "sid": 243,
+      "location": 2,
+      "content": "到时候题目他会告诉你的",
+      "music": 0.0
+    },
+    {
+      "from": 799.6,
+      "to": 804.1,
+      "sid": 244,
+      "location": 2,
+      "content": "比方说这个题研究的是这个班的所有的同学",
+      "music": 0.0
+    },
+    {
+      "from": 804.1,
+      "to": 807.24,
+      "sid": 245,
+      "location": 2,
+      "content": "那这个全集就是这个班的所有的同学",
+      "music": 0.0
+    },
+    {
+      "from": 807.54,
+      "to": 811.31,
+      "sid": 246,
+      "location": 2,
+      "content": "如果这个题目研究的是全校所有的同学",
+      "music": 0.0
+    },
+    {
+      "from": 811.31,
+      "to": 813.71,
+      "sid": 247,
+      "location": 2,
+      "content": "那这个全集就是全校所有的",
+      "music": 0.0
+    },
+    {
+      "from": 813.71,
+      "to": 816.53,
+      "sid": 248,
+      "location": 2,
+      "content": "比方说我们这个集合呢是沿呃",
+      "music": 0.0
+    },
+    {
+      "from": 816.53,
+      "to": 819.02,
+      "sid": 249,
+      "location": 2,
+      "content": "这个全集是所有的整数",
+      "music": 0.0
+    },
+    {
+      "from": 819.36,
+      "to": 820.92,
+      "sid": 250,
+      "location": 2,
+      "content": "那换一个题的话",
+      "music": 0.0
+    },
+    {
+      "from": 820.92,
+      "to": 823.23,
+      "sid": 251,
+      "location": 2,
+      "content": "可能是所有的偶数",
+      "music": 0.0
+    },
+    {
+      "from": 823.23,
+      "to": 824.1,
+      "sid": 252,
+      "location": 2,
+      "content": "再换一个题",
+      "music": 0.0
+    },
+    {
+      "from": 824.1,
+      "to": 826.68,
+      "sid": 253,
+      "location": 2,
+      "content": "可能是所有的奇数是吧",
+      "music": 0.0
+    },
+    {
+      "from": 826.68,
+      "to": 829.72,
+      "sid": 254,
+      "location": 2,
+      "content": "那所以这个到时候你得看题目是吧",
+      "music": 0.0
+    },
+    {
+      "from": 829.72,
+      "to": 832.09,
+      "sid": 255,
+      "location": 2,
+      "content": "所以这个全集不一定是什么集合哈",
+      "music": 0.0
+    },
+    {
+      "from": 832.09,
+      "to": 833.32,
+      "sid": 256,
+      "location": 2,
+      "content": "不一定是什么样的啊",
+      "music": 0.0
+    },
+    {
+      "from": 833.32,
+      "to": 834.359,
+      "sid": 257,
+      "location": 2,
+      "content": "这是全集",
+      "music": 0.0
+    },
+    {
+      "from": 835.1,
+      "to": 840.38,
+      "sid": 258,
+      "location": 2,
+      "content": "那么如果给了集合A",
+      "music": 0.0
+    },
+    {
+      "from": 843.82,
+      "to": 848.86,
+      "sid": 259,
+      "location": 2,
+      "content": "那么它的补集的定义就是由部署",
+      "music": 0.0
+    },
+    {
+      "from": 848.86,
+      "to": 851.02,
+      "sid": 260,
+      "location": 2,
+      "content": "就是由右中啊",
+      "music": 0.0
+    },
+    {
+      "from": 851.02,
+      "to": 852.64,
+      "sid": 261,
+      "location": 2,
+      "content": "大家注意这个全集啊",
+      "music": 0.0
+    },
+    {
+      "from": 852.64,
+      "to": 854.5,
+      "sid": 262,
+      "location": 2,
+      "content": "我们一般是叫做右哈啊",
+      "music": 0.0
+    },
+    {
+      "from": 854.5,
+      "to": 863.56,
+      "sid": 263,
+      "location": 2,
+      "content": "就是由右中属于A的元素",
+      "music": 0.0
+    },
+    {
+      "from": 864.94,
+      "to": 866.219,
+      "sid": 264,
+      "location": 2,
+      "content": "所有元素",
+      "music": 0.0
+    },
+    {
+      "from": 869.5,
+      "to": 870.51,
+      "sid": 265,
+      "location": 2,
+      "content": "是吧啊",
+      "music": 0.0
+    },
+    {
+      "from": 870.51,
+      "to": 872.04,
+      "sid": 266,
+      "location": 2,
+      "content": "组成的集合",
+      "music": 0.0
+    },
+    {
+      "from": 876.68,
+      "to": 884.02,
+      "sid": 267,
+      "location": 2,
+      "content": "就记住是A在右中的补集",
+      "music": 0.0
+    },
+    {
+      "from": 887.9,
+      "to": 890.52,
+      "sid": 268,
+      "location": 2,
+      "content": "记住是这样的一个符号",
+      "music": 0.0
+    },
+    {
+      "from": 892.84,
+      "to": 894.439,
+      "sid": 269,
+      "location": 2,
+      "content": "啊这样一个符号",
+      "music": 0.0
+    },
+    {
+      "from": 895.0,
+      "to": 898.0,
+      "sid": 270,
+      "location": 2,
+      "content": "这个符号我们在高中是这样写",
+      "music": 0.0
+    },
+    {
+      "from": 898.0,
+      "to": 899.74,
+      "sid": 271,
+      "location": 2,
+      "content": "但是在大学里头这个补集啊",
+      "music": 0.0
+    },
+    {
+      "from": 899.74,
+      "to": 902.4,
+      "sid": 272,
+      "location": 2,
+      "content": "我们一般就写作是A1杠就行",
+      "music": 0.0
+    },
+    {
+      "from": 902.4,
+      "to": 904.9,
+      "sid": 273,
+      "location": 2,
+      "content": "就A上头写一个横线就行",
+      "music": 0.0
+    },
+    {
+      "from": 905.44,
+      "to": 907.74,
+      "sid": 274,
+      "location": 2,
+      "content": "我们这个符号都有一个好处哈",
+      "music": 0.0
+    },
+    {
+      "from": 907.74,
+      "to": 912.94,
+      "sid": 275,
+      "location": 2,
+      "content": "因为这个补集是要相对于全集而言的",
+      "music": 0.0
+    },
+    {
+      "from": 912.94,
+      "to": 914.98,
+      "sid": 276,
+      "location": 2,
+      "content": "也就是说全集如果发生改变的话",
+      "music": 0.0
+    },
+    {
+      "from": 914.98,
+      "to": 917.14,
+      "sid": 277,
+      "location": 2,
+      "content": "他这个补集其实是会发生变化",
+      "music": 0.0
+    },
+    {
+      "from": 917.14,
+      "to": 918.52,
+      "sid": 278,
+      "location": 2,
+      "content": "那么我们这个符号呢",
+      "music": 0.0
+    },
+    {
+      "from": 918.52,
+      "to": 921.79,
+      "sid": 279,
+      "location": 2,
+      "content": "就是既把这个全集U给制定了",
+      "music": 0.0
+    },
+    {
+      "from": 921.79,
+      "to": 923.77,
+      "sid": 280,
+      "location": 2,
+      "content": "也把这个集合A给指定了",
+      "music": 0.0
+    },
+    {
+      "from": 923.77,
+      "to": 925.69,
+      "sid": 281,
+      "location": 2,
+      "content": "所以这个符号其实是挺标准的哈",
+      "music": 0.0
+    },
+    {
+      "from": 925.69,
+      "to": 926.719,
+      "sid": 282,
+      "location": 2,
+      "content": "其实挺标准的",
+      "music": 0.0
+    },
+    {
+      "from": 928.2,
+      "to": 930.68,
+      "sid": 283,
+      "location": 2,
+      "content": "那这个补集的这个定义里头啊",
+      "music": 0.0
+    },
+    {
+      "from": 930.68,
+      "to": 936.3,
+      "sid": 284,
+      "location": 2,
+      "content": "就是说说了就是是A在U中的补集啊",
+      "music": 0.0
+    },
+    {
+      "from": 936.3,
+      "to": 942.1,
+      "sid": 285,
+      "location": 2,
+      "content": "所以这个全集这个U其实是需要明确的啊",
+      "music": 0.0
+    },
+    {
+      "from": 942.1,
+      "to": 942.82,
+      "sid": 286,
+      "location": 2,
+      "content": "需要明确的",
+      "music": 0.0
+    },
+    {
+      "from": 942.82,
+      "to": 945.34,
+      "sid": 287,
+      "location": 2,
+      "content": "只不过我们平常嗯说的时候",
+      "music": 0.0
+    },
+    {
+      "from": 945.34,
+      "to": 947.86,
+      "sid": 288,
+      "location": 2,
+      "content": "可能就有时候就省略了这一步",
+      "music": 0.0
+    },
+    {
+      "from": 947.86,
+      "to": 950.27,
+      "sid": 289,
+      "location": 2,
+      "content": "就说A的补集是什么东西",
+      "music": 0.0
+    },
+    {
+      "from": 950.27,
+      "to": 953.69,
+      "sid": 290,
+      "location": 2,
+      "content": "那么其实你在说AA的补集是什么东西的时候",
+      "music": 0.0
+    },
+    {
+      "from": 953.69,
+      "to": 956.15,
+      "sid": 291,
+      "location": 2,
+      "content": "你的脑海中其实是有一个基本的前提",
+      "music": 0.0
+    },
+    {
+      "from": 956.15,
+      "to": 960.01,
+      "sid": 292,
+      "location": 2,
+      "content": "就是说他那个啊全集是给定的哈",
+      "music": 0.0
+    },
+    {
+      "from": 960.01,
+      "to": 960.74,
+      "sid": 293,
+      "location": 2,
+      "content": "给定的",
+      "music": 0.0
+    },
+    {
+      "from": 961.62,
+      "to": 964.4,
+      "sid": 294,
+      "location": 2,
+      "content": "但补集这个概念是比较好理解的",
+      "music": 0.0
+    },
+    {
+      "from": 964.4,
+      "to": 967.78,
+      "sid": 295,
+      "location": 2,
+      "content": "比方说我们集合A是这个班的所有的男生",
+      "music": 0.0
+    },
+    {
+      "from": 967.78,
+      "to": 971.23,
+      "sid": 296,
+      "location": 2,
+      "content": "那么它的补集就是所谓的女生对吧",
+      "music": 0.0
+    },
+    {
+      "from": 971.23,
+      "to": 974.88,
+      "sid": 297,
+      "location": 2,
+      "content": "比方说我们啊如果研究所有的整数的话",
+      "music": 0.0
+    },
+    {
+      "from": 974.88,
+      "to": 975.96,
+      "sid": 298,
+      "location": 2,
+      "content": "全集是整数",
+      "music": 0.0
+    },
+    {
+      "from": 975.96,
+      "to": 978.81,
+      "sid": 299,
+      "location": 2,
+      "content": "那么集合A是所有的偶数",
+      "music": 0.0
+    },
+    {
+      "from": 978.81,
+      "to": 982.36,
+      "sid": 300,
+      "location": 2,
+      "content": "那么啊集合B那就是奇数呗",
+      "music": 0.0
+    },
+    {
+      "from": 982.36,
+      "to": 982.78,
+      "sid": 301,
+      "location": 2,
+      "content": "对不对",
+      "music": 0.0
+    },
+    {
+      "from": 982.78,
+      "to": 984.04,
+      "sid": 302,
+      "location": 2,
+      "content": "这个比较好理解哈",
+      "music": 0.0
+    },
+    {
+      "from": 984.04,
+      "to": 986.32,
+      "sid": 303,
+      "location": 2,
+      "content": "不好理解好",
+      "music": 0.0
+    },
+    {
+      "from": 986.32,
+      "to": 987.94,
+      "sid": 304,
+      "location": 2,
+      "content": "我们举个例子啊",
+      "music": 0.0
+    },
+    {
+      "from": 987.94,
+      "to": 990.7,
+      "sid": 305,
+      "location": 2,
+      "content": "说假设全集U是吧",
+      "music": 0.0
+    },
+    {
+      "from": 990.7,
+      "to": 993.289,
+      "sid": 306,
+      "location": 2,
+      "content": "123456集合A啊",
+      "music": 0.0
+    },
+    {
+      "from": 993.289,
+      "to": 994.459,
+      "sid": 307,
+      "location": 2,
+      "content": "是个135",
+      "music": 0.0
+    },
+    {
+      "from": 994.459,
+      "to": 998.329,
+      "sid": 308,
+      "location": 2,
+      "content": "那第一个问他在U中的补集啊",
+      "music": 0.0
+    },
+    {
+      "from": 998.329,
+      "to": 999.76,
+      "sid": 309,
+      "location": 2,
+      "content": "所以那",
+      "music": 0.0
+    },
+    {
+      "from": 1001.54,
+      "to": 1003.63,
+      "sid": 310,
+      "location": 2,
+      "content": "他在右中的补集",
+      "music": 0.0
+    },
+    {
+      "from": 1003.63,
+      "to": 1010.7,
+      "sid": 311,
+      "location": 2,
+      "content": "那就是嗯135之外的不就是246嘛",
+      "music": 0.0
+    },
+    {
+      "from": 1010.7,
+      "to": 1013.13,
+      "sid": 312,
+      "location": 2,
+      "content": "所以就是246",
+      "music": 0.0
+    },
+    {
+      "from": 1013.13,
+      "to": 1013.79,
+      "sid": 313,
+      "location": 2,
+      "content": "对不对",
+      "music": 0.0
+    },
+    {
+      "from": 1015.06,
+      "to": 1020.459,
+      "sid": 314,
+      "location": 2,
+      "content": "下一个它的补集的补集啊",
+      "music": 0.0
+    },
+    {
+      "from": 1020.68,
+      "to": 1022.479,
+      "sid": 315,
+      "location": 2,
+      "content": "啊补集的补集",
+      "music": 0.0
+    },
+    {
+      "from": 1023.5,
+      "to": 1027.12,
+      "sid": 316,
+      "location": 2,
+      "content": "那这个补集啊我们可以这样画图啊",
+      "music": 0.0
+    },
+    {
+      "from": 1027.12,
+      "to": 1028.5,
+      "sid": 317,
+      "location": 2,
+      "content": "我一般这样画哈",
+      "music": 0.0
+    },
+    {
+      "from": 1028.5,
+      "to": 1031.819,
+      "sid": 318,
+      "location": 2,
+      "content": "全集U呢啊假设是这个集合",
+      "music": 0.0
+    },
+    {
+      "from": 1032.12,
+      "to": 1034.899,
+      "sid": 319,
+      "location": 2,
+      "content": "那集合A是这样的",
+      "music": 0.0
+    },
+    {
+      "from": 1036.14,
+      "to": 1042.52,
+      "sid": 320,
+      "location": 2,
+      "content": "那么A的补集就是除了A以外的这个阴影部分",
+      "music": 0.0
+    },
+    {
+      "from": 1042.52,
+      "to": 1043.78,
+      "sid": 321,
+      "location": 2,
+      "content": "就是A的补集",
+      "music": 0.0
+    },
+    {
+      "from": 1043.78,
+      "to": 1045.0,
+      "sid": 322,
+      "location": 2,
+      "content": "A的补集",
+      "music": 0.0
+    },
+    {
+      "from": 1046.08,
+      "to": 1050.159,
+      "sid": 323,
+      "location": 2,
+      "content": "那么A的补集再求补集",
+      "music": 0.0
+    },
+    {
+      "from": 1051.02,
+      "to": 1053.8,
+      "sid": 324,
+      "location": 2,
+      "content": "那么A的补集是这个阴影部分",
+      "music": 0.0
+    },
+    {
+      "from": 1053.8,
+      "to": 1056.2,
+      "sid": 325,
+      "location": 2,
+      "content": "它再求补集是不是又是A了呀",
+      "music": 0.0
+    },
+    {
+      "from": 1056.2,
+      "to": 1056.83,
+      "sid": 326,
+      "location": 2,
+      "content": "对不对",
+      "music": 0.0
+    },
+    {
+      "from": 1056.83,
+      "to": 1068.139,
+      "sid": 327,
+      "location": 2,
+      "content": "所以呢A的补集求补集大一就是A呀是吧",
+      "music": 0.0
+    },
+    {
+      "from": 1069.64,
+      "to": 1076.59,
+      "sid": 328,
+      "location": 2,
+      "content": "下个A的补集并上AA的补集是这个阴影部分",
+      "music": 0.0
+    },
+    {
+      "from": 1076.59,
+      "to": 1079.08,
+      "sid": 329,
+      "location": 2,
+      "content": "在B上A那不就是全集了嘛",
+      "music": 0.0
+    },
+    {
+      "from": 1079.08,
+      "to": 1079.65,
+      "sid": 330,
+      "location": 2,
+      "content": "对不对",
+      "music": 0.0
+    },
+    {
+      "from": 1079.65,
+      "to": 1087.15,
+      "sid": 331,
+      "location": 2,
+      "content": "所以呢A并上A的补集",
+      "music": 0.0
+    },
+    {
+      "from": 1087.15,
+      "to": 1090.46,
+      "sid": 332,
+      "location": 2,
+      "content": "那就是全集呗是吧",
+      "music": 0.0
+    },
+    {
+      "from": 1091.42,
+      "to": 1094.5,
+      "sid": 333,
+      "location": 2,
+      "content": "下一个A交它的补集",
+      "music": 0.0
+    },
+    {
+      "from": 1094.5,
+      "to": 1100.28,
+      "sid": 334,
+      "location": 2,
+      "content": "那么A教他的补集",
+      "music": 0.0
+    },
+    {
+      "from": 1101.26,
+      "to": 1102.88,
+      "sid": 335,
+      "location": 2,
+      "content": "这个这个这个是吧",
+      "music": 0.0
+    },
+    {
+      "from": 1102.88,
+      "to": 1104.2,
+      "sid": 336,
+      "location": 2,
+      "content": "这个刚才说了啊",
+      "music": 0.0
+    },
+    {
+      "from": 1104.2,
+      "to": 1106.75,
+      "sid": 337,
+      "location": 2,
+      "content": "如果这个A是班里的男生",
+      "music": 0.0
+    },
+    {
+      "from": 1106.75,
+      "to": 1108.51,
+      "sid": 338,
+      "location": 2,
+      "content": "他的补集呢就是女生",
+      "music": 0.0
+    },
+    {
+      "from": 1108.51,
+      "to": 1111.86,
+      "sid": 339,
+      "location": 2,
+      "content": "那他俩的交集是空集是没有的对吧",
+      "music": 0.0
+    },
+    {
+      "from": 1111.92,
+      "to": 1116.09,
+      "sid": 340,
+      "location": 2,
+      "content": "那A这个集合和它的补集是阴影部分",
+      "music": 0.0
+    },
+    {
+      "from": 1116.09,
+      "to": 1118.16,
+      "sid": 341,
+      "location": 2,
+      "content": "没有交集啊是吧",
+      "music": 0.0
+    },
+    {
+      "from": 1118.16,
+      "to": 1121.68,
+      "sid": 342,
+      "location": 2,
+      "content": "所以它的交集呢就是空警",
+      "music": 0.0
+    },
+    {
+      "from": 1125.84,
+      "to": 1127.81,
+      "sid": 343,
+      "location": 2,
+      "content": "好我们看一下这个题",
+      "music": 0.0
+    },
+    {
+      "from": 1127.81,
+      "to": 1133.38,
+      "sid": 344,
+      "location": 2,
+      "content": "那假设U是X属于NN啊",
+      "music": 0.0
+    },
+    {
+      "from": 1133.38,
+      "to": 1135.0,
+      "sid": 345,
+      "location": 2,
+      "content": "我们说过是自然数",
+      "music": 0.0
+    },
+    {
+      "from": 1135.0,
+      "to": 1137.47,
+      "sid": 346,
+      "location": 2,
+      "content": "是012356789十是吧",
+      "music": 0.0
+    },
+    {
+      "from": 1137.47,
+      "to": 1139.54,
+      "sid": 347,
+      "location": 2,
+      "content": "说了X小于等于七",
+      "music": 0.0
+    },
+    {
+      "from": 1139.54,
+      "to": 1142.66,
+      "sid": 348,
+      "location": 2,
+      "content": "所以这个U啊我们直接就给他写出来",
+      "music": 0.0
+    },
+    {
+      "from": 1142.66,
+      "to": 1150.919,
+      "sid": 349,
+      "location": 2,
+      "content": "就是一个01234567",
+      "music": 0.0
+    },
+    {
+      "from": 1152.38,
+      "to": 1154.62,
+      "sid": 350,
+      "location": 2,
+      "content": "小于等于七的自然数是吧",
+      "music": 0.0
+    },
+    {
+      "from": 1154.62,
+      "to": 1156.12,
+      "sid": 351,
+      "location": 2,
+      "content": "注意是包含零哈",
+      "music": 0.0
+    },
+    {
+      "from": 1156.12,
+      "to": 1159.03,
+      "sid": 352,
+      "location": 2,
+      "content": "好我们看一下集合A啊",
+      "music": 0.0
+    },
+    {
+      "from": 1159.03,
+      "to": 1160.8,
+      "sid": 353,
+      "location": 2,
+      "content": "X是属于U的啊",
+      "music": 0.0
+    },
+    {
+      "from": 1160.8,
+      "to": 1163.29,
+      "sid": 354,
+      "location": 2,
+      "content": "就是右那就是前面几个是吧",
+      "music": 0.0
+    },
+    {
+      "from": 1163.29,
+      "to": 1166.51,
+      "sid": 355,
+      "location": 2,
+      "content": "X方小于等于七",
+      "music": 0.0
+    },
+    {
+      "from": 1166.51,
+      "to": 1168.04,
+      "sid": 356,
+      "location": 2,
+      "content": "X次方小于等于七",
+      "music": 0.0
+    },
+    {
+      "from": 1168.04,
+      "to": 1170.86,
+      "sid": 357,
+      "location": 2,
+      "content": "我们可以得到X是大于等于负",
+      "music": 0.0
+    },
+    {
+      "from": 1170.86,
+      "to": 1176.56,
+      "sid": 358,
+      "location": 2,
+      "content": "根起小于等于根起这个根基啊",
+      "music": 0.0
+    },
+    {
+      "from": 1176.56,
+      "to": 1179.2,
+      "sid": 359,
+      "location": 2,
+      "content": "你估计一下跟七是个二点几是吧",
+      "music": 0.0
+    },
+    {
+      "from": 1179.2,
+      "to": 1182.88,
+      "sid": 360,
+      "location": 2,
+      "content": "因为二二得433就得九了",
+      "music": 0.0
+    },
+    {
+      "from": 1182.88,
+      "to": 1185.419,
+      "sid": 361,
+      "location": 2,
+      "content": "所以根七其实是个二点几",
+      "music": 0.0
+    },
+    {
+      "from": 1186.18,
+      "to": 1188.36,
+      "sid": 362,
+      "location": 2,
+      "content": "那么X是属于U的",
+      "music": 0.0
+    },
+    {
+      "from": 1189.3,
+      "to": 1192.92,
+      "sid": 363,
+      "location": 2,
+      "content": "所以X啊你得从前面这个U里边挑",
+      "music": 0.0
+    },
+    {
+      "from": 1192.92,
+      "to": 1195.47,
+      "sid": 364,
+      "location": 2,
+      "content": "还得要求小于等于根七",
+      "music": 0.0
+    },
+    {
+      "from": 1195.47,
+      "to": 1201.18,
+      "sid": 365,
+      "location": 2,
+      "content": "那所以就是212是吧",
+      "music": 0.0
+    },
+    {
+      "from": 1202.98,
+      "to": 1204.92,
+      "sid": 366,
+      "location": 2,
+      "content": "零二好",
+      "music": 0.0
+    },
+    {
+      "from": 1204.92,
+      "to": 1206.399,
+      "sid": 367,
+      "location": 2,
+      "content": "再看一下这个B",
+      "music": 0.0
+    },
+    {
+      "from": 1208.26,
+      "to": 1212.71,
+      "sid": 368,
+      "location": 2,
+      "content": "bx也属于U从这里面选嗯",
+      "music": 0.0
+    },
+    {
+      "from": 1212.71,
+      "to": 1214.87,
+      "sid": 369,
+      "location": 2,
+      "content": "2X大于零",
+      "music": 0.0
+    },
+    {
+      "from": 1214.87,
+      "to": 1215.68,
+      "sid": 370,
+      "location": 2,
+      "content": "小于等于七",
+      "music": 0.0
+    },
+    {
+      "from": 1215.68,
+      "to": 1218.94,
+      "sid": 371,
+      "location": 2,
+      "content": "那这个X的话就大于零",
+      "music": 0.0
+    },
+    {
+      "from": 1218.96,
+      "to": 1223.04,
+      "sid": 372,
+      "location": 2,
+      "content": "小于等于3.5呗是吧",
+      "music": 0.0
+    },
+    {
+      "from": 1223.04,
+      "to": 1224.36,
+      "sid": 373,
+      "location": 2,
+      "content": "小于等于3.5呗",
+      "music": 0.0
+    },
+    {
+      "from": 1224.82,
+      "to": 1226.92,
+      "sid": 374,
+      "location": 2,
+      "content": "注意这个X是大于零的",
+      "music": 0.0
+    },
+    {
+      "from": 1226.92,
+      "to": 1229.74,
+      "sid": 375,
+      "location": 2,
+      "content": "那这个词这个B这个零就不能取了",
+      "music": 0.0
+    },
+    {
+      "from": 1229.74,
+      "to": 1233.22,
+      "sid": 376,
+      "location": 2,
+      "content": "123是吧",
+      "music": 0.0
+    },
+    {
+      "from": 1233.22,
+      "to": 1234.48,
+      "sid": 377,
+      "location": 2,
+      "content": "因为小于等于3.5是吧",
+      "music": 0.0
+    },
+    {
+      "from": 1234.48,
+      "to": 1235.76,
+      "sid": 378,
+      "location": 2,
+      "content": "三是可以取的哈",
+      "music": 0.0
+    },
+    {
+      "from": 1236.72,
+      "to": 1238.42,
+      "sid": 379,
+      "location": 2,
+      "content": "然后呢下面就开始求了",
+      "music": 0.0
+    },
+    {
+      "from": 1238.42,
+      "to": 1242.86,
+      "sid": 380,
+      "location": 2,
+      "content": "第一个求A的补集",
+      "music": 0.0
+    },
+    {
+      "from": 1244.1,
+      "to": 1249.29,
+      "sid": 381,
+      "location": 2,
+      "content": "A的补集A是012012",
+      "music": 0.0
+    },
+    {
+      "from": 1249.29,
+      "to": 1256.26,
+      "sid": 382,
+      "location": 2,
+      "content": "不在A里头的不就是3567嘛",
+      "music": 0.0
+    },
+    {
+      "from": 1256.26,
+      "to": 1256.98,
+      "sid": 383,
+      "location": 2,
+      "content": "对不对",
+      "music": 0.0
+    },
+    {
+      "from": 1258.02,
+      "to": 1260.5,
+      "sid": 384,
+      "location": 2,
+      "content": "第二个求B的补集",
+      "music": 0.0
+    },
+    {
+      "from": 1260.5,
+      "to": 1263.7,
+      "sid": 385,
+      "location": 2,
+      "content": "那就是B的补集",
+      "music": 0.0
+    },
+    {
+      "from": 1264.0,
+      "to": 1266.16,
+      "sid": 386,
+      "location": 2,
+      "content": "B不是123吗",
+      "music": 0.0
+    },
+    {
+      "from": 1266.16,
+      "to": 1270.6,
+      "sid": 387,
+      "location": 2,
+      "content": "不在就右里头不不是123的",
+      "music": 0.0
+    },
+    {
+      "from": 1270.6,
+      "to": 1271.919,
+      "sid": 388,
+      "location": 2,
+      "content": "那不就是零",
+      "music": 0.0
+    },
+    {
+      "from": 1273.78,
+      "to": 1276.95,
+      "sid": 389,
+      "location": 2,
+      "content": "567嘛",
+      "music": 0.0
+    },
+    {
+      "from": 1276.95,
+      "to": 1277.78,
+      "sid": 390,
+      "location": 2,
+      "content": "对不对",
+      "music": 0.0
+    },
+    {
+      "from": 1278.78,
+      "to": 1285.22,
+      "sid": 391,
+      "location": 2,
+      "content": "然后是A的补集和B的补集的B啊",
+      "music": 0.0
+    },
+    {
+      "from": 1285.22,
+      "to": 1289.78,
+      "sid": 392,
+      "location": 2,
+      "content": "那就是A的补集并上",
+      "music": 0.0
+    },
+    {
+      "from": 1292.28,
+      "to": 1294.79,
+      "sid": 393,
+      "location": 2,
+      "content": "并上B的补集",
+      "music": 0.0
+    },
+    {
+      "from": 1294.79,
+      "to": 1298.58,
+      "sid": 394,
+      "location": 2,
+      "content": "那就是这个和这个求并呗",
+      "music": 0.0
+    },
+    {
+      "from": 1298.58,
+      "to": 1299.15,
+      "sid": 395,
+      "location": 2,
+      "content": "对不对",
+      "music": 0.0
+    },
+    {
+      "from": 1299.15,
+      "to": 1301.82,
+      "sid": 396,
+      "location": 2,
+      "content": "就是把他俩的所有的都拿过来呗",
+      "music": 0.0
+    },
+    {
+      "from": 1301.84,
+      "to": 1306.32,
+      "sid": 397,
+      "location": 2,
+      "content": "零有这个三有",
+      "music": 0.0
+    },
+    {
+      "from": 1308.62,
+      "to": 1311.64,
+      "sid": 398,
+      "location": 2,
+      "content": "567都得有",
+      "music": 0.0
+    },
+    {
+      "from": 1311.64,
+      "to": 1312.419,
+      "sid": 399,
+      "location": 2,
+      "content": "对不对",
+      "music": 0.0
+    },
+    {
+      "from": 1314.78,
+      "to": 1320.74,
+      "sid": 400,
+      "location": 2,
+      "content": "好下一个求ab的交再求补集",
+      "music": 0.0
+    },
+    {
+      "from": 1320.74,
+      "to": 1325.74,
+      "sid": 401,
+      "location": 2,
+      "content": "那这样咱先求A交鳖呗",
+      "music": 0.0
+    },
+    {
+      "from": 1326.94,
+      "to": 1328.4,
+      "sid": 402,
+      "location": 2,
+      "content": "A跟B它的交",
+      "music": 0.0
+    },
+    {
+      "from": 1328.4,
+      "to": 1329.84,
+      "sid": 403,
+      "location": 2,
+      "content": "这不是一吗",
+      "music": 0.0
+    },
+    {
+      "from": 1329.84,
+      "to": 1331.919,
+      "sid": 404,
+      "location": 2,
+      "content": "一二对不对",
+      "music": 0.0
+    },
+    {
+      "from": 1332.56,
+      "to": 1335.64,
+      "sid": 405,
+      "location": 2,
+      "content": "然后再求在右里边的补集",
+      "music": 0.0
+    },
+    {
+      "from": 1335.64,
+      "to": 1343.6,
+      "sid": 406,
+      "location": 2,
+      "content": "那所以呢A交B再求补集",
+      "music": 0.0
+    },
+    {
+      "from": 1344.22,
+      "to": 1346.85,
+      "sid": 407,
+      "location": 2,
+      "content": "那就是除了一二以外的呗",
+      "music": 0.0
+    },
+    {
+      "from": 1346.85,
+      "to": 1354.12,
+      "sid": 408,
+      "location": 2,
+      "content": "所以就是03467",
+      "music": 0.0
+    },
+    {
+      "from": 1354.12,
+      "to": 1355.08,
+      "sid": 409,
+      "location": 2,
+      "content": "对不对",
+      "music": 0.0
+    },
+    {
+      "from": 1355.08,
+      "to": 1357.75,
+      "sid": 410,
+      "location": 2,
+      "content": "嗯好就是这个哈",
+      "music": 0.0
+    },
+    {
+      "from": 1357.75,
+      "to": 1358.44,
+      "sid": 411,
+      "location": 2,
+      "content": "就是这个",
+      "music": 0.0
+    },
+    {
+      "from": 1366.5,
+      "to": 1372.03,
+      "sid": 412,
+      "location": 2,
+      "content": "好看下一个集合A是一到正无穷",
+      "music": 0.0
+    },
+    {
+      "from": 1372.03,
+      "to": 1379.3,
+      "sid": 413,
+      "location": 2,
+      "content": "所以A的话呢是从一保证无穷啊",
+      "music": 0.0
+    },
+    {
+      "from": 1379.3,
+      "to": 1380.47,
+      "sid": 414,
+      "location": 2,
+      "content": "这个是集合A",
+      "music": 0.0
+    },
+    {
+      "from": 1380.47,
+      "to": 1382.899,
+      "sid": 415,
+      "location": 2,
+      "content": "注意一这个点是不包括的",
+      "music": 0.0
+    },
+    {
+      "from": 1385.32,
+      "to": 1390.74,
+      "sid": 416,
+      "location": 2,
+      "content": "它在R中的补集R是全体实数嘛",
+      "music": 0.0
+    },
+    {
+      "from": 1390.74,
+      "to": 1391.48,
+      "sid": 417,
+      "location": 2,
+      "content": "对不对",
+      "music": 0.0
+    },
+    {
+      "from": 1391.56,
+      "to": 1394.59,
+      "sid": 418,
+      "location": 2,
+      "content": "那就是不在A里头了吧",
+      "music": 0.0
+    },
+    {
+      "from": 1394.59,
+      "to": 1397.56,
+      "sid": 419,
+      "location": 2,
+      "content": "那所以就是比这个一小是吧",
+      "music": 0.0
+    },
+    {
+      "from": 1397.56,
+      "to": 1401.78,
+      "sid": 420,
+      "location": 2,
+      "content": "所以呢就是负无穷到一",
+      "music": 0.0
+    },
+    {
+      "from": 1401.78,
+      "to": 1403.34,
+      "sid": 421,
+      "location": 2,
+      "content": "注意一这个地方啊",
+      "music": 0.0
+    },
+    {
+      "from": 1403.34,
+      "to": 1404.83,
+      "sid": 422,
+      "location": 2,
+      "content": "再取这个中括号",
+      "music": 0.0
+    },
+    {
+      "from": 1404.83,
+      "to": 1407.89,
+      "sid": 423,
+      "location": 2,
+      "content": "因为这个一是不包括的",
+      "music": 0.0
+    },
+    {
+      "from": 1407.89,
+      "to": 1411.8,
+      "sid": 424,
+      "location": 2,
+      "content": "那么它的补集就得包括他好看一下B",
+      "music": 0.0
+    },
+    {
+      "from": 1413.9,
+      "to": 1416.18,
+      "sid": 425,
+      "location": 2,
+      "content": "是从负无穷到二",
+      "music": 0.0
+    },
+    {
+      "from": 1419.34,
+      "to": 1421.899,
+      "sid": 426,
+      "location": 2,
+      "content": "这个啊是B的这个集合",
+      "music": 0.0
+    },
+    {
+      "from": 1423.5,
+      "to": 1426.52,
+      "sid": 427,
+      "location": 2,
+      "content": "注意这个二是一个啊",
+      "music": 0.0
+    },
+    {
+      "from": 1426.52,
+      "to": 1432.659,
+      "sid": 428,
+      "location": 2,
+      "content": "这个这个实心的求B在R中的补集",
+      "music": 0.0
+    },
+    {
+      "from": 1437.6,
+      "to": 1438.89,
+      "sid": 429,
+      "location": 2,
+      "content": "那不就在右边呗",
+      "music": 0.0
+    },
+    {
+      "from": 1438.89,
+      "to": 1444.36,
+      "sid": 430,
+      "location": 2,
+      "content": "那所以就是一个到正无穷是吧",
+      "music": 0.0
+    },
+    {
+      "from": 1447.6,
+      "to": 1448.62,
+      "sid": 431,
+      "location": 2,
+      "content": "他是个实心",
+      "music": 0.0
+    },
+    {
+      "from": 1450.6,
+      "to": 1452.68,
+      "sid": 432,
+      "location": 2,
+      "content": "那这个二就不能有是吧",
+      "music": 0.0
+    },
+    {
+      "from": 1453.16,
+      "to": 1456.61,
+      "sid": 433,
+      "location": 2,
+      "content": "所以这个端点啊大一定要判断仔细了哈",
+      "music": 0.0
+    },
+    {
+      "from": 1456.61,
+      "to": 1458.86,
+      "sid": 434,
+      "location": 2,
+      "content": "好那这部分我们就讲到这里",
+      "music": 0.0
+    },
+    {
+      "from": 1458.86,
+      "to": 1459.8,
+      "sid": 435,
+      "location": 2,
+      "content": "各位同学再见",
+      "music": 0.0
+    }
+  ]
+}
