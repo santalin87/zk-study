@@ -1,0 +1,82 @@
+[
+ {
+  "subject": "英语",
+  "a_name": "-ing 形容词（confusing / stressful）",
+  "a_def": "修饰物或事，表示'令人……的'；判断特征：主语或所修饰的名词是事情本身，如 The problem is confusing.（这道题令人困惑）",
+  "b_name": "-ed 形容词（confused / stressed）",
+  "b_def": "修饰人，表示'感到……的'；判断特征：主语是人，常跟在 feel、be 后面，如 I feel stressed.（我感到有压力）",
+  "diff": "差在感受的方向：-ing 是'发出去'的，事物让人产生感觉；-ed 是'收回来'的，人接收到感觉。判断步骤：先看修饰谁——名词是物（problem、news）用 -ing，是人或跟在 feel 后面用 -ed。她这次两头栽：完成句子里 maths problem 后面选错形式得 0 分，听力问感受时又挑了 stressful 的方向。抓手：物用 -ing，人用 -ed；听力里先听到 feel，笔就往 -ed 落。",
+  "check_q": "选词填空（exciting / excited，各用一次）：① The news was so ___ that everyone cheered. ② We were all ___ at the news.",
+  "check_a": "① exciting（news 是物，'令人兴奋'）；② excited（we 是人，'感到兴奋'）",
+  "keys": [
+   "英语|67|1",
+   "英语|14|1"
+  ]
+ },
+ {
+  "subject": "英语",
+  "a_name": "不定式 to（to do）",
+  "a_def": "后接动词原形，表目的；判断特征：句子已有谓语，能用'为了……'提问，且 to 后必须能还原成一个动作，如 eat something to reduce pressure（吃东西来减压）",
+  "b_name": "介词 to（固定短语里的 to）",
+  "b_def": "是短语的一部分，后接名词或动名词 -ing；判断特征：to 不能单译、属于 be addicted to、look forward to 这类整条短语，如 addicted to playing games（沉迷于玩游戏）",
+  "diff": "两个 to 长得一样、脾气相反：不定式 to 后只跟动词原形，介词 to 后跟名词或 -ing。判断步骤：先看 to 前面是不是固定短语（be addicted to、look forward to）——是，to 就是介词，后面用 doing；不是短语、又能问出'为了什么'，就是不定式，用原形。她这次一题写 to surprised，把 -ed 形容词塞进不定式；一题 addicted to 整条不会。抓手：先认短语，再看 to 后。",
+  "check_q": "用所给词的正确形式填空：① He went to the library ___ (borrow) some books. ② He is addicted to ___ (play) mobile games.",
+  "check_a": "① borrow（不定式表目的，to 后跟动词原形）；② playing（be addicted to 的 to 是介词，后接动名词）",
+  "keys": [
+   "英语|57|1",
+   "英语|72|1"
+  ]
+ },
+ {
+  "subject": "英语",
+  "a_name": "excuse（借口）",
+  "a_def": "为掩盖真相编出的说法，带贬义；判断特征：后面常跟着真相被揭穿，如 just an excuse（不过是个借口）",
+  "b_name": "reason（原因、理由）",
+  "b_def": "真实的原因或正当理由，中性词；判断特征：经得起追问，常与 for 连用，如 the reason for being late（迟到的真实原因）",
+  "diff": "差在真假：reason 是事实本身，excuse 是为了脱身编的壳。判断步骤：盯语境信号——出现 just（不过是）、in fact（其实）时，前面的说法多半是编的，选 excuse；正经回答'为什么'时选 reason。她这次完形里破折号后写着 in fact he had overslept，真相已点破，她还是选了 reason。抓手：有揭穿信号就选 excuse，看到 just 和 in fact 先警惕。",
+  "check_q": "选词填空（excuse / reason）：He said his bike was broken, but that was just an ___ — he simply didn't want to go.",
+  "check_a": "excuse（just 加上后文拆穿'只是不想去'，说明前面的说法是借口，不是真实原因）",
+  "keys": [
+   "英语|48|1"
+  ]
+ },
+ {
+  "subject": "英语",
+  "a_name": "other than（除了）",
+  "a_def": "常跟在 nothing、nobody、no 等否定词后面，后接动词原形或名词；判断特征：整句带否定，如 He does nothing other than study.（他除了学习什么都不做）",
+  "b_name": "except for（除了）",
+  "b_def": "用在肯定句里，先整体肯定、只挑出一个例外，后接名词；判断特征：句子可以先夸一遍再转折，如 The room is nice except for the noise.（房间挺好，就是有点吵）",
+  "diff": "差在句子的底色：other than 站在否定句里（nothing... other than...），except for 站在肯定句里（先肯定整体，再挑一个刺）。判断步骤：先看整句有没有 nothing、nobody 这类否定词——有，优先 other than；先肯定再挑例外，用 except for。她这次两个都写不出来，是整条没背。抓手：'什么都不，只…'用 other than，'样样都好就差一点'用 except for，成对背。",
+  "check_q": "选词填空（other than / except for）：① The classroom was empty ___ a few desks. ② She eats nothing ___ fruit for dinner.",
+  "check_a": "① except for（先肯定'空'这个整体状态，再挑出课桌这个例外，后接名词）；② other than（句中有 nothing 否定词，是 other than 的主场）",
+  "keys": [
+   "英语|75|1"
+  ]
+ },
+ {
+  "subject": "英语",
+  "a_name": "confidence（名词）",
+  "a_def": "-ence 结尾的名词'自信'；判断特征：能站在形容词、冠词或介词后面，如 with great confidence（自信地）、have confidence in（对……有信心）",
+  "b_name": "confident（形容词）",
+  "b_def": "-ent 结尾的形容词'自信的'；判断特征：修饰名词作定语，或跟在 be 后作表语，如 a confident smile（自信的微笑）、be confident of（对……有把握）",
+  "diff": "差在词性：空前面是形容词（great）或介词（with），槽位要名词，用 confidence；空在名词前作定语、或在 be 后作表语，才用形容词 confident。判断步骤：先看空的邻居——'形容词+空'或'介词+空'填名词，'空+名词'或'be+空'填形容词。她这次 with great ___ 填了 confident，位置看对、词性看错，0 分。抓手认尾巴：-ence 是名词，-ent 是形容词。",
+  "check_q": "选词填空（confidence / confident）：① Speak with ___ and the audience will trust you. ② She gave a ___ answer without any hesitation.",
+  "check_a": "① confidence（with 是介词，后面必须接名词）；② confident（a ___ answer，空后是名词 answer，要形容词作定语）",
+  "keys": [
+   "英语|66|1"
+  ]
+ },
+ {
+  "subject": "英语",
+  "a_name": "For（对于……来说）",
+  "a_def": "句首 For + 人或人群 + 逗号，表'就……而言'；判断特征：后面跟的是完整主句，是在讲对某一类对象的情况，如 For children, sleep matters.（对孩子来说，睡眠很重要）",
+  "b_name": "at（在……时刻/地点）",
+  "b_def": "只管时间和地点的小点；判断特征：后接钟点或场所，如 at 7 o'clock（在七点）、at school（在学校），永远不能用来对人说'对于'",
+  "diff": "差在管辖范围：at 钉的是一个时间点或地点，for 站在句首管的是一整类对象。判断步骤：空后是人或人群、带逗号、后面是完整句子，先想 for（对于……来说）；空后是钟点、时刻、校门口这类点位，才用 at。她这次把 at 当成万能介词填进句首，可 at children 根本不成立——at 从不'对于'人。抓手：句首'对于'必 for，at 只配时间和地点这两个'点'，动笔前先看空后跟的是人还是钟点。",
+  "check_q": "选词填空（For / At）：① ___ teenagers, music is a way to relax. ② The train leaves ___ half past seven.",
+  "check_a": "① For（对青少年来说：后接人群加完整主句）；② At（后接钟点 half past seven，at 管时间点）",
+  "keys": [
+   "英语|56|1"
+  ]
+ }
+]

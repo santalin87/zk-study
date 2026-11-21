@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>平抛运动小玩具 · 预测 → 发射 → 对照</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#f8fafc;color:#111827;padding:12px}
+h1{font-size:17px;margin:2px 0 4px}
+p{font-size:14px;line-height:1.7;margin:6px 0}
+.mut{color:#6b7280;font-size:13px}
+canvas{width:100%;background:#fff;border:1px solid #e5e7eb;border-radius:10px;display:block}
+.ctl{margin:10px 0}
+.ctl label{display:flex;justify-content:space-between;font-size:14px;margin-bottom:2px}
+.ctl input[type=range]{width:100%}
+.row{display:flex;gap:8px;margin:10px 0}
+.btn{flex:1;padding:12px;border:0;border-radius:10px;font-size:16px;cursor:pointer;background:#2563eb;color:#fff}
+.btn.gray{background:#e5e7eb;color:#111827}
+.pred{display:flex;gap:8px;align-items:center;margin:10px 0}
+.pred input{flex:1;padding:11px;border:1px solid #d1d5db;border-radius:10px;font-size:16px}
+.read{background:#eff6ff;border:1px solid #bfdbfe;border-radius:10px;padding:10px 12px;font-size:14.5px;line-height:1.8}
+.verdict{border-radius:10px;padding:10px 12px;font-size:14.5px;line-height:1.8;margin:8px 0}
+.verdict.good{background:#f0fdf4;border:1px solid #bbf7d0}
+.verdict.close{background:#fffbeb;border:1px solid #fde68a}
+.verdict.far{background:#fef2f2;border:1px solid #fca5a5}
+.opt{display:block;width:100%;text-align:left;padding:11px;border:1px solid #d1d5db;border-radius:10px;background:#fff;margin:6px 0;font-size:15px;cursor:pointer}
+.opt.ok{border-color:#16a34a;background:#f0fdf4}
+.opt.bad{border-color:#dc2626;background:#fef2f2}
+.explain{background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:10px 12px;font-size:14px;line-height:1.7;margin-top:8px}
+</style>
+</head>
+<body>
+<h1>🎯 平抛运动：先猜落点，再发射对照</h1>
+<p>平抛 = <b>水平方向匀速</b> + <b>竖直方向自由落体</b>。先猜它会落在哪，再点发射，看你的预测和真实落点差多少。（取 g = 10 m/s²，和课本一样）</p>
+<div class="ctl"><label><span>初速度 v₀</span><b id="v0v">18 m/s</b></label><input type="range" id="v0" min="5" max="30" step="1" value="18"></div>
+<div class="ctl"><label><span>抛射角 θ（0° 就是平抛）</span><b id="thv">45°</b></label><input type="range" id="th" min="0" max="90" step="1" value="45"></div>
+<div class="ctl"><label><span>抛出高度 h</span><b id="hv">8 m</b></label><input type="range" id="h" min="0" max="20" step="1" value="8"></div>
+<div class="ctl"><label><span>质量 m（拖拖看，轨迹变不变？）</span><b id="mv">1.0 kg</b></label><input type="range" id="m" min="0.5" max="5" step="0.5" value="1"></div>
+<div class="pred"><span style="font-size:15px">我预测落点在</span><input id="pred" type="number" min="0" step="0.1" placeholder="先填一个数，比如 30"><span style="font-size:15px">米处</span></div>
+<div class="row"><button class="btn" id="fire">🚀 发射</button><button class="btn gray" id="reset">重置</button></div>
+<canvas id="cv" width="720" height="400"></canvas>
+<div class="read" id="read">还没发射。先填预测落点，再点发射。</div>
+<div id="verdict"></div>
+<p class="mut">质量滑块是故意放的：拖动它，轨迹一点也不变——平抛的落点和质量无关，别被“越重掉得越快”的直觉骗了。</p>
+<h1 style="margin-top:16px">📝 练一练（只一题）</h1>
+<p>v₀ 和高度都不变，抛射角从 30° 变到 45°，射程怎么变？</p>
+<button class="opt" data-q="0">A. 变大</button>
+<button class="opt" data-q="1">B. 变小</button>
+<button class="opt" data-q="2">C. 不变</button>
+<button class="opt" data-q="3">D. 先变大后变小</button>
+<div id="qfb"></div>
+<script>
+(function () {
+  var G = 10;
+  var cv = document.getElementById('cv'), ctx = cv.getContext('2d');
+  var W = 720, H = 400, PADL = 46, PADR = 20, PADT = 24, PADB = 34;
+  var params = new URLSearchParams(location.search);
+  function num(id, def) { var v = parseFloat(params.get(id)); return isNaN(v) ? def : v; }
+  var state = { v0: num('v0', 18), th: num('theta', 45), h: num('h', 8), m: 1, pred: null, flying: false, t: 0, T: 0, R: 0, Hmax: 0, trail: [], done: false };
+  var $ = function (id) { return document.getElementById(id); };
+  function calc() {
+    var v0 = state.v0, th = state.th * Math.PI / 180, h = state.h;
+    var vy0 = v0 * Math.sin(th), vx = v0 * Math.cos(th);
+    var T = (vy0 + Math.sqrt(vy0 * vy0 + 2 * G * h)) / G;
+    var R = vx * T;
+    var Hmax = h + vy0 * vy0 / (2 * G);
+    return { T: T, R: R, Hmax: Hmax, vx: vx, vy0: vy0 };
+  }
+  function scale() {
+    var c = calc();
+    var R = Math.max(c.R, state.pred || 0, 10), Hm = Math.max(c.Hmax, 5);
+    return { sx: (W - PADL - PADR) / R, sy: (H - PADT - PADB) / Hm, R: R, Hm: Hm };
+  }
+  function X(x, sc) { return PADL + x * sc.sx; }
+  function Y(y, sc) { return H - PADB - y * sc.sy; }
+  function draw() {
+    var sc = scale(), c = calc();
+    ctx.clearRect(0, 0, W, H);
+    ctx.strokeStyle = '#e5e7eb'; ctx.lineWidth = 1;
+    var gx = X(0, sc);
+    ctx.beginPath(); ctx.moveTo(PADL - 14, Y(0, sc)); ctx.lineTo(W - PADR + 8, Y(0, sc)); ctx.stroke();
+    ctx.fillStyle = '#6b7280'; ctx.font = '12px sans-serif';
+    ctx.fillText('0', gx - 4, Y(0, sc) + 16);
+    for (var d = 10; d <= sc.R; d += 10) { ctx.fillText(d + ' m', X(d, sc) - 8, Y(0, sc) + 16); }
+    ctx.fillText('高度 ' + state.h + ' m', 8, Y(state.h, sc) - 6);
+    if (state.pred !== null) {
+      ctx.strokeStyle = '#dc2626'; ctx.setLineDash([5, 4]); ctx.lineWidth = 2;
+      ctx.beginPath(); ctx.moveTo(X(state.pred, sc), Y(0, sc)); ctx.lineTo(X(state.pred, sc), Y(0, sc) - 34); ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.fillStyle = '#dc2626'; ctx.font = 'bold 13px sans-serif';
+      ctx.fillText('🚩 你的预测 ' + state.pred + ' m', X(state.pred, sc) - 30, Y(0, sc) - 40);
+    }
+    ctx.strokeStyle = '#2563eb'; ctx.lineWidth = 2; ctx.beginPath();
+    state.trail.forEach(function (p, i) { var px = X(p.x, sc), py = Y(p.y, sc); if (i === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py); });
+    ctx.stroke();
+    if (state.trail.length) {
+      var last = state.trail[state.trail.length - 1];
+      ctx.fillStyle = '#2563eb'; ctx.beginPath(); ctx.arc(X(last.x, sc), Y(last.y, sc), 7, 0, Math.PI * 2); ctx.fill();
+    }
+    if (state.done) {
+      ctx.fillStyle = '#16a34a'; ctx.font = 'bold 13px sans-serif';
+      ctx.fillText('● 真实落点 ' + c.R.toFixed(1) + ' m', X(c.R, sc) - 34, Y(0, sc) - 40);
+      ctx.beginPath(); ctx.arc(X(c.R, sc), Y(0, sc), 5, 0, Math.PI * 2); ctx.fill();
+    }
+    ctx.fillStyle = '#111827'; ctx.font = '13px sans-serif';
+    ctx.fillText('发射台', 6, Y(state.h, sc) + 4);
+  }
+  function syncLabels() {
+    $('v0v').textContent = state.v0 + ' m/s';
+    $('thv').textContent = state.th + '°';
+    $('hv').textContent = state.h + ' m';
+    $('mv').textContent = state.m.toFixed(1) + ' kg';
+    $('v0').value = state.v0; $('th').value = state.th; $('h').value = state.h;
+  }
+  function readLine(c) {
+    return '飞行时间 ' + c.T.toFixed(2) + ' s · 射程 ' + c.R.toFixed(1) + ' m · 最高点 ' + c.Hmax.toFixed(1) + ' m · 水平速度 ' + c.vx.toFixed(1) + ' m/s（全程不变）';
+  }
+  var raf = null;
+  function fire() {
+    var pv = parseFloat($('pred').value);
+    if (isNaN(pv) || pv < 0) { alert('先填一个预测落点（米），再发射。猜错了也没关系，对照才是学习。'); return; }
+    state.pred = pv;
+    var c = calc();
+    state.T = c.T; state.R = c.R; state.Hmax = c.Hmax;
+    state.trail = []; state.t = 0; state.done = false; state.flying = true;
+    $('verdict').innerHTML = '';
+    $('read').textContent = '飞行中…（真实时间 ' + c.T.toFixed(2) + ' 秒）';
+    if (raf) cancelAnimationFrame(raf);
+    var t0 = null;
+    function step(ts) {
+      if (!t0) t0 = ts;
+      var t = Math.min((ts - t0) / 1000, state.T);
+      var x = c.vx * t, y = state.h + c.vy0 * t - 0.5 * G * t * t;
+      if (y < 0) y = 0;
+      state.trail.push({ x: x, y: y });
+      state.t = t;
+      draw();
+      if (t < state.T) { raf = requestAnimationFrame(step); }
+      else {
+        state.done = true; state.flying = false;
+        draw();
+        $('read').textContent = readLine(c);
+        var err = Math.abs(pv - c.R);
+        var v = $('verdict');
+        if (err <= 0.5) { v.className = 'verdict good'; v.textContent = '🎉 预测很准！只差 ' + err.toFixed(1) + ' 米。45° 时射程最远，你现在用的就是 ' + state.th + '°。'; }
+        else if (err <= 2) { v.className = 'verdict close'; v.textContent = '很接近了，只差 ' + err.toFixed(1) + ' 米。再想想：射程只和 v₀、角度、高度有关，和质量无关，也和“飞得高不高”不是一回事。'; }
+        else { v.className = 'verdict far'; v.textContent = '差了 ' + err.toFixed(1) + ' 米。别灰心——错的预测最有价值：射程 = 水平速度 × 飞行时间；角度影响两个量，一个变大、一个变小，所以 45° 附近才最远。'; }
+      }
+    }
+    raf = requestAnimationFrame(step);
+  }
+  $('fire').addEventListener('click', fire);
+  $('reset').addEventListener('click', function () { state.trail = []; state.done = false; state.pred = null; $('pred').value = ''; $('verdict').innerHTML = ''; $('read').textContent = '还没发射。先填预测落点，再点发射。'; draw(); });
+  [['v0', 'v0'], ['th', 'th'], ['h', 'h']].forEach(function (pair) {
+    $(pair[0]).addEventListener('input', function () { state[pair[1]] = parseFloat($(pair[0]).value); syncLabels(); state.trail = []; state.done = false; draw(); });
+  });
+  $('m').addEventListener('input', function () { state.m = parseFloat($('m').value); syncLabels(); draw(); });
+  document.querySelectorAll('[data-q]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var ok = b.getAttribute('data-q') === '0';
+      document.querySelectorAll('[data-q]').forEach(function (x) { if (x.getAttribute('data-q') === '0') x.classList.add('ok'); else if (x === b) x.classList.add('bad'); });
+      $('qfb').innerHTML = '<div class="explain">' + (ok ? '答对了。' : '不对，正确答案是 A。') + '射程 R = v₀²·sin2θ / g（从同一高度平抛时），sin2θ 在 θ=45° 时最大。所以 30°→45°，射程变大；过了 45° 再往上加，射程反而变小。高考最爱考的就是“45° 射程最大”这个结论。</div>';
+    });
+  });
+  syncLabels();
+  draw();
+})();
+</script>
+</body>
+</html>

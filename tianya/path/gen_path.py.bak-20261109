@@ -1,0 +1,211 @@
+import json, re
+
+topics = {t['id']: t for t in json.load(open('/home/hatch/workspace/study/path/topics.json'))}
+deps = json.load(open('/home/hatch/workspace/study/path/dependencies.json'))
+content = {}
+import glob
+for f in sorted(glob.glob('/home/hatch/workspace/study/path/content-ch*.json')):
+    content.update(json.load(open(f)))
+
+# 必修第一册章节结构（据用户 2026-11-02 提供的课本目录转录，含起始页）
+CH = [
+    ("第一章", "集合与常用逻辑用语", [("1.1", "集合的概念", 2), ("1.2", "集合间的基本关系", 7), ("1.3", "集合的基本运算", 10), ("1.4", "充分条件与必要条件", 17), ("1.5", "全称量词与存在量词", 26)]),
+    ("第二章", "一元二次函数、方程和不等式", [("2.1", "等式性质与不等式性质", 37), ("2.2", "基本不等式", 44), ("2.3", "二次函数与一元二次方程、不等式", 50)]),
+    ("第三章", "函数的概念与性质", [("3.1", "函数的概念及其表示", 60), ("3.2", "函数的基本性质", 76), ("3.3", "幂函数", 89), ("3.4", "函数的应用（一）", 93)]),
+    ("第四章", "指数函数与对数函数", [("4.1", "指数", 104), ("4.2", "指数函数", 111), ("4.3", "对数", 122), ("4.4", "对数函数", 130), ("4.5", "函数的应用（二）", 142)]),
+    ("第五章", "三角函数", [("5.1", "任意角和弧度制", 168), ("5.2", "三角函数的概念", 177), ("5.3", "诱导公式", 188), ("5.4", "三角函数的图象与性质", 196), ("5.5", "三角恒等变换", 215), ("5.6", "函数 y=Asin(ωx+φ)", 231), ("5.7", "三角函数的应用", 242)]),
+]
+SEC_PAGE = {}
+SEC_TITLE = {}
+for ci, (cn, ct, secs) in enumerate(CH, 1):
+    for s, st, pg in secs:
+        SEC_PAGE[s] = pg
+        SEC_TITLE[s] = st
+
+# 老师讲解视频：一数公益课堂《高一数学必修一同步课程》Bilibili 分P嵌入（2026-11-02 经搜索核对选集）
+# 注：2026-11-04 实测纠正——该 BV 共 35 个分P，每集都有一个带哈希后缀的重复分P，真实内容在奇数页（集数≠页码）；旧映射 p2/p8/p11 系按集数误填，已改。
+SEC_VIDEO = {
+    "1.1": {"p": 1, "t": "集合的概念与表示", "from": "一数·必修一同步课"},
+    "1.2": {"p": 3, "t": "集合的关系与运算", "from": "一数·必修一同步课"},
+    "1.3": {"p": 3, "t": "集合的关系与运算", "from": "一数·必修一同步课"},
+    "1.4": {"p": 15, "t": "充分必要条件（基础篇）", "from": "一数·必修一同步课"},
+    "1.5": {"p": 21, "t": "全称和存在量词（进阶篇）", "from": "一数·必修一同步课"},
+}
+BVID = "BV1UnJQzbEBm"
+
+# 本册节点：taxonomy 中 chapter 以「高一 第X章」开头的 + 数学建模（归入第四章后）
+book_nodes = []
+for t in topics.values():
+    ch = t['chapter']
+    if ch.startswith('高一 第'):
+        m = re.match(r'高一 (第.章) (.+?) (\d+\.\d+)$', ch)
+        if m:
+            book_nodes.append((t, m.group(2), m.group(3)))
+book_nodes.sort(key=lambda x: x[0]['id'])
+
+pre_map = {}
+next_map = {}
+for d in deps:
+    pre_map.setdefault(d['topicId'], []).append(d)
+    next_map.setdefault(d['prerequisiteId'], []).append(d['topicId'])
+
+def stage_of(t):
+    if t['id'].startswith('cnm_h'):
+        return '高中'
+    if t['id'].startswith('cnm_j') or re.match(r'cnm_0\d\d', t['id']):
+        return '初中'
+    return '小学'
+
+nodes = {}
+order = []
+for t, chname, sec in book_nodes:
+    nid = t['id']
+    pres = []
+    for d in sorted(pre_map.get(nid, []), key=lambda d: (0 if d['strength'] == 'hard' else 1)):
+        pt = topics.get(d['prerequisiteId'])
+        if not pt:
+            continue
+        pres.append({"id": pt['id'], "name": pt['name'], "stage": stage_of(pt), "hard": d['strength'] == 'hard'})
+    nxts = []
+    for x in next_map.get(nid, []):
+        if x in topics and topics[x]['chapter'].startswith('高一'):
+            nxts.append({"id": x, "name": topics[x]['name']})
+    node = {
+        "name": t['name'], "sec": sec, "secTitle": SEC_TITLE.get(sec, ''),
+        "page": SEC_PAGE.get(sec), "desc": t.get('description', ''),
+        "criteria": t.get('mastery_criteria', []),
+        "diag": t.get('diagnostic_question'),
+        "pre": pres, "next": nxts,
+    }
+    if sec in SEC_VIDEO:
+        node["video"] = dict(SEC_VIDEO[sec], bvid=BVID)
+    if nid in content:
+        c = dict(content[nid])
+        if 'case' in c:
+            c['case'] = dict(c['case'], tier='redo')
+        node["content"] = c
+    nodes[nid] = node
+    order.append(nid)
+
+chapters = []
+for ci, (cn, ct, secs) in enumerate(CH, 1):
+    ids = [n for n in order if nodes[n]['sec'].split('.')[0] == str(ci)]
+    chapters.append({"no": cn, "title": ct, "nodes": ids})
+
+VTOP = {
+ (BVID, 1): ["把一些确定的、互不相同的对象看成一个整体，就是集合；整体里的每个对象叫元素。", "常用数集的记号要记牢：N 自然数（从 0 开始）、N* 或 N+ 正整数、Z 整数、Q 有理数、R 实数。", "同一个式子，代表元素不同，集合完全不同。"],
+ (BVID, 3): ["交集取公共，并集都收进来，补集在全集里取对立面。", "子集不排斥相等；空集是任何集合的子集、任何非空集合的真子集。", "集合标了整数，装的是一个个点，不是一整段区间。"],
+ (BVID, 15): ["p 推出 q，一次产生两个结论：p 是 q 的充分条件，q 是 p 的必要条件。", "判断只看两个箭头：正推、反推分别验一遍，再对号入座四种关系。", "先化简条件再比对：解不等式、化等式，最后拼的是范围大小。"],
+ (BVID, 21): ["写否定只动两处：量词翻面，结论彻底否定，范围一个字不改。", "存在表示有就行，哪怕只有一个；任意表示所有都要满足。", "「都对」的否定是「不都对」，且要改成或，不是「都不是」。"],
+}
+
+VSUM = {
+ (BVID, 1): "这一课讲 1.1 集合的概念与表示，是整个高中数学的第一课。老师开场就交代：==集合这套语言是给后面学函数打底的，概念必须非常熟==。\n先是定义：==把一些确定的、互不相同的对象看成一个整体，就是集合；整体里的每个对象叫元素==。集合用大写字母表示，元素用小写字母。还特别讲了**空集**：描述完全明确、但一个元素都找不到的集合，比如平方小于 0 的实数组成的集合。\n然后是元素和集合的关系：**属于**和**不属于**。老师特别强调，==这个符号只能连元素和集合，不能拿来连两个集合==。\n==常用数集的记号要记牢：N 自然数（从 0 开始）、N* 或 N+ 正整数、Z 整数、Q 有理数、R 实数==。老师记有理数有个取巧的办法：实数里只有三类是**无理数**——π、e、开方开不尽的数（比如根号 2），剩下的都是有理数。\n接着讲元素的三个性质。**确定性**：「个子高的同学」「课本里的难题」标准不客观，成不了集合；「世界最高的七座山峰」有客观标准，能成集合，跟你知不知道是哪七座没关系。==互异性：同一个元素只写一次，这是考得最多的性质==——例题里 x+2、x² 和 1 是三个元素，就必须两两不相等，推出 x 不能取 1、-1 和 2。**无序性**：谁写在前面都一样，集合只看谁在里面。\n表示方法两种：**列举法**把元素一个个写出来；**描述法**写成 {x | 条件}，看的时候先看清代表元素是谁、范围是什么、条件是什么。老师反复提醒两个坑：一是代表元素换成什么字母都不影响集合本身；二是装点的集合写出来还得是点，比如两条直线的交点要写成 (-1, -2) 这一个点，不能拆成两个数。同一个式子 y=x²+1，代表元素是 x，得到的是 R；是 y，得到的是大于等于 1 的数；是点，得到的是抛物线上的点集——==代表元素不同，集合完全不同==。\n最后一块是**区间表示法**，初中没学过、高中必须会：==能取到的端点用中括号（闭），取不到用小括号（开），无穷大那头永远用小括号==。以后求解集要用集合或区间来写，只写 x 大于几、小于几，在高中不算集合。\n易错提醒：空集不是 {0}；写描述法别把代表元素的范围丢掉；点集别把点拆开写。",
+ (BVID, 3): "这一课把 1.2 集合间的基本关系和 1.3 集合的基本运算连着讲：先讲关系（子集、真子集、相等），再讲运算（交、并、补）。==子集的定义是：A 的每个元素都在 B 里，A 就是 B 的子集；符号开口朝谁，谁就是大的那个==。\n子集有两个容易漏的点：==子集不排斥相等——A 和 B 一样大时，照样互为子集==；还有一条特殊规定：**空集**是任何集合的子集，是任何非空集合的真子集。**真子集**比子集多一条：B 里必须有 A 没有的元素，所以两个集合相等时只能叫子集、不能叫真子集。A 是 B 的子集、B 又是 A 的子集，就是**集合相等**。\n关系填空的练习里老师连挖三个坑：代表元素写 x 还是 y 都是浮云，要看它描述的范围本质是什么；装点的集合和装数的集合风马牛不相及，谈不上包含关系；（2, 3）和（3, 2）是两个不同的点，别看成一样。\n运算三件套：==交集取公共部分，并集把有的都收进来（重复的只算一次），补集是在全集里取对立面==。带包含关系时有现成结论：B 是 A 的子集，则 A∩B=B、A∪B=A。\n最后例题三连，全是高考第一题的模样：先把每个集合解出来画上数轴，交看重叠段、并看总范围、补先翻面再说；端点取不取得到逐个核对。最阴的一个坑：集合标了**整数** Z，里面装的是一个个整数点、不是一整段区间，答案要用列举法写出那几个点。\n易错提醒：写子集别漏空集；填真子集先确认两集合不相等；求补集先看清全集是谁；看到 Z、N 的限定，先想清楚装的是点还是段。",
+ (BVID, 15): "这一课讲 1.4 充分条件与必要条件。老师开场就点题：==这类题在高考里模式固定，四个选项就是四种关系，逻辑只是外壳，真正考的是你把条件化简、比对的功夫==。\n核心只有一句：==p 能推出 q，就同时产生两个结论：p 是 q 的充分条件，q 是 p 的必要条件==——前推后，前是后的充分、后是前的必要，一并产生。为什么叫充分：x 大于 3，这个理由足够说明 x 大于 2；为什么叫必要：想大于 3，先得大于 2，这是没得商量的前提，没有它根本谈不上。\n四种关系全看两个箭头的方向：双向都能推是**充要条件**（|x|=0 和 x²=0 说的都是 x=0，所以互推）；只有 p 能推 q 是**充分不必要**（x 大于 3 能推 x 大于 2，反过来举 x=2.5 就堵死了）；只有反过来能推是**必要不充分**；两个方向都推不出，就是**既不充分也不必要**。\n例题演示的是标准打法：第一题比「且」和「或」——平方和为 0 给的是 x=1 且 y=2，乘积为 0 给的是 x=1 或 y=2，前者能推出后者，反过来举 x=1、y=3 就推不回去；第二题先把两个不等式都解出来画数轴，小范围 (0, 4) 能推出大范围 (-1, 5)，问谁是谁的条件时别答反；第三题先把绝对值等式平方化简，再和另一边比对，两边等价就是充要。\n易错提醒：问「p 是 q 的什么条件」，先把 p 推 q、q 推 p 两个方向分开各验一遍，再对号入座；方向感乱的时候用集合法救命——满足 p 的范围小，就能推出范围大的那个。",
+ (BVID, 21): "这一课是 1.5 的进阶，老师明说：==全程只攻一个核心题型——含量词命题的否定，这在高考里经久不衰，基本是送分题==。先分清两个量词：**全称量词**是「所有的、任意一个」，**存在量词**是「存在一个、至少有一个」。\n开场例题先把两个量词的手感立住：开口向上的二次函数有最小值，于是含 ≤ 的存在命题靠取等号那一刻就能成立。==存在表示有就行，哪怕只有一个；任意表示所有都要满足==——判存在命题别急着说假，先找有没有哪怕一个例子。\n否定本身的方法就两步：==量词翻面（存在变任意、任意变存在），结论彻底否定==。比如 x 大于 1 的否定是 x 小于等于 1，不等号要带着等号一起翻；结论里有「属于」，否定就是「不属于」。\n最容易画蛇添足的地方：==代表元素活动的范围是研究对象，写否定不能改==。2014 年天津卷那道题，x 大于 0 这个范围原样保留，只翻量词和结论；代表元素换个字母（x₀、y）倒是不影响，别纠结。\n结论里有「且」连接时，否定时==「且」要改成「或」==：「A 和 B 都对」的否定是「不都对」（至少一个不对），不是「都不是」。就像五个人都是男生的否定，是有人不是男生，而不是五个人都是女生。\n再难一档的用法：题目说一个含量词命题是**假命题**，先写出它的否定——那是个真命题，题目立刻顺过来。比如「存在 x 使式子小于等于 0」是假，等价于「任意 x 式子都大于 0」恒成立，剩下就是开口方向加判别式小于 0 的老问题。\n最后赏析了 2014 年北京卷的填空压轴：把两句量词命题先翻译成图像结论（一边恒负、一边要有正），再对二次函数的两个根的大小分类讨论。量词题拼到这一步，拼的还是函数功底。\n易错提醒：写否定别改范围；「不都是」别写成「都不是」；否定不等式别漏等号。",
+}
+VTECH = {
+ (BVID, 1): [["判集合看标准，不看你知不知道", "问“能不能组成集合”，只看标准客不客观。“个子高的同学”“课本里的难题”标准不客观，不行；“世界最高的七座山峰”有客观标准，行，跟你能不能说出是哪七座没关系。"], ["含参数先列禁区（互异性）", "集合里几个元素带同一个参数，先让它们两两不相等，把参数不能取的值全排掉。比如元素是 x+2、x² 和 1，就必须 x≠1、-1、2；最后把剩下的候选值代回去验一遍有没有撞车。"], ["读描述法先圈代表元素", "先问一句“这集合装的是数还是点”。同一个 y=x²+1，代表元素是 x，集合是 R；是 y，是 [1, +∞)；是点 (x, y)，是抛物线上的点集——公式没变，集合全变。"], ["区间端点：取得到用中括号，取不到用小括号", "无穷大那头永远小括号。最后写答案用集合或区间，只写“x 大于几”在高中不算答完。"]],
+ (BVID, 3): [["先解集合再运算", "凡是描述法给的集合，第一步先把它解成能画数轴、能列举的样子（解不等式、解方程），再谈交、并、补——顺序反了必错。"], ["数轴上盯端点", "交并补画完数轴，只剩一件事：逐个端点问“取得到吗”。取得到用中括号、取不到用小括号；补集翻面时，端点的开闭也要跟着翻。"], ["关系题先比能不能相等", "问子集还是真子集，先看两个集合能不能相等：可能相等就只能是子集，确认不相等才配叫真子集；含参数时，让两集合相等的那组参数值要单独拎出来讨论。"], ["先认装的是什么", "动手前先问一句“这集合装的是数、是点、还是整数点”：装整数的是一个个散点，答案用列举法；点集和数集之间不谈包含关系。"]],
+ (BVID, 15): [["两箭头分开验", "问“p 是 q 的什么条件”，别凭感觉：先验 p 能不能推出 q，再验 q 能不能推出 p，两个结果一拼，四种关系自动对号入座。"], ["证“推不出”就举反例", "想说明一个方向不成立，不用证明，举一个满足出发点、却不满足落点的例子就行。比如 x 大于 2 推不出 x 大于 3，反例 x=2.5 一举就完事。"], ["集合法看范围", "条件能写成范围时，把满足 p 的范围和满足 q 的范围都解出来画数轴：小范围能推出大范围，范围相同是充要，谁也不含谁就是既不充分也不必要。"], ["先化简再比对", "条件长得复杂（带绝对值、乘积、根式）先别急着判方向，把两边各自化简到最简形式，再比对差在哪。"]],
+ (BVID, 21): [["否定两步走：先翻量词，再否结论", "看到“写出命题的否定”，第一步把任意和存在互换，第二步把结论反过来（大于变小于等于、属于变不属于）；范围和代表元素原样保留，一个字不改。"], ["判存在命题，先找一个例子", "存在命题要判真，不用全盘证明，找到一个成立的例子就够了；尤其带小于等于、大于等于的，先看能不能靠“取等号”那一个点过关。"], ["判全称命题，专找反例", "全称命题要判假，只需一个反例：专挑边界值、特殊值（0、1、端点）去试，试出一个不成立，整句判假收工。"], ["假命题先翻面再做", "题干说“这个命题是假命题”，别顺着想：先把它的否定写出来，那是真命题，题目立刻变成你熟悉的恒成立或存在性问题，再该用判别式用判别式。"]],
+}
+
+VGAOKAO = {
+ (BVID, 1): [{"src": "2024 · 北京卷 · 第 1 题", "q": "已知 M = {x | -3 < x < 1}，N = {x | -1 ≤ x < 4}，则 M ∪ N =（　）", "opts": "A. {x | -1 ≤ x < 1}　B. {x | x > -3}　C. {x | -3 < x < 4}　D. {x | x < 4}", "ans": "C", "why": "用技巧 4：并集是把两段在数轴上连起来取总范围，左端 -3 取不到、右端 4 取不到，所以是 (-3, 4)。"}, {"src": "2021 · 新高考 I 卷 · 第 1 题（福建就考这个卷）", "q": "设 A = {x | -2 < x < 4}，B = {2, 3, 4, 5}，则 A ∩ B =（　）", "opts": "A. {2}　B. {2, 3}　C. {3, 4}　D. {2, 3, 4}", "ans": "B", "why": "用技巧 3 的读法：一边是列举、一边是描述，就把 B 的元素逐个拿去 A 的条件里验，4 不满足 x < 4，先划掉。"}],
+ (BVID, 3): [{"src": "2023 · 新课标 I 卷 · 第 1 题（福建就考这个卷）", "q": "已知集合 M = {-2, -1, 0, 1, 2}，N = {x | x² - x - 6 ≥ 0}，则 M ∩ N =（　）", "opts": "A. {-2, -1, 0, 1}　B. {0, 1, 2}　C. {-2}　D. {2}", "ans": "C", "why": "用技巧 1：先解 N，x² - x - 6 ≥ 0 得 x ≤ -2 或 x ≥ 3；再把 M 的元素逐个验，只有 -2 在 N 里。"}],
+ (BVID, 15): [{"src": "2025 · 天津卷 · 第 2 题", "q": "设 x ∈ R，则“x = 0”是“sin²x = 0”的（　）", "opts": "A. 充分不必要条件　B. 必要不充分条件　C. 充要条件　D. 既不充分也不必要条件", "ans": "A", "why": "用技巧 1 和 2：x=0 当然能推出 sin²x=0；反过来 sin²x=0 还有 x = π 这样的解，一个反例就说明必要不成立。"}],
+ (BVID, 21): [{"src": "2011 · 辽宁卷（文）· 第 4 题", "q": "已知命题 p：存在 n ∈ N，使 2 的 n 次方 > 1000，则 p 的否定为（　）", "opts": "A. 任意 n ∈ N，2 的 n 次方 ≤ 1000　B. 存在 n ∈ N，2 的 n 次方 > 1000　C. 存在 n ∈ N，2 的 n 次方 ≤ 1000　D. 任意 n ∈ N，2 的 n 次方 < 1000", "ans": "A", "why": "用技巧 1：存在先翻成任意，结论“>1000”否定成“≤1000”——等号不能漏，所以 D 错。"}],
+}
+UNIT_NAME_OVERRIDE = {('1.2', '1.3'): '集合的关系与运算'}
+
+units = {}
+unit_order = []
+chapters_out = []
+node_unit = {}
+for ch in chapters:
+    secs_seen = []
+    for nid in ch['nodes']:
+        s = nodes[nid]['sec']
+        if s not in secs_seen:
+            secs_seen.append(s)
+    groups = []
+    for s in secs_seen:
+        members = [nid for nid in ch['nodes'] if nodes[nid]['sec'] == s]
+        vid = nodes[members[0]].get('video')
+        if groups and vid and groups[-1]['video'] and vid['bvid'] == groups[-1]['video']['bvid'] and vid['p'] == groups[-1]['video']['p']:
+            groups[-1]['members'] += members
+            groups[-1]['secs'].append(s)
+        else:
+            groups.append({'members': list(members), 'secs': [s], 'video': vid})
+    ch_units = []
+    for g in groups:
+        uid = 'u_' + g['members'][0]
+        first = nodes[g['members'][0]]
+        last = nodes[g['members'][-1]]
+        key = (g['secs'][0], g['secs'][-1]) if len(g['secs']) > 1 else None
+        video = None
+        if g['video']:
+            video = dict(g['video'])
+            vs = VSUM.get((video['bvid'], video['p']))
+            if vs:
+                video['vsum'] = vs
+            vt = VTOP.get((video['bvid'], video['p']))
+            if vt:
+                video['vtop'] = vt
+            vte = VTECH.get((video['bvid'], video['p']))
+            if vte:
+                video['vtech'] = vte
+            vg = VGAOKAO.get((video['bvid'], video['p']))
+            if vg:
+                video['vgaokao'] = vg
+        units[uid] = {
+            'id': uid,
+            'name': UNIT_NAME_OVERRIDE.get(key, first['secTitle']),
+            'secs': ('-'.join(g['secs'])) if len(g['secs']) > 1 else g['secs'][0],
+            'pageFrom': first['page'], 'pageTo': last['page'],
+            'members': g['members'], 'video': video,
+        }
+        for m in g['members']:
+            node_unit[m] = uid
+        unit_order.append(uid)
+        ch_units.append(uid)
+    chapters_out.append({'no': ch['no'], 'title': ch['title'], 'units': ch_units})
+
+for uid in unit_order:
+    u = units[uid]
+    pre_u, seen_p = [], set()
+    junior, seen_j = [], set()
+    next_u, seen_n = [], set()
+    for m in u['members']:
+        for p in nodes[m].get('pre', []):
+            if p['id'] in node_unit and node_unit[p['id']] != uid:
+                if node_unit[p['id']] not in seen_p:
+                    seen_p.add(node_unit[p['id']])
+                    pre_u.append({'id': node_unit[p['id']], 'name': units[node_unit[p['id']]]['name']})
+            elif p['id'] not in node_unit:
+                k = p['stage'] + '|' + p['name']
+                if k not in seen_j:
+                    seen_j.add(k)
+                    junior.append({'stage': p['stage'], 'name': p['name']})
+        for x in nodes[m].get('next', []):
+            if x['id'] in node_unit and node_unit[x['id']] != uid and node_unit[x['id']] not in seen_n:
+                seen_n.add(node_unit[x['id']])
+                next_u.append({'id': node_unit[x['id']], 'name': units[node_unit[x['id']]]['name']})
+    u['preUnits'] = pre_u
+    u['junior'] = junior
+    u['nextUnits'] = next_u
+for i, uid in enumerate(unit_order):
+    units[uid]['prevU'] = {'id': unit_order[i - 1], 'name': units[unit_order[i - 1]]['name']} if i > 0 else None
+    units[uid]['nextU'] = {'id': unit_order[i + 1], 'name': units[unit_order[i + 1]]['name']} if i < len(unit_order) - 1 else None
+
+out = {"subject": "数学", "book": "必修第一册", "version": "人教A版",
+       "chapters": chapters_out, "order": unit_order, "nodes": nodes,
+       "units": units, "nodeUnit": node_unit}
+js = "/* 学习路径数据：数学必修第一册（人教A版）。骨架与先修关系据 GitHub 开源图谱 cn-math-taxonomy（对齐课标与人教A版），章节页码据课本目录；学习单元为本站打磨内容。 */\n"
+js += "var PATH_BOOK = " + json.dumps(out, ensure_ascii=False) + ";\n"
+open('/home/hatch/workspace/study/github/path.js', 'w').write(js)
+print("units:", len(unit_order), "| nodes:", len(order), "| content nodes:", sum(1 for n in order if 'content' in nodes[n]))
+print("chapter units:", [(c['no'], len(c['units'])) for c in chapters_out])
+print("ch1:", [(units[u]['secs'], units[u]['name'], len(units[u]['members'])) for u in chapters_out[0]['units']])

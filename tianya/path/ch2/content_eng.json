@@ -1,0 +1,288 @@
+{
+  "eng_e006": {
+    "advance": {
+      "a": "因为全文是按行程推进组织的，细节都挂在站点上：先知道某段写的是哪一站，才知道这段的见闻属于哪里。例如先定位到第二站马丘比丘，才不会把印加古城的石头建筑记到亚马逊雨林头上；先定位到最后一站的的喀喀湖，才不会把湖区见闻和库斯科的城市见闻混在一起。顺序是骨架，细节是挂在骨架上的。",
+      "kind": "self",
+      "q": "为什么说读这篇日志时「顺序比细节先行」？请用四站中的任意两站说明。"
+    },
+    "apply": [
+      {
+        "ans": 1,
+        "opts": [
+          "Read every new word with a dictionary first.",
+          "Follow the order of the journey and note what the writer saw at each stop.",
+          "Only read the first and last paragraphs.",
+          "Remember the places by how famous they are."
+        ],
+        "q": "Which is the best way to read a travel journal like this? ( )",
+        "why": "旅行日志按行程顺序组织，先顺路线、再按站抓见闻细节，细节题和顺序题都能对位。凭名气排序正是易错点。"
+      },
+      {
+        "ans": 0,
+        "opts": [
+          "the Inca civilisation",
+          "the Roman Empire",
+          "ancient Egypt",
+          "the Vikings"
+        ],
+        "q": "Machu Picchu is most closely connected with ( ).",
+        "why": "马丘比丘是印加人留下的古城遗址；库斯科也曾是印加帝国的中心，两站共同的文化线就是 Inca。"
+      }
+    ],
+    "basics": [
+      {
+        "ans": 0,
+        "opts": [
+          "The Amazon rainforest.",
+          "Machu Picchu.",
+          "Cusco.",
+          "Lake Titicaca."
+        ],
+        "q": "In Richard's travel journal about Peru, which place did he visit first? ( )",
+        "why": "日志按行程顺序展开，第一站是亚马逊雨林，之后依次是马丘比丘、库斯科、的的喀喀湖。"
+      },
+      {
+        "ans": 1,
+        "opts": [
+          "Richard's teacher.",
+          "Richard's cousin.",
+          "A local guide in Cusco.",
+          "Richard's father."
+        ],
+        "q": "Who is Xavier in the journal? ( )",
+        "why": "Xavier 是 Richard 的表兄（cousin）。人物关系题先认准 cousin 这个词，不要被同行、导游等干扰项带偏。"
+      }
+    ],
+    "case": {
+      "a": "正确顺序：亚马逊雨林 → 马丘比丘 → 库斯科 → 的的喀喀湖。",
+      "hints": [
+        "不要按名气排，按日志叙述的行程推进排。",
+        "第一站和最后一站最容易定：先定头尾，中间两站再对位。"
+      ],
+      "q": "有同学凭印象把 Richard 的行程排成「马丘比丘 → 亚马逊雨林 → 的的喀喀湖 → 库斯科」。请指出错在哪，并给出正确顺序和判断依据。",
+      "steps": [
+        "先定第一站：日志先写亚马逊雨林，原始雨林的生态见闻是全程的起点。",
+        "再定最后一站：的的喀喀湖（普诺一带）是行程的收尾。",
+        "中间两站：先到印加古城马丘比丘，再到库斯科——库斯科本身也是印加旧都，两站连读正好接上印加文明这条线。",
+        "所以正确顺序是：亚马逊雨林 → 马丘比丘 → 库斯科 → 的的喀喀湖。原排序把头尾和中间全打乱了。"
+      ],
+      "talk": [
+        "顺序题的做法：先定头尾两个锚点，再排中间。只凭名气和熟悉度排顺序，是旅行类阅读最常见的丢分方式。"
+      ],
+      "title": "案例：把四站排回正确的顺序"
+    },
+    "intro": "Unit 2 的 Reading and Thinking 是一篇秘鲁旅行日志：Richard 记录了自己在秘鲁一路走过的四个地方。==这篇课文的读法是先抓行程顺序，再抓每站的见闻细节：亚马逊雨林 → 马丘比丘 → 库斯科 → 的的喀喀湖（普诺一带）。==顺序对了，细节题就有了挂靠点；顺序乱了，再熟的单词也救不回来。",
+    "learn": [
+      {
+        "h": "先认人，再认路线",
+        "p": "日志的作者是 **Richard**，文中与他相关的同行亲属是他的表兄 **Xavier**——人物关系题最爱在这里设问，先把「谁在写、和谁有关」钉死。\n\n全篇按行程推进，四站顺序是：**Amazon rainforest（亚马逊雨林）→ Machu Picchu（马丘比丘）→ Cusco（库斯科）→ Lake Titicaca（的的喀喀湖）**。==旅行日志的骨架就是行程顺序：先顺路线，再读细节。=="
+      },
+      {
+        "h": "四站各抓一个关键词",
+        "p": "**亚马逊雨林**：看的是原始雨林的自然生态，关键词是 rainforest 与丰富的动植物。**马丘比丘**：看的是印加人留下的古城遗址，关键词是 **Inca** 与古老的石头建筑。**库斯科**：曾是印加帝国的中心，后来又留下西班牙殖民时期的建筑，两种风格在同一座城里叠在一起。**的的喀喀湖**：行程来到普诺（Puno）一带的湖区，体验当地人的生活。\n\n每站只先记一个核心印象，细节回头定位时再补，这是对付细节题最省力的做法。"
+      },
+      {
+        "h": "旅行话题必备词块",
+        "p": "本单元话题词先收一批：**destination（目的地）、tour、travel journal（旅行日志）、sightseeing、accommodation（住宿）、transport、pack（打包行李）、apply for a visa（申请签证）、book tickets（订票）**。\n\n==阅读里的生词先靠上下文猜，猜完再查词表确认，不要一遇到生词就停下来查字典。=="
+      },
+      {
+        "h": "易错提醒",
+        "p": "易错提醒：地名顺序不要凭「名气大小」排——马丘比丘最有名，但它在行程里是第二站，不是第一站；的第一站是亚马逊雨林，最后一站是的的喀喀湖。做顺序题只认日志的行程线，不认自己的印象。"
+      }
+    ],
+    "pitfalls": [
+      "按名气排顺序：把最有名的马丘比丘误当第一站（实际第一站是亚马逊雨林）。",
+      "人物关系认错：Xavier 是 Richard 的表兄（cousin），不是导游也不是老师。",
+      "四站见闻张冠李戴：印加古城遗址是马丘比丘、印加旧都加殖民建筑是库斯科、湖区在的的喀喀湖。"
+    ],
+    "svg": "<line x1='25' y1='60' x2='355' y2='60' stroke='#94a3b8' stroke-width='2'/><circle cx='50' cy='60' r='6' fill='#16a34a'/><circle cx='140' cy='60' r='6' fill='#f59e0b'/><circle cx='235' cy='60' r='6' fill='#f59e0b'/><circle cx='330' cy='60' r='6' fill='#2563eb'/><text x='50' y='42' text-anchor='middle' font-size='12'>1 亚马逊雨林</text><text x='140' y='42' text-anchor='middle' font-size='12'>2 马丘比丘</text><text x='235' y='42' text-anchor='middle' font-size='12'>3 库斯科</text><text x='330' y='42' text-anchor='middle' font-size='12'>4 的的喀喀湖</text><text x='190' y='92' text-anchor='middle' font-size='12' fill='#64748b'>Richard 的秘鲁行程线：按顺序读，按站记细节</text>",
+    "svgCap": "秘鲁旅行日志四站顺序：亚马逊雨林→马丘比丘→库斯科→的的喀喀湖。"
+  },
+  "eng_e007": {
+    "advance": {
+      "kind": "self",
+      "q": "比较两句：We are leaving tomorrow. / We are leaving now. 为什么前者表将来、后者表现在进行？判断依据是什么？",
+      "a": "前者是将来：tomorrow 是将来时间，leaving 指已安排好的出发，属于 be doing 表将来；后者是现在进行：now 指当下，说话时人正在离开。两句结构相同（be + leaving），区别全在时间标志和语境：判断 be doing 是「正在进行」还是「将来计划」，先找时间词，再看有没有「已安排」的语境。"
+    },
+    "apply": [
+      {
+        "ans": 0,
+        "opts": [
+          "am meeting",
+          "meet yesterday",
+          "have met last week",
+          "meets"
+        ],
+        "q": "I ______ my cousin Xavier at the airport at five this afternoon. We arranged it last week. ( )",
+        "why": "上周就约好的接机安排，用现在进行时 am meeting 表将来；yesterday/last week 与将来语境矛盾，meets 主谓和形式都不合。"
+      },
+      {
+        "ans": 1,
+        "opts": [
+          "I will decide where to go when I see the prices.",
+          "We are staying in Cusco for two nights — the hotel is booked.",
+          "Maybe it will rain tomorrow.",
+          "I think I will buy this map."
+        ],
+        "q": "Which sentence describes a plan that has ALREADY been arranged? ( )",
+        "why": "酒店已订好（the hotel is booked）说明是既定安排，正对应 be doing 表将来；其余三句都是临时决定或预测，用 will。"
+      }
+    ],
+    "basics": [
+      {
+        "ans": 0,
+        "opts": [
+          "are leaving",
+          "left yesterday",
+          "have a book",
+          "know the answer"
+        ],
+        "q": "—When are you going to visit Machu Picchu? —We ______ early tomorrow morning. ( )",
+        "why": "行程已定、时间在明天早上，用现在进行时 are leaving 表将来计划。后三项或时态错误、或与语境无关。"
+      },
+      {
+        "ans": 1,
+        "opts": [
+          "know",
+          "leave",
+          "like",
+          "belong"
+        ],
+        "q": "Which verb is MOST often used in the present continuous to talk about a future plan? ( )",
+        "why": "leave 是位移类动词，是 be doing 表将来的典型动词；know、like、belong 是状态动词，一般不这样用。"
+      }
+    ],
+    "case": {
+      "a": "(1) be doing：已安排的行程；(2) 一般现在时：航班時刻表；(3) will：当场预测。",
+      "hints": [
+        "先看每句的「将来依据」是什么：个人行程、航班時刻表，还是当场判断。",
+        "第 (2) 句的 leaves 不是笔误，是時刻表专用写法。"
+      ],
+      "q": "比较三句：(1) We are leaving for Peru tomorrow. (2) The plane leaves at 9:40. (3) Watch out! You will drop your camera! 分别说明每句为什么用这种形式表将来。",
+      "steps": [
+        "第 (1) 句：are leaving 是 be doing 表将来——出发去秘鲁是事先安排好的行程，tomorrow 给出了将来语境。",
+        "第 (2) 句：leaves 用一般现在时——航班起飞时间由時刻表决定，不以个人意志改变，这类固定时刻一律用一般现在时表将来。",
+        "第 (3) 句：will drop 是说话人根据眼前情况当场作出的预测（相机要掉了），不是事先安排，所以用 will。",
+        "结论：先判断「依据」再选形式——已安排的个人计划 be doing，時刻表一般现在时，当场预测/决定 will。"
+      ],
+      "talk": [
+        "时态题不要只看时间词：tomorrow 既能配 be doing 也能配 will，决定因素是这件事「安排好了没有、是不是時刻表」。"
+      ],
+      "title": "案例：同一句 leave，为什么时态不同"
+    },
+    "intro": "现在进行时不只表示「正在做」，还能表示「按计划马上要做的事」。==be doing 表将来，核心是「已经安排好、按计划将要发生」，最爱搭配 go、come、leave、arrive 这类位移动词。==本节要把它和 will、一般现在时表将来三者分清，这是时态题的高频考点。",
+    "learn": [
+      {
+        "h": "什么叫 be doing 表将来",
+        "p": "形式是 **be (am/is/are) + doing**，意思不是「正在……」，而是「已安排好、即将……」。例如：We **are leaving** tomorrow morning.（我们明天一早出发——行程已定。）\n\n==判断它表将来的信号，是句中或上下文里有将来的时间或已定的安排，而不是动作正在进行。=="
+      },
+      {
+        "h": "哪些动词最爱这样用",
+        "p": "主要是表示位置移动和行程安排的动词：**go, come, leave, arrive, start, return, fly, drive, meet, visit, stay** 等。例如：She **is arriving** at 6 pm. / I **am meeting** him at the station.\n\n表心理、状态的动词（如 know, like, want）一般不用这种将来用法；表示「拥有」的 have 也不用，说计划时要用 will 或其他表达。"
+      },
+      {
+        "h": "和 will、一般现在时怎么分",
+        "p": "**be doing**：事先安排好的计划，行程单上写着的那种——We are flying to Cusco on Friday. **will**：说话当场决定、承诺或预测——I will help you carry the bag.（刚决定）**一般现在时**：按時刻表、课程表走的固定时间——The train leaves at 7:30.（时刻表如此，每天都这样）\n\n==一句话分三者：已安排的个人计划用 be doing，临时决定用 will，時刻表用一般现在时。=="
+      },
+      {
+        "h": "易错提醒",
+        "p": "易错提醒：be doing 表将来必须有将来语境托底。I am reading. 单独出现是「我正在读书」；加上 tonight 并说明是约好的安排，才可能是将来义。做题时先找 tomorrow、next week、this weekend 等时间标志，再判断是「正在进行」还是「将来计划」。"
+      }
+    ],
+    "pitfalls": [
+      "见 be doing 就译成「正在……」：有 tomorrow/next week 等将来时间且是行程安排时，它表将来。",
+      "把状态动词硬套将来进行：know、like、belong 等不用 be doing 表计划。",
+      "時刻表不用 be doing 抢戏：航班、火车、课程的固定时刻用一般现在时（The train leaves at 7:30）。"
+    ],
+    "svg": "<rect x='8' y='35' width='112' height='42' rx='6' fill='#dcfce7'/><text x='64' y='52' text-anchor='middle' font-size='12'>be doing</text><text x='64' y='68' text-anchor='middle' font-size='11'>已安排的计划</text><rect x='134' y='35' width='112' height='42' rx='6' fill='#e0f2fe'/><text x='190' y='52' text-anchor='middle' font-size='12'>will do</text><text x='190' y='68' text-anchor='middle' font-size='11'>临时决定/预测</text><rect x='260' y='35' width='112' height='42' rx='6' fill='#fef3c7'/><text x='316' y='52' text-anchor='middle' font-size='12'>一般现在时</text><text x='316' y='68' text-anchor='middle' font-size='11'>時刻表/固定安排</text><text x='190' y='20' text-anchor='middle' font-size='13'>三种「将来」先分家</text><text x='190' y='95' text-anchor='middle' font-size='12' fill='#64748b'>先问：安排好了吗？是時刻表吗？都不是再考虑 will</text>",
+    "svgCap": "表将来的三条路：be doing（已安排）、will（临时决定/预测）、一般现在时（時刻表）。"
+  },
+  "eng_e008": {
+    "advance": {
+      "a": "示例提纲（目的地以西安为例）：(1) 目的地与时间：I am going to Xi'an with my family during the winter holiday for four days. (2) 行程安排：We are visiting the Terracotta Warriors on the first day and climbing the City Wall the next day. (3) 交通住宿：We are taking the high-speed train there and staying in a hotel near the Bell Tower. (4) 期待收尾：I'm looking forward to tasting the local food and learning more about its history. 四段齐全、将来表达（be going to / be doing）到位，即算合格提纲。",
+      "kind": "self",
+      "q": "用本单元结构写一个迷你旅行计划提纲（只要提纲，不要全文）：目的地自选，四段各写一句英文要点。"
+    },
+    "apply": [
+      {
+        "ans": 1,
+        "opts": [
+          "The trip was unforgettable.",
+          "I'm really looking forward to this trip!",
+          "We came back home on Sunday.",
+          "That is how we spent the holiday."
+        ],
+        "q": "Which is the best closing sentence for a travel plan? ( )",
+        "why": "计划尚未成行，收尾要用展望语气 looking forward to；其余三句都是事后回顾，与计划文体矛盾。"
+      }
+    ],
+    "basics": [
+      {
+        "ans": 1,
+        "opts": [
+          "The hotel and the food.",
+          "Where to go and when to go.",
+          "How excited you feel.",
+          "What you did last year."
+        ],
+        "q": "What should a travel plan talk about FIRST? ( )",
+        "why": "旅行计划第一段先亮目的地与时间（where and when），行程、交通住宿随后，期待放结尾；去年做了什么是回忆，不是计划。"
+      },
+      {
+        "ans": 1,
+        "opts": [
+          "We visited Machu Picchu yesterday.",
+          "We are flying to Peru next Friday.",
+          "We have a great time last week.",
+          "We stay in Cusco last night."
+        ],
+        "q": "Which sentence best fits a travel plan? ( )",
+        "why": "next Friday 是将来时间，are flying 是 be doing 表已定行程，正合计划文体；其余三句都是过去叙述或时态错误。"
+      }
+    ],
+    "case": {
+      "a": "顺序：出发时间 → 参观行程 → 交通与住宿 → 期待收尾（I am so excited!）。",
+      "hints": [
+        "先找「目的地与时间」句：含 leaving 和时间的先站出来。",
+        "住宿句和交通句是第三段，不要放在开头。"
+      ],
+      "q": "一位同学这样开头：「We will stay in a small hotel. I am so excited! We are leaving next Monday. We are going to visit Machu Picchu and Cusco. We will fly there.」信息都在，但顺序乱。请按四段结构重新排序，并指出每句归哪一段。",
+      "steps": [
+        "第一段（目的地与时间）：We are leaving next Monday. 先亮时间和出发，目的地 Peru 可在句中补明。",
+        "第二段（行程安排）：We are going to visit Machu Picchu and Cusco. 这是全程要做的事。",
+        "第三段（交通与住宿）：We will fly there. 和 We will stay in a small hotel. 一个管怎么去、一个管住哪里。",
+        "第四段（期待收尾）：I am so excited! 这类展望句只能放结尾，放开头就成了没头没尾。"
+      ],
+      "talk": [
+        "改作文先改顺序再改句子：结构对了，单句的小毛病才值得逐个修；结构乱时润色单句是白费力气。"
+      ],
+      "title": "案例：给一段散乱的计划稿排结构"
+    },
+    "intro": "Reading for Writing 要求写一篇旅行计划 A Travel Plan。==旅行计划不是流水账：先亮目的地和时间，再排每天的行程，然后交代交通住宿，最后一句写期待收尾。==本节把 Unit 2 的将来表达（be doing / will / be going to）装进这四段结构里，写出来的计划才像计划。",
+    "learn": [
+      {
+        "h": "四段结构：目的地→行程→交通住宿→期待",
+        "p": "第一段：**目的地与时间**——去哪儿、和谁、什么时候、多长时间。第二段：**行程安排**——按天或按站写要看什么、做什么。第三段：**交通与住宿**——怎么去、住哪里。第四段：**期待收尾**——一句展望结束全文。\n\n==阅卷先看结构：四块齐不齐、有没有顺序，是这篇作文的第一分。=="
+      },
+      {
+        "h": "行程安排用将来表达呈现",
+        "p": "写计划就是写将来，三种表达轮换用才不单调：已定的行程用 **be doing**（We are leaving on Friday.），打算和意图用 **be going to**（We are going to visit Machu Picchu.），活动本身直接写 **will** 或一般将来安排也可以，但全篇只用 will 会显得没学过本单元语法。\n\n时间顺序词也要跟上：**first, then, after that, on the first day, before leaving** 等，把行程串成线。"
+      },
+      {
+        "h": "套用秘鲁素材练一遍结构",
+        "p": "拿课文素材练结构最稳：目的地 Peru，行程照日志四站排（Amazon rainforest → Machu Picchu → Cusco → Lake Titicaca），交通写 fly / take a train，住宿写 stay in a hotel / stay with a local family，收尾写期待句。\n\n==先用熟素材把结构练顺，考试时换成题目给的目的地，骨架原样能用。=="
+      },
+      {
+        "h": "易错提醒",
+        "p": "易错提醒：计划写的是还没发生的事，通篇时态要朝将来，不要写着写着滑回过去时；写完检查一遍动词：出现 visited、went 这类过去式，多半是把旅行计划写成了旅行回忆。"
+      }
+    ],
+    "pitfalls": [
+      "把计划写成回忆：通篇过去时（visited、went）是文体错误，写完必须扫一遍时态。",
+      "只写行程、漏掉交通住宿段：四段缺一块，结构分先丢一半。",
+      "期待句放开头：展望收尾只能在最后，开头先亮目的地与时间。"
+    ],
+    "svg": "<rect x='10' y='30' width='82' height='40' rx='6' fill='#e0f2fe'/><text x='51' y='47' text-anchor='middle' font-size='12'>目的地+时间</text><text x='51' y='63' text-anchor='middle' font-size='11'>Where & When</text><rect x='104' y='30' width='82' height='40' rx='6' fill='#dcfce7'/><text x='145' y='47' text-anchor='middle' font-size='12'>行程安排</text><text x='145' y='63' text-anchor='middle' font-size='11'>Day by day</text><rect x='198' y='30' width='82' height='40' rx='6' fill='#fef3c7'/><text x='239' y='47' text-anchor='middle' font-size='12'>交通住宿</text><text x='239' y='63' text-anchor='middle' font-size='11'>How & Where</text><rect x='292' y='30' width='82' height='40' rx='6' fill='#fee2e2'/><text x='333' y='47' text-anchor='middle' font-size='12'>期待收尾</text><text x='333' y='63' text-anchor='middle' font-size='11'>Looking forward</text><text x='190' y='18' text-anchor='middle' font-size='13'>A Travel Plan 四段结构</text><text x='190' y='90' text-anchor='middle' font-size='12' fill='#64748b'>结构先行，将来表达随后填进去</text>",
+    "svgCap": "旅行计划四段式：目的地与时间→行程安排→交通住宿→期待收尾。"
+  }
+}
