@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>天娅的学习小站</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#f3f4f6;color:#111827}
+header{background:#2563eb;color:#fff;padding:14px 16px;position:sticky;top:0;z-index:20}
+header h1{margin:0;font-size:19px}
+header p{margin:2px 0 0;font-size:12px;opacity:.85}
+nav{display:flex;gap:6px;padding:10px 12px 0;flex-wrap:wrap}
+nav button{flex:1;min-width:30%;padding:10px 4px;border:1px solid #d1d5db;background:#fff;border-radius:10px;font-size:14px}
+nav button.on{background:#2563eb;color:#fff;border-color:#2563eb}
+main{padding:12px;max-width:720px;margin:0 auto}
+.card{background:#fff;border-radius:14px;padding:16px;margin-bottom:12px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.btn{display:block;width:100%;padding:13px;background:#2563eb;color:#fff;border:0;border-radius:10px;font-size:16px;margin:8px 0;text-align:center;text-decoration:none;cursor:pointer}
+.btn.gray{background:#e5e7eb;color:#111827}
+.btn.green{background:#16a34a}
+.btn.red{background:#dc2626}
+.mut{color:#6b7280;font-size:14px}
+.bar{height:14px;background:#e5e7eb;border-radius:7px;overflow:hidden;margin:6px 0}
+.bar i{display:block;height:100%;background:#2563eb}
+.tag{display:inline-block;background:#eff6ff;color:#2563eb;border-radius:6px;padding:2px 8px;font-size:12px;margin:2px 4px 2px 0}
+.flash{min-height:220px;display:flex;flex-direction:column;justify-content:center;cursor:pointer;user-select:none;-webkit-user-select:none}
+.flash.front,.flash.back{white-space:pre-wrap;word-break:break-word;line-height:1.7}
+.opt{display:block;width:100%;text-align:left;padding:12px;border:1px solid #d1d5db;border-radius:10px;background:#fff;margin:6px 0;font-size:15px;cursor:pointer}
+.opt.ok{border-color:#16a34a;background:#f0fdf4}
+.opt.bad{border-color:#dc2626;background:#fef2f2}
+.explain{background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:12px;white-space:pre-wrap;line-height:1.7;margin-top:8px}
+textarea,input[type=text]{width:100%;padding:12px;border:1px solid #d1d5db;border-radius:10px;font-size:16px}
+.row{display:flex;gap:8px}
+.row.btn{margin:8px 0}
+.task{display:flex;align-items:center;gap:10px;padding:12px;border:1px solid #e5e7eb;border-radius:10px;margin:8px 0;background:#fff}
+.task input{width:22px;height:22px}
+.pill{display:inline-block;padding:2px 10px;border-radius:999px;font-size:12px;background:#fef3c7;color:#92400e}
+select{padding:10px;border:1px solid #d1d5db;border-radius:10px;font-size:15px;width:100%}
+.qa{border:1px solid #e5e7eb;border-radius:10px;padding:12px;margin:8px 0;background:#fff}
+.qa.ans{background:#f0fdf4;border-radius:8px;padding:10px;margin-top:8px;white-space:pre-wrap;line-height:1.7}
+</style>
+</head>
+<body>
+<header><h1>天娅的学习小站</h1><p>错题卡片 · 间隔复习 · 举一反三 · 每日打卡</p></header>
+<nav id="tabs">
+<button data-t="today" class="on">今日任务</button>
+<button data-t="cards">记忆卡片</button>
+<button data-t="practice">专项练习</button>
+<button data-t="dict">默写工坊</button>
+<button data-t="book">错题本</button>
+<button data-t="ask">我要提问</button>
+<button data-t="report">学习报告</button>
+</nav>
+<main id="app"></main>
+<script src="data.js"></script>
+<script>
+var D = window.STUDY_DATA || {scores:[],wrong:[],practice:[],dictation:[]};
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function todayStr(){var d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+function lsGet(k,def){try{var v=localStorage.getItem(k);return v?JSON.parse(v):def}catch(e){return def}}
+function lsSet(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+/* 间隔重复：Leitner 盒子，间隔天数 0,1,2,4,7,15,30 */
+var INTERVALS=[0,1,2,4,7,15,30];
+function srAll(){return lsGet('ty_sr',{})}
+function srGet(id){return srAll()[id]||{box:0,due:0,seen:0}}
+function srMark(id,know){
+var all=srAll();var r=all[id]||{box:0,due:0,seen:0};
+r.seen=(r.seen||0)+1;
+r.box=know?Math.min(r.box+1,INTERVALS.length-1):0;
+var days=INTERVALS[r.box];
+r.due=Date.now()+days*86400000;
+all[id]=r;lsSet('ty_sr',all);return r;
+}
+function isDue(id){return srGet(id).due<=Date.now()}
+/* 卡片池：错题卡 + 默写卡 */
+var CARDS=[];
+D.wrong.forEach(function(w,i){
+CARDS.push({id:'w'+i,kind:'wrong',subject:w.subject,no:w.question_no,
+kp:w.knowledge_point||'',etype:w.error_type||'',
+front:'\n知识点：'+(w.knowledge_point||'见背面')+'\n\n你当时答：'+(w.student_answer||'（未记录）'),
+back:'标准答案：'+(w.std_answer||'见解析')+'\n\n'+(w.note||'')+'\n\n得分：'+w.got_score+' / '+w.full_score,
+raw:w});
+});
+D.dictation.forEach(function(d){
+CARDS.push({id:'d'+d.id,kind:'dict',subject:d.subject,no:d.set,
+kp:d.prompt,etype:'默写',
+front:'\n'+d.prompt+'\n\n（先在心里默写出来，再点卡片看答案）',
+back:d.answer+'\n\n'+(d.explain||''),
+raw:d});
+});
+var app=document.getElementById('app');
+var curTab='today';
+document.getElementById('tabs').addEventListener('click',function(e){
+if(e.target.tagName!=='BUTTON')return;
+curTab=e.target.getAttribute('data-t');
+var bs=document.querySelectorAll('#tabs button');for(var i=0;i<bs.length;i++)bs[i].classList.toggle('on',bs[i]===e.target);
+render();
+});
+function render(){
+if(curTab==='today')renderToday();
+else if(curTab==='cards')renderCards();
+else if(curTab==='practice')renderPractice();
+else if(curTab==='dict')renderDict();
+else if(curTab==='book')renderBook();
+else if(curTab==='ask')renderAsk();
+else if(curTab==='report')renderReport();
+}
+</script>
+</body>
+</html>
