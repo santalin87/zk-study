@@ -8,6 +8,7 @@ account_id = "34b542b32b08f95cd910bf8789fb6e44"
 binding = "DB"
 database_name = "tianya-study"
 database_id = "d5816ad2-aff0-42b3-bbcd-2b3ac96ae1b0"
+migrations_dir = "migrations"
 
 [[r2_buckets]]
 binding = "R2"
